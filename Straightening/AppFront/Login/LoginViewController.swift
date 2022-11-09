@@ -5,9 +5,10 @@
 //  Created by user220831 on 11/9/22.
 //
 
+import Foundation
 import UIKit
 
-class LoginView: UIViewController {
+class LoginViewController: UIViewController {
     
     private let logo: (stack: UIStackView, label: UILabel) = {
         

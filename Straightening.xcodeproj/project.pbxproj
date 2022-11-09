@@ -11,13 +11,16 @@
 		1DF21B13291C196200A85B05 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
 		2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA41291BEF4600760A35 /* SceneDelegate.swift */; };
-		2770EA44291BEF4600760A35 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA43291BEF4600760A35 /* LoginView.swift */; };
+		2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA43291BEF4600760A35 /* LoginViewController.swift */; };
 		2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */; };
 		2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2770EA4B291BEF4700760A35 /* Assets.xcassets */; };
 		2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */; };
 		2770EA5A291BEF4700760A35 /* StraighteningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA59291BEF4700760A35 /* StraighteningTests.swift */; };
 		2770EA64291BEF4700760A35 /* StraighteningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA63291BEF4700760A35 /* StraighteningUITests.swift */; };
 		2770EA66291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */; };
+		2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA80291C1F7D00760A35 /* HomeViewController.swift */; };
+		2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA82291C1FA100760A35 /* FormViewController.swift */; };
+		2770EA86291C217600760A35 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 2770EA85291C217600760A35 /* SwiftLintFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2770EA3F291BEF4600760A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2770EA41291BEF4600760A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2770EA43291BEF4600760A35 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2770EA43291BEF4600760A35 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2770EA49291BEF4600760A35 /* Straightening.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Straightening.xcdatamodel; sourceTree = "<group>"; };
 		2770EA4B291BEF4700760A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2770EA4E291BEF4700760A35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,8 @@
 		2770EA5F291BEF4700760A35 /* StraighteningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StraighteningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2770EA63291BEF4700760A35 /* StraighteningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraighteningUITests.swift; sourceTree = "<group>"; };
 		2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraighteningUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2770EA80291C1F7D00760A35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2770EA82291C1FA100760A35 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2770EA86291C217600760A35 /* SwiftLintFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +108,9 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
-				2770EA43291BEF4600760A35 /* LoginView.swift */,
+				2770EA7F291C1F5C00760A35 /* Login */,
+				2770EA7C291C1F4000760A35 /* Home */,
+				2770EA7B291C1F3700760A35 /* Form */,
 			);
 			path = AppFront;
 			sourceTree = "<group>";
@@ -173,6 +181,30 @@
 			path = StraighteningUITests;
 			sourceTree = "<group>";
 		};
+		2770EA7B291C1F3700760A35 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				2770EA82291C1FA100760A35 /* FormViewController.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		2770EA7C291C1F4000760A35 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2770EA80291C1F7D00760A35 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2770EA7F291C1F5C00760A35 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -189,6 +221,9 @@
 			dependencies = (
 			);
 			name = Straightening;
+			packageProductDependencies = (
+				2770EA85291C217600760A35 /* SwiftLintFramework */,
+			);
 			productName = Straightening;
 			productReference = 2770EA3C291BEF4600760A35 /* Straightening.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +296,9 @@
 				Base,
 			);
 			mainGroup = 2770EA33291BEF4600760A35;
+			packageReferences = (
+				2770EA84291C217600760A35 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = 2770EA3D291BEF4600760A35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,10 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
-				2770EA44291BEF4600760A35 /* LoginView.swift in Sources */,
+				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView.swift in Sources */,
+				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
+				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2770EA84291C217600760A35 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2770EA85291C217600760A35 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2770EA84291C217600760A35 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */ = {
