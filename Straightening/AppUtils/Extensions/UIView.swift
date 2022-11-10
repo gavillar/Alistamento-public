@@ -48,7 +48,7 @@ extension UIView {
                                                            constant: constant ?? 0))
             }
         }
-        if let attributes = attributes_attributes {
+        if let attributes = attributesAttributes {
 
             for attribute in attributes {
 
@@ -61,7 +61,7 @@ extension UIView {
                                                            constant: constant ?? 0))
             }
         }
-        if let attributes = attributes_constants {
+        if let attributes = attributesConstants {
 
             for attribute in attributes {
 

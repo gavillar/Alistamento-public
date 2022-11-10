@@ -23,6 +23,6 @@ class LoginViewController: UIViewController {
 
         view.layer.insertSublayer(gradient, at: 0)
         view.addSubview(logo.stack)
-        logo.stack.constraint(attributes_constants: [.top: 100, .leading: 30])
+        logo.stack.constraint(attributesConstants: [.top: 100, .leading: 30])
     }
 }
