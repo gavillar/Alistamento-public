@@ -8,33 +8,25 @@
 import UIKit
 
 extension UIView {
-    
     func addSubviews(_ views: [UIView]) {
-        
         for view in views {
-            
             addSubview(view)
         }
     }
-    
     func shape(height: CGFloat? = nil, width: CGFloat? = nil, size: CGFloat? = nil) {
-        
         translatesAutoresizingMaskIntoConstraints = false
-        
-        if let height = height {heightAnchor.constraint(equalToConstant: height).isActive = true}
-        else if let width = width {widthAnchor.constraint(equalToConstant: width).isActive = true}
-        else if let size = size {
-            
+        if let height = height {
+            heightAnchor.constraint(equalToConstant: height).isActive = true
+        } else if let width = width {
+            widthAnchor.constraint(equalToConstant: width).isActive = true
+        } else if let size = size {
             heightAnchor.constraint(equalToConstant: size).isActive = true
             widthAnchor.constraint(equalToConstant: size).isActive = true
         }
     }
-    
     func constraint(_ attributes: [NSLayoutConstraint.Attribute]? = nil,
-                    attributes_attributes: [NSLayoutConstraint.Attribute:
-                                            NSLayoutConstraint.Attribute]? = nil,
-                    attributes_constants: [NSLayoutConstraint.Attribute:
-                                           CGFloat]? = nil,
+                    attributesAttributes: [NSLayoutConstraint.Attribute: NSLayoutConstraint.Attribute]? = nil,
+                    attributesConstants: [NSLayoutConstraint.Attribute: CGFloat]? = nil,
                     to item: Any? = nil,
                     relation: NSLayoutConstraint.Relation = .equal,
                     multiplier: CGFloat = 1,

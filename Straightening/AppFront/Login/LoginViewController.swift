@@ -9,18 +9,13 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     private let logo: (stack: UIStackView, label: UILabel) = {
-        
         let label = UILabel()
-        
         return (stack: UIStackView(arrangedSubviews: [label]), label: label)
     }()
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
         let gradient = CAGradientLayer()
 
         gradient.frame = view.bounds
@@ -28,8 +23,6 @@ class LoginViewController: UIViewController {
 
         view.layer.insertSublayer(gradient, at: 0)
         view.addSubview(logo.stack)
-        
-        logo.stack.constraint(attributes_constants: [.top:100, .leading:30])
+        logo.stack.constraint(attributes_constants: [.top: 100, .leading: 30])
     }
 }
-
