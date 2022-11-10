@@ -9,10 +9,6 @@ import Foundation
 import UIKit
 
 class FormViewController: UIViewController {
-    
     override func loadView() {
-        
     }
-    
-    
 }
