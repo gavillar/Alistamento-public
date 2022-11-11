@@ -30,21 +30,13 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [passwordTextField]),
                 textField: passwordTextField)
     }()
-    private lazy var textFieldsStackView: UIStackView = {
-        return Create.stack(layoutMargins: UIEdgeInsets(),
-                            arrangedSubviews: [email.stackView, password.stackView])
-    }()
-    private lazy var buttonsForgotPassword = Create.button("Esqueci minha senha", titleColor: .red)
-    private lazy var login: (stackView: UIStackView, button: UIButton) = {
+    private lazy var forgotPasswordButton = Create.button("Esqueci minha senha", titleColor: .red)
+    private lazy var logIn: (stackView: UIStackView, button: UIButton) = {
         let loginButton = Create.button("ENTRAR", titleColor: .yellow)
         return (stackView: Create.stack(backgroundColor: .green, arrangedSubviews: [loginButton]),
                 button: loginButton)
     }()
-    private lazy var buttonsSignin = Create.button("CRIAR UMA CONTA ")
-    private lazy var buttonsStackView: UIStackView = {
-        return Create.stack(layoutMargins: UIEdgeInsets(),
-                            arrangedSubviews: [buttonsForgotPassword, login.stackView, buttonsSignin])
-    }()
+    private lazy var signInButton = Create.button("CRIAR UMA CONTA ")
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -55,7 +47,13 @@ class LoginViewController: UIViewController, SetupView {
         gradient.frame = view.bounds
         gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemGreen.cgColor, UIColor.white.cgColor]
         view.layer.insertSublayer(gradient, at: 0)
-        view.addSubviews([logo.stack, welcomeLabel, textFieldsStackView, buttonsStackView])
+        view.addSubviews([logo.stack,
+                          welcomeLabel,
+                          email.stackView,
+                          password.stackView,
+                          forgotPasswordButton,
+                          logIn.stackView,
+                          signInButton])
     }
     func setupConstraints() {
             view.addConstraints([
@@ -69,14 +67,26 @@ class LoginViewController: UIViewController, SetupView {
                                                   constant: 100),
                 welcomeLabel.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
                 welcomeLabel.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-                textFieldsStackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
+                email.stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
                                                          constant: 70),
-                textFieldsStackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-                textFieldsStackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-                buttonsStackView.topAnchor.constraint(equalTo: textFieldsStackView.bottomAnchor,
-                                                      constant: 10),
-                buttonsStackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-                buttonsStackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor)
+                email.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
+                email.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
+                password.stackView.topAnchor.constraint(equalTo: email.stackView.bottomAnchor,
+                                                        constant: 20),
+                password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
+                password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
+                forgotPasswordButton.topAnchor.constraint(equalTo: password.stackView.bottomAnchor,
+                                                          constant: 10),
+                forgotPasswordButton.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
+                forgotPasswordButton.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
+                logIn.stackView.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor,
+                                                constant: 20),
+                logIn.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
+                logIn.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
+                signInButton.topAnchor.constraint(equalTo: logIn.stackView.bottomAnchor,
+                                                  constant: 20),
+                signInButton.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
+                signInButton.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor)
             ])
     }
 }
