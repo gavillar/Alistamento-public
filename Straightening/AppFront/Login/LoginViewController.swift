@@ -75,7 +75,15 @@ class LoginViewController: UIViewController, SetupView {
         setupConstraints()
     }
     func setupView() {
-        view.backgroundColor = Assets.Colors.green
+        let gradient = CAGradientLayer()
+
+        gradient.frame = view.bounds
+        gradient.colors = [Assets.Colors.green?.cgColor as Any,
+                           Assets.Colors.green?.cgColor as Any,
+                           Assets.Colors.brown?.cgColor as Any]
+
+        view.layer.insertSublayer(gradient, at: 0)
+        view.backgroundColor = Assets.Colors.background
         view.addSubviews([logo.stack,
                           welcomeLabel,
                           email.stackView,
