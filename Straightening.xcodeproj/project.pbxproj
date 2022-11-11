@@ -121,6 +121,7 @@
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				277CC219291D6F0100BA2BCC /* Setup */,
 				1D942CD5291D65980018CC82 /* Assets */,
 				1D942CD4291D65800018CC82 /* Create */,
 				1DF21B11291C195200A85B05 /* Network */,
@@ -188,7 +189,6 @@
 		2770EA3E291BEF4600760A35 /* Straightening */ = {
 			isa = PBXGroup;
 			children = (
-				277CC219291D6F0100BA2BCC /* Setup */,
 				1DF21B0D291C18F200A85B05 /* AppFront */,
 				1DF21B0C291C18ED00A85B05 /* AppDelegate */,
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
