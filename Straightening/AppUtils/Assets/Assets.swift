@@ -20,6 +20,7 @@ struct Assets {
         static let green = UIColor(named: "green")
         static let greenDarkGreen = UIColor(named: "greenDarkGreen")
         static let lightBlue = UIColor(named: "lightBlue")
+        static let lightGreen = UIColor(named: "lightGreen")
         static let orange = UIColor(named: "orange")
         static let pink = UIColor(named: "pink")
         static let sand = UIColor(named: "sand")
