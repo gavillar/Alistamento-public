@@ -30,13 +30,11 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [passwordTextField]),
                 textField: passwordTextField)
     }()
-    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: .black,
-                                                              backgroundColor: .lightGray)
+    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha")
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
-                                                      backgroundColor: Assets.Colors.orange)
+                                                      backgroundColor: Assets.Colors.blue)
     private lazy var logInButton = Create.baseButton("ENTRAR",
-                                                     backgroundColor: Assets.Colors.pink)
+                                                     backgroundColor: Assets.Colors.brown)
     private lazy var constraints = [
         logo.stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                         constant: 100),
@@ -56,17 +54,16 @@ class LoginViewController: UIViewController, SetupView {
                                                 constant: 20),
         password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
         password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-        
         forgotPasswordButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-        forgotPasswordButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
+        forgotPasswordButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         forgotPasswordButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                                                     constant: -view.frame.height*0.05),
-        
+                                                     constant: -view.frame.height*0.1),
+        forgotPasswordButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05),
+        signInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         signInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-        signInButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
         signInButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
                                              constant: -view.frame.height*0.05),
-        
+        signInButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05),
         logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
@@ -78,7 +75,7 @@ class LoginViewController: UIViewController, SetupView {
         setupConstraints()
     }
     func setupView() {
-        view.backgroundColor = .systemPink
+        view.backgroundColor = Assets.Colors.green
         view.addSubviews([logo.stack,
                           welcomeLabel,
                           email.stackView,
