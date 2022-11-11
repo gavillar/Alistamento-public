@@ -30,11 +30,13 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [passwordTextField]),
                 textField: passwordTextField)
     }()
-    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha")
+    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
+                                                              titleColor: .red)
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
                                                       backgroundColor: Assets.Colors.blue)
     private lazy var logInButton = Create.baseButton("ENTRAR",
-                                                     backgroundColor: Assets.Colors.brown)
+                                                     titleColor: Assets.Colors.brown,
+                                                     backgroundColor: Assets.Colors.lightGreen)
     private lazy var constraints = [
         logo.stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                         constant: 100),
