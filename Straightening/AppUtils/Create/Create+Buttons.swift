@@ -8,13 +8,15 @@
 import UIKit
 
 struct Create {
-    static func buttonRegister() -> UIButton {
-       let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Cadastrar", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.backgroundColor = .lightGray
-        return button
+    static func baseButton(_ title: String? = nil,
+                           titleColor: UIColor? = nil,
+                           backgroundColor: UIColor? = nil) -> UIButton {
+        let baseButton = UIButton()
+        baseButton.translatesAutoresizingMaskIntoConstraints = false
+        baseButton.setTitle(title, for: .normal)
+        baseButton.setTitleColor(titleColor, for: .normal)
+        baseButton.backgroundColor = backgroundColor
+        return baseButton
     }
     static func button(_ text: String? = nil,
                        titleColor: UIColor? = nil,

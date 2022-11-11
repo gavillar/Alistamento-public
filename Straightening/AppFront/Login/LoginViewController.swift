@@ -30,16 +30,13 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [passwordTextField]),
                 textField: passwordTextField)
     }()
-    private lazy var forgotPasswordButton = Create.button("Esqueci minha senha", titleColor: .red)
-    private lazy var signInButton = Create.button("CRIAR UMA CONTA")
-    private lazy var logInButton: UIButton = {
-        let logInButton = UIButton()
-        logInButton.translatesAutoresizingMaskIntoConstraints = false
-        logInButton.setTitle("ENTRAR", for: .normal)
-        logInButton.setTitleColor(.yellow, for: .normal)
-        logInButton.backgroundColor = .systemPink
-        return logInButton
-    }()
+    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
+                                                              titleColor: .red)
+    private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
+                                                      backgroundColor: Assets.Colors.blue)
+    private lazy var logInButton = Create.baseButton("ENTRAR",
+                                                     titleColor: Assets.Colors.brown,
+                                                     backgroundColor: Assets.Colors.lightGreen)
     private lazy var constraints = [
         logo.stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                         constant: 100),
@@ -59,14 +56,16 @@ class LoginViewController: UIViewController, SetupView {
                                                 constant: 20),
         password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
         password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-        forgotPasswordButton.topAnchor.constraint(equalTo: password.stackView.bottomAnchor,
-                                                  constant: 10),
-        forgotPasswordButton.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-        forgotPasswordButton.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-        signInButton.topAnchor.constraint(equalTo: forgotPasswordButton.bottomAnchor,
-                                          constant: 20),
-        signInButton.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-        signInButton.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
+        forgotPasswordButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+        forgotPasswordButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        forgotPasswordButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                     constant: -view.frame.height*0.1),
+        forgotPasswordButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05),
+        signInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+        signInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        signInButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                             constant: -view.frame.height*0.05),
+        signInButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05),
         logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
@@ -79,8 +78,12 @@ class LoginViewController: UIViewController, SetupView {
     }
     func setupView() {
         let gradient = CAGradientLayer()
+
         gradient.frame = view.bounds
-        gradient.colors = [UIColor.systemGreen.cgColor, UIColor.systemGreen.cgColor, UIColor.white.cgColor]
+        gradient.colors = [Assets.Colors.green?.cgColor as Any,
+                           Assets.Colors.green?.cgColor as Any,
+                           Assets.Colors.lightGreen?.cgColor as Any]
+
         view.layer.insertSublayer(gradient, at: 0)
         view.addSubviews([logo.stack,
                           welcomeLabel,
