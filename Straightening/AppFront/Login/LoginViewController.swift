@@ -8,7 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController, SetupView {
-    private let logo: (stack: UIStackView, label: UILabel) = {
+// MARK: - Variables
+    private lazy var logo: (stack: UIStackView, label: UILabel) = {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
         let label = Create.label("Alistamento")
@@ -94,11 +95,13 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
+// MARK: - Override
     override func loadView() {
         super.loadView()
         setupView()
         setupConstraints()
     }
+// MARK: - Functions
     func setupView() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
