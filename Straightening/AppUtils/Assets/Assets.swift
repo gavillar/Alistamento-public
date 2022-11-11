@@ -5,9 +5,10 @@
 //  Created by Josicleison Elves on 19/08/1401 AP.
 //
 
-import Foundation
+import UIKit
 
 struct Assets {
-    
-    
+    static func font(_ size: CGFloat = 20, weight: UIFont.Weight = .bold) -> UIFont {
+        return UIFont.systemFont(ofSize: size, weight: weight)
+    }
 }
