@@ -45,7 +45,6 @@ class LoginViewController: UIViewController, SetupView {
             view.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
             view.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             view.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
-            
             logo.stack.topAnchor.constraint(equalTo: view.topAnchor,
                                             constant: 100),
             logo.stack.leadingAnchor.constraint(equalTo: view.leadingAnchor,
@@ -80,19 +79,16 @@ class LoginViewController: UIViewController, SetupView {
         scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         scrollView.bottomAnchor.constraint(equalTo: logInButton.topAnchor),
-        
         forgotPasswordButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         forgotPasswordButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         forgotPasswordButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
                                                      constant: -view.frame.height*0.1),
         forgotPasswordButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05),
-        
         signInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         signInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         signInButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
                                              constant: -view.frame.height*0.05),
         signInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05),
-        
         logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
         logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
@@ -103,7 +99,6 @@ class LoginViewController: UIViewController, SetupView {
         setupView()
         setupConstraints()
     }
-    
     func setupView() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
