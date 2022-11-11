@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
+		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
+		1D942CD7291D65A60018CC82 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD6291D65A60018CC82 /* Assets.swift */; };
+		1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD8291D65B70018CC82 /* Create+Buttons.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
-		1DF21B13291C196200A85B05 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView.swift */; };
+		1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* view+Hierarchy.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
 		2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA41291BEF4600760A35 /* SceneDelegate.swift */; };
 		2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA43291BEF4600760A35 /* LoginViewController.swift */; };
@@ -20,6 +24,9 @@
 		2770EA66291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */; };
 		2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA80291C1F7D00760A35 /* HomeViewController.swift */; };
 		2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA82291C1FA100760A35 /* FormViewController.swift */; };
+		277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */; };
+		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
+		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
+		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
+		1D942CD6291D65A60018CC82 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1D942CD8291D65B70018CC82 /* Create+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Buttons.swift"; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		1DF21B12291C196200A85B05 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		1DF21B12291C196200A85B05 /* view+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+Hierarchy.swift"; sourceTree = "<group>"; };
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2770EA3F291BEF4600760A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2770EA41291BEF4600760A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +68,9 @@
 		2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraighteningUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2770EA80291C1F7D00760A35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2770EA82291C1FA100760A35 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiStackView+Hierarchy.swift"; sourceTree = "<group>"; };
+		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
+		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +98,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D942CD4291D65800018CC82 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				1D942CD8291D65B70018CC82 /* Create+Buttons.swift */,
+				277CC217291D69AB00BA2BCC /* Create+Labels.swift */,
+				1D3E05D2291E81F6007F836C /* Create+Stacks.swift */,
+				1D3E05D4291E8207007F836C /* Create+TextFields.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		1D942CD5291D65980018CC82 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
+				1D942CD6291D65A60018CC82 /* Assets.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				277CC219291D6F0100BA2BCC /* Setup */,
+				1D942CD5291D65980018CC82 /* Assets */,
+				1D942CD4291D65800018CC82 /* Create */,
 				1DF21B11291C195200A85B05 /* Network */,
 				1DF21B10291C194C00A85B05 /* Extensions */,
-				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 			);
 			path = AppUtils;
 			sourceTree = "<group>";
@@ -116,7 +152,8 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1DF21B12291C196200A85B05 /* UIView.swift */,
+				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
+				277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +238,14 @@
 				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		277CC219291D6F0100BA2BCC /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				277CC21A291D6F2C00BA2BCC /* SetupView.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,14 +403,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
+				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
-				1DF21B13291C196200A85B05 /* UIView.swift in Sources */,
+				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
+				277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
+				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
+				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
+				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
+				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
