@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, SetupView {
             signInButton.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
             logInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             logInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            logInButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             logInButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
         ])
     }
