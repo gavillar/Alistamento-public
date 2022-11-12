@@ -22,6 +22,7 @@ class LoginViewController: UIViewController, SetupView {
     private lazy var welcomeLabel = Create.label("Bem Vindo")
     private lazy var email: (stackView: UIStackView, textField: UITextField) = {
         let emailTextField = Create.textField()
+        emailTextField.keyboardType = .namePhonePad
         return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [emailTextField]),
                 textField: emailTextField)
     }()
@@ -47,30 +48,31 @@ class LoginViewController: UIViewController, SetupView {
             view.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             view.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
             logo.stack.topAnchor.constraint(equalTo: view.topAnchor,
-                                            constant: 100),
+                                            constant: 100*self.view.frame.height/850),
             logo.stack.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                constant: 30),
+                                                constant: 30*self.view.frame.width/400),
             logo.stack.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                 constant: -30),
+                                                 constant: -30*self.view.frame.width/400),
             welcomeLabel.topAnchor.constraint(equalTo: logo.stack.bottomAnchor,
-                                              constant: 100),
+                                              constant: 100*self.view.frame.height/850),
             welcomeLabel.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             welcomeLabel.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
             email.stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
-                                                     constant: 70),
+                                                 constant: 70*self.view.frame.height/850),
             email.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             email.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
             password.stackView.topAnchor.constraint(equalTo: email.stackView.bottomAnchor,
-                                                    constant: 20),
+                                                    constant: 20*self.view.frame.height/850),
             password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-            password.stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            password.stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                                       constant: -20*self.view.frame.height/850)
         ])
         return scrollView
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
                                                               titleColor: .red) {_ in
-        print("a")
+        print("a", self.view.frame.width)
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
                                                       backgroundColor: Assets.Colors.blue) {_ in
