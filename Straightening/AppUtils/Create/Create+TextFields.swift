@@ -8,10 +8,11 @@
 import UIKit
 
 extension Create {
-    static func textField() -> UITextField {
+    static func textField(handler: UIActionHandler? = nil) -> UITextField {
         let textField = UITextField()
         textField.textColor = .black
         textField.translatesAutoresizingMaskIntoConstraints = false
+        if let handler = handler {textField.addAction(UIAction(handler: handler), for: .editingChanged)}
         return textField
     }
 }

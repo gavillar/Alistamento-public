@@ -69,12 +69,18 @@ class LoginViewController: UIViewController, SetupView {
         return scrollView
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: .red)
+                                                              titleColor: .red) {_ in
+        print("a")
+    }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
-                                                      backgroundColor: Assets.Colors.blue)
+                                                      backgroundColor: Assets.Colors.blue) {_ in
+        print("b")
+    }
     private lazy var logInButton = Create.baseButton("ENTRAR",
                                                      titleColor: Assets.Colors.brown,
-                                                     backgroundColor: Assets.Colors.lightGreen)
+                                                     backgroundColor: Assets.Colors.lightGreen) {_ in
+        print("c")
+    }
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
         scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
