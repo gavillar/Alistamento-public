@@ -27,7 +27,7 @@
 		277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */; };
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
-		279E0558292196C700A6E008 /* PickerViewNetWorthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */; };
+		279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */; };
 		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
 		279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* uiStackView+Border.swift */; };
@@ -75,7 +75,7 @@
 		277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiStackView+Hierarchy.swift"; sourceTree = "<group>"; };
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
-		279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewNetWorthTextField.swift; sourceTree = "<group>"; };
+		279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAvaliableTimeTextField.swift; sourceTree = "<group>"; };
 		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiTextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* uiStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiStackView+Border.swift"; sourceTree = "<group>"; };
@@ -230,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
-				279E0559292196DD00A6E008 /* MonthyPickerView */,
-				279E0553292196C700A6E008 /* NetWorthPickerView */,
+				279E0559292196DD00A6E008 /* MinisteryPickerView */,
+				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -260,20 +260,20 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
-		279E0553292196C700A6E008 /* NetWorthPickerView */ = {
+		279E0553292196C700A6E008 /* AvaliableTimePickerView */ = {
 			isa = PBXGroup;
 			children = (
-				279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */,
+				279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */,
 			);
-			path = NetWorthPickerView;
+			path = AvaliableTimePickerView;
 			sourceTree = "<group>";
 		};
-		279E0559292196DD00A6E008 /* MonthyPickerView */ = {
+		279E0559292196DD00A6E008 /* MinisteryPickerView */ = {
 			isa = PBXGroup;
 			children = (
 				279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */,
 			);
-			path = MonthyPickerView;
+			path = MinisteryPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +437,7 @@
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */,
-				279E0558292196C700A6E008 /* PickerViewNetWorthTextField.swift in Sources */,
+				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,

@@ -150,10 +150,10 @@ class FormViewController: UIViewController, SetupView {
         
         //MARK: - avaliableTimeTextField
         //NO PERMISSION PASTE ***
-        lazy var avaliableTimeTextField: PickerViewNetWorthTextField = {
+        lazy var avaliableTimeTextField: PickerViewAvaliableTimeTextField = {
             let view = uiTextFieldNoPaste()
             view.translatesAutoresizingMaskIntoConstraints = false
-            return PickerViewNetWorthTextField()
+            return PickerViewAvaliableTimeTextField()
         }()
     
     //MARK: - registerButton

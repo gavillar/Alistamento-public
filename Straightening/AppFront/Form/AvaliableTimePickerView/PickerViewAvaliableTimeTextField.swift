@@ -10,7 +10,7 @@ import UIKit
 typealias PickerNetWorthDisplayNameHandler = ((Any) -> String)
 typealias PickerNetWorthItemSelectionHandler = ((Int, Any) -> Void)
 
-final class PickerViewNetWorthTextField: UITextField {
+final class PickerViewAvaliableTimeTextField: UITextField {
     
 
     public var pickerNetWorth: [Any] = []
@@ -77,7 +77,7 @@ final class PickerViewNetWorthTextField: UITextField {
 
 }
 
-extension PickerViewNetWorthTextField: UIPickerViewDelegate {
+extension PickerViewAvaliableTimeTextField: UIPickerViewDelegate {
 
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -88,7 +88,7 @@ extension PickerViewNetWorthTextField: UIPickerViewDelegate {
 
 }
 
-extension PickerViewNetWorthTextField: UIPickerViewDataSource {
+extension PickerViewAvaliableTimeTextField: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
