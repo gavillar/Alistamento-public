@@ -86,7 +86,7 @@ class FormViewController: UIViewController, SetupView {
         //MARK: - ministryTextField
         //NO PERMISSION PASTE ***
         private lazy var ministryTextField: PickerViewMinisteryTextField = {
-            let view = uiTextFieldNoPaste()
+            let view = UiTextFieldNoPaste()
             view.translatesAutoresizingMaskIntoConstraints = false
             return PickerViewMinisteryTextField()
         }()
@@ -104,7 +104,7 @@ class FormViewController: UIViewController, SetupView {
         //MARK: - birthDateTextField
         //NO PERMISSION PASTE ***
         private lazy var birthDateTextField: UITextField = {
-            let view = uiTextFieldNoPaste()
+            let view = UiTextFieldNoPaste()
             view.textAlignment = .left
             view.attributedPlaceholder = NSAttributedString(string: "⇩ Data de Nascimento", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +112,7 @@ class FormViewController: UIViewController, SetupView {
         }()
         
         //MARK: - ToolBar
-        private func ToolBar() -> UIToolbar {
+        private func toolBar() -> UIToolbar {
             let toolBar = UIToolbar()
             toolBar.sizeToFit()
             let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(tapDoneButton))
@@ -136,7 +136,7 @@ class FormViewController: UIViewController, SetupView {
             datePicker.preferredDatePickerStyle = .wheels
             datePicker.datePickerMode = .date
             birthDateTextField.inputView = datePicker
-            birthDateTextField.inputAccessoryView = ToolBar()
+            birthDateTextField.inputAccessoryView = toolBar()
             
         }
         
@@ -151,7 +151,7 @@ class FormViewController: UIViewController, SetupView {
         //MARK: - avaliableTimeTextField
         //NO PERMISSION PASTE ***
         lazy var avaliableTimeTextField: PickerViewAvaliableTimeTextField = {
-            let view = uiTextFieldNoPaste()
+            let view = UiTextFieldNoPaste()
             view.translatesAutoresizingMaskIntoConstraints = false
             return PickerViewAvaliableTimeTextField()
         }()

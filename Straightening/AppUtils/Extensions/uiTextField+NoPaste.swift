@@ -8,7 +8,7 @@
 import Foundation
 import UIKit  //Don't forget this
 
-class uiTextFieldNoPaste: UITextField {
+class UiTextFieldNoPaste: UITextField {
     
    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         if action == #selector(UIResponderStandardEditActions.paste(_:)) {
