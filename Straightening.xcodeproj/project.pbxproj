@@ -27,6 +27,10 @@
 		277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */; };
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
+		279E0558292196C700A6E008 /* PickerViewNetWorthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */; };
+		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
+		279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */; };
+		279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* uiStackView+Border.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiStackView+Hierarchy.swift"; sourceTree = "<group>"; };
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewNetWorthTextField.swift; sourceTree = "<group>"; };
+		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
+		279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiTextField+NoPaste.swift"; sourceTree = "<group>"; };
+		279E055E2921975F00A6E008 /* uiStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiStackView+Border.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +160,10 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
+				279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */,
+				279E055E2921975F00A6E008 /* uiStackView+Border.swift */,
 				277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */,
+				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
+				279E0559292196DD00A6E008 /* MonthyPickerView */,
+				279E0553292196C700A6E008 /* NetWorthPickerView */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -246,6 +258,22 @@
 				277CC21A291D6F2C00BA2BCC /* SetupView.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		279E0553292196C700A6E008 /* NetWorthPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				279E0556292196C700A6E008 /* PickerViewNetWorthTextField.swift */,
+			);
+			path = NetWorthPickerView;
+			sourceTree = "<group>";
+		};
+		279E0559292196DD00A6E008 /* MonthyPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */,
+			);
+			path = MonthyPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,14 +432,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
+				279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
+				279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */,
+				279E0558292196C700A6E008 /* PickerViewNetWorthTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
+				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
 				277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
@@ -515,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

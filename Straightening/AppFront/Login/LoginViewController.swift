@@ -75,7 +75,21 @@ class LoginViewController: UIViewController, SetupView {
         super.viewDidLoad()
         setupView()
         setupConstraints()
+        setupTargets()
     }
+    
+    
+    func setupTargets() {
+        signInButton.addTarget(self, action: #selector(tapSignInButton), for: .touchUpInside)
+        
+    }
+    
+    @objc func tapSignInButton() {
+        let formviewcontroller = FormViewController()
+        navigationController?.pushViewController(formviewcontroller, animated: true)
+        
+    }
+    
     func setupView() {
         let gradient = CAGradientLayer()
 
