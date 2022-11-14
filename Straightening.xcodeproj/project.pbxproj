@@ -11,6 +11,12 @@
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D942CD7291D65A60018CC82 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD6291D65A60018CC82 /* Assets.swift */; };
 		1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD8291D65B70018CC82 /* Create+Buttons.swift */; };
+		1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C329229AEE0034770C /* RegisterNameViewController.swift */; };
+		1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */; };
+		1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */; };
+		1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */; };
+		1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */; };
+		1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* view+Hierarchy.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
@@ -55,6 +61,12 @@
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D942CD6291D65A60018CC82 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		1D942CD8291D65B70018CC82 /* Create+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Buttons.swift"; sourceTree = "<group>"; };
+		1DA298C329229AEE0034770C /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewController.swift; sourceTree = "<group>"; };
+		1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
+		1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMinisteryViewController.swift; sourceTree = "<group>"; };
+		1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBirthDateViewController.swift; sourceTree = "<group>"; };
+		1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAvaibleTimeViewController.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* view+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+Hierarchy.swift"; sourceTree = "<group>"; };
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +241,12 @@
 		2770EA7B291C1F3700760A35 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
+				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
+				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
+				1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */,
+				1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */,
+				1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */,
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
 				279E0559292196DD00A6E008 /* MinisteryPickerView */,
 				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
@@ -431,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */,
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
 				279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
@@ -439,10 +458,15 @@
 				279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */,
 				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
+				1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */,
+				1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */,
+				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
+				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
+				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
 				277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController, SetupView {
-// MARK: - Variables
+// MARK: - variables
     private lazy var logo: (stack: UIStackView, label: UILabel) = {
         let label = Create.label("Alistamento")
         let stack = UIStackView(arrangedSubviews: [label])
@@ -22,8 +22,7 @@ class LoginViewController: UIViewController, SetupView {
         let line = UIView()
         line.backgroundColor = .white
         let stackView = Create.stack(arrangedSubviews: [emailTextField, line])
-        line.translatesAutoresizingMaskIntoConstraints = false
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: emailTextField)
     }()
@@ -32,8 +31,7 @@ class LoginViewController: UIViewController, SetupView {
         let line = UIView()
         line.backgroundColor = .white
         let stackView = Create.stack(arrangedSubviews: [passwordTextField, line])
-        line.translatesAutoresizingMaskIntoConstraints = false
-        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: passwordTextField)
     }()
@@ -54,7 +52,7 @@ class LoginViewController: UIViewController, SetupView {
             view.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             view.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
             logo.stack.topAnchor.constraint(equalTo: view.topAnchor,
-                                            constant: 100*self.view.frame.height/850),
+                                            constant: 60*self.view.frame.height/850),
             logo.stack.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                 constant: 30*self.view.frame.width/400),
             logo.stack.trailingAnchor.constraint(equalTo: view.trailingAnchor,
@@ -82,11 +80,12 @@ class LoginViewController: UIViewController, SetupView {
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
                                                       backgroundColor: Assets.Colors.weakWhite) {_ in
-        print("b")
+        self.navigationController?.pushViewController(RegisterNameViewController(),
+                                                      animated: true)
     }
     private lazy var logInButton = Create.baseButton("ENTRAR",
                                                      backgroundColor: Assets.Colors.weakWhite) {_ in
-        print("c")
+        self.navigationController?.pushViewController(FormViewController(), animated: true)
     }
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -108,26 +107,13 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
-// MARK: - Override
+// MARK: - override functions
     override func loadView() {
         super.loadView()
         setupView()
         setupConstraints()
-        setupTargets()
     }
-    
-    
-    func setupTargets() {
-        signInButton.addTarget(self, action: #selector(tapSignInButton), for: .touchUpInside)
-        
-    }
-    
-    @objc func tapSignInButton() {
-        let formviewcontroller = FormViewController()
-        navigationController?.pushViewController(formviewcontroller, animated: true)
-        
-    }
-    
+// MARK: - functions
     func setupView() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
