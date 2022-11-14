@@ -8,6 +8,7 @@
 import UIKit
 
 class RegisterNameViewController: UIViewController, SetupView {
+// MARK: - Variables
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.addTarget(self, action: #selector(textFieldTarget), for: .editingChanged)
@@ -29,6 +30,7 @@ class RegisterNameViewController: UIViewController, SetupView {
                                                       animated: true)
     }
     lazy var button = Create.baseButton("ENTRAR", backgroundColor: Assets.Colors.weakWhite)
+// MARK: - override functions
     override func loadView() {
         super.loadView()
         let gradient = CAGradientLayer()
@@ -41,6 +43,7 @@ class RegisterNameViewController: UIViewController, SetupView {
         setupConstraints()
         button.addAction(action, for: .touchUpInside)
     }
+// MARK: - functions
     func setupView() {
         view.addSubviews([stackView, button])
     }
@@ -55,6 +58,7 @@ class RegisterNameViewController: UIViewController, SetupView {
             button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
         ])
     }
+// MARK: - objc functions
     @objc func textFieldTarget(_ sender: UITextField) {
         print(sender.text)
     }
