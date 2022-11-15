@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterMinisteryViewController: RegisterNameViewController {
+class RegisterMinisteryViewController: RegisterViewController {
     var options = ["Pastoral", "Missões", "Família", "Discipulado", "Serviço", "Adoração" ]
     lazy var pickerView: UIPickerView = {
         let pickerView = UIPickerView()
@@ -22,12 +22,6 @@ class RegisterMinisteryViewController: RegisterNameViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.removeAction(action, for: .touchUpInside)
-        action = UIAction {_ in
-            self.navigationController?.pushViewController(RegisterBirthDateViewController(),
-                                                          animated: true)
-        }
-        button.addAction(action, for: .touchUpInside)
         
         textField.inputView = pickerView
         
@@ -39,6 +33,13 @@ class RegisterMinisteryViewController: RegisterNameViewController {
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
         toolBar.setItems([spaceButton, doneButton], animated: false)
         textField.inputAccessoryView = toolBar
+        
+        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+    }
+// MARK: - objc functions
+    @objc func buttonTarget() {
+        self.navigationController?.pushViewController(RegisterBirthDateViewController(),
+                                                      animated: true)
     }
     @objc func doneButtonTapped() {
         textField.resignFirstResponder()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterAvaibleTimeViewController: RegisterNameViewController {
+final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "⇩ Disponibilidade de Horário",
@@ -15,6 +15,5 @@ class RegisterAvaibleTimeViewController: RegisterNameViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.removeAction(action, for: .touchUpInside)
     }
 }

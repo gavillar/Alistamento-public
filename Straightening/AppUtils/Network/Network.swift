@@ -23,6 +23,6 @@ struct Network {
         do {
 
             return try JSONDecoder().decode(what.self, from: data)
-        } catch {print("ERROR: \(error)"); return nil}
+        } catch {print("ERROR: \(error): \(String(data: data, encoding: .ascii) ?? "?")"); return nil}
     }
 }

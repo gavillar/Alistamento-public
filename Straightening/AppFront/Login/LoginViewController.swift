@@ -76,7 +76,8 @@ class LoginViewController: UIViewController, SetupView {
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
                                                               titleColor: .red) {_ in
-        print("a", self.view.frame.width)
+        self.navigationController?.pushViewController(BibleViewController(),
+                                                      animated: true)
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
                                                       backgroundColor: Assets.Colors.weakWhite) {_ in

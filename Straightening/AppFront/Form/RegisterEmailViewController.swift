@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterEmailViewController: RegisterNameViewController {
+final class RegisterEmailViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "Email",
@@ -15,11 +15,11 @@ class RegisterEmailViewController: RegisterNameViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.removeAction(action, for: .touchUpInside)
-        action = UIAction {_ in
-            self.navigationController?.pushViewController(RegisterMinisteryViewController(),
-                                                          animated: true)
-        }
-        button.addAction(action, for: .touchUpInside)
+        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+    }
+// MARK: - objc functions
+    @objc func buttonTarget() {
+        self.navigationController?.pushViewController(RegisterMinisteryViewController(),
+                                                      animated: true)
     }
 }
