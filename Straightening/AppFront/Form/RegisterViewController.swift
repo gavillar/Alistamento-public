@@ -9,6 +9,13 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
+    lazy var picker: (view: UIPickerView, options: [String]) = {
+        let pickerView = UIPickerView()
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.backgroundColor = .white
+        return (view: pickerView, options: [])
+    }()
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.addTarget(self, action: #selector(textFieldTarget), for: .editingChanged)
@@ -34,6 +41,30 @@ class RegisterViewController: UIViewController, SetupView {
         setupConstraints()
     }
 // MARK: - functions
+    func setupPickerView(_ options: [String]) {
+        picker.options = options
+        picker.view.reloadAllComponents()
+        view.addSubview(picker.view)
+        textField.isUserInteractionEnabled = false
+        
+        picker.view.frame = CGRect(origin: CGPoint(x: view.frame.minX,
+                                                  y: view.frame.maxY),
+                                  size: CGSize(width: view.frame.width,
+                                               height: 0))
+        
+        button.translatesAutoresizingMaskIntoConstraints = true
+        button.frame = CGRect(origin: CGPoint(x: view.frame.minX,
+                                              y: view.frame.maxY-view.frame.height*0.05),
+                              size: CGSize(width: view.frame.width,
+                                           height: view.frame.height*0.05))
+        
+        UIView.animate(withDuration: 0.5,
+        delay: 0) {
+            self.picker.view.frame.origin.y -= self.view.frame.height*0.2
+            self.button.frame.origin.y -= self.view.frame.height*0.2
+            self.picker.view.frame.size.height = self.view.frame.height*0.2
+        }
+    }
     func setupView() {
         view.addSubviews([stackView, button])
     }
@@ -51,5 +82,20 @@ class RegisterViewController: UIViewController, SetupView {
 // MARK: - objc functions
     @objc func textFieldTarget(_ sender: UITextField) {
         print(sender.text as Any)
+    }
+}
+
+extension RegisterViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return picker.options.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return picker.options[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        textField.text = picker.options[row]
     }
 }
