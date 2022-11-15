@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterBirthDateViewController: RegisterViewController {
+final class RegisterBirthDateViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "⇩ Data de Nascimento",

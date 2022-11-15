@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterAvaibleTimeViewController: RegisterViewController {
+final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "⇩ Disponibilidade de Horário",

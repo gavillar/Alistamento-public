@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterPhoneViewController: RegisterViewController {
+final class RegisterPhoneViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "Telefone",

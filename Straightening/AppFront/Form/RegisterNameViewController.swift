@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterNameViewController: RegisterViewController {
+final class RegisterNameViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "Nome Completo",

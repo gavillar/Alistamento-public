@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterEmailViewController: RegisterViewController {
+final class RegisterEmailViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "Email",
