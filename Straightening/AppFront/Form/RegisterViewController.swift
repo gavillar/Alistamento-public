@@ -46,23 +46,20 @@ class RegisterViewController: UIViewController, SetupView {
         picker.view.reloadAllComponents()
         view.addSubview(picker.view)
         textField.isUserInteractionEnabled = false
-        
         picker.view.frame = CGRect(origin: CGPoint(x: view.frame.minX,
                                                   y: view.frame.maxY),
                                   size: CGSize(width: view.frame.width,
                                                height: 0))
-        
         button.translatesAutoresizingMaskIntoConstraints = true
         button.frame = CGRect(origin: CGPoint(x: view.frame.minX,
                                               y: view.frame.maxY-view.frame.height*0.05),
                               size: CGSize(width: view.frame.width,
                                            height: view.frame.height*0.05))
-        
-        UIView.animate(withDuration: 0.5,
-        delay: 0) {
-            self.picker.view.frame.origin.y -= self.view.frame.height*0.2
-            self.button.frame.origin.y -= self.view.frame.height*0.2
-            self.picker.view.frame.size.height = self.view.frame.height*0.2
+        let pickerViewHeight = view.frame.height*0.3
+        UIView.animate(withDuration: 0.5) {
+            self.picker.view.frame.origin.y -= pickerViewHeight
+            self.button.frame.origin.y -= pickerViewHeight
+            self.picker.view.frame.size.height = pickerViewHeight
         }
     }
     func setupView() {

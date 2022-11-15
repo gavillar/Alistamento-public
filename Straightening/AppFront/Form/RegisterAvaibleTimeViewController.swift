@@ -21,7 +21,7 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
     @objc func buttonTarget() {
         pop(to: LoginViewController.self)
     }
-    func pop<T: UIViewController>(to: T.Type) {
+    func pop<T: UIViewController>(to viewController: T.Type) {
         guard let viewControllers = navigationController?.viewControllers else {return}
         for viewController in viewControllers where ((viewController as? T) != nil) {
             self.navigationController?.popToViewController(viewController,
