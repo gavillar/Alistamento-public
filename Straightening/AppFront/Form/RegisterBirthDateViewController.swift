@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterBirthDateViewController: RegisterNameViewController {
+class RegisterBirthDateViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "⇩ Data de Nascimento",
@@ -15,11 +15,11 @@ class RegisterBirthDateViewController: RegisterNameViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.removeAction(action, for: .touchUpInside)
-        action = UIAction {_ in
-            self.navigationController?.pushViewController(RegisterAvaibleTimeViewController(),
-                                                          animated: true)
-        }
-        button.addAction(action, for: .touchUpInside)
+        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+    }
+// MARK: - objc functions
+    @objc func buttonTarget() {
+        self.navigationController?.pushViewController(RegisterAvaibleTimeViewController(),
+                                                      animated: true)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterPhoneViewController: RegisterNameViewController {
+class RegisterPhoneViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         textField.attributedPlaceholder = NSAttributedString(string: "Telefone",
@@ -15,11 +15,11 @@ class RegisterPhoneViewController: RegisterNameViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.removeAction(action, for: .touchUpInside)
-        action = UIAction {_ in
-            self.navigationController?.pushViewController(RegisterEmailViewController(),
-                                                          animated: true)
-        }
-        button.addAction(action, for: .touchUpInside)
+        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+    }
+// MARK: - objc functions
+    @objc func buttonTarget() {
+        self.navigationController?.pushViewController(RegisterEmailViewController(),
+                                                      animated: true)
     }
 }

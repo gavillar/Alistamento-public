@@ -22,7 +22,7 @@ extension Create {
         label.text = text
         label.textColor = .white
         label.textAlignment = .center
-        label.font = Assets.font(50)
+        label.font = font
         return label
     }
 }

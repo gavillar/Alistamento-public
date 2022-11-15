@@ -17,6 +17,10 @@
 		1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */; };
 		1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */; };
 		1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */; };
+		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
+		1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */; };
+		1DDA4E012922E50600B9C70F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4E002922E50600B9C70F /* Book.swift */; };
+		1DDA4E032922E7A900B9C70F /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4E022922E7A900B9C70F /* BookDetail.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* view+Hierarchy.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
@@ -67,6 +71,10 @@
 		1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMinisteryViewController.swift; sourceTree = "<group>"; };
 		1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBirthDateViewController.swift; sourceTree = "<group>"; };
 		1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAvaibleTimeViewController.swift; sourceTree = "<group>"; };
+		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
+		1DDA4E002922E50600B9C70F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1DDA4E022922E7A900B9C70F /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* view+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+Hierarchy.swift"; sourceTree = "<group>"; };
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +146,23 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		1DDA4DFC2922E42900B9C70F /* Bible */ = {
+			isa = PBXGroup;
+			children = (
+				1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */,
+			);
+			path = Bible;
+			sourceTree = "<group>";
+		};
+		1DDA4DFF2922E4F400B9C70F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DDA4E002922E50600B9C70F /* Book.swift */,
+				1DDA4E022922E7A900B9C70F /* BookDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +187,7 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
+				1DDA4DFC2922E42900B9C70F /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
 				2770EA7C291C1F4000760A35 /* Home */,
 				2770EA7B291C1F3700760A35 /* Form */,
@@ -183,6 +209,7 @@
 		1DF21B11291C195200A85B05 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1DDA4DFF2922E4F400B9C70F /* Models */,
 				1DF21B0E291C194800A85B05 /* Network.swift */,
 			);
 			path = Network;
@@ -241,6 +268,7 @@
 		2770EA7B291C1F3700760A35 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
 				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
 				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
 				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
@@ -454,6 +482,8 @@
 				279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
+				1DDA4E032922E7A900B9C70F /* BookDetail.swift in Sources */,
+				1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */,
 				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
@@ -471,9 +501,11 @@
 				277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
+				1DDA4E012922E50600B9C70F /* Book.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
+				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
