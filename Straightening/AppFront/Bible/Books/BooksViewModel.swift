@@ -29,7 +29,7 @@ class BooksViewModel {
         
         guard let url = URL(string: "https://www.abibliadigital.com.br/api/books") else {return}
        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in 
             if error == nil {
                 print("not nil")
             }
@@ -40,7 +40,7 @@ class BooksViewModel {
                 
                 guard let newResult = result else {return}
             
-                    self.booksviewmodeldelegate?.sendBooksQuantity(data: newResult)
+            self?.booksviewmodeldelegate?.sendBooksQuantity(data: newResult)
                 
         }.resume()
     }
