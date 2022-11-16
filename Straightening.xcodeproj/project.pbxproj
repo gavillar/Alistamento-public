@@ -37,12 +37,13 @@
 		277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */; };
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
+		27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955AC829254C4500B12FD3 /* IntroViewController.swift */; };
 		279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */; };
 		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
 		279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* uiStackView+Border.swift */; };
 		27E3A6F529251E75007CDF8A /* uiViewController+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */; };
-		27E3A6FB2925263F007CDF8A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* Model.swift */; };
+		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
 		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
@@ -100,12 +101,13 @@
 		277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiStackView+Hierarchy.swift"; sourceTree = "<group>"; };
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		27955AC829254C4500B12FD3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAvaliableTimeTextField.swift; sourceTree = "<group>"; };
 		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiTextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* uiStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiStackView+Border.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiViewController+HiddenKeyboard.swift"; sourceTree = "<group>"; };
-		27E3A6F72925263F007CDF8A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
+				27955AC729254C3200B12FD3 /* IntroView */,
 				1DDA4DFC2922E42900B9C70F /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
 				2770EA7C291C1F4000760A35 /* Home */,
@@ -318,6 +321,14 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
+		27955AC729254C3200B12FD3 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
 		279E0553292196C700A6E008 /* AvaliableTimePickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,7 +348,7 @@
 		27E3A6F62925263F007CDF8A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				27E3A6F72925263F007CDF8A /* Model.swift */,
+				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
 				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
 				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
 				27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */,
@@ -516,7 +527,7 @@
 				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
 				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
-				27E3A6FB2925263F007CDF8A /* Model.swift in Sources */,
+				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */,
@@ -530,6 +541,7 @@
 				1DDA4E012922E50600B9C70F /* Book.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
+				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
 				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
