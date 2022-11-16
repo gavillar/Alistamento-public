@@ -192,8 +192,10 @@ class FormViewController: UIViewController, SetupView {
         view.addSubview(monthlyStackView)
         view.addSubview(birthDateStackView)
         view.addSubview(avaliableStackView)
-       
+        hideKeyboardWhenTappedAround()
     }
+    
+   
     
     //MARK: - setupPickerView
     func setupPickerView() {
@@ -308,6 +310,7 @@ class FormViewController: UIViewController, SetupView {
         }
         
     }
+
 
 
 

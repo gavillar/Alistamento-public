@@ -16,6 +16,7 @@ final class RegisterPhoneViewController: RegisterViewController {
                                                                     UIColor.white
                                                              ])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        hideKeyboardWhenTappedAround()
     }
 // MARK: - objc functions
     @objc func buttonTarget() {

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Book: Codable {
-    let author, group, name, testament: String?
-    let chapters: Int?
-    let abbrev: Abbrev?
-}
-struct Abbrev: Codable {
-    let pt, en: String?
-}
+//struct Book: Codable {
+//    let author, group, name, testament: String?
+//    let chapters: Int?
+//    let abbrev: Abbrev?
+//}
+//struct Abbrev: Codable {
+//    let pt, en: String?
+//}
