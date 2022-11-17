@@ -120,7 +120,7 @@ class BooksViewController: UIViewController{
 extension BooksViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+            navigationController?.pushViewController(BookViewController(), animated: true)
         }
         
         
