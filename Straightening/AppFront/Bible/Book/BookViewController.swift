@@ -10,6 +10,7 @@ import UIKit
 final class BookViewController: UIViewController, SetupView {
     private lazy var textView: UITextView = {
         let textView = UITextView()
+        textView.isUserInteractionEnabled = false
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "aaa\ns\nd\na\nsdq\nwea\nsd\nxcx\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc"
         textView.textColor = Assets.Colors.reverseDark
