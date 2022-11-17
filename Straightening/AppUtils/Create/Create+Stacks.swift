@@ -8,12 +8,9 @@
 import UIKit
 
 extension Create {
-    static func stack(_ spacing: CGFloat = 20,
+    static func stack(_ spacing: CGFloat = 0,
                       backgroundColor: UIColor? = nil,
-                      layoutMargins: UIEdgeInsets =  UIEdgeInsets(top: 20,
-                                                                  left: 15,
-                                                                  bottom: 20,
-                                                                  right: 15),
+                      layoutMargins: UIEdgeInsets? = nil,
                       arrangedSubviews: [UIView] = [],
                       axis: NSLayoutConstraint.Axis = .vertical,
                       cornerRadius: CGFloat = 15) -> UIStackView {
@@ -21,8 +18,10 @@ extension Create {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = axis
         stack.spacing = spacing
-        stack.isLayoutMarginsRelativeArrangement = true
-        stack.layoutMargins = layoutMargins
+        if let layoutMargins = layoutMargins {
+            stack.isLayoutMarginsRelativeArrangement = true
+            stack.layoutMargins = layoutMargins
+        }
         stack.layer.cornerRadius = cornerRadius
         stack.backgroundColor = backgroundColor
         return stack

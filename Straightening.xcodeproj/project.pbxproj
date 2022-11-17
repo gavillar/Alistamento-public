@@ -11,6 +11,16 @@
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D942CD7291D65A60018CC82 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD6291D65A60018CC82 /* Assets.swift */; };
 		1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD8291D65B70018CC82 /* Create+Buttons.swift */; };
+		1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C329229AEE0034770C /* RegisterNameViewController.swift */; };
+		1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */; };
+		1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */; };
+		1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */; };
+		1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */; };
+		1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */; };
+		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
+		1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */; };
+		1DDA4E012922E50600B9C70F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4E002922E50600B9C70F /* Book.swift */; };
+		1DDA4E032922E7A900B9C70F /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4E022922E7A900B9C70F /* BookDetail.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* view+Hierarchy.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
@@ -27,6 +37,16 @@
 		277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */; };
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
+		27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955AC829254C4500B12FD3 /* IntroViewController.swift */; };
+		279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */; };
+		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
+		279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */; };
+		279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* uiStackView+Border.swift */; };
+		27E3A6F529251E75007CDF8A /* uiViewController+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */; };
+		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
+		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
+		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
+		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +71,16 @@
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D942CD6291D65A60018CC82 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		1D942CD8291D65B70018CC82 /* Create+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Buttons.swift"; sourceTree = "<group>"; };
+		1DA298C329229AEE0034770C /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
+		1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewController.swift; sourceTree = "<group>"; };
+		1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
+		1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterMinisteryViewController.swift; sourceTree = "<group>"; };
+		1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBirthDateViewController.swift; sourceTree = "<group>"; };
+		1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAvaibleTimeViewController.swift; sourceTree = "<group>"; };
+		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
+		1DDA4E002922E50600B9C70F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1DDA4E022922E7A900B9C70F /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* view+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+Hierarchy.swift"; sourceTree = "<group>"; };
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +101,16 @@
 		277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiStackView+Hierarchy.swift"; sourceTree = "<group>"; };
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		27955AC829254C4500B12FD3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAvaliableTimeTextField.swift; sourceTree = "<group>"; };
+		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
+		279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiTextField+NoPaste.swift"; sourceTree = "<group>"; };
+		279E055E2921975F00A6E008 /* uiStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "uiStackView+Border.swift"; sourceTree = "<group>"; };
+		27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiViewController+HiddenKeyboard.swift"; sourceTree = "<group>"; };
+		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
+		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +152,27 @@
 		1D942CD5291D65980018CC82 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				1D942CD6291D65A60018CC82 /* Assets.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		1DDA4DFC2922E42900B9C70F /* Bible */ = {
+			isa = PBXGroup;
+			children = (
+				27E3A6F62925263F007CDF8A /* Books */,
+				1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */,
+			);
+			path = Bible;
+			sourceTree = "<group>";
+		};
+		1DDA4DFF2922E4F400B9C70F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DDA4E002922E50600B9C70F /* Book.swift */,
+				1DDA4E022922E7A900B9C70F /* BookDetail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
@@ -142,6 +199,8 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
+				27955AC729254C3200B12FD3 /* IntroView */,
+				1DDA4DFC2922E42900B9C70F /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
 				2770EA7C291C1F4000760A35 /* Home */,
 				2770EA7B291C1F3700760A35 /* Form */,
@@ -152,8 +211,11 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
+				279E055C2921972500A6E008 /* uiTextField+NoPaste.swift */,
+				279E055E2921975F00A6E008 /* uiStackView+Border.swift */,
 				277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */,
+				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
+				27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -161,6 +223,7 @@
 		1DF21B11291C195200A85B05 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				1DDA4DFF2922E4F400B9C70F /* Models */,
 				1DF21B0E291C194800A85B05 /* Network.swift */,
 			);
 			path = Network;
@@ -192,6 +255,7 @@
 				1DF21B0D291C18F200A85B05 /* AppFront */,
 				1DF21B0C291C18ED00A85B05 /* AppDelegate */,
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
+				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
@@ -219,7 +283,16 @@
 		2770EA7B291C1F3700760A35 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
+				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
+				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
+				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
+				1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */,
+				1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */,
+				1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */,
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
+				279E0559292196DD00A6E008 /* MinisteryPickerView */,
+				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -246,6 +319,41 @@
 				277CC21A291D6F2C00BA2BCC /* SetupView.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		27955AC729254C3200B12FD3 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
+		279E0553292196C700A6E008 /* AvaliableTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */,
+			);
+			path = AvaliableTimePickerView;
+			sourceTree = "<group>";
+		};
+		279E0559292196DD00A6E008 /* MinisteryPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */,
+			);
+			path = MinisteryPickerView;
+			sourceTree = "<group>";
+		};
+		27E3A6F62925263F007CDF8A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
+				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
+				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
+				27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,21 +511,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */,
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
+				279E055F2921975F00A6E008 /* uiStackView+Border.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
+				1DDA4E032922E7A900B9C70F /* BookDetail.swift in Sources */,
+				1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
+				279E055D2921972500A6E008 /* uiTextField+NoPaste.swift in Sources */,
+				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
+				1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */,
+				1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */,
+				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
+				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
+				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
+				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
+				27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
+				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
+				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
 				277CC216291D692500BA2BCC /* uiStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
+				1DDA4E012922E50600B9C70F /* Book.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
+				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
+				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
+				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
+				27E3A6F529251E75007CDF8A /* uiViewController+HiddenKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -569,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

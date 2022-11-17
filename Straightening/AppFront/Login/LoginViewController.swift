@@ -8,25 +8,31 @@
 import UIKit
 
 class LoginViewController: UIViewController, SetupView {
-    private let logo: (stack: UIStackView, label: UILabel) = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .red
+// MARK: - variables
+    private lazy var logo: (stack: UIStackView, label: UILabel) = {
         let label = Create.label("Alistamento")
-        let stack = UIStackView(arrangedSubviews: [imageView, label])
+        let stack = UIStackView(arrangedSubviews: [label])
         stack.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
         return (stack: stack, label: label)
     }()
     private lazy var welcomeLabel = Create.label("Bem Vindo")
     private lazy var email: (stackView: UIStackView, textField: UITextField) = {
         let emailTextField = Create.textField()
-        return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [emailTextField]),
+        emailTextField.keyboardType = .namePhonePad
+        let line = UIView()
+        line.backgroundColor = .white
+        let stackView = Create.stack(arrangedSubviews: [emailTextField, line])
+        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        return (stackView: stackView,
                 textField: emailTextField)
     }()
     private lazy var password: (stackView: UIStackView, textField: UITextField) = {
         let passwordTextField = Create.textField()
-        return (stackView: Create.stack(backgroundColor: .white, arrangedSubviews: [passwordTextField]),
+        let line = UIView()
+        line.backgroundColor = .white
+        let stackView = Create.stack(arrangedSubviews: [passwordTextField, line])
+        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+        return (stackView: stackView,
                 textField: passwordTextField)
     }()
     private lazy var scrollView: UIScrollView = {
@@ -46,34 +52,42 @@ class LoginViewController: UIViewController, SetupView {
             view.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             view.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
             logo.stack.topAnchor.constraint(equalTo: view.topAnchor,
-                                            constant: 100),
+                                            constant: 60*self.view.frame.height/850),
             logo.stack.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                constant: 30),
+                                                constant: 30*self.view.frame.width/400),
             logo.stack.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                 constant: -30),
+                                                 constant: -30*self.view.frame.width/400),
             welcomeLabel.topAnchor.constraint(equalTo: logo.stack.bottomAnchor,
-                                              constant: 100),
+                                              constant: 100*self.view.frame.height/850),
             welcomeLabel.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             welcomeLabel.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
             email.stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
-                                                     constant: 70),
+                                                 constant: 90*self.view.frame.height/850),
             email.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             email.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
             password.stackView.topAnchor.constraint(equalTo: email.stackView.bottomAnchor,
-                                                    constant: 20),
+                                                    constant: 60*self.view.frame.height/850),
             password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
             password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-            password.stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            password.stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                                       constant: -20*self.view.frame.height/850)
         ])
         return scrollView
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: .red)
+                                                              titleColor: .red) {_ in
+        self.navigationController?.pushViewController(BooksViewController(),
+                                                      animated: true)
+    }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
-                                                      backgroundColor: Assets.Colors.blue)
+                                                      backgroundColor: Assets.Colors.weakWhite) {_ in
+        self.navigationController?.pushViewController(RegisterNameViewController(),
+                                                      animated: true)
+    }
     private lazy var logInButton = Create.baseButton("ENTRAR",
-                                                     titleColor: Assets.Colors.brown,
-                                                     backgroundColor: Assets.Colors.lightGreen)
+                                                     backgroundColor: Assets.Colors.weakWhite) {_ in
+        self.navigationController?.pushViewController(FormViewController(), animated: true)
+    }
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
         scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -94,17 +108,19 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
+// MARK: - override functions
     override func loadView() {
         super.loadView()
         setupView()
         setupConstraints()
     }
+// MARK: - functions
     func setupView() {
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
         gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any]
+                           Assets.Colors.lightGreen?.cgColor as Any,
+                           Assets.Colors.darkGreen?.cgColor as Any]
         view.layer.insertSublayer(gradient, at: 0)
         view.addSubviews([scrollView,
                           forgotPasswordButton,
