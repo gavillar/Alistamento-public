@@ -24,7 +24,9 @@ struct Assets {
         static let lightGreen = UIColor(named: "lightGreen")
         static let orange = UIColor(named: "orange")
         static let pink = UIColor(named: "pink")
+        static let reverseDark = UIColor(named: "reverseDark")
         static let sand = UIColor(named: "sand")
+        static let whiteBlack = UIColor(named: "whiteBlack")
         static let weakWhite = UIColor(white: 1, alpha: 0.05)
     }
 }

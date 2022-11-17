@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController, SetupView {
         let pickerView = UIPickerView()
         pickerView.dataSource = self
         pickerView.delegate = self
-        pickerView.backgroundColor = .blue
+        pickerView.backgroundColor = Assets.Colors.whiteBlack
         return (view: pickerView, options: [])
     }()
     lazy var textField: UITextField = {
