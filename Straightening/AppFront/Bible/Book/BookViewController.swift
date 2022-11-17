@@ -11,7 +11,9 @@ final class BookViewController: UIViewController, SetupView {
     private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.text = "aaasdasdqweasdxcxcvxc"
+        textView.text = "aaa\ns\nd\na\nsdq\nwea\nsd\nxcx\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc\ncvxc"
+        textView.textColor = Assets.Colors.reverseDark
+        textView.font = Assets.font(50)
         return textView
     }()
     override func loadView() {
@@ -19,7 +21,7 @@ final class BookViewController: UIViewController, SetupView {
         setup()
     }
     func setupView() {
-        view.backgroundColor = .blue
+        view.backgroundColor = Assets.Colors.whiteBlack
         view.addSubview(textView)
     }
     func setupConstraints() {
