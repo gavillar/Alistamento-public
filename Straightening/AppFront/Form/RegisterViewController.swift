@@ -4,7 +4,6 @@
 //
 //  Created by Josicleison Elves on 23/08/1401 AP.
 //
-
 import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
@@ -13,7 +12,7 @@ class RegisterViewController: UIViewController, SetupView {
         let pickerView = UIPickerView()
         pickerView.dataSource = self
         pickerView.delegate = self
-        pickerView.backgroundColor = .white
+        pickerView.backgroundColor = .blue
         return (view: pickerView, options: [])
     }()
     lazy var textField: UITextField = {
@@ -40,6 +39,13 @@ class RegisterViewController: UIViewController, SetupView {
         setupView()
         setupConstraints()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !textField.isUserInteractionEnabled && !button.translatesAutoresizingMaskIntoConstraints {
+            showPickerView(height: view.frame.height*0.3)
+        } else {
+            hidePickerView()
+        }
+    }
 // MARK: - functions
     func setupPickerView(_ options: [String]) {
         picker.options = options
@@ -50,16 +56,30 @@ class RegisterViewController: UIViewController, SetupView {
                                                   y: view.frame.maxY),
                                   size: CGSize(width: view.frame.width,
                                                height: 0))
+        showPickerView(height: view.frame.height*0.3)
+    }
+    func showPickerView(height: CGFloat, duration: CGFloat = 0.5) {
         button.translatesAutoresizingMaskIntoConstraints = true
         button.frame = CGRect(origin: CGPoint(x: view.frame.minX,
                                               y: view.frame.maxY-view.frame.height*0.05),
                               size: CGSize(width: view.frame.width,
                                            height: view.frame.height*0.05))
-        let pickerViewHeight = view.frame.height*0.3
-        UIView.animate(withDuration: 0.5) {
-            self.picker.view.frame.origin.y -= pickerViewHeight
-            self.button.frame.origin.y -= pickerViewHeight
-            self.picker.view.frame.size.height = pickerViewHeight
+        UIView.animate(withDuration: duration) {
+            self.picker.view.frame.origin.y -= height
+            self.button.frame.origin.y -= height
+            self.picker.view.frame.size.height = height
+        }
+    }
+    func hidePickerView(duration: CGFloat = 0.5) {
+        let safeArea = self.view.safeAreaInsets
+        if button.translatesAutoresizingMaskIntoConstraints {
+            UIView.animate(withDuration: duration) {
+                self.picker.view.frame.origin.y = self.view.frame.maxY
+                self.button.frame.origin.y = self.view.frame.maxY-self.view.frame.height*0.05-safeArea.bottom
+                self.picker.view.frame.size.height = 0
+            } completion: {_ in
+                self.button.translatesAutoresizingMaskIntoConstraints = false
+            }
         }
     }
     func setupView() {
