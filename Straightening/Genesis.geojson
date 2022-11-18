@@ -1,0 +1,646 @@
+{
+   "chapters":[
+      {
+         "book":{
+            "abbrev":{
+               "pt":"gn",
+               "en":"gn"
+            },
+            "name":"Gênesis",
+            "author":"Moisés",
+            "group":"Pentateuco",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":1,
+            "verses":31
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"No princípio Deus criou os céus e a terra."
+            },
+            {
+               "number":2,
+               "text":"Era a terra sem forma e vazia; trevas cobriam a face do abismo, e o Espírito de Deus se movia sobre a face das águas."
+            },
+            {
+               "number":3,
+               "text":"Disse Deus: \"Haja luz\", e houve luz."
+            },
+            {
+               "number":4,
+               "text":"Deus viu que a luz era boa, e separou a luz das trevas."
+            },
+            {
+               "number":5,
+               "text":"Deus chamou à luz dia, e às trevas chamou noite. Passaram-se a tarde e a manhã; esse foi o primeiro dia."
+            },
+            {
+               "number":6,
+               "text":"Depois disse Deus: \"Haja entre as águas um firmamento que separe águas de águas\"."
+            },
+            {
+               "number":7,
+               "text":"Então Deus fez o firmamento e separou as águas que estavam embaixo do firmamento das que estavam por cima. E assim foi."
+            },
+            {
+               "number":8,
+               "text":"Ao firmamento Deus chamou céu. Passaram-se a tarde e a manhã; esse foi o segundo dia."
+            },
+            {
+               "number":9,
+               "text":"E disse Deus: \"Ajuntem-se num só lugar as águas que estão debaixo do céu, e apareça a parte seca\". E assim foi."
+            },
+            {
+               "number":10,
+               "text":"À parte seca Deus chamou terra, e chamou mares ao conjunto das águas. E Deus viu que ficou bom."
+            },
+            {
+               "number":11,
+               "text":"Então disse Deus: \"Cubra-se a terra de vegetação: plantas que dêem sementes e árvores cujos frutos produzam sementes de acordo com as suas espécies\". E assim foi."
+            },
+            {
+               "number":12,
+               "text":"A terra fez brotar a vegetação: plantas que dão sementes de acordo com as suas espécies, e árvores cujos frutos produzem sementes de acordo com as suas espécies. E Deus viu que ficou bom."
+            },
+            {
+               "number":13,
+               "text":"Passaram-se a tarde e a manhã; esse foi o terceiro dia."
+            },
+            {
+               "number":14,
+               "text":"Disse Deus: \"Haja luminares no firmamento do céu para separar o dia da noite. Sirvam eles de sinais para marcar estações, dias e anos,"
+            },
+            {
+               "number":15,
+               "text":"e sirvam de luminares no firmamento do céu para iluminar a terra\". E assim foi."
+            },
+            {
+               "number":16,
+               "text":"Deus fez os dois grandes luminares: o maior para governar o dia e o menor para governar a noite; fez também as estrelas."
+            },
+            {
+               "number":17,
+               "text":"Deus os colocou no firmamento do céu para iluminar a terra,"
+            },
+            {
+               "number":18,
+               "text":"governar o dia e a noite, e separar a luz das trevas. E Deus viu que ficou bom."
+            },
+            {
+               "number":19,
+               "text":"Passaram-se a tarde e a manhã; esse foi o quarto dia."
+            },
+            {
+               "number":20,
+               "text":"Disse também Deus: \"Encham-se as águas de seres vivos, e sobre a terra voem aves sob o firmamento do céu\"."
+            },
+            {
+               "number":21,
+               "text":"Assim Deus criou os grandes animais aquáticos e os demais seres vivos que povoam as águas, de acordo com as suas espécies; e todas as aves, de acordo com as suas espécies. E Deus viu que ficou bom."
+            },
+            {
+               "number":22,
+               "text":"Então Deus os abençoou, dizendo: \"Sejam férteis e multipliquem-se! Encham as águas dos mares! E multipliquem-se as aves na terra\"."
+            },
+            {
+               "number":23,
+               "text":"Passaram-se a tarde e a manhã; esse foi o quinto dia."
+            },
+            {
+               "number":24,
+               "text":"E disse Deus: \"Produza a terra seres vivos de acordo com as suas espécies: rebanhos domésticos, animais selvagens e os demais seres vivos da terra, cada um de acordo com a sua espécie\". E assim foi."
+            },
+            {
+               "number":25,
+               "text":"Deus fez os animais selvagens de acordo com as suas espécies, os rebanhos domésticos de acordo com as suas espécies, e os demais seres vivos da terra de acordo com as suas espécies. E Deus viu que ficou bom."
+            },
+            {
+               "number":26,
+               "text":"Então disse Deus: \"Façamos o homem à nossa imagem, conforme a nossa semelhança. Domine ele sobre os peixes do mar, sobre as aves do céu, sobre os animais grandes de toda a terra e sobre todos os pequenos animais que se movem rente ao chão\"."
+            },
+            {
+               "number":27,
+               "text":"Criou Deus o homem à sua imagem, à imagem de Deus o criou; homem e mulher os criou."
+            },
+            {
+               "number":28,
+               "text":"Deus os abençoou, e lhes disse: \"Sejam férteis e multipliquem-se! Encham e subjuguem a terra! Dominem sobre os peixes do mar, sobre as aves do céu e sobre todos os animais que se movem pela terra\"."
+            },
+            {
+               "number":29,
+               "text":"Disse Deus: \"Eis que lhes dou todas as plantas que nascem em toda a terra e produzem sementes, e todas as árvores que dão frutos com sementes. Elas servirão de alimento para vocês."
+            },
+            {
+               "number":30,
+               "text":"E dou todos os vegetais como alimento a tudo o que tem em si fôlego de vida: a todos os grandes animais da terra, a todas as aves do céu e a todas as criaturas que se movem rente ao chão\". E assim foi."
+            },
+            {
+               "number":31,
+               "text":"E Deus viu tudo o que havia feito, e tudo havia ficado muito bom. Passaram-se a tarde e a manhã; esse foi o sexto dia."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"gn",
+               "en":"gn"
+            },
+            "name":"Gênesis",
+            "author":"Moisés",
+            "group":"Pentateuco",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":2,
+            "verses":25
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Assim foram concluídos os céus e a terra, e tudo o que neles há."
+            },
+            {
+               "number":2,
+               "text":"No sétimo dia Deus já havia concluído a obra que realizara, e nesse dia descansou."
+            },
+            {
+               "number":3,
+               "text":"Abençoou Deus o sétimo dia e o santificou, porque nele descansou de toda a obra que realizara na criação."
+            },
+            {
+               "number":4,
+               "text":"Esta é a história das origens dos céus e da terra, no tempo em que foram criados: Quando o Senhor Deus fez a terra e os céus,"
+            },
+            {
+               "number":5,
+               "text":"ainda não tinha brotado nenhum arbusto no campo, e nenhuma planta havia germinado, porque o Senhor Deus ainda não tinha feito chover sobre a terra, e também não havia homem para cultivar o solo."
+            },
+            {
+               "number":6,
+               "text":"Todavia brotava água da terra e irrigava toda a superfície do solo."
+            },
+            {
+               "number":7,
+               "text":"Então o Senhor Deus formou o homem do pó da terra e soprou em suas narinas o fôlego de vida, e o homem se tornou um ser vivente."
+            },
+            {
+               "number":8,
+               "text":"Ora, o Senhor Deus tinha plantado um jardim no Éden, para os lados do leste; e ali colocou o homem que formara."
+            },
+            {
+               "number":9,
+               "text":"O Senhor Deus fez nascer então do solo todo tipo de árvores agradáveis aos olhos e boas para alimento. E no meio do jardim estavam a árvore da vida e a árvore do conhecimento do bem e do mal."
+            },
+            {
+               "number":10,
+               "text":"No Éden nascia um rio que irrigava o jardim, e depois se dividia em quatro."
+            },
+            {
+               "number":11,
+               "text":"O nome do primeiro é Pisom. Ele percorre toda a terra de Havilá, onde existe ouro."
+            },
+            {
+               "number":12,
+               "text":"O ouro daquela terra é excelente; lá também existem o bdélio e a pedra de ônix."
+            },
+            {
+               "number":13,
+               "text":"O segundo, que percorre toda a terra de Cuxe, é o Giom."
+            },
+            {
+               "number":14,
+               "text":"O terceiro, que corre pelo lado leste da Assíria, é o Tigre. E o quarto rio é o Eufrates."
+            },
+            {
+               "number":15,
+               "text":"O Senhor Deus colocou o homem no jardim do Éden para cuidar dele e cultivá-lo."
+            },
+            {
+               "number":16,
+               "text":"E o Senhor Deus ordenou ao homem: \"Coma livremente de qualquer árvore do jardim,"
+            },
+            {
+               "number":17,
+               "text":"mas não coma da árvore do conhecimento do bem e do mal, porque no dia em que dela comer, certamente você morrerá\"."
+            },
+            {
+               "number":18,
+               "text":"Então o Senhor Deus declarou: \"Não é bom que o homem esteja só; farei para ele alguém que o auxilie e lhe corresponda\"."
+            },
+            {
+               "number":19,
+               "text":"Depois que formou da terra todos os animais do campo e todas as aves do céu, o Senhor Deus os trouxe ao homem para ver como este lhes chamaria; e o nome que o homem desse a cada ser vivo, esse seria o seu nome."
+            },
+            {
+               "number":20,
+               "text":"Assim o homem deu nomes a todos os rebanhos domésticos, às aves do céu e a todos os animais selvagens. Todavia não se encontrou para o homem alguém que o auxiliasse e lhe correspondesse."
+            },
+            {
+               "number":21,
+               "text":"Então o Senhor Deus fez o homem cair em profundo sono e, enquanto este dormia, tirou-lhe uma das costelas, fechando o lugar com carne."
+            },
+            {
+               "number":22,
+               "text":"Com a costela que havia tirado do homem, o Senhor Deus fez uma mulher e a trouxe a ele."
+            },
+            {
+               "number":23,
+               "text":"Disse então o homem: \"Esta, sim, é osso dos meus ossos e carne da minha carne! Ela será chamada mulher, porque do homem foi tirada\"."
+            },
+            {
+               "number":24,
+               "text":"Por essa razão, o homem deixará pai e mãe e se unirá à sua mulher, e eles se tornarão uma só carne."
+            },
+            {
+               "number":25,
+               "text":"O homem e sua mulher viviam nus, e não sentiam vergonha."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"gn",
+               "en":"gn"
+            },
+            "name":"Gênesis",
+            "author":"Moisés",
+            "group":"Pentateuco",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":3,
+            "verses":24
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Ora, a serpente era o mais astuto de todos os animais selvagens que o Senhor Deus tinha feito. E ela perguntou à mulher: \"Foi isto mesmo que Deus disse: ‘Não comam de nenhum fruto das árvores do jardim’? \""
+            },
+            {
+               "number":2,
+               "text":"Respondeu a mulher à serpente: \"Podemos comer do fruto das árvores do jardim,"
+            },
+            {
+               "number":3,
+               "text":"mas Deus disse: ‘Não comam do fruto da árvore que está no meio do jardim, nem toquem nele; do contrário vocês morrerão’ \"."
+            },
+            {
+               "number":4,
+               "text":"Disse a serpente à mulher: \"Certamente não morrerão!"
+            },
+            {
+               "number":5,
+               "text":"Deus sabe que, no dia em que dele comerem, seus olhos se abrirão, e vocês serão como Deus, conhecedores do bem e do mal\"."
+            },
+            {
+               "number":6,
+               "text":"Quando a mulher viu que a árvore parecia agradável ao paladar, era atraente aos olhos e, além disso, desejável para dela se obter discernimento, tomou do seu fruto, comeu-o e o deu a seu marido, que comeu também."
+            },
+            {
+               "number":7,
+               "text":"Os olhos dos dois se abriram, e perceberam que estavam nus; então juntaram folhas de figueira para cobrir-se."
+            },
+            {
+               "number":8,
+               "text":"Ouvindo o homem e sua mulher os passos do Senhor Deus que andava pelo jardim quando soprava a brisa do dia, esconderam-se da presença do Senhor Deus entre as árvores do jardim."
+            },
+            {
+               "number":9,
+               "text":"Mas o Senhor Deus chamou o homem, perguntando: \"Onde está você? \""
+            },
+            {
+               "number":10,
+               "text":"E ele respondeu: \"Ouvi teus passos no jardim e fiquei com medo, porque estava nu; por isso me escondi\"."
+            },
+            {
+               "number":11,
+               "text":"E Deus perguntou: \"Quem lhe disse que você estava nu? Você comeu do fruto da árvore da qual lhe proibi comer? \""
+            },
+            {
+               "number":12,
+               "text":"Disse o homem: \"Foi a mulher que me deste por companheira que me deu do fruto da árvore, e eu comi\"."
+            },
+            {
+               "number":13,
+               "text":"O Senhor Deus perguntou então à mulher: \"Que foi que você fez? \" Respondeu a mulher: \"A serpente me enganou, e eu comi\"."
+            },
+            {
+               "number":14,
+               "text":"Então o Senhor Deus declarou à serpente: \"Já que você fez isso, maldita é você entre todos os rebanhos domésticos e entre todos os animais selvagens! Sobre o seu ventre você rastejará, e pó comerá todos os dias da sua vida."
+            },
+            {
+               "number":15,
+               "text":"Porei inimizade entre você e a mulher, entre a sua descendência e o descendente dela; este lhe ferirá a cabeça, e você lhe ferirá o calcanhar\"."
+            },
+            {
+               "number":16,
+               "text":"À mulher, ele declarou: \"Multiplicarei grandemente o seu sofrimento na gravidez; com sofrimento você dará à luz filhos. Seu desejo será para o seu marido, e ele a dominará\"."
+            },
+            {
+               "number":17,
+               "text":"E ao homem declarou: \"Visto que você deu ouvidos à sua mulher e comeu do fruto da árvore da qual eu lhe ordenara que não comesse, maldita é a terra por sua causa; com sofrimento você se alimentará dela todos os dias da sua vida."
+            },
+            {
+               "number":18,
+               "text":"Ela lhe dará espinhos e ervas daninhas, e você terá que alimentar-se das plantas do campo."
+            },
+            {
+               "number":19,
+               "text":"Com o suor do seu rosto você comerá o seu pão, até que volte à terra, visto que dela foi tirado; porque você é pó e ao pó voltará\"."
+            },
+            {
+               "number":20,
+               "text":"Adão deu à sua mulher o nome de Eva, pois ela seria mãe de toda a humanidade."
+            },
+            {
+               "number":21,
+               "text":"O Senhor Deus fez roupas de pele e com elas vestiu Adão e sua mulher."
+            },
+            {
+               "number":22,
+               "text":"Então disse o Senhor Deus: \"Agora o homem se tornou como um de nós, conhecendo o bem e o mal. Não se deve, pois, permitir que ele também tome do fruto da árvore da vida e o coma, e viva para sempre\"."
+            },
+            {
+               "number":23,
+               "text":"Por isso o Senhor Deus o mandou embora do jardim do Éden para cultivar o solo do qual fora tirado."
+            },
+            {
+               "number":24,
+               "text":"Depois de expulsar o homem, colocou a leste do jardim do Éden querubins e uma espada flamejante que se movia, guardando o caminho para a árvore da vida."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"gn",
+               "en":"gn"
+            },
+            "name":"Gênesis",
+            "author":"Moisés",
+            "group":"Pentateuco",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":4,
+            "verses":26
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Adão teve relações com Eva, sua mulher, e ela engravidou e deu à luz Caim. Disse ela: \"Com o auxílio do Senhor tive um filho homem\"."
+            },
+            {
+               "number":2,
+               "text":"Voltou a dar à luz, desta vez a Abel, irmão dele. Abel tornou-se pastor de ovelhas, e Caim, agricultor."
+            },
+            {
+               "number":3,
+               "text":"Passado algum tempo, Caim trouxe do fruto da terra uma oferta ao Senhor."
+            },
+            {
+               "number":4,
+               "text":"Abel, por sua vez, trouxe as partes gordas das primeiras crias do seu rebanho. O Senhor aceitou com agrado Abel e sua oferta,"
+            },
+            {
+               "number":5,
+               "text":"mas não aceitou Caim e sua oferta. Por isso Caim se enfureceu e o seu rosto se transtornou."
+            },
+            {
+               "number":6,
+               "text":"O Senhor disse a Caim: \"Por que você está furioso? Por que se transtornou o seu rosto?"
+            },
+            {
+               "number":7,
+               "text":"Se você fizer o bem, não será aceito? Mas se não o fizer, saiba que o pecado o ameaça à porta; ele deseja conquistá-lo, mas você deve dominá-lo\"."
+            },
+            {
+               "number":8,
+               "text":"Disse, porém, Caim a seu irmão Abel: \"Vamos para o campo\". Quando estavam lá, Caim atacou seu irmão Abel e o matou."
+            },
+            {
+               "number":9,
+               "text":"Então o Senhor perguntou a Caim: \"Onde está seu irmão Abel? \" Respondeu ele: \"Não sei; sou eu o responsável por meu irmão? \""
+            },
+            {
+               "number":10,
+               "text":"Disse o Senhor: \"O que foi que você fez? Escute! Da terra o sangue do seu irmão está clamando."
+            },
+            {
+               "number":11,
+               "text":"Agora amaldiçoado é você pela terra, que abriu a boca para receber da sua mão o sangue do seu irmão."
+            },
+            {
+               "number":12,
+               "text":"Quando você cultivar a terra, esta não lhe dará mais da sua força. Você será um fugitivo errante pelo mundo\"."
+            },
+            {
+               "number":13,
+               "text":"Disse Caim ao Senhor: \"Meu castigo é maior do que posso suportar."
+            },
+            {
+               "number":14,
+               "text":"Hoje me expulsas desta terra, e terei que me esconder da tua face; serei um fugitivo errante pelo mundo, e qualquer que me encontrar me matará\"."
+            },
+            {
+               "number":15,
+               "text":"Mas o Senhor lhe respondeu: \"Não será assim; se alguém matar Caim, sofrerá sete vezes a vingança\". E o Senhor colocou em Caim um sinal, para que ninguém que viesse a encontrá-lo o matasse."
+            },
+            {
+               "number":16,
+               "text":"Então Caim afastou-se da presença do Senhor e foi viver na terra de Node, a leste do Éden."
+            },
+            {
+               "number":17,
+               "text":"Caim teve relações com sua mulher, e ela engravidou e deu à luz Enoque. Depois Caim fundou uma cidade, à qual deu o nome do seu filho Enoque."
+            },
+            {
+               "number":18,
+               "text":"A Enoque nasceu-lhe Irade, Irade gerou a Meujael, Meujael a Metusael, e Metusael a Lameque."
+            },
+            {
+               "number":19,
+               "text":"Lameque tomou duas mulheres: uma chamava-se Ada e a outra, Zilá."
+            },
+            {
+               "number":20,
+               "text":"Ada deu à luz Jabal, que foi o pai daqueles que moram em tendas e criam rebanhos."
+            },
+            {
+               "number":21,
+               "text":"O nome do irmão dele era Jubal, que foi o pai de todos os que tocam harpa e flauta."
+            },
+            {
+               "number":22,
+               "text":"Zilá também deu à luz um filho, Tubalcaim, que fabricava todo tipo de ferramentas de bronze e de ferro. Tubalcaim teve uma irmã chamada Naamá."
+            },
+            {
+               "number":23,
+               "text":"Disse Lameque às suas mulheres: \"Ada e Zilá, ouçam-me; mulheres de Lameque, escutem minhas palavras: Eu matei um homem porque me feriu, e um menino, porque me machucou."
+            },
+            {
+               "number":24,
+               "text":"Se Caim é vingado sete vezes, Lameque o será setenta e sete\"."
+            },
+            {
+               "number":25,
+               "text":"Novamente Adão teve relações com sua mulher, e ela deu à luz outro filho, a quem chamou Sete, dizendo: \"Deus me concedeu um filho no lugar de Abel, visto que Caim o matou\"."
+            },
+            {
+               "number":26,
+               "text":"Também a Sete nasceu um filho, a quem deu o nome de Enos. Nessa época começou-se a invocar o nome do Senhor."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"gn",
+               "en":"gn"
+            },
+            "name":"Gênesis",
+            "author":"Moisés",
+            "group":"Pentateuco",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":5,
+            "verses":32
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Este é o registro da descendência de Adão: Quando Deus criou o homem, à semelhança de Deus o fez;"
+            },
+            {
+               "number":2,
+               "text":"homem e mulher os criou. Quando foram criados, ele os abençoou e os chamou Homem."
+            },
+            {
+               "number":3,
+               "text":"Aos 130 anos, Adão gerou um filho à sua semelhança, conforme a sua imagem; e deu-lhe o nome de Sete."
+            },
+            {
+               "number":4,
+               "text":"Depois que gerou Sete, Adão viveu 800 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":5,
+               "text":"Viveu ao todo 930 anos e morreu."
+            },
+            {
+               "number":6,
+               "text":"Aos 105 anos, Sete gerou Enos."
+            },
+            {
+               "number":7,
+               "text":"Depois que gerou Enos, Sete viveu 807 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":8,
+               "text":"Viveu ao todo 912 anos e morreu."
+            },
+            {
+               "number":9,
+               "text":"Aos 90 anos, Enos gerou Cainã."
+            },
+            {
+               "number":10,
+               "text":"Depois que gerou Cainã, Enos viveu 815 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":11,
+               "text":"Viveu ao todo 905 anos e morreu."
+            },
+            {
+               "number":12,
+               "text":"Aos 70 anos, Cainã gerou Maalaleel."
+            },
+            {
+               "number":13,
+               "text":"Depois que gerou Maalaleel, Cainã viveu 840 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":14,
+               "text":"Viveu ao todo 910 anos e morreu."
+            },
+            {
+               "number":15,
+               "text":"Aos 65 anos, Maalaleel gerou Jarede."
+            },
+            {
+               "number":16,
+               "text":"Depois que gerou Jarede, Maalaleel viveu 830 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":17,
+               "text":"Viveu ao todo 895 anos e morreu."
+            },
+            {
+               "number":18,
+               "text":"Aos 162 anos, Jarede gerou Enoque."
+            },
+            {
+               "number":19,
+               "text":"Depois que gerou Enoque, Jarede viveu 800 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":20,
+               "text":"Viveu ao todo 962 anos e morreu."
+            },
+            {
+               "number":21,
+               "text":"Aos 65 anos, Enoque gerou Matusalém."
+            },
+            {
+               "number":22,
+               "text":"Depois que gerou Matusalém, Enoque andou com Deus 300 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":23,
+               "text":"Viveu ao todo 365 anos."
+            },
+            {
+               "number":24,
+               "text":"Enoque andou com Deus; e já não foi encontrado, pois Deus o havia arrebatado."
+            },
+            {
+               "number":25,
+               "text":"Aos 187 anos, Matusalém gerou Lameque."
+            },
+            {
+               "number":26,
+               "text":"Depois que gerou Lameque, Matusalém viveu 782 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":27,
+               "text":"Viveu ao todo 969 anos e morreu."
+            },
+            {
+               "number":28,
+               "text":"Aos 182 anos, Lameque gerou um filho."
+            },
+            {
+               "number":29,
+               "text":"Deu-lhe o nome de Noé e disse: \"Ele nos aliviará do nosso trabalho e do sofrimento de nossas mãos, causados pela terra que o SENHOR amaldiçoou\"."
+            },
+            {
+               "number":30,
+               "text":"Depois que Noé nasceu, Lameque viveu 595 anos e gerou outros filhos e filhas."
+            },
+            {
+               "number":31,
+               "text":"Viveu ao todo 777 anos e morreu."
+            },
+            {
+               "number":32,
+               "text":"Aos 500 anos, Noé tinha gerado Sem, Cam e Jafé."
+            }
+         ]
+      }
+   ]
+}
