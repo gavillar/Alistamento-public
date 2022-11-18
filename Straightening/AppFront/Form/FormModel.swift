@@ -6,17 +6,16 @@
 //
 
 import Foundation
-import UIKit
 
 struct Cep: Codable {
-    var cep: String?
-    var logradouro: String?
-    var complemento: String?
-    var bairro: String?
-    var localidade: String?
-    var uf: String?
-    var ibge: Int?
-    var gia: Int?
-    var ddd: Int?
-    var siafi: Int?
+    let cep: String?
+    let logradouro: String?
+    let complemento: String?
+    let bairro: String?
+    let localidade: String?
+    let uf: String?
+    let ibge: String?
+    let gia: String?
+    let ddd: String?
+    let siafi: String?
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
+		1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
 		1D942CD7291D65A60018CC82 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD6291D65A60018CC82 /* Assets.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
+		1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
 		1D942CD6291D65A60018CC82 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
@@ -235,9 +237,10 @@
 				277CC215291D692500BA2BCC /* UIStackView+Hierarchy.swift */,
 				1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */,
 				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
+				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
+				1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */,
 				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
 				27665C812927055100F80344 /* UiStackView+HStack.swift */,
-				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
 				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
 			);
 			path = Extensions;
@@ -577,6 +580,7 @@
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				27E712BC29266B3C00009AEF /* FormModel.swift in Sources */,
 				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
+				1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */,
 				27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */,
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,

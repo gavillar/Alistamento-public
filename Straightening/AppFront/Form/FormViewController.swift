@@ -40,46 +40,22 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
         
         
     }()
-
-    //MARK: - viewDidLoad
+// MARK: - viewDidLoad
     override func viewDidLoad() {
         view.backgroundColor = .white
         setupView()
         setupConstraints()
         formviewmodel.sendCepDelegate = self
-        
-        getBooks()
-        
-    
-      
-    }
-
-func getBooks() {
-    
-    guard let url = URL(string: "viacep.com.br/ws/06220060/json/") else {return}
-   
-    URLSession.shared.dataTask(with: url) { (data, response, error) in
-        if error == nil {
-            print("not nil")
+        Task {
+            guard let data = await Network.call(from: "https://viacep.com.br/ws/59122017/json/") else {return}
+            guard let cep = Network.decode(Cep.self, from: data) else {return}
+            self.labelTest.text = cep.cep
         }
-            guard let data = data else {return}
-            
-            let result = try? JSONDecoder().decode(Cep.self, from: data)
-        print("status 200")
-        print(result as Any)
-    }.resume()
-}
-    //MARK: - setupView
+    }
+// MARK: - setupView
     func setupView() {
-        let gradient = CAGradientLayer()
-
-        gradient.frame = view.bounds
-        gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any]
-
-        view.layer.insertSublayer(gradient, at: 0)
-        view.addSubviews([verticalStack,registerButton])
+        view.defaultBackground()
+        view.addSubviews([verticalStack, registerButton])
         setupVerticalStackView()
         hideKeyboardWhenTappedAround()
     }
