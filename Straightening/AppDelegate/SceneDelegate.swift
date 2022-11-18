@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(windowScene: windowScene)
-        let navigationController = UINavigationController(rootViewController: IntroViewController())
+        let navigationController = UINavigationController(rootViewController: FormViewController())
         navigationController.navigationBar.tintColor = .white
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

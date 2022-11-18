@@ -23,6 +23,9 @@
 		1DDA4E032922E7A900B9C70F /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4E022922E7A900B9C70F /* BookDetail.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* view+Hierarchy.swift */; };
+		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
+		27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C812927055100F80344 /* UiStackView+HStack.swift */; };
+		27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */; };
 		2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA3F291BEF4600760A35 /* AppDelegate.swift */; };
 		2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA41291BEF4600760A35 /* SceneDelegate.swift */; };
 		2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA43291BEF4600760A35 /* LoginViewController.swift */; };
@@ -47,6 +50,8 @@
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
 		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
+		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
+		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,9 @@
 		1DDA4E022922E7A900B9C70F /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* view+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "view+Hierarchy.swift"; sourceTree = "<group>"; };
+		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
+		27665C812927055100F80344 /* UiStackView+HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+HStack.swift"; sourceTree = "<group>"; };
+		27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+ConstrainsFunc.swift"; sourceTree = "<group>"; };
 		2770EA3C291BEF4600760A35 /* Straightening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Straightening.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2770EA3F291BEF4600760A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2770EA41291BEF4600760A35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +119,8 @@
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
+		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +226,9 @@
 				277CC215291D692500BA2BCC /* uiStackView+Hierarchy.swift */,
 				1DF21B12291C196200A85B05 /* view+Hierarchy.swift */,
 				27E3A6F429251E75007CDF8A /* uiViewController+HiddenKeyboard.swift */,
+				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
+				27665C812927055100F80344 /* UiStackView+HStack.swift */,
+				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,14 +296,10 @@
 		2770EA7B291C1F3700760A35 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
-				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
-				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
-				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
-				1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */,
-				1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */,
-				1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */,
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
+				27E712BB29266B3C00009AEF /* FormModel.swift */,
+				27E712B929266B2B00009AEF /* FormViewModel.swift */,
+				27E712B829266AF600009AEF /* Register */,
 				279E0559292196DD00A6E008 /* MinisteryPickerView */,
 				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
 			);
@@ -354,6 +363,20 @@
 				27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */,
 			);
 			path = Books;
+			sourceTree = "<group>";
+		};
+		27E712B829266AF600009AEF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
+				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
+				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
+				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
+				1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */,
+				1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */,
+				1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,8 +549,10 @@
 				1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */,
 				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
 				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
+				27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
+				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				1DF21B13291C196200A85B05 /* view+Hierarchy.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */,
@@ -541,6 +566,9 @@
 				1DDA4E012922E50600B9C70F /* Book.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
+				27E712BC29266B3C00009AEF /* FormModel.swift in Sources */,
+				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
+				27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */,
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
