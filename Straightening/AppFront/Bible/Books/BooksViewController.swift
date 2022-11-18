@@ -83,7 +83,7 @@ class BooksViewController: UIViewController{
             
             
             booksviewmodel.booksviewmodeldelegate = self
-            booksviewmodel.getBooks { Books in
+            booksviewmodel.getBooks { books in
                 DispatchQueue.main.sync {
                     print("show")
                 }
@@ -120,7 +120,7 @@ class BooksViewController: UIViewController{
 extension BooksViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+            navigationController?.pushViewController(BookViewController(), animated: true)
         }
         
         
@@ -131,12 +131,12 @@ extension BooksViewController: UICollectionViewDelegate, UICollectionViewDataSou
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "booksCollectionCell", for: indexPath)
-            as! BooksCollectionCell
+            as? BooksCollectionCell
             
             DispatchQueue.main.async {
-                cell.showData(data: self.booksviewmodel.booksData[indexPath.row])
+                cell?.showData(data: self.booksviewmodel.booksData[indexPath.row])
             }
-            return cell
+            return cell ?? UICollectionViewCell()
         }
     }
     

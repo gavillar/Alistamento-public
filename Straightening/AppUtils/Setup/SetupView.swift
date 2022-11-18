@@ -8,4 +8,12 @@
 protocol SetupView {
     func setupView()
     func setupConstraints()
+    func setup()
+}
+
+extension SetupView {
+    func setup() {
+        setupView()
+        setupConstraints()
+    }
 }
