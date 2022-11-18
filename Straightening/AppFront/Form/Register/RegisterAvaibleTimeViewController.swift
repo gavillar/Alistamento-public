@@ -15,17 +15,5 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-    }
-// MARK: - objc functions
-    @objc func buttonTarget() {
-        pop(to: LoginViewController.self)
-    }
-    func pop<T: UIViewController>(to viewController: T.Type) {
-        guard let viewControllers = navigationController?.viewControllers else {return}
-        for viewController in viewControllers where ((viewController as? T) != nil) {
-            self.navigationController?.popToViewController(viewController,
-                                                           animated: true)
-        }
     }
 }
