@@ -76,17 +76,15 @@ class LoginViewController: UIViewController, SetupView {
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
                                                               titleColor: .red) {_ in
-        self.navigationController?.pushViewController(BooksViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: BooksViewController())
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
                                                       backgroundColor: Assets.Colors.weakWhite) {_ in
-        self.navigationController?.pushViewController(RegisterNameViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: RegisterNameViewController())
     }
     private lazy var logInButton = Create.baseButton("ENTRAR",
                                                      backgroundColor: Assets.Colors.weakWhite) {_ in
-        self.navigationController?.pushViewController(FormViewController(), animated: true)
+        self.navigationController?.navigate(to: FormViewController())
     }
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

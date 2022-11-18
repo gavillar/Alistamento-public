@@ -30,7 +30,6 @@ class RegisterMinisteryViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.pushViewController(RegisterBirthDateViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: RegisterBirthDateViewController())
     }
 }

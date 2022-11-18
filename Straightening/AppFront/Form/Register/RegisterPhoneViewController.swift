@@ -20,7 +20,6 @@ final class RegisterPhoneViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.pushViewController(RegisterEmailViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: RegisterEmailViewController())
     }
 }

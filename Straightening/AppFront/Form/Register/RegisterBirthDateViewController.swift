@@ -19,7 +19,6 @@ final class RegisterBirthDateViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.pushViewController(RegisterAvaibleTimeViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
     }
 }
