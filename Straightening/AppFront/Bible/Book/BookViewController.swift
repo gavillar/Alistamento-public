@@ -31,16 +31,6 @@ final class BookViewController: UIViewController, SetupView {
         let bookViewModel = BookViewModel()
         bookViewModel.delegate = self
         bookViewModel.updateLabel()
-//        Task {[weak self] in
-//            guard let data = await Network.call(
-//                from: "https://www.abibliadigital.com.br/api/verses/nvi/gn/1"
-//            ) else {return}
-//            guard let verses = Network.decode(Bible.self, from: data)?.verses else {return}
-//            self?.text.label.text?.append("\(verses.first?.number ?? 0): \(verses.first?.text ?? "")\n")
-//            for counter in 1...verses.count - 1 {
-//                self?.text.label.text?.append("\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
-//            }
-//        }
     }
     func setupView() {
         view.backgroundColor = Assets.Colors.whiteBlack

@@ -8,6 +8,10 @@
 import Foundation
 
 struct Bible: Codable {
+    let chapters: [Article]
+}
+
+struct Article: Codable {
     struct Book: Codable {
         let abbrev: Abbrev?
         let name, author, group, version: String?
