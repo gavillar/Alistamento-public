@@ -11,6 +11,7 @@ import UIKit
 class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
     func sendApiCep(cep: Cep) {
         streetLabel.text = cep.logradouro
+        print(cep)
     }
     
     
@@ -30,16 +31,44 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
                                                                   backgroundColor: Assets.Colors.lightGreen)
        
 
+    private lazy var labelTest: UILabel = {
+       let label = UILabel()
+        label.text = "teste"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+        
+        
+    }()
 
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         view.backgroundColor = .white
-        self.tabBarItem.title = "teste"
         setupView()
         setupConstraints()
         formviewmodel.sendCepDelegate = self
+        
+        getBooks()
+        
+    
       
     }
+
+func getBooks() {
+    
+    guard let url = URL(string: "viacep.com.br/ws/06220060/json/") else {return}
+   
+    URLSession.shared.dataTask(with: url) { (data, response, error) in
+        if error == nil {
+            print("not nil")
+        }
+            guard let data = data else {return}
+            
+            let result = try? JSONDecoder().decode(Cep.self, from: data)
+        print("status 200")
+        print(result as Any)
+    }.resume()
+}
     //MARK: - setupView
     func setupView() {
         let gradient = CAGradientLayer()
@@ -59,7 +88,8 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
                                                 streetLabel,
                                              numberTextField,
                                              districtLabel,
-                                             locationLabel)
+                                             locationLabel,
+                                                labelTest)
         verticalStack.enableAutolayout()
         verticalStack.centerX(in: view)
         verticalStack.centerY(in: view)
@@ -67,6 +97,9 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
     //MARK: - setupConstraints
     func setupConstraints() {
         NSLayoutConstraint.activate([
+            
+            labelTest.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            labelTest.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             registerButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
