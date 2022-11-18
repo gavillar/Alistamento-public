@@ -92,6 +92,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: controlCollection.cellIdentifier,
                                                       for: indexPath)
         let label = Create.label("\(indexPath.row + 1)", font: UIFont.systemFont(ofSize: 20, weight: .bold))
+        label.backgroundColor = Assets.Colors.whiteBlack
         cell.contentView.addSubview(label)
         cell.contentView.addConstraints([
             label.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
