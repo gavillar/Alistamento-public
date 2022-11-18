@@ -40,7 +40,8 @@ final class BookViewController: UIViewController, SetupView {
         controlCollectionView.showsHorizontalScrollIndicator = false
         return (view: controlCollectionView, cellIdentifier: identifier)
     }()
-    deinit {
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         controlCollection.view.removeFromSuperview()
     }
     override func loadView() {
