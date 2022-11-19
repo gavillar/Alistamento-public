@@ -8,7 +8,7 @@
 import UIKit
 
 final class BooksViewController: UIViewController {
-    let booksviewmodel = BooksViewModel()
+    private let booksviewmodel = BooksViewModel()
     private var collectionView: UICollectionView?
 // MARK: - prefersStatusBarHidden
     override var prefersStatusBarHidden: Bool {
@@ -81,7 +81,7 @@ final class BooksViewController: UIViewController {
 }
 extension BooksViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(BookViewController(), animated: true)
+        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)), animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.booksviewmodel.count

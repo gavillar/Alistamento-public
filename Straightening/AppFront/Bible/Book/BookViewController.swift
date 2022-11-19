@@ -8,7 +8,14 @@
 import UIKit
 
 final class BookViewController: UIViewController, SetupView {
-    let bookViewModel = BookViewModel()
+    private let bookViewModel: BookViewModel
+    init(_ booksElements: BooksElements) {
+        self.bookViewModel = BookViewModel(booksElements)
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     private lazy var text: (label: UILabel, scroll: UIScrollView) = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +49,7 @@ final class BookViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
+        title = bookViewModel.title
         bookViewModel.delegate = self
         bookViewModel.updateBook()
         bookViewModel.updateLabel()
@@ -96,7 +104,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: navigationController?.navigationBar.frame.height ?? 0,
-                      height: navigationController?.navigationBar.frame.height ?? 0)
+        return CGSize(width: collectionView.frame.height,
+                      height: collectionView.frame.height)
     }
 }

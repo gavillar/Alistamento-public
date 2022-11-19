@@ -13,15 +13,21 @@ protocol BookViewModelDelegate: AnyObject {
 
 final class BookViewModel {
     weak var delegate: BookViewModelDelegate?
-    var book: Bible? = nil
+    private var bible: (book: Bible?, details: BooksElements)?
+    init(_ booksElements: BooksElements) {
+        self.bible = (book: nil, details: booksElements)
+    }
     var chapters: Int {
-        return book?.chapters.count ?? 0
+        return bible?.book?.chapters.count ?? 0
+    }
+    var title: String {
+        return bible?.details.name ?? ""
     }
     func updateBook() {
-        self.book = Network.read(Bible.self, from: "Genesis")
+        self.bible?.book = Network.read(Bible.self, from: "Genesis")
     }
     func updateLabel(_ chapter: Int = 0) {
-        guard let verses = book?.chapters[chapter].verses else {return}
+        guard let verses = bible?.book?.chapters[chapter].verses else {return}
         delegate?.updateLabel(text: "\(verses.first?.number ?? 0): \(verses.first?.text ?? "")\n")
         for counter in 1...verses.count - 1 {
             delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")

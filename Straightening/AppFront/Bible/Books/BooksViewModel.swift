@@ -20,6 +20,9 @@ final class BooksViewModel {
     var count: Int {
         return self.booksData.count
     }
+    lazy var book = {(index: Int) -> BooksElements in
+        return self.booksData[index]
+    }
     func getBooks() {
         Task {
             guard let data = await Network.call(from: "https://www.abibliadigital.com.br/api/books") else {return}
