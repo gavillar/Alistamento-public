@@ -24,7 +24,8 @@ final class BookViewModel {
         return bible?.details.name ?? ""
     }
     func updateBook() {
-        self.bible?.book = Network.read(Bible.self, from: "Genesis")
+        let name = self.bible?.details.name ?? ""
+        self.bible?.book = Network.read(Bible.self, from: name)
     }
     func updateLabel(_ chapter: Int = 0) {
         guard let verses = bible?.book?.chapters[chapter].verses else {return}

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
-		1D6122CA29281C1C005AA5CA /* Genesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D6122C929281C1C005AA5CA /* Genesis.geojson */; };
+		1D6122CA29281C1C005AA5CA /* Gênesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D6122C929281C1C005AA5CA /* Gênesis.geojson */; };
 		1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
@@ -79,7 +79,7 @@
 /* Begin PBXFileReference section */
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
-		1D6122C929281C1C005AA5CA /* Genesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Genesis.geojson; sourceTree = "<group>"; };
+		1D6122C929281C1C005AA5CA /* Gênesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gênesis.geojson"; sourceTree = "<group>"; };
 		1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
-				1D6122C929281C1C005AA5CA /* Genesis.geojson */,
+				1D6122C929281C1C005AA5CA /* Gênesis.geojson */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
 			);
@@ -505,7 +505,7 @@
 			files = (
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
-				1D6122CA29281C1C005AA5CA /* Genesis.geojson in Resources */,
+				1D6122CA29281C1C005AA5CA /* Gênesis.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
