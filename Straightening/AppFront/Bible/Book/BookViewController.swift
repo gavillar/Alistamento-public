@@ -92,6 +92,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
                                                       for: indexPath)
         let label = Create.label("\(indexPath.row + 1)", font: UIFont.systemFont(ofSize: 20, weight: .bold))
         label.backgroundColor = Assets.Colors.whiteBlack
+        label.textColor = Assets.Colors.reverseDark
         cell.contentView.addSubview(label)
         cell.contentView.addConstraints([
             label.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
