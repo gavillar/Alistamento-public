@@ -82,20 +82,6 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         text.label.text = ""
         bookViewModel.updateLabel(indexPath.row)
-        for cell in collectionView.visibleCells {
-            guard let label = cell.contentView.subviews.first as? UILabel else {return}
-            if cell.isSelected {
-                UIView.animate(withDuration: 0.3) {
-                    label.backgroundColor = Assets.Colors.reverseDark
-                    label.textColor = Assets.Colors.whiteBlack
-                }
-            } else {
-                UIView.animate(withDuration: 0.3) {
-                    label.backgroundColor = Assets.Colors.whiteBlack
-                    label.textColor = Assets.Colors.reverseDark
-                }
-            }
-        }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookViewModel.chapters
