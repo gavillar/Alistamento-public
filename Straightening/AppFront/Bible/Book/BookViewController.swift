@@ -8,7 +8,6 @@
 import UIKit
 
 final class BookViewController: UIViewController, SetupView {
-    
     let bookViewModel = BookViewModel()
     private lazy var text: (label: UILabel, scroll: UIScrollView) = {
         let label = UILabel()
@@ -27,23 +26,19 @@ final class BookViewController: UIViewController, SetupView {
         ])
         return (label: label, scroll: scroll)
     }()
-    private lazy var controlCollection: (view: UICollectionView, cellIdentifier: String) = {
+    private lazy var collection: (view: UICollectionView, cellIdentifier: String) = {
         let identifier = "Cell"
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let controlCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        controlCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        controlCollectionView.delegate = self
-        controlCollectionView.dataSource = self
-        controlCollectionView.backgroundColor = Assets.Colors.whiteBlack
-        controlCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
-        controlCollectionView.showsHorizontalScrollIndicator = false
-        return (view: controlCollectionView, cellIdentifier: identifier)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = Assets.Colors.whiteBlack
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.showsHorizontalScrollIndicator = false
+        return (view: collectionView, cellIdentifier: identifier)
     }()
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        controlCollection.view.removeFromSuperview()
-    }
     override func loadView() {
         super.loadView()
         setup()
@@ -53,23 +48,19 @@ final class BookViewController: UIViewController, SetupView {
     }
     func setupView() {
         view.backgroundColor = Assets.Colors.whiteBlack
-        view.addSubview(text.scroll)
-        navigationController?.navigationBar.addSubview(controlCollection.view)
+        view.addSubviews([collection.view, text.scroll])
     }
     func setupConstraints() {
         view.addConstraints([
-            text.scroll.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collection.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collection.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collection.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            collection.view.heightAnchor.constraint(equalToConstant: view.frame.width*0.1),
+            text.scroll.topAnchor.constraint(equalTo: collection.view.bottomAnchor),
             text.scroll.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             text.scroll.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             text.scroll.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-        guard let navigationBar = navigationController?.navigationBar else {return}
-        [
-            controlCollection.view.topAnchor.constraint(equalTo: navigationBar.topAnchor),
-            controlCollection.view.trailingAnchor.constraint(equalTo: navigationBar.trailingAnchor),
-            controlCollection.view.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor),
-            controlCollection.view.widthAnchor.constraint(equalToConstant: navigationBar.frame.width*0.5)
-        ].forEach {$0.isActive = true}
     }
 }
 extension BookViewController: BookViewModelDelegate {
@@ -89,7 +80,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: controlCollection.cellIdentifier,
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collection.cellIdentifier,
                                                       for: indexPath)
         let label = Create.label("\(indexPath.row + 1)", font: UIFont.systemFont(ofSize: 20, weight: .bold))
         label.backgroundColor = Assets.Colors.whiteBlack
