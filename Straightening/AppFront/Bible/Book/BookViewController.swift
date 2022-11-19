@@ -42,7 +42,7 @@ final class BookViewController: UIViewController, SetupView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = Assets.Colors.whiteBlack
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: identifier)
+        collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         collectionView.showsHorizontalScrollIndicator = false
         return (view: collectionView, cellIdentifier: identifier)
     }()
@@ -89,18 +89,12 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collection.cellIdentifier,
-                                                      for: indexPath)
-        let label = Create.label("\(indexPath.row + 1)", font: UIFont.systemFont(ofSize: 20, weight: .bold))
-        label.backgroundColor = Assets.Colors.whiteBlack
-        label.textColor = Assets.Colors.reverseDark
-        cell.contentView.addSubview(label)
-        cell.contentView.addConstraints([
-            label.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-            label.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-            label.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor)
-        ])
-        return cell
+                                                      for: indexPath) as? BookCollectionViewCell
+        cell?.label.text = "\(indexPath.row + 1)"
+        if indexPath.row == 0 {
+            cell?.isSelected = true
+        }
+        return cell ?? UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
