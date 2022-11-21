@@ -13,11 +13,11 @@ protocol BookViewModelDelegate: AnyObject {
 
 final class BookViewModel {
     weak var delegate: BookViewModelDelegate?
-    var selectedCell: Int = 0
     private var bible: (book: Bible?, details: BooksElements)?
     init(_ booksElements: BooksElements) {
         self.bible = (book: nil, details: booksElements)
     }
+    var chapter: Int = 0
     var chapters: Int {
         return bible?.book?.chapters.count ?? 0
     }
@@ -34,6 +34,6 @@ final class BookViewModel {
         for counter in 1...verses.count - 1 {
             delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
         }
-        selectedCell = chapter
+        self.chapter = chapter
     }
 }
