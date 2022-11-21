@@ -91,7 +91,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collection.cellIdentifier,
                                                       for: indexPath) as? BookCollectionViewCell
         cell?.label.text = "\(indexPath.row + 1)"
-        if indexPath.row == 0 {
+        if indexPath.row == bookViewModel.selectedCell {
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
         }
         return cell ?? UICollectionViewCell()
