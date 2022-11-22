@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
+class FormViewController: UIViewController, SetupView {
     func sendApiCep(cep: Cep) {
         streetLabel.text = cep.logradouro
         print(cep)
@@ -36,7 +36,7 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
         view.backgroundColor = .white
         setupView()
         setupConstraints()
-        formviewmodel.sendCepDelegate = self
+        
        
     }
 // MARK: - setupView
