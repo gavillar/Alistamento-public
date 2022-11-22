@@ -47,7 +47,7 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
         setupConstraints()
         formviewmodel.sendCepDelegate = self
         Task {
-            guard let data = await Network.call(from: "https://viacep.com.br/ws/59122017/json/") else {return}
+            guard let data = await Network.call(from: Network.EndPoints.cep) else {return}
             guard let cep = Network.decode(Cep.self, from: data) else {return}
             self.labelTest.text = cep.cep
         }
