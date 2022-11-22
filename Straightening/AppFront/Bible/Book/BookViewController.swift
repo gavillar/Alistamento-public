@@ -12,6 +12,9 @@ final class BookViewController: UIViewController, SetupView {
     init(_ booksElements: BooksElements) {
         self.bookViewModel = BookViewModel(booksElements)
         super.init(nibName: nil, bundle: nil)
+        bookViewModel.delegate = self
+        bookViewModel.updateBook()
+        bookViewModel.updateLabel()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -50,9 +53,6 @@ final class BookViewController: UIViewController, SetupView {
         super.loadView()
         setup()
         title = bookViewModel.title
-        bookViewModel.delegate = self
-        bookViewModel.updateBook()
-        bookViewModel.updateLabel()
     }
     func setupView() {
         view.backgroundColor = Assets.Colors.whiteBlack
@@ -82,6 +82,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         text.label.text = ""
         bookViewModel.updateLabel(indexPath.row)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookViewModel.chapters

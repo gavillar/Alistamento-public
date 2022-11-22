@@ -8,9 +8,13 @@
 import Foundation
 
 struct Network {
-    static func call(from url: String?) async -> Data? {
+    enum EndPoints {
+        static var books: URL? {return URL(string: "https://www.abibliadigital.com.br/api/books")}
+        static var cep: URL? {return URL(string: "https://viacep.com.br/ws/59122017/json/")}
+    }
+    static func call(from url: URL?) async -> Data? {
 
-        guard let url = URL(string: url ?? "") else {print("ERROR: Wrong url"); return nil}
+        guard let url = url else {print("ERROR: Wrong url"); return nil}
 
         do {
             let (data, response) = try await URLSession.shared.data(from: url)

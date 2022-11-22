@@ -25,7 +25,7 @@ final class BooksViewModel {
     }
     func getBooks() {
         Task {
-            guard let data = await Network.call(from: "https://www.abibliadigital.com.br/api/books") else {return}
+            guard let data = await Network.call(from: Network.EndPoints.books) else {return}
             guard let books = Network.decode(Books.self, from: data) else {return}
             booksviewmodeldelegate?.sendBooksQuantity(data: books)
         }

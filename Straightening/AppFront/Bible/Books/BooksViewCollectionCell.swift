@@ -11,7 +11,7 @@ final class BooksCollectionCell: UICollectionViewCell {
     static let identifier = "booksCollectionCell"
     var booksviewmodel = BooksViewModel()
     lazy var groupLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.textColor = .white
         label.text = "Group"
         label.font = UIFont.boldSystemFont(ofSize: 14)
@@ -20,7 +20,7 @@ final class BooksCollectionCell: UICollectionViewCell {
        return label
     }()
     lazy var testamentLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.numberOfLines = 0
@@ -38,9 +38,8 @@ final class BooksCollectionCell: UICollectionViewCell {
     }()
     lazy var imageBook: UIImageView = {
         let image = UIImageView()
-         image.image = UIImage(named: "biblia")
+        image.image = Assets.Images.bible
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .lightGray
         return image
     }()
     lazy var authorLabel: UILabel = {
@@ -52,13 +51,12 @@ final class BooksCollectionCell: UICollectionViewCell {
         label.backgroundColor = .black
         label.layer.cornerRadius = 5
         label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor(cgColor: CGColor(red: 218/255, green: 165/255,
-                                                           blue: 32/255, alpha: 1)).cgColor
-       return label
+        label.layer.borderColor = Assets.Colors.border
+        return label
     }()
     lazy var titleBook: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = Assets.Colors.reverseDark
         label.text = "Name"
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.numberOfLines = 0
@@ -68,12 +66,8 @@ final class BooksCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.clipsToBounds = true
-        contentView.addSubview(titleBook)
-        contentView.addSubview(imageBook)
-        contentView.addSubview(groupLabel)
-        contentView.addSubview(testamentLabel)
-        contentView.addSubview(chaptersLabel)
-        contentView.addSubview(authorLabel)
+        contentView.addSubviews([titleBook, imageBook, groupLabel,
+                                 testamentLabel, chaptersLabel, authorLabel])
         setupConstrains()
     }
     required init?(coder: NSCoder) {
