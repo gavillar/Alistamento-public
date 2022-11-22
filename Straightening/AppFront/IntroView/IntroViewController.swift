@@ -12,13 +12,10 @@ class IntroViewController: UIViewController, SetupView {
     let booksviewcontroller = BooksViewController()
     private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
                                                              backgroundColor: Assets.Colors.green) {_ in
-//            self.navigationController?.pushViewController(self.loginviewcontroller, animated: true)
-//        self.navigationController?.pushViewController(self.loginviewcontroller, animated: true)
         self.navigationController?.navigate(to: self.loginviewcontroller)
     }
     private lazy var bibleButton = Create.baseButton("Biblía Sagrada", titleColor: .black,
                                                      backgroundColor: Assets.Colors.green) {_ in
-//            self.navigationController?.pushViewController(self.booksviewcontroller, animated: true)
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
     private lazy var verseLabel = Create.label("Versículo do dia.", font: nil)

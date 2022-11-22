@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BooksViewController: UIViewController {
+final class BooksViewController: UIViewController, SetupView {
     private let booksviewmodel = BooksViewModel()
     private var collectionView: UICollectionView?
 // MARK: - prefersStatusBarHidden
@@ -19,7 +19,7 @@ final class BooksViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Bíblia Digital"
-        label.textColor = .white
+        label.textColor = Assets.Colors.reverseDark
         label.textAlignment = .left
         label.font = UIFont.boldSystemFont(ofSize: 40)
         return label
@@ -48,7 +48,7 @@ final class BooksViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.frame = view.bounds
-        collectionView.backgroundColor = UIColor(red: 51.0/255.0, green: 51.0/255.0, blue: 51.0/255.0, alpha: 1)
+        collectionView.backgroundColor = Assets.Colors.weakWhiteBlack
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.topAnchor.constraint(equalTo: popularMoviesLabel.bottomAnchor, constant: 20).isActive = true
@@ -62,17 +62,18 @@ final class BooksViewController: UIViewController {
         super.loadView()
         self.view.backgroundColor = UIColor(red: 31.0/255.0, green: 31.0/255.0, blue: 31.0/255.0, alpha: 1.00)
         setupView()
-        setupConstrains()
+        setupConstraints()
         moviesCollection()
         booksviewmodel.booksviewmodeldelegate = self
         booksviewmodel.getBooks()
     }
 // MARK: - setupView
     func setupView() {
+        view.backgroundColor = Assets.Colors.whiteBlack
         view.addSubview(popularMoviesLabel)
     }
-// MARK: - setupConstrains
-    func setupConstrains() {
+// MARK: - setupConstraints
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             popularMoviesLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             popularMoviesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
