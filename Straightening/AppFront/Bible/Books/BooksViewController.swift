@@ -10,9 +10,7 @@ import UIKit
 final class BooksViewController: UIViewController, SetupView {
     private let booksviewmodel = BooksViewModel()
 // MARK: - prefersStatusBarHidden
-    override var prefersStatusBarHidden: Bool {
-        false
-    }
+    override var prefersStatusBarHidden: Bool {false}
 // MARK: - backgroundViewCollection
     private lazy var backgroundViewCollection: UIView = {
         let view = UIView()
@@ -36,12 +34,19 @@ final class BooksViewController: UIViewController, SetupView {
         collectionView.backgroundColor = Assets.Colors.weakWhiteBlack
         return collectionView
     }()
+// MARK: - init
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        booksviewmodel.booksviewmodeldelegate = self
+        booksviewmodel.getBooks()
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 // MARK: - loadView
     override func loadView() {
         super.loadView()
         setup()
-        booksviewmodel.booksviewmodeldelegate = self
-        booksviewmodel.getBooks()
     }
 // MARK: - setupView
     func setupView() {
