@@ -10,7 +10,9 @@ import Foundation
 struct Network {
     enum EndPoints {
         static var books: URL? {return URL(string: "https://www.abibliadigital.com.br/api/books")}
-        static var cep: URL? {return URL(string: "https://viacep.com.br/ws/59122017/json/")}
+        static var cep: URL? {
+            get {
+            return URL(string: "https://viacep.com.br/ws/59122017/json/")}}
         static let cepInformation = {(cep: String? ) -> URL? in
             return URL(string: "https://viacep.com.br/ws/\(cep ?? "")/json/")
         }

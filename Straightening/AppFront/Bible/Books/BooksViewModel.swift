@@ -18,7 +18,9 @@ final class BooksViewModel {
     var books: BooksElements?
 // MARK: - count
     var count: Int {
-        return self.booksData.count
+        get {
+            return self.booksData.count
+        }
     }
     lazy var book = {(index: Int) -> BooksElements in
         return self.booksData[index]
