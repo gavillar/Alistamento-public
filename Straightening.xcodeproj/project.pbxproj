@@ -26,7 +26,6 @@
 		1DA4456E2927B2A5001E137C /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4456D2927B2A5001E137C /* BookViewModel.swift */; };
 		1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DA45EE32929181D00BB5870 /* Gênesis.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
-		1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
@@ -97,7 +96,6 @@
 		1DA4456D2927B2A5001E137C /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		1DA45EE32929181D00BB5870 /* Gênesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gênesis.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewController.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			children = (
 				1D7A2DFB2926A2CC00F9907D /* Book */,
 				27E3A6F62925263F007CDF8A /* Books */,
-				1DDA4DFD2922E43800B9C70F /* BibleViewController.swift */,
 			);
 			path = Bible;
 			sourceTree = "<group>";
@@ -559,7 +556,6 @@
 				1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
-				1DDA4DFE2922E43800B9C70F /* BibleViewController.swift in Sources */,
 				1DA4456C2927B029001E137C /* BookModel.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */,
