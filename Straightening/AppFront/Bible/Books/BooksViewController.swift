@@ -48,7 +48,6 @@ final class BooksViewController: UIViewController, SetupView {
         title = "Bíblia Digital"
         view.backgroundColor = Assets.Colors.whiteBlack
         view.addSubview(collectionView)
-        
     }
 // MARK: - setupConstraints
     func setupConstraints() {
