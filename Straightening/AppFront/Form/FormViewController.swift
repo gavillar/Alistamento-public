@@ -16,13 +16,14 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
     
     
 // MARK: - var and let
+    private let formviewmodel = FormViewModel()
     private var verticalStack = VStack()
     let streetLabel = Create.label("streetLabel", font: nil)
     let districtLabel = Create.label("districtLabel", font: nil)
     let locationLabel = Create.label("locationLabel", font: nil)
     let cepTextField = Create.textField(textColor: UIColor.white, placeholder: "Cep", for: nil, handler: nil)
     let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
-    private let formviewmodel = FormViewModel()
+
     
 
     //MARK: - registerButton
@@ -30,27 +31,13 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
                                                                   titleColor: Assets.Colors.brown,
                                                                   backgroundColor: Assets.Colors.lightGreen)
        
-
-    private lazy var labelTest: UILabel = {
-       let label = UILabel()
-        label.text = "teste"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-        
-        
-    }()
 // MARK: - viewDidLoad
     override func viewDidLoad() {
         view.backgroundColor = .white
         setupView()
         setupConstraints()
         formviewmodel.sendCepDelegate = self
-        Task {
-            guard let data = await Network.call(from: "https://viacep.com.br/ws/59122017/json/") else {return}
-            guard let cep = Network.decode(Cep.self, from: data) else {return}
-            self.labelTest.text = cep.cep
-        }
+       
     }
 // MARK: - setupView
     func setupView() {
@@ -58,14 +45,33 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
         view.addSubviews([verticalStack, registerButton])
         setupVerticalStackView()
         hideKeyboardWhenTappedAround()
+        setupRequest()
+    }
+    func getApiCep() {
+        Task {
+            guard let cepString = cepTextField.text else {return}
+            guard let data = await Network.call(from: "https://viacep.com.br/ws/\(cepString)/json/") else {return}
+            guard let cep = Network.decode(Cep.self, from: data) else {return}
+            streetLabel.text = cep.logradouro
+            locationLabel.text = cep.localidade
+            districtLabel.text = cep.bairro
+        }
+    }
+    func setupRequest() {
+        cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
+    }
+    @objc func tapCepTextField(sender: UITextField) {
+        if validateCep(sender.text ?? "") {
+            getApiCep()
+        }
     }
     func setupVerticalStackView() {
         verticalStack.addArrangedSubviewList(views: cepTextField,
                                                 streetLabel,
                                              numberTextField,
                                              districtLabel,
-                                             locationLabel,
-                                                labelTest)
+                                             locationLabel
+                                                )
         verticalStack.enableAutolayout()
         verticalStack.centerX(in: view)
         verticalStack.centerY(in: view)
@@ -74,9 +80,7 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
     func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            labelTest.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            labelTest.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            
+        
             registerButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             registerButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),

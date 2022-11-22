@@ -51,6 +51,7 @@
 		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* UIStackView+Border.swift */; };
+		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */; };
 		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
@@ -126,6 +127,7 @@
 		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* UIStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
+		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HiddenKeyboard.swift"; sourceTree = "<group>"; };
 		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
 				27665C812927055100F80344 /* UiStackView+HStack.swift */,
 				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
+				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
+				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
