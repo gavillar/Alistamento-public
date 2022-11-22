@@ -16,12 +16,15 @@ extension Create {
         return label
     }
     static func label(_ text: String? = nil,
-                      font: UIFont? = Assets.font(50)) -> UILabel {
+                      font: UIFont? = Assets.font(50),
+                      alignment: NSTextAlignment = .center,
+                      numberOfLines: Int = 0) -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
-        label.textColor = .white
-        label.textAlignment = .center
+        label.textColor = Assets.Colors.reverseDark
+        label.textAlignment = alignment
+        label.numberOfLines = numberOfLines
         label.font = font
         return label
     }

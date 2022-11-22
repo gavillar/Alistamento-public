@@ -17,7 +17,6 @@ struct BooksElements: Codable {
     let results: [BooksElements]?
 }
 
-
 // MARK: - Abbrev
 struct Abbrev: Codable {
     let pt, en: String?
@@ -29,4 +28,3 @@ enum Testament: String, Codable {
 }
 
 typealias Books = [BooksElements]
-

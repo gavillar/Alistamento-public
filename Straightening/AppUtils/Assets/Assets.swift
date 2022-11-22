@@ -11,6 +11,9 @@ struct Assets {
     static func font(_ size: CGFloat = 20, weight: UIFont.Weight = .bold) -> UIFont? {
         return UIFont(name: "Snell Roundhand", size: size)
     }
+    struct Images {
+        static let bible = UIImage(named: "biblia")
+    }
     struct Colors {
         static let background = UIColor(named: "background")
         static let blue = UIColor(named: "blue")
@@ -26,6 +29,7 @@ struct Assets {
         static let pink = UIColor(named: "pink")
         static let reverseDark = UIColor(named: "reverseDark")
         static let sand = UIColor(named: "sand")
+        static let weakWhiteBlack = UIColor(named: "weakWhiteBlack")
         static let whiteBlack = UIColor(named: "whiteBlack")
         static let weakWhite = UIColor(white: 1, alpha: 0.05)
     }

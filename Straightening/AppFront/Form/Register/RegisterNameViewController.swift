@@ -1,5 +1,5 @@
 //
-//  RegisterPhoneViewController.swift
+//  ComoEuFariaViewController.swift
 //  Straightening
 //
 //  Created by Josicleison Elves on 23/08/1401 AP.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class RegisterPhoneViewController: RegisterViewController {
+final class RegisterNameViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        textField.attributedPlaceholder = NSAttributedString(string: "Telefone",
+        textField.attributedPlaceholder = NSAttributedString(string: "Nome Completo",
                                                              attributes: [
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
@@ -20,7 +20,6 @@ final class RegisterPhoneViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.pushViewController(RegisterEmailViewController(),
-                                                      animated: true)
+        self.navigationController?.navigate(to: RegisterPhoneViewController())
     }
 }
