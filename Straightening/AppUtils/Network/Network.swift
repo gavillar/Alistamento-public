@@ -11,7 +11,11 @@ struct Network {
     enum EndPoints {
         static var books: URL? {return URL(string: "https://www.abibliadigital.com.br/api/books")}
         static var cep: URL? {return URL(string: "https://viacep.com.br/ws/59122017/json/")}
+        static let cepInformation = {(cep: String? ) -> URL? in
+            return URL(string: "https://viacep.com.br/ws/\(cep ?? "")/json/")
+        }
     }
+    
     static func call(from url: URL?) async -> Data? {
 
         guard let url = url else {print("ERROR: Wrong url"); return nil}

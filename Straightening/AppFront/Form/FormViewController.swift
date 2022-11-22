@@ -49,8 +49,7 @@ class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
     }
     func getApiCep() {
         Task {
-            guard let cepString = cepTextField.text else {return}
-            guard let data = await Network.call(from: "https://viacep.com.br/ws/\(cepString)/json/") else {return}
+            guard let data = await Network.call(from: Network.EndPoints.cepInformation(cepTextField.text)) else {return}
             guard let cep = Network.decode(Cep.self, from: data) else {return}
             streetLabel.text = cep.logradouro
             locationLabel.text = cep.localidade
