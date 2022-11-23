@@ -72,6 +72,9 @@ final class BookViewController: UIViewController, SetupView {
     }
 }
 extension BookViewController: BookViewModelDelegate {
+    func unfreezeCollection() {
+        collection.view.isUserInteractionEnabled = true
+    }
     func updateLabel(text: String) {
         Task {[weak self] in
             self?.text.label.text?.append(text)
@@ -80,6 +83,7 @@ extension BookViewController: BookViewModelDelegate {
 }
 extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.isUserInteractionEnabled = false
         text.label.text = ""
         bookViewModel.updateLabel(indexPath.row)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
