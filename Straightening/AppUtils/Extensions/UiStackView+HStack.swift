@@ -8,18 +8,17 @@
 import Foundation
 import UIKit
 
-
 class HStack: VStack {
 
-        override init(spacing: CGFloat = 16,
-                              distribution: UIStackView.Distribution = .fill,
-                      alignment: UIStackView.Alignment = .fill) {
+    override init(spacing: CGFloat = 16,
+                  distribution: UIStackView.Distribution = .fill,
+                  alignment: UIStackView.Alignment = .fill,
+                  addArrangedSubviews views: [UIView]) {
 
         super.init(spacing: spacing, distribution: distribution,
-                                        alignment: alignment)
+                   alignment: alignment, addArrangedSubviews: views)
         axis = .horizontal
     }
-    
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
