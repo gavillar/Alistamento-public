@@ -13,11 +13,9 @@ protocol FormViewModelProtocol {
 }
 
 class FormViewModel {
-    
 // MARK: - var and let 
     var formViewModelDelegate: FormViewModelProtocol?
     var cep: String = ""
-    
 // MARK: - getApiCep
         func getApiCep() {
             Task {
