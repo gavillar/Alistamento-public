@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
+class FormViewController: UIViewController, SetupView, UITextFieldDelegate {
+    
     
     
 // MARK: - var and let
@@ -17,7 +18,7 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
     let streetLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
     let districtLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
     let locationLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
-    let cepTextField = Create.textField(textColor: nil, placeholder: "Cep", for: nil, keyboard: .numberPad, handler: nil)
+    let cepTextField = BindingCepTextField()
     let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
 
     //MARK: - registerButton
@@ -29,17 +30,9 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
     override func viewDidLoad() {
         view.backgroundColor = .white
         setup()
+        formviewmodel.formViewModelDelegate = self
     }
-// MARK: - getApiCep
-    func getApiCep() {
-        Task {
-            guard let data = await Network.call(from: Network.EndPoints.cepInformation(cepTextField.text)) else {return}
-            guard let cep = Network.decode(Cep.self, from: data) else {return}
-            streetLabel.text = cep.logradouro
-            locationLabel.text = cep.localidade
-            districtLabel.text = cep.bairro
-        }
-    }
+
 // MARK: - setupVerticalStackView
     func setupVerticalStackView() {
         verticalStack.addArrangedSubviewList(views: cepTextField,
@@ -55,10 +48,14 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
         verticalStack.centerX(in: view)
     }
 // MARK: - setupRequest
-        func setupRequest() {
+        func setupCepTextField() {
+            cepTextField.bind { [weak self] text in
+                self?.formviewmodel.cep = text
+            }
             cepTextField.becomeFirstResponder()
             cepTextField.delegate = self
             cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
+            cepTextField.attributedPlaceholder = NSAttributedString(string: "Cep", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -70,7 +67,7 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
 // MARK: - tapCepTextField
         @objc func tapCepTextField(sender: UITextField) {
             if validateCep(sender.text ?? "") {
-                getApiCep()
+                formviewmodel.getApiCep()
                 streetLabel.isHidden = false
                 districtLabel.isHidden = false
                 locationLabel.isHidden = false
@@ -83,7 +80,7 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
             view.addSubviews([verticalStack, registerButton])
             setupVerticalStackView()
             hideKeyboardWhenTappedAround()
-            setupRequest()
+            setupCepTextField()
         }
 //MARK: - setupConstraints
     func setupConstraints() {
@@ -97,3 +94,14 @@ class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
     }
 }
 
+extension FormViewController: FormViewModelProtocol {
+    func sendCep(cep: Cep) {
+        Task {
+            streetLabel.text = cep.logradouro
+            districtLabel.text = cep.bairro
+            locationLabel.text = cep.localidade
+        }
+    }
+    
+    
+}
