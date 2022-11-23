@@ -8,23 +8,29 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
-    lazy var picker: (view: UIPickerView, options: [String]) = {
+    private lazy var picker: (view: UIPickerView, options: [String]) = {
         let pickerView = UIPickerView()
         pickerView.dataSource = self
         pickerView.delegate = self
         pickerView.backgroundColor = Assets.Colors.whiteBlack
         return (view: pickerView, options: [])
     }()
+    private lazy var baseView: UIView = {
+        let stackView = UIStackView(arrangedSubviews: [textField])
+        stackView.setUnderlineBorder()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        let baseView = UIView()
+        baseView.translatesAutoresizingMaskIntoConstraints = false
+        baseView.addSubview(stackView)
+        stackView.widthAnchor.constraint(equalTo: baseView.widthAnchor, multiplier: 0.85).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: baseView.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
+        return baseView
+    }()
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.addTarget(self, action: #selector(textFieldTarget), for: .editingChanged)
         return textField
-    }()
-    lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [textField])
-        stackView.setUnderlineBorder()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
     }()
     lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                         backgroundColor: Assets.Colors.weakWhite)
@@ -48,13 +54,14 @@ class RegisterViewController: UIViewController, SetupView {
     }
 // MARK: - Setup
     func setupView() {
-        view.addSubviews([stackView, button])
+        view.addSubviews([baseView, button])
     }
     func setupConstraints() {
         view.addConstraints([
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            baseView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            baseView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            baseView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            baseView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
