@@ -35,8 +35,10 @@ class FormViewController: UIViewController, SetupView {
     let cepTextField = BindingTextField()
     let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
 // MARK: - registerButton
-    private lazy var registerButton = Create.baseButton("Enviar", titleColor: Assets.Colors.brown,
-                                                        backgroundColor: Assets.Colors.weakWhite)
+    private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
+                                                        backgroundColor: Assets.Colors.weakWhite) {_ in
+        self.navigationController?.navigate(to: LoginViewController())
+    }
 // MARK: - viewDidLoad
     override func loadView() {
         super.loadView()

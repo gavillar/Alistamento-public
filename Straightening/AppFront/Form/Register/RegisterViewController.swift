@@ -26,16 +26,12 @@ class RegisterViewController: UIViewController, SetupView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    lazy var button = Create.baseButton("ENTRAR", backgroundColor: Assets.Colors.weakWhite)
+    lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
+                                        backgroundColor: Assets.Colors.weakWhite)
 // MARK: - override functions
     override func loadView() {
         super.loadView()
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any,
-                           Assets.Colors.darkGreen?.cgColor as Any]
-        view.layer.insertSublayer(gradient, at: 0)
+        view.defaultBackground()
         setupView()
         setupConstraints()
     }

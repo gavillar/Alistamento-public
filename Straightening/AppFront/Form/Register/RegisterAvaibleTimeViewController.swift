@@ -15,5 +15,9 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
+        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+    }
+    @objc func buttonTarget() {
+        self.navigationController?.navigate(to: FormViewController())
     }
 }

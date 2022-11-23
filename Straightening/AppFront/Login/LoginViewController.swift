@@ -114,12 +114,7 @@ class LoginViewController: UIViewController, SetupView {
     }
 // MARK: - functions
     func setupView() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any,
-                           Assets.Colors.darkGreen?.cgColor as Any]
-        view.layer.insertSublayer(gradient, at: 0)
+        view.defaultBackground()
         view.addSubviews([scrollView,
                           forgotPasswordButton,
                           signInButton,
