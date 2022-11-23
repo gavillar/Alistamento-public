@@ -15,10 +15,21 @@ final class RegisterBirthDateViewController: RegisterViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
+        textField.delegate = self
+        setupPickerView(["Pastoral", "Missões", "Família", "Discipulado", "Serviço", "Adoração"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
         self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
+    }
+}
+
+extension RegisterBirthDateViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= 0
     }
 }

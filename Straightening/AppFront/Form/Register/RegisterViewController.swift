@@ -69,6 +69,7 @@ class RegisterViewController: UIViewController, SetupView {
         toolBar.sizeToFit()
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
+        doneButton.tintColor = Assets.Colors.brown
         toolBar.setItems([spaceButton, doneButton], animated: false)
         textField.inputAccessoryView = toolBar
     }
