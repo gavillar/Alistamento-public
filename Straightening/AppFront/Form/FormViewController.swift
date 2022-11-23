@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FormViewController: UIViewController, SetupView {
+class FormViewController: UIViewController, SetupView, UITextFieldDelegate{
     
     
 // MARK: - var and let
@@ -57,8 +57,16 @@ class FormViewController: UIViewController, SetupView {
 // MARK: - setupRequest
         func setupRequest() {
             cepTextField.becomeFirstResponder()
+            cepTextField.delegate = self
             cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
         }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let max = 8
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= max
+    }
 // MARK: - tapCepTextField
         @objc func tapCepTextField(sender: UITextField) {
             if validateCep(sender.text ?? "") {
@@ -88,3 +96,4 @@ class FormViewController: UIViewController, SetupView {
         ])
     }
 }
+
