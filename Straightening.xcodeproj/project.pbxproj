@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
+		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
 		1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
+		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
 				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
 				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
+				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
 			);
@@ -524,6 +527,7 @@
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
+				1D635314292E99560052705D /* Levítico.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
