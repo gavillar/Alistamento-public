@@ -8,13 +8,6 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
-    private lazy var picker: (view: UIPickerView, options: [String]) = {
-        let pickerView = UIPickerView()
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        pickerView.backgroundColor = Assets.Colors.whiteBlack
-        return (view: pickerView, options: [])
-    }()
     private lazy var baseView: UIView = {
         let stackView = UIStackView(arrangedSubviews: [textField])
         stackView.setUnderlineBorder()
@@ -26,6 +19,13 @@ class RegisterViewController: UIViewController, SetupView {
         stackView.centerXAnchor.constraint(equalTo: baseView.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
         return baseView
+    }()
+    lazy var picker: (view: UIPickerView, options: [String]) = {
+        let pickerView = UIPickerView()
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.backgroundColor = Assets.Colors.whiteBlack
+        return (view: pickerView, options: [])
     }()
     lazy var textField: UITextField = {
         let textField = UITextField()
@@ -42,15 +42,7 @@ class RegisterViewController: UIViewController, SetupView {
         setupConstraints()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if !textField.isUserInteractionEnabled && !button.translatesAutoresizingMaskIntoConstraints {
-            showPickerView(height: view.frame.height*0.3)
-        } else {
-            hidePickerView()
-        }
-    }
-    override func viewWillTransition(to size: CGSize,
-                                     with coordinator: UIViewControllerTransitionCoordinator) {
-        touchesBegan(Set<UITouch>(), with: nil)
+        dismissKeyboard()
     }
 // MARK: - Setup
     func setupView() {
@@ -70,43 +62,22 @@ class RegisterViewController: UIViewController, SetupView {
     }
 // MARK: - functions
     func setupPickerView(_ options: [String]) {
+        textField.inputView = picker.view
         picker.options = options
-        picker.view.reloadAllComponents()
-        view.addSubview(picker.view)
-        textField.isUserInteractionEnabled = false
-        picker.view.frame = CGRect(origin: CGPoint(x: view.frame.minX,
-                                                  y: view.frame.maxY),
-                                  size: CGSize(width: view.frame.width,
-                                               height: 0))
-        showPickerView(height: view.frame.height*0.3)
-    }
-    func showPickerView(height: CGFloat, duration: CGFloat = 0.5) {
-        button.translatesAutoresizingMaskIntoConstraints = true
-        button.frame = CGRect(origin: CGPoint(x: view.frame.minX,
-                                              y: view.frame.maxY-view.frame.height*0.05),
-                              size: CGSize(width: view.frame.width,
-                                           height: view.frame.height*0.05))
-        UIView.animate(withDuration: duration) {
-            self.picker.view.frame.origin.y -= height
-            self.button.frame.origin.y -= height
-            self.picker.view.frame.size.height = height
-        }
-    }
-    func hidePickerView(duration: CGFloat = 0.5) {
-        let safeArea = self.view.safeAreaInsets
-        if button.translatesAutoresizingMaskIntoConstraints {
-            UIView.animate(withDuration: duration) {
-                self.picker.view.frame.origin.y = self.view.frame.maxY
-                self.button.frame.origin.y = self.view.frame.maxY-self.view.frame.height*0.05-safeArea.bottom
-                self.picker.view.frame.size.height = 0
-            } completion: {_ in
-                self.button.translatesAutoresizingMaskIntoConstraints = false
-            }
-        }
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.sizeToFit()
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
+        toolBar.setItems([spaceButton, doneButton], animated: false)
+        textField.inputAccessoryView = toolBar
     }
 // MARK: - objc functions
     @objc func textFieldTarget(_ sender: UITextField) {
         print(sender.text as Any)
+    }
+    @objc func done() {
+        dismissKeyboard()
     }
 }
 
