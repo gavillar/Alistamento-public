@@ -42,6 +42,25 @@ class RegisterViewController: UIViewController, SetupView {
             hidePickerView()
         }
     }
+    override func viewWillTransition(to size: CGSize,
+                                     with coordinator: UIViewControllerTransitionCoordinator) {
+        touchesBegan(Set<UITouch>(), with: nil)
+    }
+// MARK: - Setup
+    func setupView() {
+        view.addSubviews([stackView, button])
+    }
+    func setupConstraints() {
+        view.addConstraints([
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
+            stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
+            button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
+        ])
+    }
 // MARK: - functions
     func setupPickerView(_ options: [String]) {
         picker.options = options
@@ -77,20 +96,6 @@ class RegisterViewController: UIViewController, SetupView {
                 self.button.translatesAutoresizingMaskIntoConstraints = false
             }
         }
-    }
-    func setupView() {
-        view.addSubviews([stackView, button])
-    }
-    func setupConstraints() {
-        view.addConstraints([
-            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
-            stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
-            button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
-        ])
     }
 // MARK: - objc functions
     @objc func textFieldTarget(_ sender: UITextField) {

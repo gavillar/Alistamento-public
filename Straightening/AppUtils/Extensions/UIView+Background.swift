@@ -10,10 +10,10 @@ import UIKit
 extension UIView {
     func defaultBackground() {
         let gradient = CAGradientLayer()
-        gradient.frame = self.bounds
+        gradient.frame = bounds
         gradient.colors = [Assets.Colors.green?.cgColor as Any,
                            Assets.Colors.green?.cgColor as Any,
                            Assets.Colors.lightGreen?.cgColor as Any]
-        self.layer.insertSublayer(gradient, at: 0)
+        layer.insertSublayer(gradient, at: 0)
     }
 }
