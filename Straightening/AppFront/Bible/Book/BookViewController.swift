@@ -86,7 +86,6 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         collectionView.isUserInteractionEnabled = false
         text.label.text = ""
         bookViewModel.updateLabel(indexPath.row)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookViewModel.chapters
