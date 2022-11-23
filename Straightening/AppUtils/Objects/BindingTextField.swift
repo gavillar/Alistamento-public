@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BindingCepTextField: UITextField {
+class BindingTextField: UITextField {
     
     var textChanged: (String) -> Void = {  _ in }
     
@@ -33,7 +33,4 @@ class BindingCepTextField: UITextField {
             textChanged(text)
         }
     }
-    
-    
-    
 }

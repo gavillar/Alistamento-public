@@ -25,14 +25,14 @@ class FormViewController: UIViewController, SetupView {
         baseView.translatesAutoresizingMaskIntoConstraints = false
         baseView.addSubview(verticalStack)
         verticalStack.enableAutolayout()
-            .centerX(in: baseView)
-            .centerY(in: baseView)
+            .centerX()
+            .centerY()
         return baseView
     }()
     let streetLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
     let districtLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
     let locationLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
-    let cepTextField = BindingCepTextField()
+    let cepTextField = BindingTextField()
     let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
 // MARK: - registerButton
     private lazy var registerButton = Create.baseButton("Enviar", titleColor: Assets.Colors.brown,
@@ -48,7 +48,6 @@ class FormViewController: UIViewController, SetupView {
     func setupView() {
         view.defaultBackground()
         view.addSubviews([baseView, registerButton])
-        setupVerticalStackView()
         hideKeyboardWhenTappedAround()
         setupCepTextField()
     }
@@ -65,10 +64,7 @@ class FormViewController: UIViewController, SetupView {
             .bottom(in: view.safeAreaLayoutGuide)
             .height(multiplier: 0.05)
     }
-// MARK: - setupVerticalStackView
-    func setupVerticalStackView() {
-    }
-// MARK: - setupRequest
+// MARK: - setupCepTextField
     func setupCepTextField() {
         cepTextField.bind { [weak self] text in
             self?.formviewmodel.cep = text

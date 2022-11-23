@@ -25,5 +25,4 @@ class FormViewModel {
                 formViewModelDelegate?.sendCep(cep: cep)
             }
         }
-
 }
