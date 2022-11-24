@@ -53,8 +53,7 @@
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
 		27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955AC829254C4500B12FD3 /* IntroViewController.swift */; };
-		279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */; };
-		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
+		279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewCustom.swift */; };
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* UIStackView+Border.swift */; };
 		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
@@ -66,7 +65,6 @@
 		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
 		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
-		27E7E0B4292FA1F600B7C546 /* PickerViewStringCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,8 +135,7 @@
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		27955AC829254C4500B12FD3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAvaliableTimeTextField.swift; sourceTree = "<group>"; };
-		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
+		279E055A292196DD00A6E008 /* PickerViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCustom.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* UIStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
 		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
@@ -150,7 +147,6 @@
 		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
-		27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewStringCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */,
+				279E055A292196DD00A6E008 /* PickerViewCustom.swift */,
 				27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */,
-				27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -352,8 +348,6 @@
 				27E712BB29266B3C00009AEF /* FormModel.swift */,
 				27E712B929266B2B00009AEF /* FormViewModel.swift */,
 				27E712B829266AF600009AEF /* Register */,
-				279E0559292196DD00A6E008 /* MinisteryPickerView */,
-				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -388,22 +382,6 @@
 				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
 			);
 			path = IntroView;
-			sourceTree = "<group>";
-		};
-		279E0553292196C700A6E008 /* AvaliableTimePickerView */ = {
-			isa = PBXGroup;
-			children = (
-				279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */,
-			);
-			path = AvaliableTimePickerView;
-			sourceTree = "<group>";
-		};
-		279E0559292196DD00A6E008 /* MinisteryPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */,
-			);
-			path = MinisteryPickerView;
 			sourceTree = "<group>";
 		};
 		27E3A6F62925263F007CDF8A /* Books */ = {
@@ -593,7 +571,6 @@
 			files = (
 				1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */,
 				27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */,
-				27E7E0B4292FA1F600B7C546 /* PickerViewStringCustom.swift in Sources */,
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
 				279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */,
 				1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */,
@@ -602,7 +579,6 @@
 				1DA4456C2927B029001E137C /* BookModel.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */,
-				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */,
 				1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */,
@@ -620,7 +596,7 @@
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
 				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
-				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
+				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,

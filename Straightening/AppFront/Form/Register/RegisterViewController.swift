@@ -8,6 +8,7 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
+    lazy var datePicker = DatePicker()
     lazy var base: (view: UIView, stack: UIStackView) = {
         let stackView = UIStackView()
         stackView.distribution = .equalSpacing
@@ -36,7 +37,6 @@ class RegisterViewController: UIViewController, SetupView {
     }()
     lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                         backgroundColor: Assets.Colors.weakWhite)
-    lazy var datePicker = DatePicker()
 // MARK: - override functions
     override func loadView() {
         super.loadView()
@@ -61,13 +61,13 @@ class RegisterViewController: UIViewController, SetupView {
         ])
     }
     func setupPickerView(_ title: String, options: [String]) {
-        let textFieldPicker = PickerViewMinisteryTextField()
+        let textFieldPicker = PickerViewCustom()
         textFieldPicker.attributedPlaceholder = NSAttributedString(string: title,
                                                              attributes: [
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
-        textFieldPicker.pickerMinistery = options
+        textFieldPicker.picker = options
         textFieldPicker.displayNameHandler = {item in
             return (item as? String) ?? ""
         }

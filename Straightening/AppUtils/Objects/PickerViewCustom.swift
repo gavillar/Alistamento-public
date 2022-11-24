@@ -7,14 +7,14 @@
 
 import UIKit
 
-typealias PickerMinisteryDisplayNameHandler = ((Any) -> String)
-typealias PickerMinisteryItemSelectionHandler = ((Int, Any) -> Void)
+typealias PickerCustomDisplayNameHandler = ((Any) -> String)
+typealias PickerCustomItemSelectionHandler = ((Int, Any) -> Void)
 
-final class PickerViewMinisteryTextField: UITextField {
+final class PickerViewCustom: UITextField {
     
-    public var pickerMinistery: [Any] = []
-    public var displayNameHandler: PickerMinisteryDisplayNameHandler?
-    public var itemSelectionHandler: PickerMinisteryItemSelectionHandler?
+    public var picker: [Any] = []
+    public var displayNameHandler: PickerCustomDisplayNameHandler?
+    public var itemSelectionHandler: PickerCustomItemSelectionHandler?
     private let pickerView = UIPickerView(frame: .zero)
     private var lastSelectRow: Int?
 
@@ -52,31 +52,31 @@ final class PickerViewMinisteryTextField: UITextField {
         if self.lastSelectRow == nil {
             self.lastSelectRow = 0
         }
-        if self.lastSelectRow! > self.pickerMinistery.count {
+        if self.lastSelectRow! > self.picker.count {
             return
         }
-        let data = self.pickerMinistery[self.lastSelectRow!]
+        let data = self.picker[self.lastSelectRow!]
         self.text = self.displayNameHandler?(data)
     }
 }
 
-extension PickerViewMinisteryTextField: UIPickerViewDelegate {
+extension PickerViewCustom: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let data = self.pickerMinistery[row]
+        let data = self.picker[row]
         return self.displayNameHandler?(data)
     }
 }
-extension PickerViewMinisteryTextField: UIPickerViewDataSource {
+extension PickerViewCustom: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.pickerMinistery.count
+        return self.picker.count
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.lastSelectRow = row
         self.updateText()
-        let data = self.pickerMinistery[row]
+        let data = self.picker[row]
         self.itemSelectionHandler?(row, data)
     }
 }
