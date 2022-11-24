@@ -17,6 +17,8 @@ final class RegisterBirthDateViewController: RegisterViewController {
                                                              ])
         textField.delegate = self
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        datePicker.delegate = self
+        datePicker.setup()
     }
 
 // MARK: - objc functions
