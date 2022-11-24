@@ -36,7 +36,7 @@ class RegisterViewController: UIViewController, SetupView {
     }()
     lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                         backgroundColor: Assets.Colors.weakWhite)
-    let datePicker = DatePicker()
+    lazy var datePicker = DatePicker()
 // MARK: - override functions
     override func loadView() {
         super.loadView()
