@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
+		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
 		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
 		1D635316292E9B760052705D /* Números.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D635315292E9B760052705D /* Números.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
@@ -61,7 +62,7 @@
 		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
-		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
+		27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */; };
 		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
 		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
@@ -89,6 +90,7 @@
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
+		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
 		1D635315292E9B760052705D /* Números.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Números.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D695751292F963D008AE42D /* BookCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionView.swift; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
-		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
+		27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
@@ -407,7 +409,8 @@
 		27E3A6F62925263F007CDF8A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */,
+				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
+				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
 				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
 				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
 				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
@@ -611,7 +614,7 @@
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
-				27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */,
+				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
@@ -631,6 +634,7 @@
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
+				1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */,
 				1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */,
 				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
 				27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */,
