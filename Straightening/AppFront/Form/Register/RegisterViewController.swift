@@ -40,7 +40,6 @@ class RegisterViewController: UIViewController, SetupView {
         setupConstraints()
         hideKeyboardWhenTappedAround()
     }
-    
 // MARK: - Setup
     func setupView() {
         view.addSubviews([baseView.view, button])
@@ -64,7 +63,6 @@ extension RegisterViewController: DatePickerDelegate {
         textField.inputAccessoryView = toolBar
         textField.inputView = datePicker
     }
-    
     func doneButtonTarget() {
         dismissKeyboard()
     }
