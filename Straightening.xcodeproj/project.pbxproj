@@ -64,6 +64,8 @@
 		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
 		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
 		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
+		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
+		27E7E0B4292FA1F600B7C546 /* PickerViewStringCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
 		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
+		27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewStringCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */,
+				27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */,
+				27E7E0B3292FA1F600B7C546 /* PickerViewStringCustom.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -583,6 +589,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */,
+				27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */,
+				27E7E0B4292FA1F600B7C546 /* PickerViewStringCustom.swift in Sources */,
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
 				279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */,
 				1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */,

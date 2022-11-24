@@ -15,6 +15,7 @@ final class RegisterEmailViewController: RegisterViewController {
                                                                 NSAttributedString.Key.foregroundColor:
                                                                     UIColor.white
                                                              ])
+        textField.becomeFirstResponder()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }

@@ -40,10 +40,9 @@ class RegisterViewController: UIViewController, SetupView {
         view.defaultBackground()
         setupView()
         setupConstraints()
+        hideKeyboardWhenTappedAround()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dismissKeyboard()
-    }
+    
 // MARK: - Setup
     func setupView() {
         view.addSubviews([baseView, button])
@@ -79,6 +78,17 @@ class RegisterViewController: UIViewController, SetupView {
     }
     @objc func done() {
         dismissKeyboard()
+        let dataFormartter = DateFormatter()
+        dataFormartter.dateStyle = .medium
+        dataFormartter.timeStyle = .none
+        textField.text = dataFormartter.string(from: datePicker.date)
+    }
+//MARK: - datePicker
+            let datePicker = UIDatePicker()
+            func birthDatePicker() {
+            datePicker.preferredDatePickerStyle = .wheels
+            datePicker.datePickerMode = .date
+            textField.inputView = datePicker
     }
 }
 
