@@ -9,19 +9,15 @@ import Foundation
 import UIKit
 
 class BindingTextField: UITextField {
-    
-    var textChanged: (String) -> Void = {  _ in }
-    
+    var textChanged: (String) -> Void = {_ in}
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
      private func commonInit() {
         addTarget(self, action: #selector(textFieldDidChanged), for: .editingChanged)
     }
