@@ -16,7 +16,7 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
                                                                     UIColor.white
                                                              ])
         textField.delegate = self
-        setupPickerView(["Pastoral", "Missões", "Família", "Discipulado", "Serviço", "Adoração"])
+        setupPickerView(["Manhã", "Tarde", "Noite", "Todos Horários"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func buttonTarget() {

@@ -16,9 +16,11 @@ final class RegisterBirthDateViewController: RegisterViewController {
                                                                     UIColor.white
                                                              ])
         textField.delegate = self
-        setupPickerView(["Pastoral", "Missões", "Família", "Discipulado", "Serviço", "Adoração"])
+        setupPickerView([])
+        birthDatePicker()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
+
 // MARK: - objc functions
     @objc func buttonTarget() {
         self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
