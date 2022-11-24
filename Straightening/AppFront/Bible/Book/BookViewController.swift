@@ -15,19 +15,11 @@ final class BookViewController: UIViewController, SetupView {
     }
     private lazy var text: (label: UILabel, scroll: UIScrollView) = {
         let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
         label.numberOfLines = 0
         let scroll = UIScrollView()
         scroll.translatesAutoresizingMaskIntoConstraints = false
-        scroll.addSubview(label)
-        scroll.addConstraints([
-            label.topAnchor.constraint(equalTo: scroll.contentLayoutGuide.topAnchor),
-            label.leadingAnchor.constraint(equalTo: scroll.contentLayoutGuide.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: scroll.contentLayoutGuide.trailingAnchor),
-            label.bottomAnchor.constraint(equalTo: scroll.contentLayoutGuide.bottomAnchor),
-            label.widthAnchor.constraint(equalTo: scroll.frameLayoutGuide.widthAnchor)
-        ])
+        scroll.turnIntoAList(of: [label])
         return (label: label, scroll: scroll)
     }()
     private lazy var bookCollectionView: BookCollectionView = {
