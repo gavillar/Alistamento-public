@@ -12,6 +12,8 @@
 		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
 		1D635316292E9B760052705D /* Números.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D635315292E9B760052705D /* Números.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
+		1D695752292F963D008AE42D /* BookCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695751292F963D008AE42D /* BookCollectionView.swift */; };
+		1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */; };
 		1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
@@ -89,6 +91,8 @@
 		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
 		1D635315292E9B760052705D /* Números.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Números.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D695751292F963D008AE42D /* BookCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionView.swift; sourceTree = "<group>"; };
+		1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Hierarchy.swift"; sourceTree = "<group>"; };
 		1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */,
+				1D695751292F963D008AE42D /* BookCollectionView.swift */,
 				1DA4456D2927B2A5001E137C /* BookViewModel.swift */,
 				1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */,
 				1DA4456B2927B029001E137C /* BookModel.swift */,
@@ -260,6 +265,7 @@
 				27665C812927055100F80344 /* UiStackView+HStack.swift */,
 				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
 				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
+				1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -609,6 +615,7 @@
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
+				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
@@ -629,6 +636,7 @@
 				27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */,
 				1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */,
 				270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */,
+				1D695752292F963D008AE42D /* BookCollectionView.swift in Sources */,
 				1DA4456E2927B2A5001E137C /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
