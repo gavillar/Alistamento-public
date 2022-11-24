@@ -8,9 +8,9 @@
 import UIKit
 
 protocol BookCollectionViewDelegate: AnyObject {
-    func updateLabel(_ indexPath: IndexPath)
-    func countChapters() -> Int
-    func verifyChapter() -> Int
+    func collectionView(didSelectItemAt indexPath: IndexPath)
+    func numberOfItemsInSection() -> Int
+    func selectedChapter() -> Int
 }
 
 final class BookCollectionView: UICollectionView {
@@ -35,17 +35,17 @@ final class BookCollectionView: UICollectionView {
 extension BookCollectionView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.isUserInteractionEnabled = false
-        bookCollectionViewDelegate?.updateLabel(indexPath)
+        bookCollectionViewDelegate?.collectionView(didSelectItemAt: indexPath)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookCollectionViewDelegate?.countChapters() ?? 0
+        return bookCollectionViewDelegate?.numberOfItemsInSection() ?? 0
     }
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier,
                                                       for: indexPath) as? BookCollectionViewCell
         cell?.label.text = "\(indexPath.row + 1)"
-        if indexPath.row == bookCollectionViewDelegate?.verifyChapter() {
+        if indexPath.row == bookCollectionViewDelegate?.selectedChapter() {
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
         }
         return cell ?? UICollectionViewCell()

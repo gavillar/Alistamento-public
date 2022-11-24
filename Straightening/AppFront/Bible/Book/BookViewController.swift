@@ -76,14 +76,14 @@ extension BookViewController: BookViewModelDelegate {
 }
 
 extension BookViewController: BookCollectionViewDelegate {
-    func updateLabel(_ indexPath: IndexPath) {
+    func collectionView(didSelectItemAt indexPath: IndexPath) {
         text.label.text = ""
         bookViewModel.updateLabel(indexPath.row)
     }
-    func countChapters() -> Int {
+    func numberOfItemsInSection() -> Int {
         return bookViewModel.chapters
     }
-    func verifyChapter() -> Int {
+    func selectedChapter() -> Int {
         return bookViewModel.chapter
     }
 }
