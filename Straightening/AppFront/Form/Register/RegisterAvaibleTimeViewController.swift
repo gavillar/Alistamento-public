@@ -10,13 +10,10 @@ import UIKit
 final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        textField.attributedPlaceholder = NSAttributedString(string: "⇩ Disponibilidade de Horário",
-                                                             attributes: [
-                                                                NSAttributedString.Key.foregroundColor:
-                                                                    UIColor.white
-                                                             ])
-        textField.delegate = self
-       // setupPickerView(["Manhã", "Tarde", "Noite", "Todos Horários"])
+        setupPickerView("⇩ Disponibilidade de Horário", options: ["Manhã",
+                                                                  "Tarde",
+                                                                  "Noite",
+                                                                  "Todos Horários"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func buttonTarget() {
