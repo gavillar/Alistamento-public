@@ -14,8 +14,8 @@ final class PickerViewAvaliableTimeTextField: UITextField {
     
 
     public var pickerNetWorth: [Any] = []
-    public var displayNameHandler: PickerMontlhyDisplayNameHandler?
-    public var itemSelectionHandler: PickerBirthDateItemSelectionHandler?
+    public var displayNameHandler: PickerMinisteryDisplayNameHandler?
+    public var itemSelectionHandler: PickerMinisteryItemSelectionHandler?
 
     private let pickerView = UIPickerView(frame: .zero)
     private var lastSelectRow: Int?

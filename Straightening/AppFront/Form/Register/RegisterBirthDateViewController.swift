@@ -16,8 +16,6 @@ final class RegisterBirthDateViewController: RegisterViewController {
                                                                     UIColor.white
                                                              ])
         textField.delegate = self
-        setupPickerView([])
-        birthDatePicker()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
 
