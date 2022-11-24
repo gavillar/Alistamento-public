@@ -10,12 +10,8 @@ import UIKit
 final class RegisterBirthDateViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        textField.attributedPlaceholder = NSAttributedString(string: "⇩ Data de Nascimento",
-                                                             attributes: [
-                                                                NSAttributedString.Key.foregroundColor:
-                                                                    UIColor.white
-                                                             ])
-        textField.delegate = self
+        text.setPlaceholder("⇩ Data de Nascimento")
+        text.field.delegate = self
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         datePicker.delegate = self
         datePicker.setup()
