@@ -8,14 +8,8 @@
 import UIKit
 
 final class BookViewController: UIViewController, SetupView {
+// MARK: - variables
     private let bookViewModel: BookViewModel
-    init(_ booksElements: BooksElements) {
-        self.bookViewModel = BookViewModel(booksElements)
-        super.init(nibName: nil, bundle: nil)
-        bookViewModel.delegate = self
-        bookViewModel.updateBook()
-        bookViewModel.updateLabel()
-    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -41,11 +35,21 @@ final class BookViewController: UIViewController, SetupView {
         bookCollectionView.bookCollectionViewDelegate = self
         return bookCollectionView
     }()
+// MARK: - init
+    init(_ booksElements: BooksElements) {
+        self.bookViewModel = BookViewModel(booksElements)
+        super.init(nibName: nil, bundle: nil)
+        bookViewModel.delegate = self
+        bookViewModel.updateBook()
+        bookViewModel.updateLabel()
+    }
+// MARK: - overrides
     override func loadView() {
         super.loadView()
         setup()
         title = bookViewModel.title
     }
+// MARK: - setup
     func setupView() {
         view.backgroundColor = Assets.Colors.whiteBlack
         view.addSubviews([bookCollectionView, text.scroll])
