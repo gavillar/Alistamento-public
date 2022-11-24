@@ -8,8 +8,8 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
-    lazy var baseView: (view: UIView, stack: UIStackView) = {
-        let stackView = UIStackView(arrangedSubviews: [textField])
+    lazy var base: (view: UIView, stack: UIStackView) = {
+        let stackView = UIStackView()
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
         stackView.setUnderlineBorder()
@@ -22,12 +22,17 @@ class RegisterViewController: UIViewController, SetupView {
         stackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
         return (view: baseView, stack: stackView)
     }()
-    lazy var textField: UITextField = {
+    lazy var text: (field: UITextField, setPlaceholder: (String) -> Void) = {
         let textField = UITextField()
-        return textField
-    }()
-    lazy var textFieldPicker: PickerViewMinisteryTextField = {
-        return PickerViewMinisteryTextField()
+        base.stack.addArrangedSubview(textField)
+        let setPlaceholder = {(placeholder: String) in
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                                 attributes: [
+                                                                    NSAttributedString.Key.foregroundColor:
+                                                                        UIColor.white
+                                                                 ])
+        }
+        return (field: textField, setPlaceholder: setPlaceholder)
     }()
     lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                         backgroundColor: Assets.Colors.weakWhite)
@@ -36,32 +41,47 @@ class RegisterViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         view.defaultBackground()
-        setupView()
-        setupConstraints()
+        setup()
         hideKeyboardWhenTappedAround()
     }
 // MARK: - Setup
     func setupView() {
-        view.addSubviews([baseView.view, button])
+        view.addSubviews([base.view, button])
     }
     func setupConstraints() {
         view.addConstraints([
-            baseView.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            baseView.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            baseView.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            baseView.view.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
+            base.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            base.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            base.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            base.view.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
         ])
     }
+    func setupPickerView(_ title: String, options: [String]) {
+        let textFieldPicker = PickerViewMinisteryTextField()
+        textFieldPicker.attributedPlaceholder = NSAttributedString(string: title,
+                                                             attributes: [
+                                                                NSAttributedString.Key.foregroundColor:
+                                                                    UIColor.white
+                                                             ])
+        textFieldPicker.pickerMinistery = options
+        textFieldPicker.displayNameHandler = {item in
+            return (item as? String) ?? ""
+        }
+        textFieldPicker.itemSelectionHandler = { index, item in
+            print("\(index), \(item as? String)")
+        }
+        base.stack.addArrangedSubview(textFieldPicker)
+    }
 }
 
 extension RegisterViewController: DatePickerDelegate {
     func datePicker(_ toolBar: UIToolbar) {
-        textField.inputAccessoryView = toolBar
-        textField.inputView = datePicker
+        text.field.inputAccessoryView = toolBar
+        text.field.inputView = datePicker
     }
     func doneButtonTarget() {
         dismissKeyboard()

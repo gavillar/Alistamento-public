@@ -9,24 +9,13 @@ import UIKit
 class RegisterMinisteryViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        setupPickerView()
-        textField.removeFromSuperview()
-        baseView.stack.addArrangedSubview(textFieldPicker)
+        setupPickerView("⇩ Ministério", options: ["Pastoral",
+                                                  "Missões",
+                                                  "Família",
+                                                  "Discipulado",
+                                                  "Serviços",
+                                                  "Adoração"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-    }
-    func setupPickerView() {
-        textFieldPicker.attributedPlaceholder = NSAttributedString(string: "⇩ Ministério",
-                                                             attributes: [
-                                                                NSAttributedString.Key.foregroundColor:
-                                                                    UIColor.white
-                                                             ])
-        textFieldPicker.pickerMinistery = ["Pastoral", "Missões", "Família", "Discipulado", "Serviços", "Adoração"]
-        textFieldPicker.displayNameHandler = {item in
-            return (item as? String) ?? ""
-        }
-        self.textFieldPicker.itemSelectionHandler = { index, item in
-            print("\(index), \(item as? String)")
-        }
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
