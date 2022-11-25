@@ -40,6 +40,10 @@ class FormViewController: UIViewController, SetupView {
         self.navigationController?.navigate(to: LoginViewController())
     }
 // MARK: - viewDidLoad
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        view.defaultBackground()
+    }
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
@@ -48,7 +52,6 @@ class FormViewController: UIViewController, SetupView {
     }
 // MARK: - setupView
     func setupView() {
-        view.defaultBackground()
         view.addSubviews([baseView, registerButton])
         hideKeyboardWhenTappedAround()
         setupCepTextField()

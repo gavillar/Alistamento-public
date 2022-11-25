@@ -38,9 +38,12 @@ class RegisterViewController: UIViewController, SetupView {
     lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                         backgroundColor: Assets.Colors.weakWhite)
 // MARK: - override functions
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        view.defaultBackground()
+    }
     override func loadView() {
         super.loadView()
-        view.defaultBackground()
         setup()
         hideKeyboardWhenTappedAround()
     }

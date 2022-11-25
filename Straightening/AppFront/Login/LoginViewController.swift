@@ -92,7 +92,7 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
-// MARK: - override functions
+// MARK: - overrides
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
         view.defaultBackground()
@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, SetupView {
         super.loadView()
         setup()
     }
-// MARK: - functions
+// MARK: - setup
     func setupView() {
         view.addSubviews([scrollView,
                           forgotPasswordButton,
