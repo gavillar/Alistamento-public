@@ -41,16 +41,22 @@ class IntroViewController: UIViewController, SetupView {
     }
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+                                                     constant: view.frame.height*0.1),
             straighteningButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             straighteningButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            verseLabel.topAnchor.constraint(equalTo: straighteningButton.bottomAnchor, constant: 50),
-            verseLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            verseLabel.topAnchor.constraint(equalTo: straighteningButton.bottomAnchor,
+                                            constant: view.frame.height*0.1),
+            verseLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+                                                constant: view.frame.height*0.05),
             verseDayLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             verseDayLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            verseDayLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            verseDayLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            verseDayLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+                                                   constant: view.frame.height*0.05),
+            verseDayLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+                                                    constant: -view.frame.height*0.05),
+            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                constant: -view.frame.height*0.1),
             bibleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bibleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
