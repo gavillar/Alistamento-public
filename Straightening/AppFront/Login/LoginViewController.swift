@@ -21,7 +21,12 @@ class LoginViewController: UIViewController, SetupView {
         emailTextField.keyboardType = .namePhonePad
         let line = UIView()
         line.backgroundColor = .white
-        let stackView = Create.stack(arrangedSubviews: [emailTextField, line])
+        let margins = view.frame.height*0.02
+        let stackView = Create.stack(
+            layoutMargins: UIEdgeInsets(top: margins, left: 0,
+                                        bottom: margins, right: 0),
+            arrangedSubviews: [emailTextField, line]
+        )
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: emailTextField)
@@ -30,7 +35,12 @@ class LoginViewController: UIViewController, SetupView {
         let passwordTextField = Create.textField()
         let line = UIView()
         line.backgroundColor = .white
-        let stackView = Create.stack(arrangedSubviews: [passwordTextField, line])
+        let margins = view.frame.height*0.02
+        let stackView = Create.stack(
+            layoutMargins: UIEdgeInsets(top: margins, left: 0,
+                                        bottom: margins, right: 0),
+            arrangedSubviews: [passwordTextField, line]
+        )
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: passwordTextField)
@@ -43,10 +53,10 @@ class LoginViewController: UIViewController, SetupView {
                                                       email.stackView,
                                                       password.stackView])
         stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.layoutMargins = UIEdgeInsets(top: 20,
-                                               left: 20,
-                                               bottom: 20,
-                                               right: 20)
+        let verticalMargins = view.frame.height*0.05
+        let horizontalMargins = view.frame.height*0.04
+        stackView.layoutMargins = UIEdgeInsets(top: verticalMargins, left: horizontalMargins,
+                                               bottom: verticalMargins, right: horizontalMargins)
         stackView.spacing = 50
         return scrollView
     }()
