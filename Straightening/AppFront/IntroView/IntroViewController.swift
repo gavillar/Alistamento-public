@@ -29,13 +29,13 @@ class IntroViewController: UIViewController, SetupView {
         return label
     }()
 // MARK: - overrides
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        view.defaultBackground()
+    override func loadView() {
+        super.loadView()
         setup()
     }
 // MARK: - setup
     func setupView() {
+        view.defaultBackground()
         verseDayLabel.textColor = .white
         view.addSubviews([straighteningButton, bibleButton, verseLabel, verseDayLabel])
     }

@@ -15,6 +15,5 @@ extension UIView {
                            Assets.Colors.green?.cgColor as Any,
                            Assets.Colors.lightGreen?.cgColor as Any]
         layer.addSublayer(gradient)
-        
     }
 }
