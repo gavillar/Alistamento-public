@@ -56,7 +56,7 @@ class LoginViewController: UIViewController, SetupView {
         let verticalMargins = view.frame.height*0.05
         let horizontalMargins = view.frame.height*0.04
         stackView.layoutMargins = UIEdgeInsets(top: verticalMargins, left: horizontalMargins,
-                                               bottom: verticalMargins, right: horizontalMargins)
+                                               bottom: verticalMargins*2, right: horizontalMargins)
         stackView.spacing = 50
         return scrollView
     }()
