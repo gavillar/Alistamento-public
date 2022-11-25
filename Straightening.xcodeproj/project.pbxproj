@@ -65,6 +65,7 @@
 		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
 		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
+		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
+		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
 				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
 				1D635315292E9B760052705D /* Números.geojson */,
+				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
 			);
@@ -525,6 +528,7 @@
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
 				1D635314292E99560052705D /* Levítico.geojson in Resources */,
 				1D635316292E9B760052705D /* Números.geojson in Resources */,
+				27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

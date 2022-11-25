@@ -1,9 +1,4 @@
-//
-//  PickerViewBirthDateTextField.swift
-//  br.com.foursys.crud
-//
-//  Created by user220831 on 5/4/22.
-//
+
 
 import UIKit
 
