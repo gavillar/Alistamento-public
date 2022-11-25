@@ -107,10 +107,9 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
 // MARK: - override functions
-    override func loadView() {
-        super.loadView()
-        setupView()
-        setupConstraints()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setup()
     }
 // MARK: - functions
     func setupView() {

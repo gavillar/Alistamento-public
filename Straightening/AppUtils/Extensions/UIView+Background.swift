@@ -14,6 +14,7 @@ extension UIView {
         gradient.colors = [Assets.Colors.green?.cgColor as Any,
                            Assets.Colors.green?.cgColor as Any,
                            Assets.Colors.lightGreen?.cgColor as Any]
-        layer.insertSublayer(gradient, at: 0)
+        layer.addSublayer(gradient)
+        
     }
 }
