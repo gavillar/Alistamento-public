@@ -8,84 +8,107 @@
 import Foundation
 import UIKit
 
-class FormViewController: UIViewController, SetupView, SendResultCepProtocol {
-    func sendApiCep(cep: Cep) {
-        streetLabel.text = cep.logradouro
-        print(cep)
-    }
-    
-    
+class FormViewController: UIViewController, SetupView {
 // MARK: - var and let
-    private var verticalStack = VStack()
-    let streetLabel = Create.label("streetLabel", font: nil)
-    let districtLabel = Create.label("districtLabel", font: nil)
-    let locationLabel = Create.label("locationLabel", font: nil)
-    let cepTextField = Create.textField(textColor: UIColor.white, placeholder: "Cep", for: nil, handler: nil)
-    let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
     private let formviewmodel = FormViewModel()
-    
-
-    //MARK: - registerButton
-    private lazy var registerButton = Create.baseButton("Enviar",
-                                                                  titleColor: Assets.Colors.brown,
-                                                                  backgroundColor: Assets.Colors.lightGreen)
-       
-
-    private lazy var labelTest: UILabel = {
-       let label = UILabel()
-        label.text = "teste"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-        
-        
+    private lazy var baseView: UIView = {
+        let verticalStack = VStack(addArrangedSubviews: [cepTextField,
+                                                         streetLabel,
+                                                         numberTextField,
+                                                         districtLabel,
+                                                         locationLabel])
+        streetLabel.isHidden = true
+        districtLabel.isHidden = true
+        locationLabel.isHidden = true
+        numberTextField.isHidden = true
+        let baseView = UIView()
+        baseView.translatesAutoresizingMaskIntoConstraints = false
+        baseView.addSubview(verticalStack)
+        verticalStack.enableAutolayout()
+            .centerX()
+            .centerY()
+        return baseView
     }()
+    let streetLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
+    let districtLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
+    let locationLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
+    let cepTextField = BindingTextField()
+    let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
+// MARK: - registerButton
+    private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
+                                                        backgroundColor: Assets.Colors.weakWhite) {_ in
+        self.navigationController?.navigate(to: LoginViewController())
+    }
 // MARK: - viewDidLoad
-    override func viewDidLoad() {
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        view.defaultBackground()
+    }
+    override func loadView() {
+        super.loadView()
         view.backgroundColor = .white
-        setupView()
-        setupConstraints()
-        formviewmodel.sendCepDelegate = self
-        Task {
-            guard let data = await Network.call(from: "https://viacep.com.br/ws/59122017/json/") else {return}
-            guard let cep = Network.decode(Cep.self, from: data) else {return}
-            self.labelTest.text = cep.cep
-        }
+        setup()
+        formviewmodel.formViewModelDelegate = self
     }
 // MARK: - setupView
     func setupView() {
-        view.defaultBackground()
-        view.addSubviews([verticalStack, registerButton])
-        setupVerticalStackView()
+        view.addSubviews([baseView, registerButton])
         hideKeyboardWhenTappedAround()
+        setupCepTextField()
     }
-    func setupVerticalStackView() {
-        verticalStack.addArrangedSubviewList(views: cepTextField,
-                                                streetLabel,
-                                             numberTextField,
-                                             districtLabel,
-                                             locationLabel,
-                                                labelTest)
-        verticalStack.enableAutolayout()
-        verticalStack.centerX(in: view)
-        verticalStack.centerY(in: view)
-    }
-    //MARK: - setupConstraints
+// MARK: - setupConstraints
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            
-            labelTest.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            labelTest.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            
-            registerButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            registerButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            registerButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
-            registerButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05)
-            
-            
-                        
-        ])
+        baseView.enableAutolayout()
+            .top(in: view.safeAreaLayoutGuide)
+            .leading(in: view.safeAreaLayoutGuide)
+            .trailing(in: view.safeAreaLayoutGuide)
+            .constraint(.bottom, to: view.keyboardLayoutGuide, itemAttribute: .top)
+        registerButton
+            .leading(in: view.safeAreaLayoutGuide)
+            .trailing(in: view.safeAreaLayoutGuide)
+            .bottom(in: view.safeAreaLayoutGuide)
+            .height(multiplier: 0.05)
     }
+// MARK: - setupCepTextField
+    func setupCepTextField() {
+        cepTextField.bind { [weak self] text in
+            self?.formviewmodel.cep = text
+        }
+        cepTextField.becomeFirstResponder()
+        cepTextField.delegate = self
+        cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
+        cepTextField.attributedPlaceholder = NSAttributedString(string: "Cep",
+                                                                attributes: [NSAttributedString.Key.foregroundColor:
+                                                                                UIColor.white])
+    }
+// MARK: - tapCepTextField
+        @objc func tapCepTextField(sender: UITextField) {
+            if validateCep(sender.text ?? "") {
+                formviewmodel.getApiCep()
+                streetLabel.isHidden = false
+                districtLabel.isHidden = false
+                locationLabel.isHidden = false
+                numberTextField.isHidden = false
+            }
+        }
+}
 
+extension FormViewController: FormViewModelProtocol {
+    func sendCep(cep: Cep) {
+        Task {
+            streetLabel.text = cep.logradouro
+            districtLabel.text = cep.bairro
+            locationLabel.text = cep.localidade
+        }
+    }
+}
 
+extension FormViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let max = 8
+        let currentString: NSString = (textField.text ?? "") as NSString
+        let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= max
+    }
 }

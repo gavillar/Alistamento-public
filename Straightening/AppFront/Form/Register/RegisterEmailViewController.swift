@@ -10,11 +10,8 @@ import UIKit
 final class RegisterEmailViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        textField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                             attributes: [
-                                                                NSAttributedString.Key.foregroundColor:
-                                                                    UIColor.white
-                                                             ])
+        text.setPlaceholder("Email")
+        text.field.becomeFirstResponder()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }

@@ -8,22 +8,8 @@
 import UIKit
 
 final class BooksViewController: UIViewController, SetupView {
+// MARK: - booksviewmodel
     private let booksviewmodel = BooksViewModel()
-    private var collectionView: UICollectionView?
-// MARK: - prefersStatusBarHidden
-    override var prefersStatusBarHidden: Bool {
-        false
-    }
-// MARK: - popularMoviesLabel
-    private lazy var popularMoviesLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Bíblia Digital"
-        label.textColor = Assets.Colors.reverseDark
-        label.textAlignment = .left
-        label.font = UIFont.boldSystemFont(ofSize: 40)
-        return label
-    }()
 // MARK: - backgroundViewCollection
     private lazy var backgroundViewCollection: UIView = {
         let view = UIView()
@@ -32,71 +18,49 @@ final class BooksViewController: UIViewController, SetupView {
         return view
     }()
 // MARK: - moviesCollection
-    private func moviesCollection() {
+    private lazy var collectionView: BooksViewCollection = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 40
         layout.minimumInteritemSpacing = 5
         layout.itemSize = CGSize(width: (view.frame.size.width/3)-4,
                                  height: (view.frame.size.width/1.7)-4)
-        collectionView = UICollectionView(frame: .zero,
-                                          collectionViewLayout: layout)
-        guard let collectionView = collectionView else {
-            return
-        }
-        collectionView.register(BooksCollectionCell.self, forCellWithReuseIdentifier: BooksCollectionCell.identifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.frame = view.bounds
-        collectionView.backgroundColor = Assets.Colors.weakWhiteBlack
-        view.addSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.topAnchor.constraint(equalTo: popularMoviesLabel.bottomAnchor, constant: 20).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                                               constant: -20).isActive = true
-    }
-// MARK: - loadView
-    override func loadView() {
-        super.loadView()
-        self.view.backgroundColor = UIColor(red: 31.0/255.0, green: 31.0/255.0, blue: 31.0/255.0, alpha: 1.00)
-        setupView()
-        setupConstraints()
-        moviesCollection()
+        let collectionView = BooksViewCollection(frame: .zero, collectionViewLayout: layout)
+        collectionView.booksViewCollectionDelegate = self
+        return collectionView
+    }()
+// MARK: - init
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         booksviewmodel.booksviewmodeldelegate = self
         booksviewmodel.getBooks()
     }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+// MARK: - prefersStatusBarHidden
+    override var prefersStatusBarHidden: Bool {false}
+// MARK: - loadView
+    override func loadView() {
+        super.loadView()
+        setup()
+    }
 // MARK: - setupView
     func setupView() {
+        title = "Bíblia Digital"
         view.backgroundColor = Assets.Colors.whiteBlack
-        view.addSubview(popularMoviesLabel)
+        view.addSubview(collectionView)
     }
 // MARK: - setupConstraints
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            popularMoviesLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            popularMoviesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        view.addConstraints([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
-extension BooksViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)), animated: true)
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.booksviewmodel.count
-    }
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "booksCollectionCell",
-                                                      for: indexPath) as? BooksCollectionCell
-        Task {
-            cell?.showData(data: self.booksviewmodel.booksData[indexPath.row])
-        }
-        return cell ?? UICollectionViewCell()
-    }
-}
+
 extension BooksViewController: BooksViewModelProtocol {
     func sendBooksElements(data: BooksElements) {
         Task {[weak self] in
@@ -106,7 +70,20 @@ extension BooksViewController: BooksViewModelProtocol {
     func sendBooksQuantity(data: Books) {
         Task {[weak self] in
             self?.booksviewmodel.booksData = data
-            self?.collectionView?.reloadData()
+            self?.collectionView.reloadData()
         }
+    }
+}
+
+extension BooksViewController: BooksViewCollectionDelegate {
+    func collectionView(didSelectItemAt indexPath: IndexPath) {
+        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)),
+                                                 animated: true)
+    }
+    func numberOfItemsInSection() -> Int {
+        return self.booksviewmodel.count
+    }
+    func collectionView(_ cell: BooksCollectionCell, forItemAt indexPath: IndexPath) {
+        cell.showData(data: self.booksviewmodel.booksData[indexPath.row])
     }
 }

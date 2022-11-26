@@ -21,7 +21,12 @@ class LoginViewController: UIViewController, SetupView {
         emailTextField.keyboardType = .namePhonePad
         let line = UIView()
         line.backgroundColor = .white
-        let stackView = Create.stack(arrangedSubviews: [emailTextField, line])
+        let margins = view.frame.height*0.02
+        let stackView = Create.stack(
+            layoutMargins: UIEdgeInsets(top: margins, left: 0,
+                                        bottom: margins, right: 0),
+            arrangedSubviews: [emailTextField, line]
+        )
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: emailTextField)
@@ -30,48 +35,29 @@ class LoginViewController: UIViewController, SetupView {
         let passwordTextField = Create.textField()
         let line = UIView()
         line.backgroundColor = .white
-        let stackView = Create.stack(arrangedSubviews: [passwordTextField, line])
+        let margins = view.frame.height*0.02
+        let stackView = Create.stack(
+            layoutMargins: UIEdgeInsets(top: margins, left: 0,
+                                        bottom: margins, right: 0),
+            arrangedSubviews: [passwordTextField, line]
+        )
         line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return (stackView: stackView,
                 textField: passwordTextField)
     }()
     private lazy var scrollView: UIScrollView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubviews([view,
-                                logo.stack,
-                                welcomeLabel,
-                                email.stackView,
-                                password.stackView])
-        scrollView.addConstraints([
-            view.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor),
-            view.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-            view.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
-            logo.stack.topAnchor.constraint(equalTo: view.topAnchor,
-                                            constant: 60*self.view.frame.height/850),
-            logo.stack.leadingAnchor.constraint(equalTo: view.leadingAnchor,
-                                                constant: 30*self.view.frame.width/400),
-            logo.stack.trailingAnchor.constraint(equalTo: view.trailingAnchor,
-                                                 constant: -30*self.view.frame.width/400),
-            welcomeLabel.topAnchor.constraint(equalTo: logo.stack.bottomAnchor,
-                                              constant: 100*self.view.frame.height/850),
-            welcomeLabel.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-            welcomeLabel.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-            email.stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
-                                                 constant: 90*self.view.frame.height/850),
-            email.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-            email.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-            password.stackView.topAnchor.constraint(equalTo: email.stackView.bottomAnchor,
-                                                    constant: 60*self.view.frame.height/850),
-            password.stackView.leadingAnchor.constraint(equalTo: logo.stack.leadingAnchor),
-            password.stackView.trailingAnchor.constraint(equalTo: logo.stack.trailingAnchor),
-            password.stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
-                                                       constant: -20*self.view.frame.height/850)
-        ])
+        let stackView = scrollView.turnIntoAList(of: [logo.stack,
+                                                      welcomeLabel,
+                                                      email.stackView,
+                                                      password.stackView])
+        stackView.isLayoutMarginsRelativeArrangement = true
+        let verticalMargins = view.frame.height*0.05
+        let horizontalMargins = view.frame.height*0.04
+        stackView.layoutMargins = UIEdgeInsets(top: verticalMargins, left: horizontalMargins,
+                                               bottom: verticalMargins*2, right: horizontalMargins)
+        stackView.spacing = 50
         return scrollView
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
@@ -106,20 +92,17 @@ class LoginViewController: UIViewController, SetupView {
         logInButton.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
         logInButton.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
     ]
-// MARK: - override functions
+// MARK: - overrides
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
+        view.defaultBackground()
+    }
     override func loadView() {
         super.loadView()
-        setupView()
-        setupConstraints()
+        setup()
     }
-// MARK: - functions
+// MARK: - setup
     func setupView() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any,
-                           Assets.Colors.darkGreen?.cgColor as Any]
-        view.layer.insertSublayer(gradient, at: 0)
         view.addSubviews([scrollView,
                           forgotPasswordButton,
                           signInButton,

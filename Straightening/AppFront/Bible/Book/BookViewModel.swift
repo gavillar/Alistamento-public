@@ -9,6 +9,7 @@ import Foundation
 
 protocol BookViewModelDelegate: AnyObject {
     func updateLabel(text: String)
+    func unfreezeCollection()
 }
 
 final class BookViewModel {
@@ -35,5 +36,6 @@ final class BookViewModel {
             delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
         }
         self.chapter = chapter
+        delegate?.unfreezeCollection()
     }
 }

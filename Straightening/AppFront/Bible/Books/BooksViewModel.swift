@@ -17,15 +17,13 @@ final class BooksViewModel {
     var booksData = [BooksElements]()
     var books: BooksElements?
 // MARK: - count
-    var count: Int {
-        return self.booksData.count
-    }
+    var count: Int {self.booksData.count}
     lazy var book = {(index: Int) -> BooksElements in
         return self.booksData[index]
     }
     func getBooks() {
         Task {
-            guard let data = await Network.call(from: "https://www.abibliadigital.com.br/api/books") else {return}
+            guard let data = await Network.call(from: Network.EndPoints.books) else {return}
             guard let books = Network.decode(Books.self, from: data) else {return}
             booksviewmodeldelegate?.sendBooksQuantity(data: books)
         }

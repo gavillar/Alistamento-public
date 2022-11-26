@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
+		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
+		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
+		1D635316292E9B760052705D /* Números.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D635315292E9B760052705D /* Números.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
+		1D695752292F963D008AE42D /* BookCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695751292F963D008AE42D /* BookCollectionView.swift */; };
+		1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */; };
 		1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
@@ -25,9 +30,11 @@
 		1DA4456C2927B029001E137C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4456B2927B029001E137C /* BookModel.swift */; };
 		1DA4456E2927B2A5001E137C /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4456D2927B2A5001E137C /* BookViewModel.swift */; };
 		1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DA45EE32929181D00BB5870 /* Gênesis.geojson */; };
+		1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
+		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
 		27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C812927055100F80344 /* UiStackView+HStack.swift */; };
 		27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */; };
@@ -46,17 +53,19 @@
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
 		27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955AC829254C4500B12FD3 /* IntroViewController.swift */; };
-		279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */; };
-		279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */; };
+		279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewCustom.swift */; };
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* UIStackView+Border.swift */; };
+		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */; };
 		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
-		27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */; };
+		27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */; };
 		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
 		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
+		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
+		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +88,12 @@
 /* Begin PBXFileReference section */
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
+		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
+		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
+		1D635315292E9B760052705D /* Números.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Números.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D695751292F963D008AE42D /* BookCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionView.swift; sourceTree = "<group>"; };
+		1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Hierarchy.swift"; sourceTree = "<group>"; };
 		1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
@@ -95,9 +109,11 @@
 		1DA4456B2927B029001E137C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		1DA4456D2927B2A5001E137C /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		1DA45EE32929181D00BB5870 /* Gênesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gênesis.geojson"; sourceTree = "<group>"; };
+		1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Êxodo.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
 		27665C812927055100F80344 /* UiStackView+HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+HStack.swift"; sourceTree = "<group>"; };
 		27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+ConstrainsFunc.swift"; sourceTree = "<group>"; };
@@ -120,17 +136,19 @@
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		27955AC829254C4500B12FD3 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewAvaliableTimeTextField.swift; sourceTree = "<group>"; };
-		279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewMinisteryTextField.swift; sourceTree = "<group>"; };
+		279E055A292196DD00A6E008 /* PickerViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCustom.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* UIStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
+		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HiddenKeyboard.swift"; sourceTree = "<group>"; };
 		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
-		27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewCollectionCell.swift; sourceTree = "<group>"; };
+		27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
+		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */,
+				1D695751292F963D008AE42D /* BookCollectionView.swift */,
 				1DA4456D2927B2A5001E137C /* BookViewModel.swift */,
 				1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */,
 				1DA4456B2927B029001E137C /* BookModel.swift */,
@@ -201,6 +220,7 @@
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				2728114B292E4E1600D3B9C8 /* Objects */,
 				277CC219291D6F0100BA2BCC /* Setup */,
 				1D942CD5291D65980018CC82 /* Assets */,
 				1D942CD4291D65800018CC82 /* Create */,
@@ -244,6 +264,8 @@
 				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
 				27665C812927055100F80344 /* UiStackView+HStack.swift */,
 				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
+				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
+				1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +276,16 @@
 				1DF21B0E291C194800A85B05 /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2728114B292E4E1600D3B9C8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */,
+				279E055A292196DD00A6E008 /* PickerViewCustom.swift */,
+				27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		2770EA33291BEF4600760A35 = {
@@ -285,6 +317,10 @@
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
 				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
+				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
+				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
+				1D635315292E9B760052705D /* Números.geojson */,
+				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
 			);
@@ -315,8 +351,6 @@
 				27E712BB29266B3C00009AEF /* FormModel.swift */,
 				27E712B929266B2B00009AEF /* FormViewModel.swift */,
 				27E712B829266AF600009AEF /* Register */,
-				279E0559292196DD00A6E008 /* MinisteryPickerView */,
-				279E0553292196C700A6E008 /* AvaliableTimePickerView */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -353,26 +387,11 @@
 			path = IntroView;
 			sourceTree = "<group>";
 		};
-		279E0553292196C700A6E008 /* AvaliableTimePickerView */ = {
-			isa = PBXGroup;
-			children = (
-				279E0556292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift */,
-			);
-			path = AvaliableTimePickerView;
-			sourceTree = "<group>";
-		};
-		279E0559292196DD00A6E008 /* MinisteryPickerView */ = {
-			isa = PBXGroup;
-			children = (
-				279E055A292196DD00A6E008 /* PickerViewMinisteryTextField.swift */,
-			);
-			path = MinisteryPickerView;
-			sourceTree = "<group>";
-		};
 		27E3A6F62925263F007CDF8A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				27E3A6FA2925263F007CDF8A /* BooksViewCollectionCell.swift */,
+				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
+				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
 				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
 				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
 				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
@@ -505,7 +524,11 @@
 			files = (
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
+				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
+				1D635314292E99560052705D /* Levítico.geojson in Resources */,
+				1D635316292E9B760052705D /* Números.geojson in Resources */,
+				27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA298CC2922A4F70034770C /* RegisterMinisteryViewController.swift in Sources */,
+				27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */,
 				277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */,
 				279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */,
 				1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */,
@@ -559,7 +583,6 @@
 				1DA4456C2927B029001E137C /* BookModel.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */,
-				279E0558292196C700A6E008 /* PickerViewAvaliableTimeTextField.swift in Sources */,
 				2770EA4A291BEF4600760A35 /* Straightening.xcdatamodeld in Sources */,
 				1DA298CA2922A4E80034770C /* RegisterEmailViewController.swift in Sources */,
 				1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */,
@@ -571,11 +594,13 @@
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
-				27E3A6FE2925263F007CDF8A /* BooksViewCollectionCell.swift in Sources */,
+				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
-				279E055B292196DD00A6E008 /* PickerViewMinisteryTextField.swift in Sources */,
+				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
+				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
+				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
@@ -589,10 +614,13 @@
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
+				1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */,
 				1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */,
 				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
 				27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */,
 				1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */,
+				270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */,
+				1D695752292F963D008AE42D /* BookCollectionView.swift in Sources */,
 				1DA4456E2927B2A5001E137C /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

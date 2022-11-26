@@ -8,21 +8,21 @@
 import Foundation
 import UIKit
 
-
-protocol SendResultCepProtocol {
-    func sendApiCep(cep: Cep)
+protocol FormViewModelProtocol {
+    func sendCep(cep: Cep)
 }
 
 class FormViewModel {
-    
-    var sendCepDelegate: SendResultCepProtocol?
-    
-    func getApiCep() {
-        
-        
-        
-        
-        
-    }
-    
+// MARK: - var and let 
+    var formViewModelDelegate: FormViewModelProtocol?
+    var cep: String = ""
+// MARK: - getApiCep
+        func getApiCep() {
+            Task {
+                guard let data = await Network.call(from: Network.EndPoints.cepInformation(cep)) else {return}
+                guard let cep = Network.decode(Cep.self, from: data) else {return}
+                print(cep)
+                formViewModelDelegate?.sendCep(cep: cep)
+            }
+        }
 }
