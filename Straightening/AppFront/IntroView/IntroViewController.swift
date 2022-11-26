@@ -11,6 +11,7 @@ class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
+    let function = VerseManager()
     private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
                                                              backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
@@ -19,14 +20,14 @@ class IntroViewController: UIViewController, SetupView {
                                                      backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
-    private lazy var verseLabel = Create.label("Versículo do dia.", font: UIFont.boldSystemFont(ofSize: 25))
+    private lazy var verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
     private lazy var verseDayLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.text = "O cavalo prepara-se para o dia da batalha, mas a vitória vem do SENHOR.\n\nProvérbios 21:31 ARA"
+        label.text = function.randomVerse(Network.read([String].self, from: "Verses") ?? [])
         return label
     }()
 // MARK: - overrides
@@ -37,6 +38,8 @@ class IntroViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
+        
+        
     }
 // MARK: - setup
     func setupView() {

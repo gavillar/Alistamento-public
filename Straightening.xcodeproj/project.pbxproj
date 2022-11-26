@@ -35,6 +35,7 @@
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
+		2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720A1DF2931C25D00795D73 /* VerseManager.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
 		27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C812927055100F80344 /* UiStackView+HStack.swift */; };
 		27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */; };
@@ -56,6 +57,7 @@
 		279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewCustom.swift */; };
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* UIStackView+Border.swift */; };
+		27C379FA2932666A00397E14 /* Verses.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27C379F92932666A00397E14 /* Verses.geojson */; };
 		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIViewController+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */; };
 		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
@@ -114,6 +116,7 @@
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		2720A1DF2931C25D00795D73 /* VerseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseManager.swift; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
 		27665C812927055100F80344 /* UiStackView+HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+HStack.swift"; sourceTree = "<group>"; };
 		27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+ConstrainsFunc.swift"; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 		279E055A292196DD00A6E008 /* PickerViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCustom.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* UIStackView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Border.swift"; sourceTree = "<group>"; };
+		27C379F92932666A00397E14 /* Verses.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Verses.geojson; sourceTree = "<group>"; };
 		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HiddenKeyboard.swift"; sourceTree = "<group>"; };
 		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
@@ -311,12 +315,14 @@
 		2770EA3E291BEF4600760A35 /* Straightening */ = {
 			isa = PBXGroup;
 			children = (
+				27C379FD29329CEE00397E14 /* Methods */,
 				1DF21B0D291C18F200A85B05 /* AppFront */,
 				1DF21B0C291C18ED00A85B05 /* AppDelegate */,
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
 				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
+				27C379F92932666A00397E14 /* Verses.geojson */,
 				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
 				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
 				1D635315292E9B760052705D /* Números.geojson */,
@@ -385,6 +391,14 @@
 				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
 			);
 			path = IntroView;
+			sourceTree = "<group>";
+		};
+		27C379FD29329CEE00397E14 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				2720A1DF2931C25D00795D73 /* VerseManager.swift */,
+			);
+			path = Methods;
 			sourceTree = "<group>";
 		};
 		27E3A6F62925263F007CDF8A /* Books */ = {
@@ -523,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
+				27C379FA2932666A00397E14 /* Verses.geojson in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
@@ -601,6 +616,7 @@
 				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,
+				2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
