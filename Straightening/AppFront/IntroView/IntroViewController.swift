@@ -12,19 +12,20 @@ class IntroViewController: UIViewController, SetupView {
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
     private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
-                                                             backgroundColor: Assets.Colors.weakWhite) {_ in
+                                                             backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
     }
     private lazy var bibleButton = Create.baseButton("Biblía Sagrada", titleColor: .black,
-                                                     backgroundColor: Assets.Colors.weakWhite) {_ in
+                                                     backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
-    private lazy var verseLabel = Create.label("Versículo do dia.", font: nil)
+    private lazy var verseLabel = Create.label("Versículo do dia.", font: UIFont.boldSystemFont(ofSize: 25))
     private lazy var verseDayLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.text = "O cavalo prepara-se para o dia da batalha, mas a vitória vem do SENHOR.\n\nProvérbios 21:31 ARA"
         return label
     }()
