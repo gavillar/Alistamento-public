@@ -18,6 +18,7 @@ extension Create {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = axis
         stack.spacing = spacing
+        stack.setUnderlineBorderWhite()
         if let layoutMargins = layoutMargins {
             stack.isLayoutMarginsRelativeArrangement = true
             stack.layoutMargins = layoutMargins

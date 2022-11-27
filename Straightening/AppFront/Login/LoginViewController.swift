@@ -11,37 +11,37 @@ class LoginViewController: UIViewController, SetupView {
 // MARK: - variables
     private lazy var logo: (stack: UIStackView, label: UILabel) = {
         let label = Create.label("Alistamento")
+        label.textColor = Assets.Colors.whiteBlack
         let stack = UIStackView(arrangedSubviews: [label])
         stack.translatesAutoresizingMaskIntoConstraints = false
         return (stack: stack, label: label)
     }()
-    private lazy var welcomeLabel = Create.label("Bem Vindo")
+    private lazy var welcomeLabel: UILabel = {
+        let label = Create.label("Bem Vindo")
+        label.textColor = Assets.Colors.whiteBlack
+        return label
+    }()
     private lazy var email: (stackView: UIStackView, textField: UITextField) = {
-        let emailTextField = Create.textField()
+        let emailTextField = Create.textField(placeholder: "Email")
+        emailTextField.becomeFirstResponder()
         emailTextField.keyboardType = .namePhonePad
-        let line = UIView()
-        line.backgroundColor = .white
         let margins = view.frame.height*0.02
         let stackView = Create.stack(
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
-            arrangedSubviews: [emailTextField, line]
-        )
-        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+            arrangedSubviews: [emailTextField])
         return (stackView: stackView,
                 textField: emailTextField)
     }()
     private lazy var password: (stackView: UIStackView, textField: UITextField) = {
-        let passwordTextField = Create.textField()
-        let line = UIView()
-        line.backgroundColor = .white
+        let passwordTextField = Create.textField(placeholder: "Senha")
+        passwordTextField.isSecureTextEntry = true
         let margins = view.frame.height*0.02
         let stackView = Create.stack(
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
-            arrangedSubviews: [passwordTextField, line]
-        )
-        line.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+            arrangedSubviews: [passwordTextField])
+    
         return (stackView: stackView,
                 textField: passwordTextField)
     }()
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController, SetupView {
         return scrollView
     }()
     private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: .red) {_ in
+                                                              titleColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: BooksViewController())
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
