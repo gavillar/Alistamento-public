@@ -22,7 +22,7 @@ extension Create {
             textField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                                  attributes: [
                                                                     NSAttributedString.Key.foregroundColor:
-                                                                        UIColor.white
+                                                                        Assets.Colors.whiteBlack as Any
                                                                  ])
         }
         textField.translatesAutoresizingMaskIntoConstraints = false

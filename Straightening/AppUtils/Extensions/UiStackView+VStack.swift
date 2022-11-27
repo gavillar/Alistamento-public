@@ -10,7 +10,7 @@ import UIKit
 
 class VStack: UIStackView {
 
-    init(spacing: CGFloat = 16, distribution: UIStackView.Distribution = .fill,
+    init(spacing: CGFloat = 40, distribution: UIStackView.Distribution = .fill,
                                 alignment: UIStackView.Alignment = .fill,
                                 addArrangedSubviews views: [UIView]) {
         super.init(frame: .zero)

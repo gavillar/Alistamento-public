@@ -36,6 +36,7 @@
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
 		2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720A1DF2931C25D00795D73 /* VerseManager.swift */; };
+		2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
 		27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C812927055100F80344 /* UiStackView+HStack.swift */; };
 		27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */; };
@@ -117,6 +118,7 @@
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		2720A1DF2931C25D00795D73 /* VerseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseManager.swift; sourceTree = "<group>"; };
+		2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Border.swift"; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
 		27665C812927055100F80344 /* UiStackView+HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+HStack.swift"; sourceTree = "<group>"; };
 		27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+ConstrainsFunc.swift"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
 				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
 				1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */,
+				2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
 				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */,
+				2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,

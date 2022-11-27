@@ -10,6 +10,7 @@ import UIKit
 final class RegisterNameViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        title = "Nome Completo"
         text.setPlaceholder("Nome Completo")
         text.field.becomeFirstResponder()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)

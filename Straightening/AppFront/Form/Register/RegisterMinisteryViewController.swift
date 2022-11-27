@@ -9,6 +9,7 @@ import UIKit
 class RegisterMinisteryViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        title = "Ministério"
         setupPickerView("⇩ Ministério", options: ["Pastoral",
                                                   "Missões",
                                                   "Família",

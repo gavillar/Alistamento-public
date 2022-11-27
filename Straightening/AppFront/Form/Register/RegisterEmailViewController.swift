@@ -10,6 +10,7 @@ import UIKit
 final class RegisterEmailViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        title = "Email"
         text.setPlaceholder("Email")
         text.field.becomeFirstResponder()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
