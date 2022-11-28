@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+
 
 class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
