@@ -76,7 +76,6 @@
 		27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */; };
 		27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */; };
 		27EECF9629352F8800DBBEEA /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9529352F8800DBBEEA /* RegisterModel.swift */; };
-		27EECF9E2935470800DBBEEA /* UiTextFieldDelegateMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */; };
 		27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECFA02935483600DBBEEA /* FormatMask.swift */; };
 /* End PBXBuildFile section */
 
@@ -169,7 +168,6 @@
 		27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		27EECF9529352F8800DBBEEA /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
-		27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTextFieldDelegateMask.swift; sourceTree = "<group>"; };
 		27EECFA02935483600DBBEEA /* FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -470,7 +468,6 @@
 			children = (
 				279E055C2921972500A6E008 /* UITextField+NoPaste.swift */,
 				2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */,
-				27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */,
 			);
 			path = UiTextField;
 			sourceTree = "<group>";
@@ -701,7 +698,6 @@
 				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
 				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */,
-				27EECF9E2935470800DBBEEA /* UiTextFieldDelegateMask.swift in Sources */,
 				2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,

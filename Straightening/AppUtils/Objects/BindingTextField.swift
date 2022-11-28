@@ -10,8 +10,10 @@ import UIKit
 
 class BindingTextField: UITextField {
     var textChanged: (String) -> Void = {_ in}
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var formatMask: String?
+    init() {
+        super.init(frame: .zero)
+        delegate = self
         commonInit()
     }
     required init?(coder: NSCoder) {
@@ -28,5 +30,19 @@ class BindingTextField: UITextField {
         if let text = sender.text {
             textChanged(text)
         }
+    }
+}
+
+extension BindingTextField: UITextFieldDelegate {
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        additionalCellTextFieldSetup(textField)
+    }
+
+    func additionalCellTextFieldSetup(_ textField: UITextField?) {
+        if let formatMask = formatMask {
+            textField?.text = textField?.text?.formatMask(formatMask)
+        }
+//        "(##)#####-####)"
     }
 }
