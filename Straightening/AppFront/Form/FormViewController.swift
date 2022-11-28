@@ -29,11 +29,12 @@ class FormViewController: UIViewController, SetupView {
             .centerY()
         return baseView
     }()
-    let streetLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
-    let districtLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
-    let locationLabel = Create.label("", font: nil, alignment: .left, numberOfLines: 0)
+    
+    let streetLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 22), alignment: .left, numberOfLines: 0)
+    let districtLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
+    let locationLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
     let cepTextField = BindingTextField()
-    let numberTextField = Create.textField(textColor: UIColor.white, placeholder: "Número", for: nil, handler: nil)
+    let numberTextField = Create.textField(textColor: Assets.Colors.whiteBlack, placeholder: "Número-Complemento", for: nil, handler: nil)
 // MARK: - registerButton
     private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
                                                         backgroundColor: Assets.Colors.weakWhite) {_ in
@@ -46,7 +47,7 @@ class FormViewController: UIViewController, SetupView {
     }
     override func loadView() {
         super.loadView()
-        view.backgroundColor = .white
+        title = "Endereço"
         setup()
         formviewmodel.formViewModelDelegate = self
     }
@@ -68,6 +69,13 @@ class FormViewController: UIViewController, SetupView {
             .trailing(in: view.safeAreaLayoutGuide)
             .bottom(in: view.safeAreaLayoutGuide)
             .height(multiplier: 0.05)
+        NSLayoutConstraint.activate([
+            
+            cepTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant:  40),
+            cepTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40)
+        
+        ])
+        
     }
 // MARK: - setupCepTextField
     func setupCepTextField() {
@@ -75,6 +83,7 @@ class FormViewController: UIViewController, SetupView {
             self?.formviewmodel.cep = text
         }
         cepTextField.becomeFirstResponder()
+        cepTextField.setUnderlineTextFieldBorderWhite()
         cepTextField.delegate = self
         cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
         cepTextField.attributedPlaceholder = NSAttributedString(string: "Cep",
@@ -96,9 +105,9 @@ class FormViewController: UIViewController, SetupView {
 extension FormViewController: FormViewModelProtocol {
     func sendCep(cep: Cep) {
         Task {
-            streetLabel.text = cep.logradouro
-            districtLabel.text = cep.bairro
-            locationLabel.text = cep.localidade
+            streetLabel.text = "Endereço:\n\n\(cep.logradouro ?? "")"
+            districtLabel.text = "Bairro: \(cep.bairro ?? "")"
+            locationLabel.text = "Cidade: \(cep.localidade ?? "") \(cep.uf ?? "")"
         }
     }
 }

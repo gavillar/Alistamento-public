@@ -10,6 +10,7 @@ import UIKit
 final class RegisterPhoneViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        title = "Telefone"
         text.setPlaceholder("Telefone")
         text.field.becomeFirstResponder()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)

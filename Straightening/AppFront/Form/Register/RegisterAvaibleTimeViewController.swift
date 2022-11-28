@@ -10,7 +10,8 @@ import UIKit
 final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        setupPickerView("⇩ Disponibilidade de Horário", options: ["Manhã",
+        title = "Disponibilidade"
+        setupPickerView("⇩ Disponibilidade", options: ["Manhã",
                                                                   "Tarde",
                                                                   "Noite",
                                                                   "Todos Horários"])

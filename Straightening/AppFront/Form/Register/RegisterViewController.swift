@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController, SetupView {
         let stackView = UIStackView()
         stackView.distribution = .equalSpacing
         stackView.axis = .vertical
-        stackView.setUnderlineBorder()
+        stackView.setUnderlineBorderWhite()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let baseView = UIView()
         baseView.translatesAutoresizingMaskIntoConstraints = false

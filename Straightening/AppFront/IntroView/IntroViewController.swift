@@ -11,21 +11,23 @@ class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
+    let function = VerseManager()
     private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
-                                                             backgroundColor: Assets.Colors.weakWhite) {_ in
+                                                             backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
     }
     private lazy var bibleButton = Create.baseButton("Biblía Sagrada", titleColor: .black,
-                                                     backgroundColor: Assets.Colors.weakWhite) {_ in
+                                                     backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
-    private lazy var verseLabel = Create.label("Versículo do dia.", font: nil)
+    private lazy var verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
     private lazy var verseDayLabel: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.numberOfLines = 0
-        label.text = "O cavalo prepara-se para o dia da batalha, mas a vitória vem do SENHOR.\n\nProvérbios 21:31 ARA"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.text = function.randomVerse(Network.read([String].self, from: "Verses") ?? [])
         return label
     }()
 // MARK: - overrides
@@ -36,6 +38,8 @@ class IntroViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
+        
+        
     }
 // MARK: - setup
     func setupView() {
@@ -52,8 +56,7 @@ class IntroViewController: UIViewController, SetupView {
                                             constant: view.frame.height*0.1),
             verseLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                                                 constant: view.frame.height*0.05),
-            verseDayLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            verseDayLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            verseDayLabel.topAnchor.constraint(equalTo: verseLabel.bottomAnchor, constant: 20),
             verseDayLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                                                    constant: view.frame.height*0.05),
             verseDayLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,

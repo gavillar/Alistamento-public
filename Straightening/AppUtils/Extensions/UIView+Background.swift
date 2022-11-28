@@ -15,9 +15,10 @@ extension UIView {
         }
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.green?.cgColor as Any,
-                           Assets.Colors.lightGreen?.cgColor as Any]
+        gradient.colors = [Assets.Colors.purple?.cgColor as Any,
+                           Assets.Colors.blue?.cgColor as Any,
+                           Assets.Colors.red?.cgColor as Any,
+                           Assets.Colors.orange?.cgColor as Any]
         layer.insertSublayer(gradient, at: 0)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 final class RegisterBirthDateViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        title = "Data de Nascimento"
         text.setPlaceholder("⇩ Data de Nascimento")
         text.field.delegate = self
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
