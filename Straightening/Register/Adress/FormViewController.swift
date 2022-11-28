@@ -29,7 +29,6 @@ class FormViewController: UIViewController, SetupView {
             .centerY()
         return baseView
     }()
-    
     let streetLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 22), alignment: .left, numberOfLines: 0)
     let districtLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
     let locationLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)

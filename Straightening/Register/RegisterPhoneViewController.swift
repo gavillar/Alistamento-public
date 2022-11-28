@@ -7,12 +7,14 @@
 
 import UIKit
 
-final class RegisterPhoneViewController: RegisterViewController {
+final class RegisterPhoneViewController: RegisterViewController, UITextFieldDelegate {
     override func loadView() {
         super.loadView()
         title = "Telefone"
         text.setPlaceholder("Telefone")
         text.field.becomeFirstResponder()
+        text.field.tag = 1
+        text.field.delegate = self
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }

@@ -73,6 +73,11 @@
 		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 		27EECF8D2935073600DBBEEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8C2935073600DBBEEA /* FirebaseAuth */; };
 		27EECF8F2935073600DBBEEA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8E2935073600DBBEEA /* FirebaseFirestore */; };
+		27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */; };
+		27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */; };
+		27EECF9629352F8800DBBEEA /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9529352F8800DBBEEA /* RegisterModel.swift */; };
+		27EECF9E2935470800DBBEEA /* UiTextFieldDelegateMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */; };
+		27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECFA02935483600DBBEEA /* FormatMask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +166,11 @@
 		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
 		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
+		27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
+		27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		27EECF9529352F8800DBBEEA /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTextFieldDelegateMask.swift; sourceTree = "<group>"; };
+		27EECFA02935483600DBBEEA /* FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +270,6 @@
 				1DDA4DFC2922E42900B9C70F /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
 				2770EA7C291C1F4000760A35 /* Home */,
-				2770EA7B291C1F3700760A35 /* Form */,
 			);
 			path = AppFront;
 			sourceTree = "<group>";
@@ -268,19 +277,13 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				279E055C2921972500A6E008 /* UITextField+NoPaste.swift */,
-				279E055E2921975F00A6E008 /* UIStackView+Border.swift */,
-				277CC215291D692500BA2BCC /* UIStackView+Hierarchy.swift */,
-				1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */,
-				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
-				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
-				1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */,
-				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
-				27665C812927055100F80344 /* UiStackView+HStack.swift */,
-				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
-				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
-				1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */,
-				2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */,
+				27EECF9F2935482000DBBEEA /* String */,
+				27EECF9C2935407000DBBEEA /* UiNavigationController */,
+				27EECF9B29353F9D00DBBEEA /* UiScrollView */,
+				27EECF9A29353F6700DBBEEA /* UiStackView */,
+				27EECF9929353F4700DBBEEA /* UiViewController */,
+				27EECF9829353F1C00DBBEEA /* UiTextField */,
+				27EECF9729353EE700DBBEEA /* UiView */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 		2770EA3E291BEF4600760A35 /* Straightening */ = {
 			isa = PBXGroup;
 			children = (
+				27E712B829266AF600009AEF /* Register */,
 				27C379FD29329CEE00397E14 /* Methods */,
 				1DF21B0D291C18F200A85B05 /* AppFront */,
 				1DF21B0C291C18ED00A85B05 /* AppDelegate */,
@@ -362,15 +366,14 @@
 			path = StraighteningUITests;
 			sourceTree = "<group>";
 		};
-		2770EA7B291C1F3700760A35 /* Form */ = {
+		2770EA7B291C1F3700760A35 /* Adress */ = {
 			isa = PBXGroup;
 			children = (
 				2770EA82291C1FA100760A35 /* FormViewController.swift */,
 				27E712BB29266B3C00009AEF /* FormModel.swift */,
 				27E712B929266B2B00009AEF /* FormViewModel.swift */,
-				27E712B829266AF600009AEF /* Register */,
 			);
-			path = Form;
+			path = Adress;
 			sourceTree = "<group>";
 		};
 		2770EA7C291C1F4000760A35 /* Home */ = {
@@ -409,7 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				2720A1DF2931C25D00795D73 /* VerseManager.swift */,
-				270A38002934E24D003855C3 /* FireBaseManager.swift */,
+				27EECF902935183400DBBEEA /* FireBase */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -429,15 +432,91 @@
 		27E712B829266AF600009AEF /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
+				27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */,
+				27EECF9529352F8800DBBEEA /* RegisterModel.swift */,
 				1DA298C329229AEE0034770C /* RegisterNameViewController.swift */,
 				1DA298C72922A4D60034770C /* RegisterPhoneViewController.swift */,
 				1DA298C92922A4E80034770C /* RegisterEmailViewController.swift */,
-				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
+				27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */,
 				1DA298CD2922A50A0034770C /* RegisterBirthDateViewController.swift */,
 				1DA298CF2922A5190034770C /* RegisterAvaibleTimeViewController.swift */,
 				1DA298CB2922A4F70034770C /* RegisterMinisteryViewController.swift */,
+				2770EA7B291C1F3700760A35 /* Adress */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		27EECF902935183400DBBEEA /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				270A38002934E24D003855C3 /* FireBaseManager.swift */,
+			);
+			path = FireBase;
+			sourceTree = "<group>";
+		};
+		27EECF9729353EE700DBBEEA /* UiView */ = {
+			isa = PBXGroup;
+			children = (
+				1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */,
+				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
+				1D77F9AB2927D3ED00EF0EFB /* UIView+Background.swift */,
+			);
+			path = UiView;
+			sourceTree = "<group>";
+		};
+		27EECF9829353F1C00DBBEEA /* UiTextField */ = {
+			isa = PBXGroup;
+			children = (
+				279E055C2921972500A6E008 /* UITextField+NoPaste.swift */,
+				2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */,
+				27EECF9D2935470800DBBEEA /* UiTextFieldDelegateMask.swift */,
+			);
+			path = UiTextField;
+			sourceTree = "<group>";
+		};
+		27EECF9929353F4700DBBEEA /* UiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
+				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
+			);
+			path = UiViewController;
+			sourceTree = "<group>";
+		};
+		27EECF9A29353F6700DBBEEA /* UiStackView */ = {
+			isa = PBXGroup;
+			children = (
+				279E055E2921975F00A6E008 /* UIStackView+Border.swift */,
+				277CC215291D692500BA2BCC /* UIStackView+Hierarchy.swift */,
+				27665C812927055100F80344 /* UiStackView+HStack.swift */,
+				27665C7F2927050A00F80344 /* UiStackView+VStack.swift */,
+			);
+			path = UiStackView;
+			sourceTree = "<group>";
+		};
+		27EECF9B29353F9D00DBBEEA /* UiScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */,
+			);
+			path = UiScrollView;
+			sourceTree = "<group>";
+		};
+		27EECF9C2935407000DBBEEA /* UiNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				1DA445692927A807001E137C /* UINavigationController+Navigate.swift */,
+			);
+			path = UiNavigationController;
+			sourceTree = "<group>";
+		};
+		27EECF9F2935482000DBBEEA /* String */ = {
+			isa = PBXGroup;
+			children = (
+				27EECFA02935483600DBBEEA /* FormatMask.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +690,7 @@
 				279E055F2921975F00A6E008 /* UIStackView+Border.swift in Sources */,
 				1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */,
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
+				27EECF9629352F8800DBBEEA /* RegisterModel.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
 				1DA4456C2927B029001E137C /* BookModel.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
@@ -621,11 +701,14 @@
 				1DA298CE2922A50A0034770C /* RegisterBirthDateViewController.swift in Sources */,
 				1DA298D02922A5190034770C /* RegisterAvaibleTimeViewController.swift in Sources */,
 				27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */,
+				27EECF9E2935470800DBBEEA /* UiTextFieldDelegateMask.swift in Sources */,
 				2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
+				27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */,
+				27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
@@ -647,6 +730,7 @@
 				1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */,
 				27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */,
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
+				27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
 				1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */,

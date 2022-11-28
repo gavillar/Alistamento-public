@@ -16,8 +16,16 @@ final class RegisterEmailViewController: RegisterViewController {
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }
+    func setupEmailText() {
+       text.field.bind { text in
+           self.registerviewmodel.email = text
+           print(text)
+       }
+   }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterMinisteryViewController())
+        setupEmailText()
+        print("tap email")
+        self.navigationController?.navigate(to: RegisterPasswordViewController())
     }
 }

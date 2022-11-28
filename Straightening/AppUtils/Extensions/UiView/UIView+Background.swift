@@ -9,10 +9,7 @@ import UIKit
 
 extension UIView {
     func defaultBackground() {
-        guard let sublayers = layer.sublayers else {return}
-        for layer in sublayers where (layer as? CAGradientLayer) != nil {
-            layer.removeFromSuperlayer()
-        }
+        removeSubLayers((layer as? CAGradientLayer) != nil )
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = [Assets.Colors.purple?.cgColor as Any,

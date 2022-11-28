@@ -13,7 +13,6 @@ class IntroViewController: UIViewController, SetupView {
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
     let function = VerseManager()
-    let firebase = FireBaseManager()
     private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
                                                              backgroundColor: Assets.Colors.whiteBlack) {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
@@ -40,8 +39,6 @@ class IntroViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
-        firebase.setupFirebase()
-        
     }
 // MARK: - setup
     func setupView() {

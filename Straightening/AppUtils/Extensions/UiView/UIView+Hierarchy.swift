@@ -13,4 +13,10 @@ extension UIView {
             addSubview(view)
         }
     }
+    func removeSubLayers(_ condition: Bool = true) {
+        guard let sublayers = layer.sublayers else {return}
+        for layer in sublayers where condition {
+            layer.removeFromSuperlayer()
+        }
+    }
 }

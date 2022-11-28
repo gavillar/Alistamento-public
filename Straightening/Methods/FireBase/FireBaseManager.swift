@@ -6,12 +6,12 @@
 //
 
 import Foundation
-
+import Firebase
 
 class FireBaseManager {
     
     
     func setupFirebase() {
-       
+        FirebaseApp.configure()
     }
 }
