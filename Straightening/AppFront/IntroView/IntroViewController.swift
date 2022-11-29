@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
