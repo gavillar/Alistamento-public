@@ -10,6 +10,7 @@
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
+		1D53BA6329367478007D6802 /* CALayer+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53BA6229367478007D6802 /* CALayer+Hierarchy.swift */; };
 		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
 		1D635316292E9B760052705D /* Números.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D635315292E9B760052705D /* Números.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
@@ -103,6 +104,7 @@
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
 		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
+		1D53BA6229367478007D6802 /* CALayer+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Hierarchy.swift"; sourceTree = "<group>"; };
 		1D635315292E9B760052705D /* Números.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Números.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D695751292F963D008AE42D /* BookCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionView.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D53BA6129367463007D6802 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				1D53BA6229367478007D6802 /* CALayer+Hierarchy.swift */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
 		1D7A2DFB2926A2CC00F9907D /* Book */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +291,7 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1D53BA6129367463007D6802 /* CALayer */,
 				27EECF9F2935482000DBBEEA /* String */,
 				27EECF9C2935407000DBBEEA /* UiNavigationController */,
 				27EECF9B29353F9D00DBBEEA /* UiScrollView */,
@@ -722,6 +733,7 @@
 				2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */,
 				27F7863229364B6800796436 /* Regex+Email.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
+				1D53BA6329367478007D6802 /* CALayer+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
 				1DA4456A2927A807001E137C /* UINavigationController+Navigate.swift in Sources */,

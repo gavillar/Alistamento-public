@@ -12,7 +12,7 @@ extension UIView {
                                                  Assets.Colors.blue?.cgColor,
                                                  Assets.Colors.red?.cgColor,
                                                  Assets.Colors.orange?.cgColor]) {
-        removeSubLayers(ofType: CAGradientLayer.self)
+        layer.removeSubLayers(ofType: CAGradientLayer.self)
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = colors as [Any]

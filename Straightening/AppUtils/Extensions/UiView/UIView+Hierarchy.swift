@@ -13,16 +13,14 @@ extension UIView {
             addSubview(view)
         }
     }
-    func removeSubLayers<T>(ofType: T.Type) {
-        guard let sublayers = layer.sublayers else {return}
-        for layer in sublayers where (layer as? T) != nil {
-            layer.removeFromSuperlayer()
+    func removeSubviews<T>(ofType: T.Type) {
+        for subview in subviews where (subview as? T) != nil {
+            subview.removeFromSuperview()
         }
     }
-    func removeSubLayers() {
-        guard let sublayers = layer.sublayers else {return}
-        for layer in sublayers {
-            layer.removeFromSuperlayer()
+    func removeSubviews() {
+        for subview in subviews {
+            subview.removeFromSuperview()
         }
     }
 }
