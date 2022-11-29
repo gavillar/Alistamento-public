@@ -77,6 +77,8 @@
 		27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */; };
 		27EECF9629352F8800DBBEEA /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9529352F8800DBBEEA /* RegisterModel.swift */; };
 		27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECFA02935483600DBBEEA /* FormatMask.swift */; };
+		27F7863229364B6800796436 /* Regex+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863129364B6800796436 /* Regex+Email.swift */; };
+		27F7863429364BB800796436 /* Regex+Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863329364BB800796436 /* Regex+Password.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,8 @@
 		27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		27EECF9529352F8800DBBEEA /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		27EECFA02935483600DBBEEA /* FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMask.swift; sourceTree = "<group>"; };
+		27F7863129364B6800796436 /* Regex+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Email.swift"; sourceTree = "<group>"; };
+		27F7863329364BB800796436 /* Regex+Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Password.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +481,8 @@
 			children = (
 				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
 				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
+				27F7863129364B6800796436 /* Regex+Email.swift */,
+				27F7863329364BB800796436 /* Regex+Password.swift */,
 			);
 			path = UiViewController;
 			sourceTree = "<group>";
@@ -714,6 +720,7 @@
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,
 				2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */,
+				27F7863229364B6800796436 /* Regex+Email.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
@@ -722,6 +729,7 @@
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */,
 				27E712BC29266B3C00009AEF /* FormModel.swift in Sources */,
+				27F7863429364BB800796436 /* Regex+Password.swift in Sources */,
 				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
 				1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */,
 				27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */,
