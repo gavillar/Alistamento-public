@@ -31,7 +31,6 @@ final class RegisterEmailViewController: RegisterViewController {
     //This function validates if the email matches the regex
     @objc func tapEmailTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
-        //sender.text? = sender.text?.lowercased() ?? ""
         if text.field.isValidEmail(value) {
             button.isUserInteractionEnabled = true
             catchEmailText()
