@@ -9,8 +9,8 @@ import UIKit
 
 struct Create {
     static func baseButton(_ title: String? = nil,
-                           titleColor: UIColor? = nil,
-                           backgroundColor: UIColor? = nil,
+                           titleColor: UIColor? = Assets.Colors.reverseDark,
+                           backgroundColor: UIColor? = Assets.Colors.weakWhite,
                            for control: UIControl.Event? = nil,
                            handler: UIActionHandler? = nil) -> UIButton {
         let baseButton = UIButton()
