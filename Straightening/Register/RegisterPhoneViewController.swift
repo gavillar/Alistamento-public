@@ -13,7 +13,7 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
         title = "Telefone"
         text.setPlaceholder("Telefone")
         text.field.becomeFirstResponder()
-        text.field.formatMask = "(##)#####-####)"
+        text.field.formatMask = "(##)#####-####"
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }
