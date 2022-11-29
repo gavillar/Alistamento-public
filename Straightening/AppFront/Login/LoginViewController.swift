@@ -93,7 +93,7 @@ class LoginViewController: UIViewController, SetupView {
 // MARK: - overrides
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()

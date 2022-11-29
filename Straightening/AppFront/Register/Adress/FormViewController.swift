@@ -41,7 +41,7 @@ class FormViewController: UIViewController, SetupView {
 // MARK: - viewDidLoad
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
