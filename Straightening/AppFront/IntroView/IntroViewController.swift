@@ -7,34 +7,35 @@
 
 import UIKit
 
-
 class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
     let function = VerseManager()
-    private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
-                                                             backgroundColor: Assets.Colors.whiteBlack) {_ in
+    private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
     }
-    private lazy var bibleButton = Create.baseButton("Biblía Sagrada", titleColor: .black,
-                                                     backgroundColor: Assets.Colors.whiteBlack) {_ in
+    private lazy var bibleScrollView: UIScrollView = {
+        let verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
+        verseLabel.textAlignment = .left
+        let verseDayLabel = UILabel()
+        verseDayLabel.textColor = .white
+        verseDayLabel.numberOfLines = 0
+        verseDayLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        verseDayLabel.text = function.randomVerse(Network.read([String].self, from: "Verses") ?? [])
+        let bibleScrollView = UIScrollView()
+        bibleScrollView.translatesAutoresizingMaskIntoConstraints = false
+        bibleScrollView.turnIntoAList(of: [verseLabel, verseDayLabel])
+            .spacing = view.frame.height*0.05
+        return bibleScrollView
+    }()
+    private lazy var bibleButton = Create.baseButton("BÍBLIA SAGRADA") {_ in
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
-    private lazy var verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
-    private lazy var verseDayLabel: UILabel = {
-       let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.text = function.randomVerse(Network.read([String].self, from: "Verses") ?? [])
-        return label
-    }()
 // MARK: - overrides
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
@@ -42,28 +43,24 @@ class IntroViewController: UIViewController, SetupView {
     }
 // MARK: - setup
     func setupView() {
-        verseDayLabel.textColor = .white
-        view.addSubviews([straighteningButton, bibleButton, verseLabel, verseDayLabel])
+        view.addSubviews([straighteningButton, bibleButton, bibleScrollView])
     }
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                                                     constant: view.frame.height*0.1),
+            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             straighteningButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             straighteningButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            verseLabel.topAnchor.constraint(equalTo: straighteningButton.bottomAnchor,
-                                            constant: view.frame.height*0.1),
-            verseLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                                                constant: view.frame.height*0.05),
-            verseDayLabel.topAnchor.constraint(equalTo: verseLabel.bottomAnchor, constant: 20),
-            verseDayLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                                                   constant: view.frame.height*0.05),
-            verseDayLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-                                                    constant: -view.frame.height*0.05),
-            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                                                constant: -view.frame.height*0.1),
+            bibleScrollView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            bibleScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
+                                                     constant: view.frame.width*0.05),
+            bibleScrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+                                                      constant: -view.frame.width*0.05),
+            bibleScrollView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor,
+                                                    multiplier: 0.6),
             bibleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            bibleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            bibleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                constant: -view.frame.height*0.05)
         ])
     }
 }
