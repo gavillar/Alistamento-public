@@ -8,14 +8,14 @@
 import UIKit
 
 extension UIView {
-    func defaultBackground() {
-        removeSubLayers((layer as? CAGradientLayer) != nil )
+    func defaultBackground(colors: [CGColor?] = [Assets.Colors.purple?.cgColor,
+                                                 Assets.Colors.blue?.cgColor,
+                                                 Assets.Colors.red?.cgColor,
+                                                 Assets.Colors.orange?.cgColor]) {
+        removeSubLayers(ofType: CAGradientLayer.self)
         let gradient = CAGradientLayer()
         gradient.frame = bounds
-        gradient.colors = [Assets.Colors.purple?.cgColor as Any,
-                           Assets.Colors.blue?.cgColor as Any,
-                           Assets.Colors.red?.cgColor as Any,
-                           Assets.Colors.orange?.cgColor as Any]
+        gradient.colors = colors as [Any]
         layer.insertSublayer(gradient, at: 0)
     }
 }
