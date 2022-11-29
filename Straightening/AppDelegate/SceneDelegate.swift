@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = Create.navigationController(rootViewController: RegisterEmailViewController())
+        window?.rootViewController = Create.navigationController(rootViewController: RegisterViewController())
         window?.makeKeyAndVisible()
     }
 
