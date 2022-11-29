@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func defaultBackground(colors: [CGColor?] = [Assets.Colors.purple?.cgColor,
+    func addGradientBackground(colors: [CGColor?] = [Assets.Colors.purple?.cgColor,
                                                  Assets.Colors.blue?.cgColor,
                                                  Assets.Colors.red?.cgColor,
                                                  Assets.Colors.orange?.cgColor]) {

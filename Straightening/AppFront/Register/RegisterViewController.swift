@@ -45,7 +45,7 @@ class RegisterViewController: UIViewController, SetupView {
 // MARK: - override functions
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
