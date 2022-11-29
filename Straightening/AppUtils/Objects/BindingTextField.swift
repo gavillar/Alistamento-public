@@ -34,15 +34,9 @@ class BindingTextField: UITextField {
 }
 
 extension BindingTextField: UITextFieldDelegate {
-
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        additionalCellTextFieldSetup(textField)
-    }
-
-    func additionalCellTextFieldSetup(_ textField: UITextField?) {
         if let formatMask = formatMask {
-            textField?.text = textField?.text?.formatMask(formatMask)
+            textField.text = textField.text?.formatMask(formatMask)
         }
-//        "(##)#####-####)"
     }
 }
