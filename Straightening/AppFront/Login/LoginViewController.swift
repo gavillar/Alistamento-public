@@ -60,16 +60,14 @@ class LoginViewController: UIViewController, SetupView {
         stackView.spacing = 50
         return scrollView
     }()
-    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: Assets.Colors.whiteBlack) {_ in
+    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha", titleColor: Assets.Colors.whiteBlack,
+                                                              backgroundColor: nil) {_ in
         self.navigationController?.navigate(to: BooksViewController())
     }
-    private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA",
-                                                      backgroundColor: Assets.Colors.weakWhite) {_ in
+    private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA") {_ in
         self.navigationController?.navigate(to: RegisterNameViewController())
     }
-    private lazy var logInButton = Create.baseButton("ENTRAR",
-                                                     backgroundColor: Assets.Colors.weakWhite) {_ in
+    private lazy var logInButton = Create.baseButton("ENTRAR") {_ in
         self.navigationController?.navigate(to: FormViewController())
     }
     private lazy var constraints = [

@@ -13,12 +13,10 @@ class IntroViewController: UIViewController, SetupView {
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
     let function = VerseManager()
-    private lazy var straighteningButton = Create.baseButton("Alistamento", titleColor: .black,
-                                                             backgroundColor: Assets.Colors.whiteBlack) {_ in
+    private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") {_ in
         self.navigationController?.navigate(to: self.loginviewcontroller)
     }
-    private lazy var bibleButton = Create.baseButton("Biblía Sagrada", titleColor: .black,
-                                                     backgroundColor: Assets.Colors.whiteBlack) {_ in
+    private lazy var bibleButton = Create.baseButton("BÍBLIA SAGRADA") {_ in
         self.navigationController?.navigate(to: self.booksviewcontroller)
     }
     private lazy var verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
@@ -47,23 +45,22 @@ class IntroViewController: UIViewController, SetupView {
     }
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                                                     constant: view.frame.height*0.1),
+            straighteningButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             straighteningButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             straighteningButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            verseLabel.topAnchor.constraint(equalTo: straighteningButton.bottomAnchor,
-                                            constant: view.frame.height*0.1),
             verseLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                                                 constant: view.frame.height*0.05),
-            verseDayLabel.topAnchor.constraint(equalTo: verseLabel.bottomAnchor, constant: 20),
+            verseLabel.bottomAnchor.constraint(equalTo: verseDayLabel.topAnchor,
+                                            constant: -view.frame.height*0.05),
+            verseDayLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             verseDayLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                                                    constant: view.frame.height*0.05),
             verseDayLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,
                                                     constant: -view.frame.height*0.05),
-            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                                                constant: -view.frame.height*0.1),
             bibleButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            bibleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            bibleButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            bibleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                constant: -view.frame.height*0.05)
         ])
     }
 }
