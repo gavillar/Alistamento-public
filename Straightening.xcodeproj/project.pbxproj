@@ -80,6 +80,7 @@
 		27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECFA02935483600DBBEEA /* FormatMask.swift */; };
 		27F7863229364B6800796436 /* Regex+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863129364B6800796436 /* Regex+Email.swift */; };
 		27F7863429364BB800796436 /* Regex+Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863329364BB800796436 /* Regex+Password.swift */; };
+		5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB458F2936927700B3D7F9 /* Josué.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		27EECFA02935483600DBBEEA /* FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMask.swift; sourceTree = "<group>"; };
 		27F7863129364B6800796436 /* Regex+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Email.swift"; sourceTree = "<group>"; };
 		27F7863329364BB800796436 /* Regex+Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Password.swift"; sourceTree = "<group>"; };
+		5FCB458F2936927700B3D7F9 /* Josué.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Josué.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +352,7 @@
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
 				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
+				5FCB458F2936927700B3D7F9 /* Josué.geojson */,
 				27C379F92932666A00397E14 /* Verses.geojson */,
 				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
 				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
@@ -649,6 +652,7 @@
 				27C379FA2932666A00397E14 /* Verses.geojson in Resources */,
 				270A38032934E959003855C3 /* GoogleService-Info.plist in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
+				5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
 				1D635314292E99560052705D /* Levítico.geojson in Resources */,
