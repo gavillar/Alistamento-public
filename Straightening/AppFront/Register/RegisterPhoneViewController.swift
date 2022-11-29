@@ -14,8 +14,17 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
         text.setPlaceholder("Telefone")
         text.field.becomeFirstResponder()
         text.field.formatMask = "(##)#####-####"
+        text.field.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
+    }
+    @objc func tapPhoneTextField(_ sender: UITextField) {
+        guard let count = sender.text?.count else {return}
+        if count > 10 {
+            button.isUserInteractionEnabled = true
+        } else {
+            button.isUserInteractionEnabled = false
+        }
     }
 // MARK: - objc functions
     @objc func buttonTarget() {

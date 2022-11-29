@@ -242,6 +242,7 @@
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				27C379FD29329CEE00397E14 /* Methods */,
 				2728114B292E4E1600D3B9C8 /* Objects */,
 				277CC219291D6F0100BA2BCC /* Setup */,
 				1D942CD5291D65980018CC82 /* Assets */,
@@ -264,6 +265,7 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
+				27E712B829266AF600009AEF /* Register */,
 				27955AC729254C3200B12FD3 /* IntroView */,
 				1DDA4DFC2922E42900B9C70F /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
@@ -327,8 +329,6 @@
 		2770EA3E291BEF4600760A35 /* Straightening */ = {
 			isa = PBXGroup;
 			children = (
-				27E712B829266AF600009AEF /* Register */,
-				27C379FD29329CEE00397E14 /* Methods */,
 				1DF21B0D291C18F200A85B05 /* AppFront */,
 				1DF21B0C291C18ED00A85B05 /* AppDelegate */,
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
