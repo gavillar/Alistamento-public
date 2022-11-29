@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController, SetupView {
 
     lazy var button: UIButton = {
         let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
-        button.isUserInteractionEnabled = false
+        button.isUserInteractionEnabled = true
         return button
     }()
 // MARK: - override functions

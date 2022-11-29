@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 extension UITextField {
-//MARK: - VALIDATE PASSOWRD
+//MARK: - isValidPassword
      func isValidPassword(_ senha: String) -> Bool {
-        let passwordRegex =  ".{6,}"
+        let passwordRegex =  ".{8,}"
         let validatePassowrd = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
-        return validatePassowrd.evaluate(with: passwordRegex)
+        return validatePassowrd.evaluate(with: self.text)
     }
 }
