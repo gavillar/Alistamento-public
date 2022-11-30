@@ -14,7 +14,6 @@ final class RegisterPasswordViewController: RegisterViewController {
         title = "Senha"
         setupText()
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        hideKeyboardWhenTappedAround()
         
     }
     //This function sets parameters for the text property

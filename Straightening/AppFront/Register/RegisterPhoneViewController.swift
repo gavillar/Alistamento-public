@@ -16,7 +16,6 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
         text.field.formatMask = "(##)#####-####"
         text.field.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        hideKeyboardWhenTappedAround()
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}

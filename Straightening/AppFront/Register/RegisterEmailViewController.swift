@@ -13,7 +13,6 @@ final class RegisterEmailViewController: RegisterViewController {
         title = "Email"
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         setupText()
-        hideKeyboardWhenTappedAround()
     }
 // This function sets parameters for the text property
     func setupText() {
