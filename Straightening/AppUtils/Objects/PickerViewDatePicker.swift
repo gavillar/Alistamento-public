@@ -14,7 +14,12 @@ protocol DatePickerDelegate: AnyObject {
 
 final class DatePicker: UIDatePicker {
 // MARK: - variables
-    weak var delegate: DatePickerDelegate?
+    var dayMonthYear: String {String(date.formatted().split(separator: " ").first ?? "")}
+    weak var delegate: DatePickerDelegate? {
+        didSet {
+            setup()
+        }
+    }
 // MARK: - overrides
     override init(frame: CGRect) {
         super.init(frame: frame)

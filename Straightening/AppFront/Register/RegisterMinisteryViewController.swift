@@ -20,8 +20,11 @@ class RegisterMinisteryViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerviewmodel.setRegister()
-        self.navigationController?.navigate(to: FormViewController())
+        guard let count = text.field.text?.count else {return}
+        if registerviewmodel.changeButton(condition: count > 0) {
+            registerviewmodel.setRegister()
+            self.navigationController?.navigate(to: FormViewController())
+        }
     }
 }
 

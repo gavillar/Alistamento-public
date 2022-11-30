@@ -19,11 +19,7 @@ final class RegisterNameViewController: RegisterViewController {
     }
     @objc func tapNameTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        if count > 6 {
-            button.isUserInteractionEnabled = true
-        } else {
-            button.isUserInteractionEnabled = false
-        }
+        registerviewmodel.changeButton(condition: count > 6)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {

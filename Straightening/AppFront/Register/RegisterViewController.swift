@@ -8,7 +8,11 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
-    let registerviewmodel = RegisterViewModel()
+    lazy var registerviewmodel: RegisterViewModel = {
+        let registerviewmodel = RegisterViewModel()
+        registerviewmodel.delegate = self
+        return registerviewmodel
+    }()
     lazy var datePicker = DatePicker()
     lazy var base: (view: UIView, stack: UIStackView) = {
         let stackView = UIStackView()
@@ -38,7 +42,6 @@ class RegisterViewController: UIViewController, SetupView {
     }()
     lazy var button: UIButton = {
         let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
-        button.isUserInteractionEnabled = true
         return button
     }()
 // MARK: - override functions
@@ -49,6 +52,7 @@ class RegisterViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
+        freezeButton()
         hideKeyboardWhenTappedAround()
     }
 // MARK: - Setup
@@ -92,5 +96,16 @@ extension RegisterViewController: DatePickerDelegate {
     }
     func doneButtonTarget() {
         dismissKeyboard()
+    }
+}
+
+extension RegisterViewController: RegisterViewModelDelegate {
+    func freezeButton() {
+        button.alpha = 0.5
+        button.isUserInteractionEnabled = false
+    }
+    func unFreezeButton() {
+        button.alpha = 1
+        button.isUserInteractionEnabled = true
     }
 }

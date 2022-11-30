@@ -18,7 +18,10 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterMinisteryViewController())
+        guard let count = text.field.text?.count else {return}
+        if registerviewmodel.changeButton(condition: count > 0) {
+            self.navigationController?.navigate(to: RegisterMinisteryViewController())
+        }
     }
 }
 

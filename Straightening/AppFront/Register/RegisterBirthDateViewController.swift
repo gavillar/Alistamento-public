@@ -15,12 +15,17 @@ final class RegisterBirthDateViewController: RegisterViewController {
         text.field.delegate = self
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         datePicker.delegate = self
-        datePicker.setup()
+        datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
     }
-
 // MARK: - objc functions
+    @objc func datePickerTarget(_ sender: UIDatePicker) {
+        text.field.text = datePicker.dayMonthYear
+    }
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
+        guard let count = text.field.text?.count else {return}
+        if registerviewmodel.changeButton(condition: count == 8) {
+            self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
+        }
     }
 }
 

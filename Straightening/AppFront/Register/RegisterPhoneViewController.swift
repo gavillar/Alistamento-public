@@ -20,11 +20,7 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        if count > 10 {
-            button.isUserInteractionEnabled = true
-        } else {
-            button.isUserInteractionEnabled = false
-        }
+        registerviewmodel.changeButton(condition: count > 10)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
