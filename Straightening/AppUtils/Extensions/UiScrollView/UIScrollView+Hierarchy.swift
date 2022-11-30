@@ -10,6 +10,7 @@ import UIKit
 extension UIScrollView {
     @discardableResult
     func turnIntoAList(of views: [UIView]) -> UIStackView {
+        removeSubviews()
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false

@@ -1,28 +1,31 @@
 //
-//  RegisterAvaibleTimeViewController.swift
+//  RegisterMinisteryViewController.swift
 //  Straightening
 //
 //  Created by Josicleison Elves on 23/08/1401 AP.
 //
-
 import UIKit
 
-final class RegisterAvaibleTimeViewController: RegisterViewController {
+class RegisterMinisteryViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
-        title = "Disponibilidade"
-        setupPickerView("⇩ Disponibilidade", options: ["Manhã",
-                                                                  "Tarde",
-                                                                  "Noite",
-                                                                  "Todos Horários"])
+        title = "Ministério"
+        setupPickerView("⇩ Ministério", options: ["Pastoral",
+                                                  "Missões",
+                                                  "Família",
+                                                  "Discipulado",
+                                                  "Serviços",
+                                                  "Adoração"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
+// MARK: - objc functions
     @objc func buttonTarget() {
+        registerviewmodel.setRegister()
         self.navigationController?.navigate(to: FormViewController())
     }
 }
 
-extension RegisterAvaibleTimeViewController: UITextFieldDelegate {
+extension RegisterMinisteryViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         let currentString: NSString = (textField.text ?? "") as NSString

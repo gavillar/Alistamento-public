@@ -8,6 +8,7 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
+    let registerviewmodel = RegisterViewModel()
     lazy var datePicker = DatePicker()
     lazy var base: (view: UIView, stack: UIStackView) = {
         let stackView = UIStackView()
@@ -23,8 +24,8 @@ class RegisterViewController: UIViewController, SetupView {
         stackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
         return (view: baseView, stack: stackView)
     }()
-    lazy var text: (field: UITextField, setPlaceholder: (String) -> Void) = {
-        let textField = UITextField()
+    lazy var text: (field: BindingTextField, setPlaceholder: (String) -> Void) = {
+        let textField = BindingTextField()
         base.stack.addArrangedSubview(textField)
         let setPlaceholder = {(placeholder: String) in
             textField.attributedPlaceholder = NSAttributedString(string: placeholder,
@@ -35,12 +36,16 @@ class RegisterViewController: UIViewController, SetupView {
         }
         return (field: textField, setPlaceholder: setPlaceholder)
     }()
-    lazy var button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
-                                        backgroundColor: Assets.Colors.weakWhite)
+
+    lazy var button: UIButton = {
+        let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
+        button.isUserInteractionEnabled = true
+        return button
+    }()
 // MARK: - override functions
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()

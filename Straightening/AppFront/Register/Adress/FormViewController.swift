@@ -29,21 +29,19 @@ class FormViewController: UIViewController, SetupView {
             .centerY()
         return baseView
     }()
-    
     let streetLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 22), alignment: .left, numberOfLines: 0)
     let districtLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
     let locationLabel = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
     let cepTextField = BindingTextField()
-    let numberTextField = Create.textField(textColor: Assets.Colors.whiteBlack, placeholder: "Número-Complemento", for: nil, handler: nil)
+    let numberTextField = Create.textField(textColor: Assets.Colors.whiteBlack, placeholder: "Número-Complemento")
 // MARK: - registerButton
-    private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown,
-                                                        backgroundColor: Assets.Colors.weakWhite) {_ in
+    private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown) {_ in
         self.navigationController?.navigate(to: LoginViewController())
     }
 // MARK: - viewDidLoad
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.defaultBackground()
+        view.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
