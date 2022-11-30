@@ -10,7 +10,7 @@ class RegisterMinisteryViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         title = "Ministério"
-        text.field.text = "Pastoral"
+        textFieldPicker.text = "Pastoral"
         setupPickerView("⇩ Ministério", options: ["Pastoral", "Missões",
                                                   "Família", "Discipulado",
                                                   "Serviços", "Adoração"])

@@ -28,6 +28,7 @@ class RegisterViewController: UIViewController, SetupView {
         stackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
         return (view: baseView, stack: stackView)
     }()
+    lazy var textFieldPicker = PickerViewCustom()
     lazy var text: (field: BindingTextField, setPlaceholder: (String) -> Void) = {
         let textField = BindingTextField()
         base.stack.addArrangedSubview(textField)
@@ -72,7 +73,6 @@ class RegisterViewController: UIViewController, SetupView {
         ])
     }
     func setupPickerView(_ title: String, options: [String]) {
-        let textFieldPicker = PickerViewCustom()
         textFieldPicker.attributedPlaceholder = NSAttributedString(string: title,
                                                              attributes: [
                                                                 NSAttributedString.Key.foregroundColor:

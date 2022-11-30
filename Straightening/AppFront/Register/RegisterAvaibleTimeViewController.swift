@@ -11,7 +11,7 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         title = "Disponibilidade"
-        text.field.text = "Manhã"
+        textFieldPicker.text = "Manhã"
         setupPickerView("⇩ Disponibilidade", options: ["Manhã", "Tarde",
                                                        "Noite", "Todos Horários"])
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
