@@ -36,7 +36,6 @@ class RegisterViewController: UIViewController, SetupView {
         }
         return (field: textField, setPlaceholder: setPlaceholder)
     }()
-
     lazy var button: UIButton = {
         let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
         button.isUserInteractionEnabled = true
