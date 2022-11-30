@@ -16,7 +16,7 @@ class LoginViewModel {
         print(email)
         guard let password = UserDefaults.standard.string(forKey: "loginPassword") else {return}
         print(password)
-        self.auth?.signIn(withEmail: email, password: password, completion: {(user, error) in
+        self.auth.signIn(withEmail: email, password: password, completion: {(user, error) in
             if error != nil {
                 print("Dados incorretos, tente novamente")
             } else {
