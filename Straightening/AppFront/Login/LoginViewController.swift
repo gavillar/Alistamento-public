@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, SetupView {
         label.textColor = Assets.Colors.whiteBlack
         return label
     }()
-     lazy var email: (stackView: UIStackView, textField: UITextField) = {
+    lazy var email: (stackView: UIStackView, textField: UITextField) = {
         let emailTextField = Create.textField(placeholder: "Email")
         emailTextField.becomeFirstResponder()
         emailTextField.keyboardType = .namePhonePad
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: stackView,
                 textField: emailTextField)
     }()
-     lazy var password: (stackView: UIStackView, textField: UITextField) = {
+    lazy var password: (stackView: UIStackView, textField: UITextField) = {
         let passwordTextField = Create.textField(placeholder: "Senha")
         passwordTextField.isSecureTextEntry = true
         let margins = view.frame.height*0.02
@@ -42,7 +42,6 @@ class LoginViewController: UIViewController, SetupView {
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
             arrangedSubviews: [passwordTextField])
-    
         return (stackView: stackView,
                 textField: passwordTextField)
     }()
@@ -61,19 +60,15 @@ class LoginViewController: UIViewController, SetupView {
         stackView.spacing = 50
         return scrollView
     }()
-    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha", titleColor: Assets.Colors.whiteBlack,
+    private lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
+                                                              titleColor: Assets.Colors.whiteBlack,
                                                               backgroundColor: nil) {_ in
         self.navigationController?.navigate(to: BooksViewController())
     }
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA") {_ in
         self.navigationController?.navigate(to: RegisterNameViewController())
     }
-    var logInButton: UIButton = {
-        let button = Create.baseButton("ENTRAR")
-        return button
-    }()
-    
-    
+    lazy var logInButton: UIButton = Create.baseButton("ENTRAR")
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
         scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -113,5 +108,4 @@ class LoginViewController: UIViewController, SetupView {
     func setupConstraints() {
         view.addConstraints(constraints)
     }
-    
 }

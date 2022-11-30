@@ -69,7 +69,6 @@ extension BooksViewController: BooksViewModelProtocol {
     }
     func sendBooksQuantity(data: Books) {
         Task {[weak self] in
-            self?.booksviewmodel.booksData = data
             self?.collectionView.reloadData()
         }
     }

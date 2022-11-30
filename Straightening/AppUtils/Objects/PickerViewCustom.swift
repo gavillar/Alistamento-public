@@ -1,4 +1,9 @@
-
+//
+//  BindingCepTextField.swift
+//  Straightening
+//
+//  Created by user220831 on 11/22/22.
+//
 
 import UIKit
 
@@ -6,7 +11,6 @@ typealias PickerCustomDisplayNameHandler = ((Any) -> String)
 typealias PickerCustomItemSelectionHandler = ((Int, Any) -> Void)
 
 final class PickerViewCustom: UITextField {
-    
     public var picker: [Any] = []
     public var displayNameHandler: PickerCustomDisplayNameHandler?
     public var itemSelectionHandler: PickerCustomItemSelectionHandler?
@@ -29,7 +33,10 @@ final class PickerViewCustom: UITextField {
         toolBar.barStyle = .default
         toolBar.sizeToFit()
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
+        let doneButton = UIBarButtonItem(title: "Done",
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(doneButtonTapped))
         toolBar.setItems([spaceButton, doneButton], animated: false)
         self.inputAccessoryView = toolBar
     }

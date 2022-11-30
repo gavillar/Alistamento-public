@@ -21,7 +21,9 @@ class IntroViewController: UIViewController, SetupView {
         verseDayLabel.textColor = .white
         verseDayLabel.numberOfLines = 0
         verseDayLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        verseDayLabel.text = Network.read([String].self, from: "Verses")?.randomElement()
+        Task {
+            verseDayLabel.text = await Network.read([String].self, from: "Verses")?.randomElement()
+        }
         let bibleScrollView = UIScrollView()
         bibleScrollView.translatesAutoresizingMaskIntoConstraints = false
         bibleScrollView.turnIntoAList(of: [verseLabel, verseDayLabel])

@@ -13,12 +13,16 @@ final class RegisterBirthDateViewController: RegisterViewController {
         title = "Data de Nascimento"
         text.setPlaceholder("⇩ Data de Nascimento")
         text.field.delegate = self
+        text.field.text = datePicker.dayMonthYear
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        unFreezeButton()
         datePicker.delegate = self
-        datePicker.setup()
+        datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
     }
-
 // MARK: - objc functions
+    @objc func datePickerTarget(_ sender: UIDatePicker) {
+        text.field.text = datePicker.dayMonthYear
+    }
     @objc func buttonTarget() {
         self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
     }

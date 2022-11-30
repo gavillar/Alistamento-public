@@ -9,19 +9,14 @@ import Foundation
 import Firebase
 
 class LoginViewModel {
-    
-    var auth: Auth?
-    init() {
-        self.auth = Auth.auth()
-    }
+    var auth = Auth.auth()
     func performLogin() {
         print("performLogin")
         guard let email = UserDefaults.standard.string(forKey: "loginEmail") else {return}
         print(email)
         guard let password = UserDefaults.standard.string(forKey: "loginPassword") else {return}
         print(password)
-        self.auth?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            
+        self.auth.signIn(withEmail: email, password: password, completion: {(user, error) in
             if error != nil {
                 print("Dados incorretos, tente novamente")
             } else {
@@ -30,10 +25,7 @@ class LoginViewModel {
                 } else {
                     print("Login feito com sucesso")
                 }
-                
             }
         })
-        
     }
-    
 }

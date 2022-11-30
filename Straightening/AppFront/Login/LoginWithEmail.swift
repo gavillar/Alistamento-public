@@ -29,12 +29,12 @@ class LoginWithEmail: LoginViewController {
     func setupPasswordText() {
         password.textField.addTarget(self, action: #selector(tapLoginPasswordTextfield), for: .editingChanged)
     }
-    //This function restricts that capital letters can be entered in the text field
+// This function restricts that capital letters can be entered in the text field
     @objc func textLowercased(_ sender: UITextField) {
         guard sender.text != nil else {return}
         sender.text? = sender.text?.lowercased() ?? ""
     }
-    //This function validates if the email matches the regex
+// This function validates if the email matches the regex
     @objc func tapLoginEmailTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
         print(value)
@@ -42,12 +42,12 @@ class LoginWithEmail: LoginViewController {
             catchEmailText()
         }
     }
-    //This function captures the text field to send to the viewmodel
+// This function captures the text field to send to the viewmodel
     func catchEmailText() {
         guard let email = email.textField.text else {return}
         UserDefaults.standard.set(email, forKey: "loginEmail")
    }
-    //This function validates if the email matches the regex
+// This function validates if the email matches the regex
     @objc func tapLoginPasswordTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
         if password.textField.isValidPassword(value) {
@@ -57,11 +57,9 @@ class LoginWithEmail: LoginViewController {
             logInButton.isUserInteractionEnabled = false
         }
     }
-
-    //This function captures the text field to send to the viewmodel
+// This function captures the text field to send to the viewmodel
     func catchPasswordText() {
         guard let password = password.textField.text else {return}
         UserDefaults.standard.set(password, forKey: "loginPassword")
    }
-
 }
