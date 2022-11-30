@@ -42,7 +42,6 @@ class LoginViewController: UIViewController, SetupView {
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
             arrangedSubviews: [passwordTextField])
-    
         return (stackView: stackView,
                 textField: passwordTextField)
     }()
@@ -109,5 +108,4 @@ class LoginViewController: UIViewController, SetupView {
     func setupConstraints() {
         view.addConstraints(constraints)
     }
-    
 }

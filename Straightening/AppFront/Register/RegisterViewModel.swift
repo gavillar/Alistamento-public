@@ -20,7 +20,7 @@ class RegisterViewModel {
     lazy var password: String = ""
     func setRegister() {
         if email.isEmpty && password.isEmpty {
-            self.auth?.createUser(withEmail: email, password: password, completion: { (result, error) in
+            self.auth?.createUser(withEmail: email, password: password, completion: {(_, error) in
                 if error != nil {
                     print("Falha ao Cadastrar")
                 } else {
