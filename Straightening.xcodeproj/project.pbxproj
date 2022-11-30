@@ -493,6 +493,8 @@
 		27EECF9829353F1C00DBBEEA /* UiTextField */ = {
 			isa = PBXGroup;
 			children = (
+				27F7863329364BB800796436 /* Regex+Password.swift */,
+				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
 				279E055C2921972500A6E008 /* UITextField+NoPaste.swift */,
 				2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */,
 			);
@@ -502,10 +504,8 @@
 		27EECF9929353F4700DBBEEA /* UiViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */,
 				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
 				27F7863129364B6800796436 /* Regex+Email.swift */,
-				27F7863329364BB800796436 /* Regex+Password.swift */,
 			);
 			path = UiViewController;
 			sourceTree = "<group>";
