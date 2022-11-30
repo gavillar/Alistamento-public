@@ -10,5 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     override func loadView() {
+        super.loadView()
+        view.addGradientBackground()
     }
 }

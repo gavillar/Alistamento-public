@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class LoginSetup: LoginViewController {
+class LoginWithEmail: LoginViewController {
 
     override func loadView() {
         super.loadView()
@@ -20,6 +20,8 @@ class LoginSetup: LoginViewController {
     @objc func tapLoginButton() {
         loginviewmodel.performLogin()
         self.navigationController?.navigate(to: HomeViewController())
+        email.textField.text = nil
+        password.textField.text = nil
     }
     func setupEmailText() {
         email.textField.addTarget(self, action: #selector(tapLoginEmailTextfield), for: .editingChanged)
