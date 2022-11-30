@@ -13,7 +13,7 @@ class IntroViewController: UIViewController, SetupView {
     let booksviewcontroller = BooksViewController()
     let function = VerseManager()
     private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") {_ in
-        self.navigationController?.navigate(to: self.loginviewcontroller)
+        self.navigationController?.navigate(to: LoginSetup())
     }
     private lazy var bibleScrollView: UIScrollView = {
         let verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))

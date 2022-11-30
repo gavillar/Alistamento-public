@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController, SetupView {
 // MARK: - variables
+    let loginviewmodel = LoginViewModel()
     private lazy var logo: (stack: UIStackView, label: UILabel) = {
         let label = Create.label("Alistamento")
         label.textColor = Assets.Colors.whiteBlack
@@ -21,7 +22,7 @@ class LoginViewController: UIViewController, SetupView {
         label.textColor = Assets.Colors.whiteBlack
         return label
     }()
-    private lazy var email: (stackView: UIStackView, textField: UITextField) = {
+     lazy var email: (stackView: UIStackView, textField: UITextField) = {
         let emailTextField = Create.textField(placeholder: "Email")
         emailTextField.becomeFirstResponder()
         emailTextField.keyboardType = .namePhonePad
@@ -33,7 +34,7 @@ class LoginViewController: UIViewController, SetupView {
         return (stackView: stackView,
                 textField: emailTextField)
     }()
-    private lazy var password: (stackView: UIStackView, textField: UITextField) = {
+     lazy var password: (stackView: UIStackView, textField: UITextField) = {
         let passwordTextField = Create.textField(placeholder: "Senha")
         passwordTextField.isSecureTextEntry = true
         let margins = view.frame.height*0.02
@@ -67,9 +68,12 @@ class LoginViewController: UIViewController, SetupView {
     private lazy var signInButton = Create.baseButton("CRIAR UMA CONTA") {_ in
         self.navigationController?.navigate(to: RegisterNameViewController())
     }
-    private lazy var logInButton = Create.baseButton("ENTRAR") {_ in
-        self.navigationController?.navigate(to: FormViewController())
-    }
+    var logInButton: UIButton = {
+        let button = Create.baseButton("ENTRAR")
+        return button
+    }()
+    
+    
     private lazy var constraints = [
         scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
         scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -109,4 +113,5 @@ class LoginViewController: UIViewController, SetupView {
     func setupConstraints() {
         view.addConstraints(constraints)
     }
+    
 }

@@ -36,9 +36,11 @@
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A38002934E24D003855C3 /* FireBaseManager.swift */; };
-		270A38032934E959003855C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 270A38022934E959003855C3 /* GoogleService-Info.plist */; };
 		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
 		2720A1E02931C25D00795D73 /* VerseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720A1DF2931C25D00795D73 /* VerseManager.swift */; };
+		274384A22937911A0079AE75 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274384A12937911A0079AE75 /* LoginViewModel.swift */; };
+		274384A42937913E0079AE75 /* LoginSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274384A32937913E0079AE75 /* LoginSetup.swift */; };
+		274384A629379BE60079AE75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 274384A529379BE60079AE75 /* GoogleService-Info.plist */; };
 		2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
 		27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C812927055100F80344 /* UiStackView+HStack.swift */; };
@@ -131,9 +133,11 @@
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270A38002934E24D003855C3 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
-		270A38022934E959003855C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 		2720A1DF2931C25D00795D73 /* VerseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseManager.swift; sourceTree = "<group>"; };
+		274384A12937911A0079AE75 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		274384A32937913E0079AE75 /* LoginSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSetup.swift; sourceTree = "<group>"; };
+		274384A529379BE60079AE75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Border.swift"; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
 		27665C812927055100F80344 /* UiStackView+HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+HStack.swift"; sourceTree = "<group>"; };
@@ -361,8 +365,8 @@
 				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
 				1D635315292E9B760052705D /* Números.geojson */,
 				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
-				270A38022934E959003855C3 /* GoogleService-Info.plist */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
+				274384A529379BE60079AE75 /* GoogleService-Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
 			);
 			path = Straightening;
@@ -407,6 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
+				274384A12937911A0079AE75 /* LoginViewModel.swift */,
+				274384A32937913E0079AE75 /* LoginSetup.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -654,8 +660,8 @@
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
 				27C379FA2932666A00397E14 /* Verses.geojson in Resources */,
 				5FCB45922936A1BA00B3D7F9 /* Juízes.geojson in Resources */,
-				270A38032934E959003855C3 /* GoogleService-Info.plist in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
+				274384A629379BE60079AE75 /* GoogleService-Info.plist in Resources */,
 				5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
@@ -714,6 +720,7 @@
 				277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */,
 				27EECF9629352F8800DBBEEA /* RegisterModel.swift in Sources */,
 				1DF21B0F291C194800A85B05 /* Network.swift in Sources */,
+				274384A22937911A0079AE75 /* LoginViewModel.swift in Sources */,
 				1DA4456C2927B029001E137C /* BookModel.swift in Sources */,
 				2770EA44291BEF4600760A35 /* LoginViewController.swift in Sources */,
 				279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */,
@@ -757,6 +764,7 @@
 				27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
 				1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */,
+				274384A42937913E0079AE75 /* LoginSetup.swift in Sources */,
 				1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */,
 				1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */,
 				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
