@@ -24,7 +24,8 @@ final class RegisterBirthDateViewController: RegisterViewController {
         text.field.text = datePicker.dayMonthYear
     }
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
+        registerViewModel.userToRegister.birthDate = text.field.text
+        self.navigationController?.navigate(to: RegisterAvaibleTimeViewController(registerViewModel))
     }
 }
 

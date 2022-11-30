@@ -19,10 +19,11 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        registerviewmodel.changeButton(condition: count > 10)
+        registerViewModel.changeButton(condition: count > 10)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterEmailViewController())
+        registerViewModel.userToRegister.phone = text.field.text
+        self.navigationController?.navigate(to: RegisterEmailViewController(registerViewModel))
     }
 }
