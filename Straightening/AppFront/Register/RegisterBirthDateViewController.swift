@@ -13,7 +13,9 @@ final class RegisterBirthDateViewController: RegisterViewController {
         title = "Data de Nascimento"
         text.setPlaceholder("⇩ Data de Nascimento")
         text.field.delegate = self
+        text.field.text = datePicker.dayMonthYear
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        unFreezeButton()
         datePicker.delegate = self
         datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
     }
@@ -22,10 +24,7 @@ final class RegisterBirthDateViewController: RegisterViewController {
         text.field.text = datePicker.dayMonthYear
     }
     @objc func buttonTarget() {
-        guard let count = text.field.text?.count else {return}
-        if registerviewmodel.changeButton(condition: count == 8) {
-            self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
-        }
+        self.navigationController?.navigate(to: RegisterAvaibleTimeViewController())
     }
 }
 
