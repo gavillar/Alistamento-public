@@ -18,10 +18,11 @@ final class RegisterNameViewController: RegisterViewController {
     }
     @objc func tapNameTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        registerviewmodel.changeButton(condition: count > 6)
+        registerViewModel.changeButton(condition: count > 6)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterPhoneViewController())
+        registerViewModel.userToRegister.name = text.field.text
+        self.navigationController?.navigate(to: RegisterPhoneViewController(registerViewModel))
     }
 }

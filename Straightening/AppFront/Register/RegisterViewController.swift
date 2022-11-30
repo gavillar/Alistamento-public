@@ -8,11 +8,7 @@ import UIKit
 
 class RegisterViewController: UIViewController, SetupView {
 // MARK: - Variables
-    lazy var registerviewmodel: RegisterViewModel = {
-        let registerviewmodel = RegisterViewModel()
-        registerviewmodel.delegate = self
-        return registerviewmodel
-    }()
+    var registerViewModel: RegisterViewModel
     lazy var datePicker = DatePicker()
     lazy var base: (view: UIView, stack: UIStackView) = {
         let stackView = UIStackView()
@@ -45,6 +41,16 @@ class RegisterViewController: UIViewController, SetupView {
         let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
         return button
     }()
+// MARK: - init
+    init(_ registerViewModel: RegisterViewModel = RegisterViewModel()) {
+        self.registerViewModel = registerViewModel
+        print(self.registerViewModel.userToRegister)
+        super.init(nibName: nil, bundle: nil)
+        registerViewModel.delegate = self
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 // MARK: - override functions
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()

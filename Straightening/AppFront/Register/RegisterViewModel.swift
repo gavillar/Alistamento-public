@@ -16,6 +16,7 @@ protocol RegisterViewModelDelegate: AnyObject {
 class RegisterViewModel {
     weak var delegate: RegisterViewModelDelegate?
     var auth: Auth?
+    var userToRegister: RegisterModel = RegisterModel()
     lazy var email: String = ""
     lazy var password: String = ""
     func setRegister() {

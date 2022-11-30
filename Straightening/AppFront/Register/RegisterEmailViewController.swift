@@ -30,20 +30,21 @@ final class RegisterEmailViewController: RegisterViewController {
 // This function validates if the email matches the regex
     @objc func tapEmailTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
-        if registerviewmodel.changeButton(condition: text.field.isValidEmail(value)) {
+        if registerViewModel.changeButton(condition: text.field.isValidEmail(value)) {
             catchEmailText()
         }
     }
 // This function captures the text field to send to the viewmodel
     func catchEmailText() {
        text.field.bind {text in
-           self.registerviewmodel.email = text
+           self.registerViewModel.email = text
        }
     }
 
 // MARK: - objc functions
     @objc func buttonTarget() {
         print("tap email")
-        self.navigationController?.navigate(to: RegisterPasswordViewController())
+        registerViewModel.userToRegister.email = text.field.text
+        self.navigationController?.navigate(to: RegisterPasswordViewController(registerViewModel))
     }
 }
