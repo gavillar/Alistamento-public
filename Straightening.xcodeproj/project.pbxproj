@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D255F462937BE5A00074B58 /* Books.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Books.geojson */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D255F452937BE5A00074B58 /* Books.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Books.geojson; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
+				1D255F452937BE5A00074B58 /* Books.geojson */,
 				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
 				5FCB458F2936927700B3D7F9 /* Josué.geojson */,
 				5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */,
@@ -660,6 +663,7 @@
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
 				274384A629379BE60079AE75 /* GoogleService-Info.plist in Resources */,
 				5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */,
+				1D255F462937BE5A00074B58 /* Books.geojson in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
 				1D635314292E99560052705D /* Levítico.geojson in Resources */,
