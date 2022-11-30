@@ -11,7 +11,6 @@ class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
-    let function = VerseManager()
     private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") {_ in
         self.navigationController?.navigate(to: LoginWithEmail())
     }
@@ -22,7 +21,7 @@ class IntroViewController: UIViewController, SetupView {
         verseDayLabel.textColor = .white
         verseDayLabel.numberOfLines = 0
         verseDayLabel.font = UIFont.boldSystemFont(ofSize: 15)
-        verseDayLabel.text = function.randomVerse(Network.read([String].self, from: "Verses") ?? [])
+        verseDayLabel.text = Network.read([String].self, from: "Verses")?.randomElement()
         let bibleScrollView = UIScrollView()
         bibleScrollView.translatesAutoresizingMaskIntoConstraints = false
         bibleScrollView.turnIntoAList(of: [verseLabel, verseDayLabel])

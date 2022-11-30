@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 
 class LoginWithEmail: LoginViewController {
-
     override func loadView() {
         super.loadView()
         setupEmailText()
