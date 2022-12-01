@@ -26,7 +26,7 @@ struct LoginViewModel: AuthenticationLoginViewModel {
     var email: String?
     var password: String?
     var formatIsValid: Bool {
-        return email?.isEmpty == false && password?.isEmpty == false
+        return email?.isEmpty == false && password?.isEmpty == false && email?.isEmail() == true
     }
     var backgroundCollorButton: UIColor {
         return formatIsValid ? UIColor(red: 152/155, green: 251/155, blue: 144/155, alpha: 1) : UIColor.white.withAlphaComponent(0.5)

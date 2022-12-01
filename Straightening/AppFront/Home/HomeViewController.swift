@@ -12,5 +12,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view.addGradientBackground()
+        navigationController?.navigationBar.isUserInteractionEnabled = false
+        navigationController?.navigationBar.isHidden = true
     }
 }

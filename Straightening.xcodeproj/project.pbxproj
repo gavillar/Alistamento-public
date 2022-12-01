@@ -572,7 +572,6 @@
 			isa = PBXGroup;
 			children = (
 				27E3A6F429251E75007CDF8A /* UIViewController+HiddenKeyboard.swift */,
-				27F7863129364B6800796436 /* Regex+Email.swift */,
 			);
 			path = UiViewController;
 			sourceTree = "<group>";
@@ -608,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				27EECFA02935483600DBBEEA /* FormatMask.swift */,
+				27F7863129364B6800796436 /* Regex+Email.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
