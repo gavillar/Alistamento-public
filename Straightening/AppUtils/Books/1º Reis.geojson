@@ -1,5 +1,720 @@
 {
-    "chapters": [
-        
-    ]
+   "chapters":[
+      {
+         "book":{
+            "abbrev":{
+               "pt":"1rs",
+               "en":"1kgs"
+            },
+            "name":"1º Reis",
+            "author":"Jeremias",
+            "group":"Históricos",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":1,
+            "verses":53
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Quando o rei Davi envelheceu, já de idade bem avançada, cobriam-no de cobertores, mas ele não se aquecia."
+            },
+            {
+               "number":2,
+               "text":"Por isso os seus servos lhe propuseram: \"Nós vamos procurar uma jovem virgem para servir e cuidar do rei. Ela se deitará ao seu lado, afim de aquecer o rei\"."
+            },
+            {
+               "number":3,
+               "text":"Então procuraram em todo o território de Israel uma jovem que fosse bonita e encontraram Abisague, uma sunamita, e a levaram ao rei."
+            },
+            {
+               "number":4,
+               "text":"A jovem, muito bonita, cuidava do rei e o servia, mas o rei não teve relações com ela."
+            },
+            {
+               "number":5,
+               "text":"Ora, Adonias, cuja mãe se chamava Hagite, tomou a dianteira e disse: \"Eu serei o rei\". Providenciou uma carruagem e cavalos, além de cinqüenta homens para correrem à sua frente."
+            },
+            {
+               "number":6,
+               "text":"Seu pai nunca o havia contrariado; nunca lhe perguntava: \"Por que você age assim? \" Adonias também tinha boa aparência e havia nascido depois de Absalão."
+            },
+            {
+               "number":7,
+               "text":"Adonias fez acordo com Joabe, filho de Zeruia, e com o sacerdote Abiatar, e eles, o seguiram e o apoiaram."
+            },
+            {
+               "number":8,
+               "text":"Mas o sacerdote Zadoque, Benaia, filho de Joiada, o profeta Natã, Simei, Reí e a guarda especial de Davi não deram apoio a Adonias."
+            },
+            {
+               "number":9,
+               "text":"Então Adonias sacrificou ovelhas, bois e novilhos gordos junto à pedra de Zoelete, próximo a En-Rogel. Convidou todos os seus irmãos, filhos do rei, e todos os homens de Judá que eram conselheiros do rei,"
+            },
+            {
+               "number":10,
+               "text":"mas não convidou o profeta Natã nem Benaia nem a guarda especial nem o seu irmão Salomão."
+            },
+            {
+               "number":11,
+               "text":"Natã perguntou então a Bate-Seba, mãe de Salomão: \"Você ainda não sabe que Adonias, o filho de Hagite, tornou-se rei, sem que o nosso senhor Davi ficasse sabendo?"
+            },
+            {
+               "number":12,
+               "text":"Agora, vou dar-lhe um conselho para salvar a sua vida e também a vida do seu filho Salomão."
+            },
+            {
+               "number":13,
+               "text":"Vá perguntar ao rei Davi: Ó rei, meu senhor, não juraste a esta tua serva, prometendo: ‘Tenha certeza que o seu filho Salomão me sucederá como rei, e se assentará no meu trono? ’ Por que foi então, que Adonias se tornou rei?"
+            },
+            {
+               "number":14,
+               "text":"Enquanto você ainda estiver conversando com o rei, eu entrarei e confirmarei as suas palavras\"."
+            },
+            {
+               "number":15,
+               "text":"Então Bate-Seba foi até o quarto do rei, já idoso, onde a sunamita Abisague cuidava dele."
+            },
+            {
+               "number":16,
+               "text":"Bate-Seba ajoelhou-se e prostrou-se diante do rei. \"O que você quer? \", o rei perguntou."
+            },
+            {
+               "number":17,
+               "text":"Ela respondeu: \"Meu senhor, tu mesmo juraste a esta tua serva, pelo Senhor o teu Deus: ‘Seu filho Salomão o sucederá como rei e se assentará no meu trono’."
+            },
+            {
+               "number":18,
+               "text":"Mas agora Adonias se tornou rei, sem que o rei meu senhor o soubesse."
+            },
+            {
+               "number":19,
+               "text":"Ele sacrificou muitos bois, novilhos gordos e ovelhas, e convidou todos os filhos do rei, o sacerdote Abiatar, e Joabe, o comandante do exército, mas não convidou o teu servo Salomão."
+            },
+            {
+               "number":20,
+               "text":"Agora, ó rei, meu senhor, os olhos de todo o Israel estão sobre ti para saber de tua parte, quem sucederá ao rei, meu senhor, no trono."
+            },
+            {
+               "number":21,
+               "text":"De outro modo, tão logo o rei, meu senhor descanse com os seus antepassados, eu e o meu filho Salomão seremos tratados como traidores\"."
+            },
+            {
+               "number":22,
+               "text":"Ela ainda conversava com o rei, quando o profeta Natã chegou."
+            },
+            {
+               "number":23,
+               "text":"Assim que informaram o rei que o profeta Natã havia chegado, ele entrou e prostrou-se, rosto em terra, diante do rei."
+            },
+            {
+               "number":24,
+               "text":"E Natã lhe perguntou: \"Ó rei, meu senhor, por acaso declaraste que Adonias te sucederia como rei e que ele se assentaria no teu trono?"
+            },
+            {
+               "number":25,
+               "text":"Hoje ele foi matar muitos bois, novilhos gordos e ovelhas. Convidou todos os filhos do rei, os comandantes do exército e o sacerdote Abiatar. Agora eles estão comendo e bebendo com ele e comemorando: ‘Viva o rei Adonias! ’"
+            },
+            {
+               "number":26,
+               "text":"Mas ele não convidou a mim, que sou teu servo, nem ao sacerdote Zadoque nem a Benaia, filho de Joiada, nem a teu servo Salomão."
+            },
+            {
+               "number":27,
+               "text":"Seria isto algo que o rei, meu senhor, fez sem deixar que os seus conselheiros soubessem quem sucederia ao rei, meu senhor, no trono? \""
+            },
+            {
+               "number":28,
+               "text":"Então o rei Davi ordenou: \"Chamem Bate-Seba\". Ela entrou e ficou de pé diante dele."
+            },
+            {
+               "number":29,
+               "text":"O rei fez então um juramento: \"Juro pelo nome do Senhor, o qual me livrou de todas as adversidades,"
+            },
+            {
+               "number":30,
+               "text":"que sem dúvida hoje mesmo vou executar o que jurei pelo Senhor, o Deus de Israel. O seu filho Salomão me sucederá como rei e se assentará no meu trono em meu lugar\"."
+            },
+            {
+               "number":31,
+               "text":"Então Bate-Seba prostrou-se, rosto em terra, e, ajoelhando-se diante do rei, disse: \"Que o rei Davi, meu senhor, viva para sempre! \""
+            },
+            {
+               "number":32,
+               "text":"O rei Davi ordenou: \"Chamem o sacerdote Zadoque, o profeta Natã e Benaia, filho de Joiada\". Quando chegaram à presença do rei,"
+            },
+            {
+               "number":33,
+               "text":"ele os instruiu: \"Levem os conselheiros do seu senhor com vocês e ponham o meu filho Salomão sobre a minha mula e levem-no a Giom."
+            },
+            {
+               "number":34,
+               "text":"Ali o sacerdote Zadoque e o profeta Natã o ungirão rei sobre Israel. Então toquem a trombeta e gritem: Viva o rei Salomão!"
+            },
+            {
+               "number":35,
+               "text":"Depois acompanhem-no, e ele virá assentar-se no meu trono e reinará em meu lugar. Eu o designei para governar Israel e Judá\"."
+            },
+            {
+               "number":36,
+               "text":"Benaia, filho de Joiada, respondeu ao rei: \"Assim se fará! Que o Senhor, o Deus do rei, meu senhor, o confirme."
+            },
+            {
+               "number":37,
+               "text":"Assim como o Senhor esteve com o rei, meu senhor, também esteja ele com Salomão para que ele tenha um reinado ainda mais glorioso do que o meu senhor, o rei Davi! \""
+            },
+            {
+               "number":38,
+               "text":"Então o sacerdote Zadoque, o profeta Natã, Benaia, filho de Joiada, os queretitas e os peletitas fizeram Salomão montar a mula do rei Davi e o escoltaram até Giom."
+            },
+            {
+               "number":39,
+               "text":"O sacerdote Zadoque pegou na Tenda o chifre com óleo e ungiu Salomão. Então tocaram a trombeta e todo o povo gritou: \"Viva o rei Salomão! \""
+            },
+            {
+               "number":40,
+               "text":"E todo o povo o acompanhou, tocando flautas e comemorando, de tal forma que o chão tremia com o barulho."
+            },
+            {
+               "number":41,
+               "text":"Adonias e todos os seus convidados souberam disso quando estavam terminando o banquete. Ao ouvir o toque da trombeta, Joabe perguntou: \"O que significa esta gritaria, esse alvoroço na cidade? \""
+            },
+            {
+               "number":42,
+               "text":"Falava ele ainda, quando chegou Jônatas, filho do sacerdote Abiatar. E Adonias lhe disse: \"Entre, pois um homem digno como você deve estar trazendo boas notícias! \""
+            },
+            {
+               "number":43,
+               "text":"\"De modo algum\", respondeu Jônatas a Adonias. \"Davi, o nosso rei e senhor, constituiu rei a Salomão."
+            },
+            {
+               "number":44,
+               "text":"O rei enviou com ele o sacerdote Zadoque, o profeta Natã, Benaia, filho de Joiada, os queretitas e os peletitas, e eles o fizeram montar a mula do rei."
+            },
+            {
+               "number":45,
+               "text":"Depois o sacerdote Zadoque e o profeta Natã o ungiram rei em Giom. De lá eles saíram comemorando, e a cidade está alvoroçada. É esse o barulho que vocês ouvem."
+            },
+            {
+               "number":46,
+               "text":"Além disso, Salomão já se assentou no trono real."
+            },
+            {
+               "number":47,
+               "text":"Até mesmo os oficiais do rei foram cumprimentar Davi, o nosso rei e senhor, dizendo: ‘Que o teu Deus torne o nome de Salomão mais famoso que o teu, e o seu reinado mais glorioso do que o teu! ’ E o rei curvou-se reverentemente em sua cama,"
+            },
+            {
+               "number":48,
+               "text":"e disse: ‘Bendito seja o Senhor, o Deus de Israel, que permitiu que os meus olhos vissem hoje um sucessor em meu trono’ \"."
+            },
+            {
+               "number":49,
+               "text":"Diante disso, todos os convidados de Adonias entraram em pânico e se dispersaram."
+            },
+            {
+               "number":50,
+               "text":"Mas Adonias, com medo de Salomão, foi agarrar-se às pontas do altar."
+            },
+            {
+               "number":51,
+               "text":"Então informaram a Salomão: \"Adonias está com medo do rei Salomão e está agarrado às pontas do altar. Ele diz: ‘Que o rei Salomão me jure que não matará o seu servo pela espada’ \"."
+            },
+            {
+               "number":52,
+               "text":"Salomão respondeu: \"Se ele se mostrar confiável, não cairá nem um só fio de cabelo da sua cabeça; mas se nele se descobrir alguma maldade, ele morrerá\"."
+            },
+            {
+               "number":53,
+               "text":"Então o rei enviou alguns soldados, e eles o fizeram descer do altar. E Adonias veio e se curvou solenemente perante o rei Salomão, que lhe disse: \"Vá para casa\"."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"1rs",
+               "en":"1kgs"
+            },
+            "name":"1º Reis",
+            "author":"Jeremias",
+            "group":"Históricos",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":2,
+            "verses":46
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Quando se aproximava o dia de sua morte, Davi deu instruções ao seu filho Salomão:"
+            },
+            {
+               "number":2,
+               "text":"\"Estou para seguir o caminho de toda a terra. Por isso, seja forte e seja homem."
+            },
+            {
+               "number":3,
+               "text":"Obedeça ao que o Senhor, o seu Deus, exige: Ande nos seus caminhos e obedeça aos seus decretos, aos seus mandamentos, às suas ordenanças e aos seus testemunhos, conforme se acham escritos na Lei de Moisés; assim você prosperará em tudo o que fizer e por onde quer que for,"
+            },
+            {
+               "number":4,
+               "text":"e o Senhor manterá a promessa que me fez: ‘Se os seus descendentes cuidarem de sua conduta, e se me seguirem fielmente de todo o coração e de toda a alma, você jamais ficará sem descendente no trono de Israel’."
+            },
+            {
+               "number":5,
+               "text":"\"Você sabe muito bem o que Joabe, filho de Zeruia, me fez; o que fez com os dois comandantes dos exércitos de Israel, Abner, filho de Ner, e Amasa, filho de Jéter. Ele os matou, derramando sangue em tempos de paz; agiu como se estivesse em guerra, e com aquele sangue manchou o seu cinto e as suas sandálias."
+            },
+            {
+               "number":6,
+               "text":"Proceda com a sabedoria que você tem, e não o deixe envelhecer e descer em paz à sepultura."
+            },
+            {
+               "number":7,
+               "text":"\"Mas seja bondoso com os filhos de Barzilai, de Gileade, admita-os entre os que comem à mesa com você, pois eles me apoiaram quando fugi do seu irmão Absalão."
+            },
+            {
+               "number":8,
+               "text":"\"Saiba que também está com você Simei, filho de Gera, o benjamita de Baurim. Ele lançou terríveis maldições contra mim no dia em que fui a Maanaim. Mas depois desceu ao meu encontro no Jordão e lhe prometi jurando pelo Senhor que não o mataria à espada."
+            },
+            {
+               "number":9,
+               "text":"Mas, agora, não o considere inocente. Você é um homem sábio e saberá o que fazer com ele; apesar de ele já ser idoso, faça-o descer ensangüentado à sepultura\"."
+            },
+            {
+               "number":10,
+               "text":"Então Davi descansou com os seus antepassados e foi sepultado na cidade de Davi."
+            },
+            {
+               "number":11,
+               "text":"Ele reinou quarenta anos em Israel: sete anos em Hebrom e trinta e três em Jerusalém."
+            },
+            {
+               "number":12,
+               "text":"Salomão assentou-se no trono de Davi, seu pai, e o seu reinado foi firmemente estabelecido."
+            },
+            {
+               "number":13,
+               "text":"Adonias, o filho de Hagite, foi até Bate-Seba, mãe de Salomão. E esta lhe perguntou: \"Você vem em paz? \" Ele respondeu: \"Sim\"."
+            },
+            {
+               "number":14,
+               "text":"E acrescentou: \"Tenho algo para lhe dizer\". Ela disse: Fale!"
+            },
+            {
+               "number":15,
+               "text":"\"Você sabe\", disse ele, \"que o reino era meu. Todo o Israel me via como o seu rei. Mas as circunstâncias mudaram, e o reino foi para o meu irmão; pois o Senhor o concedeu a ele."
+            },
+            {
+               "number":16,
+               "text":"Agora, quero fazer-lhe um pedido e espero que não me seja negado. \" Ela disse: \"Fale! \""
+            },
+            {
+               "number":17,
+               "text":"Então ele prosseguiu: \"Peça, por favor, ao rei Salomão que me dê a sunamita Abisague por mulher, pois ele não deixará de atender você\"."
+            },
+            {
+               "number":18,
+               "text":"\"Está bem\", respondeu Bate-Seba, \"falarei com o rei em seu favor. \""
+            },
+            {
+               "number":19,
+               "text":"Quando Bate-Seba foi falar ao rei em favor de Adonias, Salomão levantou-se para recebê-la e inclinou-se diante dela. Depois assentou-se no seu trono, mandou que trouxessem um trono para a sua mãe, e ela se assentou à sua direita."
+            },
+            {
+               "number":20,
+               "text":"\"Tenho um pequeno pedido para lhe fazer\", disse ela. \"Não deixe de me atender. \" O rei respondeu: \"Faça o pedido, minha mãe; não deixarei de atendê-lo\"."
+            },
+            {
+               "number":21,
+               "text":"Então ela disse: \"Dê a sunamita Abisague por mulher a seu irmão Adonias\"."
+            },
+            {
+               "number":22,
+               "text":"O rei Salomão perguntou à sua mãe: \"Por que você pede somente a sunamita Abisague para Adonias? Peça logo o reino para ele, para o sacerdote Abiatar e para Joabe, filho de Zeruia; afinal ele é o meu irmão mais velho! \""
+            },
+            {
+               "number":23,
+               "text":"Então o rei Salomão jurou pelo Senhor: \"Que Deus me castigue com todo o rigor, se isso que Adonias falou não lhe custar a sua própria vida!"
+            },
+            {
+               "number":24,
+               "text":"E agora eu juro pelo nome do Senhor, que me estabeleceu no trono de meu pai Davi, e, conforme prometeu, fundou uma dinastia para mim, que hoje mesmo Adonias será morto! \""
+            },
+            {
+               "number":25,
+               "text":"E o rei Salomão deu ordem a Benaia, filho de Joiada, e este feriu e matou Adonias."
+            },
+            {
+               "number":26,
+               "text":"Ao sacerdote Abiatar o rei ordenou: \"Vá para Anatote, para as suas terras! Você merece morrer, mas hoje eu não o matarei, pois você carregou a arca do Soberano Senhor diante de Davi, meu pai, e partilhou de todas as aflições dele\"."
+            },
+            {
+               "number":27,
+               "text":"Então Salomão expulsou Abiatar do sacerdócio do Senhor, cumprindo a palavra que o Senhor tinha dito em Siló a respeito da família de Eli."
+            },
+            {
+               "number":28,
+               "text":"Quando a notícia chegou a Joabe, que havia conspirado com Adonias, ainda que não com Absalão, ele fugiu para a Tenda do Senhor e agarrou-se às pontas do altar."
+            },
+            {
+               "number":29,
+               "text":"Foi dito ao rei Salomão que Joabe havia se refugiado na Tenda do Senhor e estava ao lado do altar. Então Salomão ordenou a Benaia, filho de Joiada: \"Vá matá-lo! \""
+            },
+            {
+               "number":30,
+               "text":"Então Benaia entrou na Tenda do Senhor e disse a Joabe: \"O rei lhe ordena que saia\". \"Não\", respondeu ele, \"Vou morrer aqui\". Benaia relatou ao rei a resposta de Joabe."
+            },
+            {
+               "number":31,
+               "text":"Então o rei ordenou a Benaia: \"Faça o que ele diz. Mate-o e sepulte-o, e assim você retirará de mim e da minha família a culpa do sangue inocente que Joabe derramou."
+            },
+            {
+               "number":32,
+               "text":"O Senhor fará recair sobre a cabeça dele o sangue que derramou: ele atacou dois homens mais justos e melhores do que ele, sem o conhecimento de meu pai Davi, e os matou à espada. Os dois homens eram Abner, filho de Ner, comandante do exército de Israel, e Amasa, filho de Jéter, comandante do exército de Judá."
+            },
+            {
+               "number":33,
+               "text":"Que o sangue deles recaia sobre a cabeça de Joabe e sobre a dos seus descendentes para sempre. Mas que a paz do Senhor esteja para sempre sobre Davi, sobre os seus descendentes, sobre a sua dinastia e sobre o seu trono\"."
+            },
+            {
+               "number":34,
+               "text":"Então Benaia, filho de Joiada, foi e atacou Joabe e o matou, e ele foi sepultado em sua casa no campo."
+            },
+            {
+               "number":35,
+               "text":"No lugar dele o rei nomeou Benaia, filho de Joiada, no comando do exército, e o sacerdote Zadoque no lugar de Abiatar."
+            },
+            {
+               "number":36,
+               "text":"Depois o rei mandou chamar Simei e lhe ordenou: \"Construa para você uma casa em Jerusalém. Você morará nela e não poderá ir para nenhum outro lugar."
+            },
+            {
+               "number":37,
+               "text":"Esteja certo de que no dia em que sair e atravessar o vale de Cedrom, você será morto; e você será responsável por sua própria morte\"."
+            },
+            {
+               "number":38,
+               "text":"Simei respondeu ao rei: \"A ordem do rei é boa! O teu servo lhe obedecerá\". E Simei permaneceu em Jerusalém por muito tempo."
+            },
+            {
+               "number":39,
+               "text":"Mas três anos depois, dois escravos de Simei fugiram para a casa de Aquis, filho de Maaca, rei de Gate. Alguém contou a Simei: \"Seus escravos estão em Gate\"."
+            },
+            {
+               "number":40,
+               "text":"Então Simei selou um jumento e foi até Aquis, em Gate, procurar os seus escravos. E de lá Simei trouxe os escravos de volta."
+            },
+            {
+               "number":41,
+               "text":"Quando Salomão soube que Simei tinha ido a Gate e voltado a Jerusalém,"
+            },
+            {
+               "number":42,
+               "text":"mandou chamá-lo e lhe perguntou: \"Eu não fiz você jurar pelo Senhor e não o adverti: No dia em que você for para qualquer outro lugar, esteja certo que você morrerá? E você me respondeu: ‘Esta ordem é boa! Obedecerei’."
+            },
+            {
+               "number":43,
+               "text":"Por que não manteve o juramento ao Senhor e não obedeceu à ordem que lhe dei? \""
+            },
+            {
+               "number":44,
+               "text":"E acrescentou: \"No seu coração você sabe como você prejudicou o meu pai Davi. Agora o Senhor faz recair sua maldade sobre a sua cabeça."
+            },
+            {
+               "number":45,
+               "text":"Mas o rei Salomão será abençoado, e o trono de Davi será estabelecido perante o Senhor para sempre\"."
+            },
+            {
+               "number":46,
+               "text":"Então o rei deu ordem a Benaia, filho de Joiada, e este atacou Simei e o matou. Assim o reino ficou bem estabelecido nas mãos de Salomão."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"1rs",
+               "en":"1kgs"
+            },
+            "name":"1º Reis",
+            "author":"Jeremias",
+            "group":"Históricos",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":3,
+            "verses":28
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"Salomão aliou-se ao faraó, rei do Egito, casando-se com a filha dele. Ele a trouxe à cidade de Davi até terminar a construção do seu palácio e do templo do Senhor, e do muro em torno de Jerusalém."
+            },
+            {
+               "number":2,
+               "text":"O povo, porém, sacrificava nos lugares sagrados, pois ainda não tinha sido construído um templo em honra do nome do Senhor."
+            },
+            {
+               "number":3,
+               "text":"Salomão amava o Senhor, pois andava de acordo com os decretos do seu pai Davi; todavia oferecia sacrifícios e queimava incenso nos lugares sagrados."
+            },
+            {
+               "number":4,
+               "text":"O rei Salomão foi a Gibeom para oferecer sacrifícios, pois ali ficava o principal lugar sagrado, e ofereceu naquele altar mil holocaustos."
+            },
+            {
+               "number":5,
+               "text":"Em Gibeom o Senhor apareceu a Salomão num sonho, à noite, e lhe disse: \"Peça-me o que quiser, e eu lhe darei\"."
+            },
+            {
+               "number":6,
+               "text":"Salomão respondeu: \"Tu foste muito bondoso para com o teu servo, o meu pai Davi, pois ele foi fiel a ti, e foi justo e reto de coração. Tu sustentaste grande bondade para com ele e lhe deste um filho que hoje se assenta no seu trono."
+            },
+            {
+               "number":7,
+               "text":"\"Agora, Senhor meu Deus, fizeste o teu servo reinar em lugar de meu pai Davi. Mas eu não passo de um jovem e não sei o que fazer."
+            },
+            {
+               "number":8,
+               "text":"Teu servo está aqui entre o povo que escolheste, um povo tão grande que nem se pode contar."
+            },
+            {
+               "number":9,
+               "text":"Dá, pois, ao teu servo um coração cheio de discernimento para governar o teu povo e capaz de distinguir entre o bem e o mal. Pois, quem pode governar este teu grande povo? \""
+            },
+            {
+               "number":10,
+               "text":"O pedido que Salomão fez agradou ao Senhor."
+            },
+            {
+               "number":11,
+               "text":"Por isso Deus lhe disse: \"Já que você pediu isto e não uma vida longa nem riqueza, nem pediu a morte dos seus inimigos, mas discernimento para ministrar a justiça,"
+            },
+            {
+               "number":12,
+               "text":"farei o que você pediu. Eu lhe darei um coração sábio e capaz de discernir, de modo que nunca houve nem haverá ninguém como você."
+            },
+            {
+               "number":13,
+               "text":"Também lhe darei o que você não pediu: riquezas e fama; de forma que não haverá rei igual a você durante toda a sua vida."
+            },
+            {
+               "number":14,
+               "text":"E, se você andar nos meus caminhos e obedecer aos meus decretos e aos meus mandamentos, como o seu pai Davi, eu prolongarei a sua vida\"."
+            },
+            {
+               "number":15,
+               "text":"Então Salomão acordou e percebeu que tinha sido um sonho. Depois voltou a Jerusalém, pôs-se perante a arca da aliança do Senhor, sacrificou holocaustos e apresentou ofertas de comunhão. Então deu um banquete para toda a sua corte."
+            },
+            {
+               "number":16,
+               "text":"Certo dia duas prostitutas compareceram diante do rei."
+            },
+            {
+               "number":17,
+               "text":"Uma delas disse: \"Ah meu senhor! Esta mulher mora comigo na mesma casa. Eu dei à luz um filho e ela estava comigo na casa."
+            },
+            {
+               "number":18,
+               "text":"Três dias depois de nascer o meu filho, esta mulher também deu à luz um filho. Estávamos sozinhas, e não havia mais ninguém na casa."
+            },
+            {
+               "number":19,
+               "text":"\"Certa noite esta mulher se deitou sobre o seu filho, e ele morreu."
+            },
+            {
+               "number":20,
+               "text":"Então ela se levantou no meio da noite e pegou o meu filho enquanto eu, tua serva, dormia, e o pôs ao seu lado. E pôs o filho dela, morto, ao meu lado."
+            },
+            {
+               "number":21,
+               "text":"Ao levantar-me de madrugada para amamentar o meu filho, ele estava morto. Mas quando olhei bem para ele de manhã, vi que não era o filho que eu dera à luz\"."
+            },
+            {
+               "number":22,
+               "text":"A outra mulher disse: \"Não! O que está vivo é meu filho; o morto é seu\". Mas a primeira insistia: \"Não! O morto é seu; o vivo é meu\". Assim elas discutiram diante do rei."
+            },
+            {
+               "number":23,
+               "text":"O rei disse: \"Esta afirma: ‘Meu filho está vivo, e o seu filho está morto’, enquanto aquela diz: ‘Não! Seu filho está morto, e o meu está vivo’ \"."
+            },
+            {
+               "number":24,
+               "text":"Então o rei ordenou: \"Tragam-me uma espada\". Trouxeram-lhe."
+            },
+            {
+               "number":25,
+               "text":"Ele então ordenou: \"Cortem a criança viva ao meio e dêem metade a uma e metade à outra\"."
+            },
+            {
+               "number":26,
+               "text":"A mãe do filho que estava vivo, movida pela compaixão materna, clamou: \"Por favor, meu senhor, dê a criança viva a ela! Não a mate! \" A outra, porém, disse: \"Não será nem minha nem sua. Cortem-na ao meio! \""
+            },
+            {
+               "number":27,
+               "text":"Então o rei deu o seu veredicto: \"Não matem a criança! Dêem-na à primeira mulher. Ela é a mãe\"."
+            },
+            {
+               "number":28,
+               "text":"Quando todo o Israel ouviu o veredicto do rei, passou a respeitá-lo profundamente, pois viu que a sabedoria de Deus estava nele para fazer justiça."
+            }
+         ]
+      },
+      {
+         "book":{
+            "abbrev":{
+               "pt":"1rs",
+               "en":"1kgs"
+            },
+            "name":"1º Reis",
+            "author":"Jeremias",
+            "group":"Históricos",
+            "version":"nvi"
+         },
+         "chapter":{
+            "number":4,
+            "verses":34
+         },
+         "verses":[
+            {
+               "number":1,
+               "text":"E assim o rei Salomão tornou-se rei sobre todo o Israel."
+            },
+            {
+               "number":2,
+               "text":"E estes foram os seus principais assessores: Azarias, filho de Zadoque: o sacerdote;"
+            },
+            {
+               "number":3,
+               "text":"Eliorefe e Aías, filhos de Sisa: secretários; Josafá, filho de Ailude: arquivista real;"
+            },
+            {
+               "number":4,
+               "text":"Benaia, filho de Joiada: comandante do exército; Zadoque e Abiatar: sacerdotes;"
+            },
+            {
+               "number":5,
+               "text":"Azarias, filho de Natã: responsável pelos governadores distritais; Zabude, filho de Natã: sacerdote e conselheiro pessoal do rei;"
+            },
+            {
+               "number":6,
+               "text":"Aisar: responsável pelo palácio; Adonirão, filho de Abda: chefe de trabalhos forçados."
+            },
+            {
+               "number":7,
+               "text":"Salomão tinha também, doze governadores distritais em todo o Israel, que forneciam provisões para o rei e para o palácio real. Cada um deles tinha que fornecer suprimentos durante um mês do ano."
+            },
+            {
+               "number":8,
+               "text":"Estes são os seus nomes: Ben-Hur, nos montes de Efraim;"
+            },
+            {
+               "number":9,
+               "text":"Ben-Dequer, em Macaz, Saalbim, Bete-Semes e Elom-Bete-Hanã;"
+            },
+            {
+               "number":10,
+               "text":"Ben-Hesede, em Arubote, Socó e toda a terra de Héfer;"
+            },
+            {
+               "number":11,
+               "text":"Ben-Abinadabe, em Nafote-Dor. Tafate, filha de Salomão, era sua mulher;"
+            },
+            {
+               "number":12,
+               "text":"Baaná, filho de Ailude, em Taanaque e Megido e toda Bete-Seã, próxima de Zaretã, abaixo de Jezreel, desde Bete-Seã até Abel-Meolá, indo além dos limites de Jocmeão;"
+            },
+            {
+               "number":13,
+               "text":"Ben-Geder, em Ramote-Gileade e nos povoados de Jair, filho de Manassés, em Gileade, bem como o distrito de Argobe, em Basã, e as suas sessenta grandes cidades muradas com trancas de bronze nos portões;"
+            },
+            {
+               "number":14,
+               "text":"Ainadabe, filho de Ido, em Maanaim;"
+            },
+            {
+               "number":15,
+               "text":"Aimaás, em Naftali. Ele se casou com Basemate, filha de Salomão;"
+            },
+            {
+               "number":16,
+               "text":"Baaná, filho de Husai, em Aser e em Bealote;"
+            },
+            {
+               "number":17,
+               "text":"Josafá, filho de Parua, em Issacar;"
+            },
+            {
+               "number":18,
+               "text":"Simei, filho de Elá, em Benjamim;"
+            },
+            {
+               "number":19,
+               "text":"Geber, filho de Uri, em Gileade, a terra de Seom, rei dos amorreus, e de Ogue, rei de Basã. Ele era o único governador desse distrito."
+            },
+            {
+               "number":20,
+               "text":"Judá e Israel eram tão numerosos como a areia da praia; eles comiam, bebiam e eram felizes."
+            },
+            {
+               "number":21,
+               "text":"E Salomão governava todos os reinos, desde o Rio até a terra dos filisteus, chegando até a fronteira do Egito. Esses reinos traziam tributos e foram submissos a Salomão durante toda a sua vida."
+            },
+            {
+               "number":22,
+               "text":"As provisões diárias de Salomão eram trinta tonéis da melhor farinha e sessenta tonéis de farinha comum,"
+            },
+            {
+               "number":23,
+               "text":"dez cabeças de gado engordado em cocheiras, vinte de gado engordado no pasto e cem ovelhas e bodes, bem como cervos, gazelas, corças e aves escolhidas."
+            },
+            {
+               "number":24,
+               "text":"Ele governava todos os reinos a oeste do Rio, desde Tifsa até Gaza, e tinha paz em todas as fronteiras."
+            },
+            {
+               "number":25,
+               "text":"Durante a vida de Salomão, Judá e Israel viveram em segurança, cada homem debaixo da sua videira e da sua figueira, desde Dã até Berseba."
+            },
+            {
+               "number":26,
+               "text":"Salomão possuía quatro mil cocheiras para cavalos de carros de guerra, e doze mil cavalos."
+            },
+            {
+               "number":27,
+               "text":"Todo mês um dos governadores distritais fornecia provisões ao rei Salomão e a todos os que vinham participar de sua mesa. Cuidavam para que não faltasse nada."
+            },
+            {
+               "number":28,
+               "text":"Também traziam ao devido lugar suas quotas de cevada e de palha para os cavalos de carros de guerra e para os outros cavalos."
+            },
+            {
+               "number":29,
+               "text":"Deus deu a Salomão sabedoria, discernimento extraordinário e uma abrangência de conhecimento tão imensurável quanto a areia do mar."
+            },
+            {
+               "number":30,
+               "text":"A sabedoria de Salomão era maior do que a de todos os homens do oriente, bem como de toda a sabedoria do Egito."
+            },
+            {
+               "number":31,
+               "text":"Ele era mais sábio do que qualquer outro homem, mais do que o ezraíta Etã; mais sábio do que Hemã, Calcol e Darda, filhos de Maol. E a sua fama espalhou-se por todas as nações em redor."
+            },
+            {
+               "number":32,
+               "text":"Ele compôs três mil provérbios, e os seus cânticos chegaram a mil e cinco."
+            },
+            {
+               "number":33,
+               "text":"Descreveu as plantas, desde o cedro do Líbano até o hissopo que brota nos muros. Também discorreu sobre os quadrúpedes, as aves, os animais que se movem rente ao chão e os peixes."
+            },
+            {
+               "number":34,
+               "text":"Homens de todas as nações vinham ouvir a sabedoria de Salomão. Eram enviados por todos os reis que tinham ouvido falar de sua sabedoria."
+            }
+         ]
+      }
+   ]
 }
