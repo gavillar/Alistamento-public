@@ -1,5 +1,5 @@
 //
-//  FormViewModel.swift
+//  RegisterAdressViewModel.swift
 //  Straightening
 //
 //  Created by user220831 on 11/17/22.
@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol FormViewModelProtocol {
+protocol RegisterAdressViewModelProtocol {
     func sendCep(cep: Cep)
 }
 
-class FormViewModel {
+class RegisterAdressViewModel {
 // MARK: - var and let 
-    var formViewModelDelegate: FormViewModelProtocol?
+    var formViewModelDelegate: RegisterAdressViewModelProtocol?
     var cep: String = ""
 // MARK: - getApiCep
         func getApiCep() {

@@ -19,8 +19,7 @@ class RegisterMinisteryViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.ministery = textFieldPicker.text
-        self.navigationController?.navigate(to: FormViewController())
+        self.navigationController?.navigate(to: RegisterAdressViewController())
     }
 }
 
