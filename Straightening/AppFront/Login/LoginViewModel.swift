@@ -7,25 +7,46 @@
 
 import Foundation
 import Firebase
+import UIKit
 
-class LoginViewModel {
+protocol UpdateFormViewModel {
+    func updateForm()
+}
+protocol AuthenticationLoginViewModel {
+    var formatIsValid: Bool {get}
+    var backgroundCollorButton: UIColor {get}
+    var titleColorButton: UIColor {get}
+}
+protocol AuthenticationDelegate: AnyObject {
+    func nextView()
+}
+struct LoginViewModel: AuthenticationLoginViewModel {
+    weak var authenticationdelegate: AuthenticationDelegate?
     var auth = Auth.auth()
+    var email: String?
+    var password: String?
+    var formatIsValid: Bool {
+        return email?.isEmpty == false && password?.isEmpty == false
+    }
+    var backgroundCollorButton: UIColor {
+        return formatIsValid ? UIColor(red: 152/155, green: 251/155, blue: 144/155, alpha: 1) : UIColor.white.withAlphaComponent(0.5)
+    }
+    var titleColorButton: UIColor {
+        return formatIsValid ? .black : UIColor(white: 1, alpha: 0.67)
+    }
     func performLogin() {
-        print("performLogin")
-        guard let email = UserDefaults.standard.string(forKey: "loginEmail") else {return}
-        print(email)
-        guard let password = UserDefaults.standard.string(forKey: "loginPassword") else {return}
-        print(password)
+        guard let email = email else {return}
+        guard let password = password else {return}
         self.auth.signIn(withEmail: email, password: password, completion: {(user, error) in
-            if error != nil {
-                print("Dados incorretos, tente novamente")
-            } else {
-                if user == nil {
-                    print("Problema")
-                } else {
-                    print("Login feito com sucesso")
-                }
+            if let error = error {
+                print("Falha ao Cadastrar\(error.localizedDescription)")
+                return
             }
+            self.authenticationdelegate?.nextView()
+            print("Login efetuado com Sucesso")
         })
     }
 }
+    
+    
+    

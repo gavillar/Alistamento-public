@@ -11,10 +11,11 @@ class IntroViewController: UIViewController, SetupView {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
-    private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") {_ in
-        self.navigationController?.navigate(to: LoginWithEmail())
+    private lazy var straighteningButton = Create.baseButton("ALISTAMENTO") { [self]_ in
+        self.navigationController?.navigate(to: loginviewcontroller)
     }
     private lazy var bibleScrollView: UIScrollView = {
+        
         let verseLabel = Create.label("Versículos Bíblicos.", font: UIFont.boldSystemFont(ofSize: 25))
         verseLabel.textAlignment = .left
         let verseDayLabel = UILabel()
