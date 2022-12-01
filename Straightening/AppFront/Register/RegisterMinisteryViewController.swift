@@ -19,7 +19,7 @@ class RegisterMinisteryViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: FormViewController())
+        self.navigationController?.navigate(to: RegisterAdressViewController())
     }
 }
 

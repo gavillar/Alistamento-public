@@ -55,7 +55,7 @@
 		2770EA64291BEF4700760A35 /* StraighteningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA63291BEF4700760A35 /* StraighteningUITests.swift */; };
 		2770EA66291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */; };
 		2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA80291C1F7D00760A35 /* HomeViewController.swift */; };
-		2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA82291C1FA100760A35 /* FormViewController.swift */; };
+		2770EA83291C1FA100760A35 /* RegisterAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2770EA82291C1FA100760A35 /* RegisterAdressViewController.swift */; };
 		277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC215291D692500BA2BCC /* UIStackView+Hierarchy.swift */; };
 		277CC218291D69AB00BA2BCC /* Create+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC217291D69AB00BA2BCC /* Create+Labels.swift */; };
 		277CC21B291D6F2C00BA2BCC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277CC21A291D6F2C00BA2BCC /* SetupView.swift */; };
@@ -70,8 +70,8 @@
 		27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F82925263F007CDF8A /* BooksViewController.swift */; };
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
 		27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */; };
-		27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* FormViewModel.swift */; };
-		27E712BC29266B3C00009AEF /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* FormModel.swift */; };
+		27E712BA29266B2B00009AEF /* RegisterAdressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */; };
+		27E712BC29266B3C00009AEF /* RegisterAdressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* PickerViewDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */; };
 		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 		27EECF8D2935073600DBBEEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8C2935073600DBBEEA /* FirebaseAuth */; };
@@ -156,7 +156,7 @@
 		2770EA63291BEF4700760A35 /* StraighteningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraighteningUITests.swift; sourceTree = "<group>"; };
 		2770EA65291BEF4700760A35 /* StraighteningUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StraighteningUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2770EA80291C1F7D00760A35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2770EA82291C1FA100760A35 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		2770EA82291C1FA100760A35 /* RegisterAdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressViewController.swift; sourceTree = "<group>"; };
 		277CC215291D692500BA2BCC /* UIStackView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Hierarchy.swift"; sourceTree = "<group>"; };
 		277CC217291D69AB00BA2BCC /* Create+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Labels.swift"; sourceTree = "<group>"; };
 		277CC21A291D6F2C00BA2BCC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
@@ -171,8 +171,8 @@
 		27E3A6F82925263F007CDF8A /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
-		27E712B929266B2B00009AEF /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
-		27E712BB29266B3C00009AEF /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressViewModel.swift; sourceTree = "<group>"; };
+		27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* PickerViewDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDatePicker.swift; sourceTree = "<group>"; };
 		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
 		27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
@@ -393,9 +393,9 @@
 		2770EA7B291C1F3700760A35 /* Adress */ = {
 			isa = PBXGroup;
 			children = (
-				2770EA82291C1FA100760A35 /* FormViewController.swift */,
-				27E712BB29266B3C00009AEF /* FormModel.swift */,
-				27E712B929266B2B00009AEF /* FormViewModel.swift */,
+				2770EA82291C1FA100760A35 /* RegisterAdressViewController.swift */,
+				27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */,
+				27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */,
 			);
 			path = Adress;
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
-				2770EA83291C1FA100760A35 /* FormViewController.swift in Sources */,
+				2770EA83291C1FA100760A35 /* RegisterAdressViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
 				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
@@ -755,11 +755,11 @@
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */,
-				27E712BC29266B3C00009AEF /* FormModel.swift in Sources */,
+				27E712BC29266B3C00009AEF /* RegisterAdressModel.swift in Sources */,
 				27F7863429364BB800796436 /* Regex+Password.swift in Sources */,
 				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
 				1D77F9AC2927D3ED00EF0EFB /* UIView+Background.swift in Sources */,
-				27E712BA29266B2B00009AEF /* FormViewModel.swift in Sources */,
+				27E712BA29266B2B00009AEF /* RegisterAdressViewModel.swift in Sources */,
 				27955AC929254C4500B12FD3 /* IntroViewController.swift in Sources */,
 				27EECF9429351C7000DBBEEA /* RegisterViewModel.swift in Sources */,
 				1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */,
