@@ -18,7 +18,8 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
         unFreezeButton()
     }
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterMinisteryViewController())
+        registerViewModel.userToRegister.avaibleTime = textFieldPicker.text
+        self.navigationController?.navigate(to: RegisterMinisteryViewController(registerViewModel))
     }
 }
 
