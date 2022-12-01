@@ -34,6 +34,26 @@
 		1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DA45EE32929181D00BB5870 /* Gênesis.geojson */; };
 		1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
+		1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D732938CB8B001FD29D /* Rute.geojson */; };
+		1DDA2D762938CBB1001FD29D /* 1º Samuel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */; };
+		1DDA2D782938CBCC001FD29D /* 2º Samuel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */; };
+		1DDA2D7D2938CC5D001FD29D /* 2º Crônicas.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */; };
+		1DDA2D7E2938CC60001FD29D /* 1º Crônicas.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */; };
+		1DDA2D7F2938CC63001FD29D /* 2º Reis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */; };
+		1DDA2D802938CC66001FD29D /* 1º Reis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D792938CC27001FD29D /* 1º Reis.geojson */; };
+		1DDA2D822938CD17001FD29D /* Esdras.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D812938CD17001FD29D /* Esdras.geojson */; };
+		1DDA2D842938CD35001FD29D /* Neemias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D832938CD35001FD29D /* Neemias.geojson */; };
+		1DDA2D862938CE07001FD29D /* Ester.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D852938CE07001FD29D /* Ester.geojson */; };
+		1DDA2D882938CE17001FD29D /* Jó.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D872938CE17001FD29D /* Jó.geojson */; };
+		1DDA2D8B2938CE44001FD29D /* Provérbios.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */; };
+		1DDA2D8D2938CE59001FD29D /* Eclesiastes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */; };
+		1DDA2D8F2938CE68001FD29D /* Cânticos.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */; };
+		1DDA2D912938CE75001FD29D /* Isaías.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D902938CE75001FD29D /* Isaías.geojson */; };
+		1DDA2D942938D11A001FD29D /* Jeremias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D932938D11A001FD29D /* Jeremias.geojson */; };
+		1DDA2D962938D12F001FD29D /* Lamentações de Jeremias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */; };
+		1DDA2D982938D17B001FD29D /* Ezequiel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D972938D17B001FD29D /* Ezequiel.geojson */; };
+		1DDA2D9A2938D18A001FD29D /* Daniel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D992938D18A001FD29D /* Daniel.geojson */; };
+		1DDA2D9C2938D1C7001FD29D /* Oséias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A38002934E24D003855C3 /* FireBaseManager.swift */; };
@@ -131,6 +151,27 @@
 		1DA45EE32929181D00BB5870 /* Gênesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gênesis.geojson"; sourceTree = "<group>"; };
 		1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Êxodo.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1DDA2D732938CB8B001FD29D /* Rute.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rute.geojson; sourceTree = "<group>"; };
+		1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Samuel.geojson"; sourceTree = "<group>"; };
+		1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Samuel.geojson"; sourceTree = "<group>"; };
+		1DDA2D792938CC27001FD29D /* 1º Reis.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Reis.geojson"; sourceTree = "<group>"; };
+		1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Reis.geojson"; sourceTree = "<group>"; };
+		1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Crônicas.geojson"; sourceTree = "<group>"; };
+		1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Crônicas.geojson"; sourceTree = "<group>"; };
+		1DDA2D812938CD17001FD29D /* Esdras.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Esdras.geojson; sourceTree = "<group>"; };
+		1DDA2D832938CD35001FD29D /* Neemias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Neemias.geojson; sourceTree = "<group>"; };
+		1DDA2D852938CE07001FD29D /* Ester.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ester.geojson; sourceTree = "<group>"; };
+		1DDA2D872938CE17001FD29D /* Jó.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Jó.geojson"; sourceTree = "<group>"; };
+		1DDA2D892938CE30001FD29D /* Salmos.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Salmos.geojson; sourceTree = "<group>"; };
+		1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Provérbios.geojson"; sourceTree = "<group>"; };
+		1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Eclesiastes.geojson; sourceTree = "<group>"; };
+		1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Cânticos.geojson"; sourceTree = "<group>"; };
+		1DDA2D902938CE75001FD29D /* Isaías.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Isaías.geojson"; sourceTree = "<group>"; };
+		1DDA2D932938D11A001FD29D /* Jeremias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jeremias.geojson; sourceTree = "<group>"; };
+		1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Lamentações de Jeremias.geojson"; sourceTree = "<group>"; };
+		1DDA2D972938D17B001FD29D /* Ezequiel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ezequiel.geojson; sourceTree = "<group>"; };
+		1DDA2D992938D18A001FD29D /* Daniel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Daniel.geojson; sourceTree = "<group>"; };
+		1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Oséias.geojson"; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270A38002934E24D003855C3 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
@@ -252,6 +293,43 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		1DDA2D922938CE7E001FD29D /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				27C379F92932666A00397E14 /* Verses.geojson */,
+				1D255F452937BE5A00074B58 /* Books.geojson */,
+				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
+				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
+				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
+				1D635315292E9B760052705D /* Números.geojson */,
+				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
+				5FCB458F2936927700B3D7F9 /* Josué.geojson */,
+				5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */,
+				1DDA2D732938CB8B001FD29D /* Rute.geojson */,
+				1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */,
+				1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */,
+				1DDA2D792938CC27001FD29D /* 1º Reis.geojson */,
+				1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */,
+				1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */,
+				1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */,
+				1DDA2D812938CD17001FD29D /* Esdras.geojson */,
+				1DDA2D832938CD35001FD29D /* Neemias.geojson */,
+				1DDA2D852938CE07001FD29D /* Ester.geojson */,
+				1DDA2D872938CE17001FD29D /* Jó.geojson */,
+				1DDA2D892938CE30001FD29D /* Salmos.geojson */,
+				1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */,
+				1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */,
+				1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */,
+				1DDA2D902938CE75001FD29D /* Isaías.geojson */,
+				1DDA2D932938D11A001FD29D /* Jeremias.geojson */,
+				1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */,
+				1DDA2D972938D17B001FD29D /* Ezequiel.geojson */,
+				1DDA2D992938D18A001FD29D /* Daniel.geojson */,
+				1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
 		1DDA4DFC2922E42900B9C70F /* Bible */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +342,7 @@
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				1DDA2D922938CE7E001FD29D /* Books */,
 				27C379FD29329CEE00397E14 /* Methods */,
 				2728114B292E4E1600D3B9C8 /* Objects */,
 				277CC219291D6F0100BA2BCC /* Setup */,
@@ -357,15 +436,6 @@
 				1DF21B0B291C18E500A85B05 /* AppUtils */,
 				2770EA4B291BEF4700760A35 /* Assets.xcassets */,
 				2770EA4D291BEF4700760A35 /* LaunchScreen.storyboard */,
-				1D255F452937BE5A00074B58 /* Books.geojson */,
-				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
-				5FCB458F2936927700B3D7F9 /* Josué.geojson */,
-				5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */,
-				27C379F92932666A00397E14 /* Verses.geojson */,
-				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
-				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
-				1D635315292E9B760052705D /* Números.geojson */,
-				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
 				2770EA50291BEF4700760A35 /* Info.plist */,
 				274384A529379BE60079AE75 /* GoogleService-Info.plist */,
 				2770EA48291BEF4600760A35 /* Straightening.xcdatamodeld */,
@@ -657,18 +727,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDA2D8F2938CE68001FD29D /* Cânticos.geojson in Resources */,
+				1DDA2D802938CC66001FD29D /* 1º Reis.geojson in Resources */,
+				1DDA2D9A2938D18A001FD29D /* Daniel.geojson in Resources */,
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
+				1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */,
+				1DDA2D7E2938CC60001FD29D /* 1º Crônicas.geojson in Resources */,
 				27C379FA2932666A00397E14 /* Verses.geojson in Resources */,
 				5FCB45922936A1BA00B3D7F9 /* Juízes.geojson in Resources */,
+				1DDA2D942938D11A001FD29D /* Jeremias.geojson in Resources */,
+				1DDA2D962938D12F001FD29D /* Lamentações de Jeremias.geojson in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
+				1DDA2D882938CE17001FD29D /* Jó.geojson in Resources */,
 				274384A629379BE60079AE75 /* GoogleService-Info.plist in Resources */,
 				5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */,
+				1DDA2D7D2938CC5D001FD29D /* 2º Crônicas.geojson in Resources */,
 				1D255F462937BE5A00074B58 /* Books.geojson in Resources */,
 				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
 				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
+				1DDA2D762938CBB1001FD29D /* 1º Samuel.geojson in Resources */,
+				1DDA2D842938CD35001FD29D /* Neemias.geojson in Resources */,
+				1DDA2D7F2938CC63001FD29D /* 2º Reis.geojson in Resources */,
+				1DDA2D912938CE75001FD29D /* Isaías.geojson in Resources */,
 				1D635314292E99560052705D /* Levítico.geojson in Resources */,
+				1DDA2D9C2938D1C7001FD29D /* Oséias.geojson in Resources */,
+				1DDA2D8B2938CE44001FD29D /* Provérbios.geojson in Resources */,
 				1D635316292E9B760052705D /* Números.geojson in Resources */,
+				1DDA2D8D2938CE59001FD29D /* Eclesiastes.geojson in Resources */,
+				1DDA2D782938CBCC001FD29D /* 2º Samuel.geojson in Resources */,
 				27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */,
+				1DDA2D982938D17B001FD29D /* Ezequiel.geojson in Resources */,
+				1DDA2D822938CD17001FD29D /* Esdras.geojson in Resources */,
+				1DDA2D862938CE07001FD29D /* Ester.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
