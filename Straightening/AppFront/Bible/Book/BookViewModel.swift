@@ -20,7 +20,7 @@ final class BookViewModel {
     }
     var chapter: Int = 0
     var chapters: Int {
-        return bible?.book?.chapters.count ?? 0
+        return bible?.book?.chapters?.count ?? 0
     }
     var title: String {
         return bible?.details.name ?? ""
@@ -30,12 +30,14 @@ final class BookViewModel {
         self.bible?.book = Network.read(Bible.self, from: name)
     }
     func updateLabel(_ chapter: Int = 0) {
-        guard let verses = bible?.book?.chapters[chapter].verses else {return}
-        delegate?.updateLabel(text: "\(verses.first?.number ?? 0): \(verses.first?.text ?? "")\n")
-        for counter in 1...verses.count - 1 {
-            delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
+        if !(bible?.book?.chapters?.isEmpty ?? true) {
+            guard let verses = bible?.book?.chapters?[chapter].verses else {return}
+            delegate?.updateLabel(text: "\(verses.first?.number ?? 0): \(verses.first?.text ?? "")\n")
+            for counter in 1...verses.count - 1 {
+                delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
+            }
+            self.chapter = chapter
+            delegate?.unfreezeCollection()
         }
-        self.chapter = chapter
-        delegate?.unfreezeCollection()
     }
 }
