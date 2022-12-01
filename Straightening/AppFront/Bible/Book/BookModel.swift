@@ -8,7 +8,7 @@
 import Foundation
 
 struct Bible: Codable {
-    let chapters: [Article]
+    let chapters: [Article]?
 }
 
 struct Article: Codable {
