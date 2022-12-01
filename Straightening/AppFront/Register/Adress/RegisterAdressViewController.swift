@@ -1,5 +1,5 @@
 //
-//  FormViewController.swift
+//  RegisterAdressViewController.swift
 //  Straightening
 //
 //  Created by user220831 on 11/9/22.
@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class FormViewController: UIViewController, SetupView {
+class RegisterAdressViewController: UIViewController, SetupView {
 // MARK: - var and let
-    private let formviewmodel = FormViewModel()
+    private let registeradressviewmodel = RegisterAdressViewModel()
     private lazy var baseView: UIView = {
         let verticalStack = VStack(addArrangedSubviews: [cepTextField,
                                                          streetLabel,
@@ -47,7 +47,7 @@ class FormViewController: UIViewController, SetupView {
         super.loadView()
         title = "Endereço"
         setup()
-        formviewmodel.formViewModelDelegate = self
+        registeradressviewmodel.formViewModelDelegate = self
     }
 // MARK: - setupView
     func setupView() {
@@ -78,7 +78,7 @@ class FormViewController: UIViewController, SetupView {
 // MARK: - setupCepTextField
     func setupCepTextField() {
         cepTextField.bind { [weak self] text in
-            self?.formviewmodel.cep = text
+            self?.registeradressviewmodel.cep = text
         }
         cepTextField.becomeFirstResponder()
         cepTextField.setUnderlineTextFieldBorderWhite()
@@ -91,7 +91,7 @@ class FormViewController: UIViewController, SetupView {
 // MARK: - tapCepTextField
         @objc func tapCepTextField(sender: UITextField) {
             if validateCep(sender.text ?? "") {
-                formviewmodel.getApiCep()
+                registeradressviewmodel.getApiCep()
                 streetLabel.isHidden = false
                 districtLabel.isHidden = false
                 locationLabel.isHidden = false
@@ -100,7 +100,7 @@ class FormViewController: UIViewController, SetupView {
         }
 }
 
-extension FormViewController: FormViewModelProtocol {
+extension RegisterAdressViewController: RegisterAdressViewModelProtocol {
     func sendCep(cep: Cep) {
         Task {
             streetLabel.text = "Endereço:\n\n\(cep.logradouro ?? "")"
@@ -110,7 +110,7 @@ extension FormViewController: FormViewModelProtocol {
     }
 }
 
-extension FormViewController: UITextFieldDelegate {
+extension RegisterAdressViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         let max = 8
