@@ -39,10 +39,10 @@ final class BookViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         setup()
-        title = bookViewModel.title
     }
 // MARK: - setup
     func setupView() {
+        title = bookViewModel.title
         view.backgroundColor = Assets.Colors.whiteBlack
         view.addSubviews([bookCollectionView, text.scroll])
     }

@@ -22,10 +22,8 @@ final class BooksViewModel {
         return self.booksData[index]
     }
     func getBooks() {
-        Task {
-            guard let books = await Network.read(Books.self, from: "Books") else {return}
-            booksData = books
-            booksviewmodeldelegate?.sendBooksQuantity(data: booksData)
-        }
+        guard let books = Network.read(Books.self, from: "Books") else {return}
+        booksData = books
+        booksviewmodeldelegate?.sendBooksQuantity(data: booksData)
     }
 }

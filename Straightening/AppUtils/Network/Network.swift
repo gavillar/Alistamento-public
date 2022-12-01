@@ -25,23 +25,23 @@ struct Network {
             return data
         } catch {print("ERROR: \(error)"); return nil}
     }
-    static func decode<T: Codable>(_ what: T.Type, from data: Data) async -> T? {
+    static func decode<T: Codable>(_ model: T.Type, from data: Data) async -> T? {
 
         do {
 
-            return try JSONDecoder().decode(what.self, from: data)
+            return try JSONDecoder().decode(model.self, from: data)
         } catch {print("ERROR: \(error): \(String(data: data, encoding: .ascii) ?? "?")"); return nil}
     }
-    static func read<T: Codable>(_ what: T.Type, from file: String, type: String = "geojson") async -> T? {
+    static func read<T: Codable>(_ what: T.Type, from file: String, type: String = "geojson") -> T? {
         guard let url = Bundle.main.url(forResource: file, withExtension: type) else {
-            print("Wrong url"); return nil
+            print("ERROR: File not found"); return nil
         }
         guard let data = try? Data(contentsOf: url) else {
-            print("Data decoding error"); return nil
+            print("ERROR: Unable to assign data"); return nil
         }
-        guard let books = try? JSONDecoder().decode(T.self, from: data) else {
-            print("Json decoding error"); return nil
+        guard let model = try? JSONDecoder().decode(T.self, from: data) else {
+            print("ERROR: Could not decode file"); return nil
         }
-        return books
+        return model
     }
 }
