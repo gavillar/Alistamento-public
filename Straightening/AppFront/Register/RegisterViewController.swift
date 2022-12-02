@@ -9,7 +9,12 @@ import UIKit
 class RegisterViewController: UIViewController {
 // MARK: - Variables
     var registerViewModel: RegisterViewModel
-    lazy var datePicker = DatePicker()
+    lazy var datePicker: DatePicker =  {
+        let datePicker = DatePicker()
+        datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
+        return datePicker
+    }()
+    lazy var pickerView = PickerView()
     let baseView: UIView = {
         let baseView = UIView()
         baseView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,9 +36,9 @@ class RegisterViewController: UIViewController {
                                                                   ])
     }
     lazy var textField = BindingTextField()
-    lazy var textFieldPicker = PickerViewCustom()
-    lazy var button: UIButton = {
-        let button = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown)
+    lazy var button: BaseButton = {
+        let button = BaseButton("ENTRAR", titleColor: Assets.Colors.brown)
+        button.delegate = self
         return button
     }()
 // MARK: - init
@@ -41,7 +46,6 @@ class RegisterViewController: UIViewController {
         self.registerViewModel = registerViewModel
         print(self.registerViewModel.userToRegister)
         super.init(nibName: nil, bundle: nil)
-        registerViewModel.delegate = self
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -80,20 +84,19 @@ class RegisterViewController: UIViewController {
             button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
         ])
     }
-    func setupPickerView(_ title: String, options: [String]) {
-        textFieldPicker.attributedPlaceholder = NSAttributedString(string: title,
-                                                             attributes: [
-                                                                NSAttributedString.Key.foregroundColor:
-                                                                    UIColor.white
-                                                             ])
-        textFieldPicker.picker = options
-        textFieldPicker.displayNameHandler = {item in
-            return (item as? String) ?? ""
-        }
-        textFieldPicker.itemSelectionHandler = { index, item in
-            print("\(index), \(item as? String)")
-        }
-        baseStackView.addArrangedSubview(textFieldPicker)
+// MARK: - @objc funcs
+    @objc func datePickerTarget(_ sender: UIDatePicker) {
+        textField.text = datePicker.dayMonthYear
+    }
+}
+
+extension RegisterViewController: PickerViewDelegate {
+    func pickerView(didSelect option: String) {
+        textField.text = option
+    }
+    func pickerView(_ toolBar: UIToolbar) {
+        textField.inputAccessoryView = toolBar
+        textField.inputView = pickerView
     }
 }
 
@@ -107,7 +110,7 @@ extension RegisterViewController: DatePickerDelegate {
     }
 }
 
-extension RegisterViewController: RegisterViewModelDelegate {
+extension RegisterViewController: BaseButtonDelegate {
     func freezeButton() {
         button.alpha = 0.5
         button.isUserInteractionEnabled = false

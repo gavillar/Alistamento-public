@@ -18,7 +18,7 @@ final class RegisterNameViewController: RegisterViewController {
     }
     @objc func tapNameTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        registerViewModel.changeButton(condition: count > 6)
+        button.performSelection(condition: count > 6)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
