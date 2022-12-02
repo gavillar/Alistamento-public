@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, SetupView {
+class LoginViewController: UIViewController {
 // MARK: - variables
     var loginviewmodel = LoginViewModel()
     private lazy var logo: (stack: UIStackView, label: UILabel) = {
@@ -101,8 +101,8 @@ class LoginViewController: UIViewController, SetupView {
     }
     override func loadView() {
         super.loadView()
-        setup()
-        
+        setupView()
+        setupConstraints()
     }
     override func viewDidLoad() {
         super.viewDidLoad()

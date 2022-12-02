@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookCollectionViewCell: UICollectionViewCell, SetupView {
+class BookCollectionViewCell: UICollectionViewCell {
     lazy var label: UILabel = {
         let label = Create.label(font: UIFont.systemFont(ofSize: 20, weight: .bold))
         label.backgroundColor = Assets.Colors.whiteBlack
@@ -16,7 +16,8 @@ class BookCollectionViewCell: UICollectionViewCell, SetupView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupView()
+        setupConstraints()
     }
     override var isSelected: Bool {
         didSet {

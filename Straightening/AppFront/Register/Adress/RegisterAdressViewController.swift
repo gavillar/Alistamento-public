@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RegisterAdressViewController: UIViewController, SetupView {
+class RegisterAdressViewController: UIViewController {
 // MARK: - var and let
     private let registeradressviewmodel = RegisterAdressViewModel()
     private lazy var baseView: UIView = {
@@ -66,13 +66,14 @@ class RegisterAdressViewController: UIViewController, SetupView {
     override func loadView() {
         super.loadView()
         title = "Endereço"
-        setup()
+        setupView()
+        setupConstraints()
         registeradressviewmodel.formViewModelDelegate = self
     }
 // MARK: - setupView
     func setupView() {
         view.addSubviews([baseView, registerButton])
-        hideKeyboardWhenTappedAround()
+        view.hideKeyboardWhenTappedAround()
         setupCepTextField()
         sendCep()
         updateForm()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController, SetupView {
+class IntroViewController: UIViewController {
 // MARK: - variables
     let loginviewcontroller = LoginViewController()
     let booksviewcontroller = BooksViewController()
@@ -39,7 +39,8 @@ class IntroViewController: UIViewController, SetupView {
     }
     override func loadView() {
         super.loadView()
-        setup()
+        setupView()
+        setupConstraints()
     }
 // MARK: - setup
     func setupView() {

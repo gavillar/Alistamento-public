@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class RegisterViewController: UIViewController, SetupView {
+class RegisterViewController: UIViewController {
 // MARK: - Variables
     var registerViewModel: RegisterViewModel
     lazy var datePicker = DatePicker()
@@ -58,9 +58,11 @@ class RegisterViewController: UIViewController, SetupView {
     }
     override func loadView() {
         super.loadView()
-        setup()
+        setupView()
+        setupConstraints()
         freezeButton()
-        hideKeyboardWhenTappedAround()
+        navigationController?.navigationBar.hideKeyboardWhenTappedAround()
+        view.hideKeyboardWhenTappedAround()
     }
 // MARK: - Setup
     func setupView() {
@@ -101,7 +103,7 @@ extension RegisterViewController: DatePickerDelegate {
         text.field.inputView = datePicker
     }
     func doneButtonTarget() {
-        dismissKeyboard()
+        view.dismissKeyboard()
     }
 }
 
