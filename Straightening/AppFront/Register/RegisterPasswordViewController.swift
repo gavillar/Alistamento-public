@@ -25,7 +25,7 @@ final class RegisterPasswordViewController: RegisterViewController {
     //This function validates if the password matches the regex
     @objc func tapPasswordTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
-        if registerViewModel.changeButton(condition: textField.isValidPassword(value)) {
+        if button.performSelection(condition: textField.isValidPassword(value)) {
             catchPasswordText()
         }
     }

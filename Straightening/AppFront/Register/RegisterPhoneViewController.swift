@@ -19,7 +19,7 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        registerViewModel.changeButton(condition: count > 10)
+        button.performSelection(condition: count > 10)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {

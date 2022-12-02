@@ -8,13 +8,7 @@
 import Foundation
 import Firebase
 
-protocol RegisterViewModelDelegate: AnyObject {
-    func freezeButton()
-    func unFreezeButton()
-}
-
 class RegisterViewModel {
-    weak var delegate: RegisterViewModelDelegate?
     var auth: Auth?
     var userToRegister: RegisterModel = RegisterModel()
     lazy var email: String = ""
@@ -32,13 +26,5 @@ class RegisterViewModel {
     }
     init(auth: Auth? = nil) {
         self.auth = auth
-    }
-    @discardableResult func changeButton(condition: Bool) -> Bool {
-        if condition {
-            delegate?.unFreezeButton()
-        } else {
-            delegate?.freezeButton()
-        }
-        return condition
     }
 }
