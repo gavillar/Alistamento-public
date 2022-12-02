@@ -11,9 +11,9 @@ final class RegisterNameViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         title = "Nome Completo"
-        text.setPlaceholder("Nome Completo")
-        text.field.becomeFirstResponder()
-        text.field.addTarget(self, action: #selector(tapNameTextField), for: .editingChanged)
+        setTextFieldPlaceholder("Nome Completo")
+        textField.becomeFirstResponder()
+        textField.addTarget(self, action: #selector(tapNameTextField), for: .editingChanged)
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func tapNameTextField(_ sender: UITextField) {
@@ -22,7 +22,7 @@ final class RegisterNameViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.name = text.field.text
+        registerViewModel.userToRegister.name = textField.text
         self.navigationController?.navigate(to: RegisterPhoneViewController(registerViewModel))
     }
 }
