@@ -18,13 +18,16 @@ class LoginViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
-        configureNotificationsObserves()
         view = loginView
+        setupTargets()
+        configureNotificationsObserves()
+    }
+// MARK: - setup
+    func setupTargets() {
         loginView.forgotPasswordButton.addTarget(nil, action: #selector(hendleForgotPassword), for: .touchUpInside)
         loginView.signInButton.addTarget(nil, action: #selector(hendleSignIn), for: .touchUpInside)
         loginView.logInButton.addTarget(self, action: #selector(hendleLogIn), for: .touchUpInside)
     }
-// MARK: - setup
     func configureNotificationsObserves() {
         loginView.emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         loginView.emailTextField.addTarget(self, action: #selector(textLowercased), for: .editingChanged)
