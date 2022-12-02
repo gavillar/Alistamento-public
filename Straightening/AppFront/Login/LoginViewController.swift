@@ -10,48 +10,53 @@ import UIKit
 class LoginViewController: UIViewController {
 // MARK: - variables
     var loginviewmodel = LoginViewModel()
-    private lazy var logo: (stack: UIStackView, label: UILabel) = {
-        let label = Create.label("Alistamento")
-        label.textColor = Assets.Colors.whiteBlack
-        let stack = UIStackView(arrangedSubviews: [label])
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return (stack: stack, label: label)
+    private lazy var logoStack: UIStackView = {
+        let logoLabel = Create.label("Alistamento")
+        logoLabel.textColor = Assets.Colors.whiteBlack
+        let logoStack = UIStackView(arrangedSubviews: [logoLabel])
+        logoStack.translatesAutoresizingMaskIntoConstraints = false
+        return logoStack
     }()
     private lazy var welcomeLabel: UILabel = {
         let label = Create.label("Bem Vindo")
         label.textColor = Assets.Colors.whiteBlack
         return label
     }()
-    lazy var email: (stackView: UIStackView, textField: UITextField) = {
+    lazy var emailTextField = {
         let emailTextField = Create.textField(placeholder: "Email")
         emailTextField.becomeFirstResponder()
         emailTextField.keyboardType = .namePhonePad
+        return emailTextField
+    }()
+    lazy var emailStackView: UIStackView = {
         let margins = view.frame.height*0.02
-        let stackView = Create.stack(
+        let emailStackView = Create.stack(
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
             arrangedSubviews: [emailTextField])
-        return (stackView: stackView,
-                textField: emailTextField)
+        return emailStackView
     }()
-    lazy var password: (stackView: UIStackView, textField: UITextField) = {
+    lazy var passwordTextField: UITextField = {
         let passwordTextField = Create.textField(placeholder: "Senha")
         passwordTextField.isSecureTextEntry = true
+        return passwordTextField
+    }()
+    lazy var passwordStackView: UIStackView = {
         let margins = view.frame.height*0.02
-        let stackView = Create.stack(
+        let passwordStackView = Create.stack(
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
-            arrangedSubviews: [passwordTextField])
-        return (stackView: stackView,
-                textField: passwordTextField)
+            arrangedSubviews: [passwordTextField]
+        )
+        return passwordStackView
     }()
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        let stackView = scrollView.turnIntoAList(of: [logo.stack,
+        let stackView = scrollView.turnIntoAList(of: [logoStack,
                                                       welcomeLabel,
-                                                      email.stackView,
-                                                      password.stackView])
+                                                      emailStackView,
+                                                      passwordStackView])
         stackView.isLayoutMarginsRelativeArrangement = true
         let verticalMargins = view.frame.height*0.05
         let horizontalMargins = view.frame.height*0.04
@@ -119,16 +124,16 @@ class LoginViewController: UIViewController {
         view.addConstraints(constraints)
     }
     func configureNotificationsObserves() {
-        email.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        email.textField.addTarget(self, action: #selector(textLowercased), for: .editingChanged)
-        password.textField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textLowercased), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     @objc func textLowercased(_ sender: UITextField) {
             guard sender.text != nil else {return}
             sender.text? = sender.text?.lowercased() ?? ""
         }
     @objc func textDidChange(_ sender: UITextField) {
-        if sender == email.textField {
+        if sender == emailTextField {
             loginviewmodel.email = sender.text
         } else {
             loginviewmodel.password = sender.text
