@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import UIKit
 
-protocol UpdateFormViewModel {
+protocol UpdateFormViewModel: AnyObject {
     func updateForm()
 }
 protocol AuthenticationLoginViewModel {
