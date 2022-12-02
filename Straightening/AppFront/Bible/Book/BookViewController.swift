@@ -13,14 +13,17 @@ final class BookViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    private lazy var text: (label: UILabel, scroll: UIScrollView) = {
-        let label = UILabel()
-        label.text = ""
-        label.numberOfLines = 0
-        let scroll = UIScrollView()
-        scroll.translatesAutoresizingMaskIntoConstraints = false
-        scroll.turnIntoAList(of: [label])
-        return (label: label, scroll: scroll)
+    private lazy var versesLabel: UILabel = {
+        let versesLabel = UILabel()
+        versesLabel.text = ""
+        versesLabel.numberOfLines = 0
+        return versesLabel
+    }()
+    private lazy var versesScroll: UIScrollView = {
+        let versesScroll = UIScrollView()
+        versesScroll.translatesAutoresizingMaskIntoConstraints = false
+        versesScroll.turnIntoAList(of: [versesLabel])
+        return versesScroll
     }()
     private lazy var bookCollectionView: BookCollectionView = {
         let bookCollectionView = BookCollectionView()
@@ -45,7 +48,7 @@ final class BookViewController: UIViewController {
     func setupView() {
         title = bookViewModel.title
         view.backgroundColor = Assets.Colors.whiteBlack
-        view.addSubviews([bookCollectionView, text.scroll])
+        view.addSubviews([bookCollectionView, versesScroll])
     }
     func setupConstraints() {
         view.addConstraints([
@@ -53,10 +56,10 @@ final class BookViewController: UIViewController {
             bookCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bookCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             bookCollectionView.heightAnchor.constraint(equalToConstant: view.frame.width*0.1),
-            text.scroll.topAnchor.constraint(equalTo: bookCollectionView.bottomAnchor),
-            text.scroll.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            text.scroll.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            text.scroll.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            versesScroll.topAnchor.constraint(equalTo: bookCollectionView.bottomAnchor),
+            versesScroll.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            versesScroll.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            versesScroll.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
@@ -67,14 +70,14 @@ extension BookViewController: BookViewModelDelegate {
     }
     func updateLabel(text: String) {
         Task {[weak self] in
-            self?.text.label.text?.append(text)
+            self?.versesLabel.text?.append(text)
         }
     }
 }
 
 extension BookViewController: BookCollectionViewDelegate {
     func collectionView(didSelectItemAt indexPath: IndexPath) {
-        text.label.text = ""
+        versesLabel.text = ""
         bookViewModel.updateLabel(indexPath.row)
     }
     func numberOfItemsInSection() -> Int {
