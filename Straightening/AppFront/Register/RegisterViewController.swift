@@ -28,13 +28,6 @@ class RegisterViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-    lazy var setTextFieldPlaceholder = {(placeholder: String) in
-        self.textField.attributedPlaceholder = NSAttributedString(string: placeholder,
-                                                                  attributes: [
-                                                                    NSAttributedString.Key.foregroundColor:
-                                                                        UIColor.white
-                                                                  ])
-    }
     lazy var textField = BindingTextField()
     lazy var button: BaseButton = {
         let button = BaseButton("ENTRAR", titleColor: Assets.Colors.brown)
@@ -64,7 +57,7 @@ class RegisterViewController: UIViewController {
         view.hideKeyboardWhenTappedAround()
         baseStackView.addArrangedSubview(textField)
     }
-// MARK: - Setup
+// MARK: - setup
     func setupView() {
         baseView.addSubview(baseStackView)
         view.addSubviews([baseView, button])
@@ -83,6 +76,14 @@ class RegisterViewController: UIViewController {
             button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
         ])
+    }
+// MARK: - funcs
+    func setTextFieldPlaceholder(_ placeholder: String) {
+        self.textField.attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                                  attributes: [
+                                                                    NSAttributedString.Key.foregroundColor:
+                                                                        UIColor.white
+                                                                  ])
     }
 // MARK: - @objc funcs
     @objc func datePickerTarget(_ sender: UIDatePicker) {

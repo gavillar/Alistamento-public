@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol BooksViewModelProtocol: AnyObject {
+protocol BooksViewModelDelegate: AnyObject {
     func sendBooksQuantity(data: Books)
     func sendBooksElements(data: BooksElements)
 }
 
 final class BooksViewModel {
-    weak var booksviewmodeldelegate: BooksViewModelProtocol?
+    weak var booksviewmodeldelegate: BooksViewModelDelegate?
     var booksData = [BooksElements]()
     var books: BooksElements?
 // MARK: - count
