@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BooksViewController: UIViewController, SetupView {
+final class BooksViewController: UIViewController {
 // MARK: - booksviewmodel
     private let booksviewmodel = BooksViewModel()
 // MARK: - backgroundViewCollection
@@ -42,7 +42,8 @@ final class BooksViewController: UIViewController, SetupView {
 // MARK: - loadView
     override func loadView() {
         super.loadView()
-        setup()
+        setupView()
+        setupConstraints()
     }
 // MARK: - setupView
     func setupView() {
