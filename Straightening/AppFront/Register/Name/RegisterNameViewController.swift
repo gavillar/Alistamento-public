@@ -12,6 +12,9 @@ final class RegisterNameViewController: RegisterViewController {
         super.loadView()
         title = "Nome Completo"
         setTextFieldPlaceholder("Nome Completo")
+        setupTargets()
+    }
+    private func setupTargets() {
         registerView.textField.becomeFirstResponder()
         registerView.textField.addTarget(self, action: #selector(tapNameTextField), for: .editingChanged)
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)

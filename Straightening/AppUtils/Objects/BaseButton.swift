@@ -29,7 +29,7 @@ class BaseButton: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func performSelection(condition: Bool) -> Bool {
+    @discardableResult func performSelection(condition: Bool) -> Bool {
         if condition {
             delegate?.unFreezeButton()
         } else {
