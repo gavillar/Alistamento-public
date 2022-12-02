@@ -11,10 +11,10 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
     override func loadView() {
         super.loadView()
         title = "Telefone"
-        text.setPlaceholder("Telefone")
-        text.field.becomeFirstResponder()
-        text.field.formatMask = "(##)#####-####"
-        text.field.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
+        setTextFieldPlaceholder("Telefone")
+        textField.becomeFirstResponder()
+        textField.formatMask = "(##)#####-####"
+        textField.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
         button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
@@ -23,7 +23,7 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.phone = text.field.text
+        registerViewModel.userToRegister.phone = textField.text
         self.navigationController?.navigate(to: RegisterEmailViewController(registerViewModel))
     }
 }

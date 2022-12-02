@@ -18,27 +18,27 @@ final class RegisterPasswordViewController: RegisterViewController {
     }
     //This function sets parameters for the text property
     func setupText() {
-        text.setPlaceholder("Senha")
-        text.field.becomeFirstResponder()
-        text.field.addTarget(self, action: #selector(tapPasswordTextfield), for: .editingChanged)
+        setTextFieldPlaceholder("Senha")
+        textField.becomeFirstResponder()
+        textField.addTarget(self, action: #selector(tapPasswordTextfield), for: .editingChanged)
     }
     //This function validates if the password matches the regex
     @objc func tapPasswordTextfield(_ sender: UITextField) {
         guard let value = sender.text else {return}
-        if registerViewModel.changeButton(condition: text.field.isValidPassword(value)) {
+        if registerViewModel.changeButton(condition: textField.isValidPassword(value)) {
             catchPasswordText()
         }
     }
     //This function captures the text field to send to the viewmodel
     func catchPasswordText() {
-       text.field.bind { text in
+       textField.bind { text in
            self.registerViewModel.password = text
            print(text)
        }
    }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.password = text.field.text
+        registerViewModel.userToRegister.password = textField.text
         self.navigationController?.navigate(to: RegisterBirthDateViewController(registerViewModel))
     }
 }
