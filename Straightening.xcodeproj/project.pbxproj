@@ -36,6 +36,7 @@
 		1DB3725C293A3F1F00A47FA1 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725B293A3F1F00A47FA1 /* BooksView.swift */; };
 		1DB3725E293A469500A47FA1 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725D293A469500A47FA1 /* BookView.swift */; };
 		1DB37260293A604E00A47FA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725F293A604E00A47FA1 /* LoginView.swift */; };
+		1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB37261293A63A000A47FA1 /* RegisterView.swift */; };
 		1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
 		1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D732938CB8B001FD29D /* Rute.geojson */; };
@@ -157,6 +158,7 @@
 		1DB3725B293A3F1F00A47FA1 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		1DB3725D293A469500A47FA1 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		1DB3725F293A604E00A47FA1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1DB37261293A63A000A47FA1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Êxodo.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1DDA2D732938CB8B001FD29D /* Rute.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rute.geojson; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 		27E712B829266AF600009AEF /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				1DB37261293A63A000A47FA1 /* RegisterView.swift */,
 				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
 				27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */,
 				27EECF9529352F8800DBBEEA /* RegisterModel.swift */,
@@ -840,6 +843,7 @@
 				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
 				1DA4456A2927A807001E137C /* UINavigationController+Navigate.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
+				1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */,
 				27E712BC29266B3C00009AEF /* RegisterAdressModel.swift in Sources */,

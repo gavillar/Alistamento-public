@@ -12,18 +12,18 @@ final class RegisterPhoneViewController: RegisterViewController, UITextFieldDele
         super.loadView()
         title = "Telefone"
         setTextFieldPlaceholder("Telefone")
-        textField.becomeFirstResponder()
-        textField.formatMask = "(##)#####-####"
-        textField.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
-        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        registerView.textField.becomeFirstResponder()
+        registerView.textField.formatMask = "(##)#####-####"
+        registerView.textField.addTarget(self, action: #selector(tapPhoneTextField), for: .editingChanged)
+        registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func tapPhoneTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        button.performSelection(condition: count > 10)
+        registerView.button.performSelection(condition: count > 10)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.phone = textField.text
+        registerViewModel.userToRegister.phone = registerView.textField.text
         self.navigationController?.navigate(to: RegisterEmailViewController(registerViewModel))
     }
 }

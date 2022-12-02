@@ -7,33 +7,11 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-// MARK: - Variables
+// MARK: - variables
     var registerViewModel: RegisterViewModel
-    lazy var datePicker: DatePicker =  {
-        let datePicker = DatePicker()
-        datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
-        return datePicker
-    }()
+    lazy var registerView = RegisterView(frame: view.frame)
+    lazy var datePicker = DatePicker()
     lazy var pickerView = PickerView()
-    let baseView: UIView = {
-        let baseView = UIView()
-        baseView.translatesAutoresizingMaskIntoConstraints = false
-        return baseView
-    }()
-    lazy var baseStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.distribution = .equalSpacing
-        stackView.axis = .vertical
-        stackView.setUnderlineBorderWhite()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
-    }()
-    lazy var textField = BindingTextField()
-    lazy var button: BaseButton = {
-        let button = BaseButton("ENTRAR", titleColor: Assets.Colors.brown)
-        button.delegate = self
-        return button
-    }()
 // MARK: - init
     init(_ registerViewModel: RegisterViewModel = RegisterViewModel()) {
         self.registerViewModel = registerViewModel
@@ -50,36 +28,16 @@ class RegisterViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
-        setupView()
-        setupConstraints()
         freezeButton()
         navigationController?.navigationBar.hideKeyboardWhenTappedAround()
         view.hideKeyboardWhenTappedAround()
-        baseStackView.addArrangedSubview(textField)
-    }
-// MARK: - setup
-    func setupView() {
-        baseView.addSubview(baseStackView)
-        view.addSubviews([baseView, button])
-    }
-    func setupConstraints() {
-        view.addConstraints([
-            baseStackView.widthAnchor.constraint(equalTo: baseView.widthAnchor, multiplier: 0.85),
-            baseStackView.centerXAnchor.constraint(equalTo: baseView.centerXAnchor),
-            baseStackView.centerYAnchor.constraint(equalTo: baseView.centerYAnchor),
-            baseView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            baseView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            baseView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            baseView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
-            button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
-            button.heightAnchor.constraint(equalToConstant: view.frame.height*0.05)
-        ])
+        view = registerView
+        registerView.button.delegate = self
+        datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
     }
 // MARK: - funcs
     func setTextFieldPlaceholder(_ placeholder: String) {
-        self.textField.attributedPlaceholder = NSAttributedString(string: placeholder,
+        registerView.textField.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                                   attributes: [
                                                                     NSAttributedString.Key.foregroundColor:
                                                                         UIColor.white
@@ -87,24 +45,24 @@ class RegisterViewController: UIViewController {
     }
 // MARK: - @objc funcs
     @objc func datePickerTarget(_ sender: UIDatePicker) {
-        textField.text = datePicker.dayMonthYear
+        registerView.textField.text = datePicker.dayMonthYear
     }
 }
 
 extension RegisterViewController: PickerViewDelegate {
     func pickerView(didSelect option: String) {
-        textField.text = option
+        registerView.textField.text = option
     }
     func pickerView(_ toolBar: UIToolbar) {
-        textField.inputAccessoryView = toolBar
-        textField.inputView = pickerView
+        registerView.textField.inputAccessoryView = toolBar
+        registerView.textField.inputView = pickerView
     }
 }
 
 extension RegisterViewController: DatePickerDelegate {
     func datePicker(_ toolBar: UIToolbar) {
-        textField.inputAccessoryView = toolBar
-        textField.inputView = datePicker
+        registerView.textField.inputAccessoryView = toolBar
+        registerView.textField.inputView = datePicker
     }
     func doneButtonTarget() {
         view.dismissKeyboard()
@@ -113,11 +71,11 @@ extension RegisterViewController: DatePickerDelegate {
 
 extension RegisterViewController: BaseButtonDelegate {
     func freezeButton() {
-        button.alpha = 0.5
-        button.isUserInteractionEnabled = false
+        registerView.button.alpha = 0.5
+        registerView.button.isUserInteractionEnabled = false
     }
     func unFreezeButton() {
-        button.alpha = 1
-        button.isUserInteractionEnabled = true
+        registerView.button.alpha = 1
+        registerView.button.isUserInteractionEnabled = true
     }
 }

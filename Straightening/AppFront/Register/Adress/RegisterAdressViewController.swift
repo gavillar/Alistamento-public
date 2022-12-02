@@ -17,7 +17,6 @@ class RegisterAdressViewController: UIViewController {
                                                          numberTextField,
                                                          districtLabel,
                                                          locationLabel])
-        
         let baseView = UIView()
         baseView.translatesAutoresizingMaskIntoConstraints = false
         baseView.addSubview(verticalStack)
@@ -40,7 +39,6 @@ class RegisterAdressViewController: UIViewController {
         label.isHidden = true
         return label
     }()
-    
     let locationLabel: UILabel = {
         let label = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
         label.isHidden = true
@@ -91,10 +89,8 @@ class RegisterAdressViewController: UIViewController {
             .bottom(in: view.safeAreaLayoutGuide)
             .height(multiplier: 0.05)
         NSLayoutConstraint.activate([
-            
             cepTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant:  40),
             cepTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40)
-        
         ])
     }
 // MARK: - setupCepTextField
@@ -113,12 +109,12 @@ class RegisterAdressViewController: UIViewController {
         }
     }
 // MARK: - tapCepTextField
-        @objc func tapCepTextField(sender: UITextField) {
-            guard let text = sender.text else {return}
-            if text.validateCep(text)  {
-                registeradressviewmodel.getApiCep()
-            }
+    @objc func tapCepTextField(sender: UITextField) {
+        guard let text = sender.text else {return}
+        if text.validateCep(text)  {
+            registeradressviewmodel.getApiCep()
         }
+    }
 }
 
 extension RegisterAdressViewController: RegisterAdressViewModelProtocol {

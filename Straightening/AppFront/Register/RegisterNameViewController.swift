@@ -12,17 +12,17 @@ final class RegisterNameViewController: RegisterViewController {
         super.loadView()
         title = "Nome Completo"
         setTextFieldPlaceholder("Nome Completo")
-        textField.becomeFirstResponder()
-        textField.addTarget(self, action: #selector(tapNameTextField), for: .editingChanged)
-        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        registerView.textField.becomeFirstResponder()
+        registerView.textField.addTarget(self, action: #selector(tapNameTextField), for: .editingChanged)
+        registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
     @objc func tapNameTextField(_ sender: UITextField) {
         guard let count = sender.text?.count else {return}
-        button.performSelection(condition: count > 6)
+        registerView.button.performSelection(condition: count > 6)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        registerViewModel.userToRegister.name = textField.text
+        registerViewModel.userToRegister.name = registerView.textField.text
         self.navigationController?.navigate(to: RegisterPhoneViewController(registerViewModel))
     }
 }

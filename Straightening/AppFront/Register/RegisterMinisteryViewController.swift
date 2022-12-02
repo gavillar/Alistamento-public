@@ -10,13 +10,13 @@ class RegisterMinisteryViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
         title = "Ministério"
-        textField.delegate = self
+        registerView.textField.delegate = self
         setTextFieldPlaceholder("Pastoral")
         pickerView.options = ["Pastoral", "Missões",
                               "Família", "Discipulado",
                               "Serviços", "Adoração"]
         pickerView.pickerViewDelegate = self
-        button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
         unFreezeButton()
     }
 // MARK: - objc functions
