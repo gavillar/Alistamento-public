@@ -15,7 +15,8 @@ class RegisterView: UIView {
         return baseView
     }()
     lazy var baseStackView: UIStackView = {
-        let baseStackView = Create.stack(arrangedSubviews: [textField])
+        let baseStackView = Create.stack(frame.height*0.015, arrangedSubviews: [textField])
+        baseStackView.addUnderline(frame.height*0.015)
         baseStackView.distribution = .equalSpacing
         baseStackView.translatesAutoresizingMaskIntoConstraints = false
         return baseStackView

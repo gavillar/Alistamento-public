@@ -37,6 +37,7 @@
 		1DB3725E293A469500A47FA1 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725D293A469500A47FA1 /* BookView.swift */; };
 		1DB37260293A604E00A47FA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725F293A604E00A47FA1 /* LoginView.swift */; };
 		1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB37261293A63A000A47FA1 /* RegisterView.swift */; };
+		1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3726B293A7E7200A47FA1 /* UIView+addUnderLine.swift */; };
 		1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
 		1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D732938CB8B001FD29D /* Rute.geojson */; };
@@ -159,6 +160,7 @@
 		1DB3725D293A469500A47FA1 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		1DB3725F293A604E00A47FA1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1DB37261293A63A000A47FA1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		1DB3726B293A7E7200A47FA1 /* UIView+addUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addUnderLine.swift"; sourceTree = "<group>"; };
 		1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Êxodo.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1DDA2D732938CB8B001FD29D /* Rute.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rute.geojson; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */,
 				27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */,
 				27665C8329270AFD00F80344 /* UiView+ConstrainsFunc.swift */,
+				1DB3726B293A7E7200A47FA1 /* UIView+addUnderLine.swift */,
 			);
 			path = UiView;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
+				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
 				1DA68AA9293A149200154B91 /* IntroView.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */,

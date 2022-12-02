@@ -11,22 +11,28 @@ import UIKit
 class RegisterAdressViewController: RegisterViewController {
 // MARK: - var and let
     private let registeradressviewmodel = RegisterAdressViewModel()
-    let streetLabel: UILabel = {
-        let label = Create.label("", font: UIFont.boldSystemFont(ofSize: 22), alignment: .left, numberOfLines: 0)
-        label.isHidden = true
-        return label
+    lazy var streetLabel: UILabel = {
+        let streetLabel = UILabel()
+        streetLabel.font = registerView.textField.font
+        streetLabel.textAlignment = .left
+        streetLabel.isHidden = true
+        return streetLabel
     }()
-    let districtLabel: UILabel = {
-        let label = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
-        label.isHidden = true
-        return label
+    lazy var districtLabel: UILabel = {
+        let districtLabel = UILabel()
+        districtLabel.font = registerView.textField.font
+        districtLabel.textAlignment = .left
+        districtLabel.isHidden = true
+        return districtLabel
     }()
-    let locationLabel: UILabel = {
-        let label = Create.label("", font: UIFont.boldSystemFont(ofSize: 18), alignment: .left, numberOfLines: 0)
-        label.isHidden = true
-        return label
+    lazy var locationLabel: UILabel = {
+        let locationLabel = UILabel()
+        locationLabel.font = registerView.textField.font
+        locationLabel.textAlignment = .left
+        locationLabel.isHidden = true
+        return locationLabel
     }()
-    let numberTextField: UITextField = {
+    lazy var numberTextField: UITextField = {
         let textfield = UITextField()
         textfield.attributedPlaceholder = NSAttributedString(string: "Número-Complemento",
                                                                 attributes: [NSAttributedString.Key.foregroundColor:
