@@ -24,7 +24,7 @@ class RegisterViewController: UIViewController {
 // MARK: - override functions
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.addGradientBackground()
+        view.layer.addGradientBackground()
     }
     override func loadView() {
         super.loadView()

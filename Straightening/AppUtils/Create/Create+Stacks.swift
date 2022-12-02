@@ -12,18 +12,15 @@ extension Create {
                       backgroundColor: UIColor? = nil,
                       layoutMargins: UIEdgeInsets? = nil,
                       arrangedSubviews: [UIView] = [],
-                      axis: NSLayoutConstraint.Axis = .vertical,
-                      cornerRadius: CGFloat = 15) -> UIStackView {
+                      axis: NSLayoutConstraint.Axis = .vertical) -> UIStackView {
         let stack = UIStackView(arrangedSubviews: arrangedSubviews)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = axis
         stack.spacing = spacing
-        stack.setUnderlineBorderWhite()
         if let layoutMargins = layoutMargins {
             stack.isLayoutMarginsRelativeArrangement = true
             stack.layoutMargins = layoutMargins
         }
-        stack.layer.cornerRadius = cornerRadius
         stack.backgroundColor = backgroundColor
         return stack
     }

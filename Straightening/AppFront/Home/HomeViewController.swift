@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     override func loadView() {
         super.loadView()
-        view.addGradientBackground()
+        view.layer.addGradientBackground()
         navigationController?.navigationBar.isUserInteractionEnabled = false
         navigationController?.navigationBar.isHidden = true
     }

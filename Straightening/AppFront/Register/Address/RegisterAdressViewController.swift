@@ -8,27 +8,9 @@
 import Foundation
 import UIKit
 
-class RegisterAdressViewController: UIViewController {
+class RegisterAdressViewController: RegisterViewController {
 // MARK: - var and let
     private let registeradressviewmodel = RegisterAdressViewModel()
-    private lazy var baseView: UIView = {
-        let verticalStack = VStack(addArrangedSubviews: [cepTextField,
-                                                         streetLabel,
-                                                         numberTextField,
-                                                         districtLabel,
-                                                         locationLabel])
-        let baseView = UIView()
-        baseView.translatesAutoresizingMaskIntoConstraints = false
-        baseView.addSubview(verticalStack)
-        verticalStack.enableAutolayout()
-            .centerX()
-            .centerY()
-        return baseView
-    }()
-    let cepTextField: BindingTextField = {
-       let textfield = BindingTextField()
-        return textfield
-    }()
     let streetLabel: UILabel = {
         let label = Create.label("", font: UIFont.boldSystemFont(ofSize: 22), alignment: .left, numberOfLines: 0)
         label.isHidden = true
@@ -52,68 +34,55 @@ class RegisterAdressViewController: UIViewController {
         textfield.isHidden = true
         return textfield
     }()
-// MARK: - registerButton
-    private lazy var registerButton = Create.baseButton("ENTRAR", titleColor: Assets.Colors.brown) {_ in
-        self.navigationController?.navigate(to: LoginViewController())
-    }
 // MARK: - viewDidLoad
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.addGradientBackground()
+        view.layer.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
+        registerView.baseStackView.addArrangedSubviews([registerView.textField,
+                                                        streetLabel,
+                                                        numberTextField,
+                                                        districtLabel,
+                                                        locationLabel])
         title = "Endereço"
         setupView()
-        setupConstraints()
         registeradressviewmodel.formViewModelDelegate = self
     }
 // MARK: - setupView
     func setupView() {
-        view.addSubviews([baseView, registerButton])
         view.hideKeyboardWhenTappedAround()
         setupCepTextField()
         sendCep()
         updateForm()
-    }
-// MARK: - setupConstraints
-    func setupConstraints() {
-        baseView.enableAutolayout()
-            .top(in: view.safeAreaLayoutGuide)
-            .leading(in: view.safeAreaLayoutGuide)
-            .trailing(in: view.safeAreaLayoutGuide)
-            .constraint(.bottom, to: view.keyboardLayoutGuide, itemAttribute: .top)
-        registerButton
-            .leading(in: view.safeAreaLayoutGuide)
-            .trailing(in: view.safeAreaLayoutGuide)
-            .bottom(in: view.safeAreaLayoutGuide)
-            .height(multiplier: 0.05)
-        NSLayoutConstraint.activate([
-            cepTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant:  40),
-            cepTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -40)
-        ])
+        registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
+        unFreezeButton()
     }
 // MARK: - setupCepTextField
     func setupCepTextField() {
-        cepTextField.becomeFirstResponder()
-        cepTextField.setUnderlineTextFieldBorderWhite()
-        cepTextField.delegate = self
-        cepTextField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
-        cepTextField.attributedPlaceholder = NSAttributedString(string: "Cep",
+        registerView.textField.becomeFirstResponder()
+        registerView.textField.delegate = self
+        registerView.textField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
+        registerView.textField.attributedPlaceholder = NSAttributedString(string: "Cep",
                                                                 attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 UIColor.white])
     }
     func sendCep() {
-        cepTextField.bind { [weak self] text in
+        registerView.textField.bind {[weak self] text in
             self?.registeradressviewmodel.cep = text
         }
     }
 // MARK: - tapCepTextField
     @objc func tapCepTextField(sender: UITextField) {
         guard let text = sender.text else {return}
-        if text.validateCep(text)  {
+        if text.validateCep(text) {
             registeradressviewmodel.getApiCep()
         }
+    }
+// MARK: - objc functions
+    @objc func buttonTarget() {
+        self.navigationController?.navigate(to: LoginViewController())
     }
 }
 

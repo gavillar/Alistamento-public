@@ -32,7 +32,9 @@ class LoginView: UIView {
         let emailStackView = Create.stack(
             layoutMargins: UIEdgeInsets(top: margins, left: 0,
                                         bottom: margins, right: 0),
-            arrangedSubviews: [emailTextField])
+            arrangedSubviews: [emailTextField]
+        )
+        emailStackView.layer.setUnderlineBorderWhite()
         return emailStackView
     }()
     lazy var passwordTextField: UITextField = {
@@ -47,6 +49,7 @@ class LoginView: UIView {
                                         bottom: margins, right: 0),
             arrangedSubviews: [passwordTextField]
         )
+        passwordStackView.layer.setUnderlineBorderWhite()
         return passwordStackView
     }()
     private lazy var scrollView: UIScrollView = {

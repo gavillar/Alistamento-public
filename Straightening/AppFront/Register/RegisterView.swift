@@ -14,13 +14,11 @@ class RegisterView: UIView {
         baseView.translatesAutoresizingMaskIntoConstraints = false
         return baseView
     }()
-    private lazy var baseStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.distribution = .equalSpacing
-        stackView.axis = .vertical
-        stackView.setUnderlineBorderWhite()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+    lazy var baseStackView: UIStackView = {
+        let baseStackView = Create.stack(arrangedSubviews: [textField])
+        baseStackView.distribution = .equalSpacing
+        baseStackView.translatesAutoresizingMaskIntoConstraints = false
+        return baseStackView
     }()
     lazy var textField = BindingTextField()
     lazy var button: BaseButton = {
@@ -39,7 +37,6 @@ class RegisterView: UIView {
 // MARK: - setup
     func setupView() {
         baseView.addSubview(baseStackView)
-        baseStackView.addArrangedSubview(textField)
         addSubviews([baseView, button])
     }
     func setupConstraints() {

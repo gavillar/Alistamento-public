@@ -21,13 +21,13 @@ class RegisterAdressViewModel {
     var formViewModelDelegate: RegisterAdressViewModelProtocol?
     var cep: String = ""
 // MARK: - getApiCep
-        func getApiCep() {
-            Task {
-                guard let data = await Network.call(from: Network.EndPoints.cepInformation(cep)) else {return}
-                guard let cep = await Network.decode(Cep.self, from: data) else {return}
-                print(cep)
-                formViewModelDelegate?.sendCep(cep: cep)
-                updateformviewmodel?.updateForm()
-            }
+    func getApiCep() {
+        Task {
+            guard let data = await Network.call(from: Network.EndPoints.cepInformation(cep)) else {return}
+            guard let cep = await Network.decode(Cep.self, from: data) else {return}
+            print(cep)
+            formViewModelDelegate?.sendCep(cep: cep)
+            updateformviewmodel?.updateForm()
         }
+    }
 }

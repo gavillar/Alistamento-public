@@ -15,7 +15,7 @@ class IntroViewController: UIViewController {
 // MARK: - overrides
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.addGradientBackground()
+        view.layer.addGradientBackground()
     }
     override func loadView() {
         super.loadView()

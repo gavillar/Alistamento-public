@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
 // MARK: - overrides
     override func viewLayoutMarginsDidChange() {
         super.viewLayoutMarginsDidChange()
-        view.addGradientBackground()
+        view.layer.addGradientBackground()
     }
     override func loadView() {
         super.loadView()
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         } else {
             loginviewmodel.password = sender.text
         }
-            updateForm()
+        updateForm()
     }
     @objc func hendleForgotPassword() {
         navigationController?.navigate(to: BooksViewController())
