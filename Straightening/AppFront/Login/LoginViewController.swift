@@ -60,11 +60,6 @@ class LoginViewController: UIViewController {
     @objc func hendleLogIn() {
         loginviewmodel.performLogin()
     }
-    private func verifyErrorLogin() {
-        if loginviewmodel.controlError == true {
-            showView()
-        }
-    }
 }
 
 extension LoginViewController: UpdateFormViewModel {
