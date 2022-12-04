@@ -9,22 +9,14 @@ import Foundation
 import Firebase
 import UIKit
 
-protocol UpdateFormViewModel: AnyObject {
-    func updateForm()
-}
-protocol AuthenticationLoginViewModel {
-    var formatIsValid: Bool {get}
-    var backgroundCollorButton: UIColor {get}
-    var titleColorButton: UIColor {get}
-}
-protocol AuthenticationDelegate: AnyObject {
-    func nextView()
-}
-struct LoginViewModel: AuthenticationLoginViewModel {
+
+class LoginViewModel: AuthenticationLoginViewModel {
     weak var authenticationdelegate: AuthenticationDelegate?
+    weak var authenticationFailDelegate: AuthenticationLoginFail?
     var auth = Auth.auth()
     var email: String?
     var password: String?
+    var controlError = false
     var formatIsValid: Bool {
         return email?.isEmpty == false && password?.isEmpty == false && email?.isEmail() == true
     }
@@ -34,19 +26,21 @@ struct LoginViewModel: AuthenticationLoginViewModel {
     var titleColorButton: UIColor {
         return formatIsValid ? .black : UIColor(white: 1, alpha: 0.67)
     }
-    func performLogin() {
+     func performLogin() {
         guard let email = email else {return}
         guard let password = password else {return}
         self.auth.signIn(withEmail: email, password: password, completion: {(user, error) in
-            if let error = error {
-                print("Falha ao Cadastrar\(error.localizedDescription)")
-                return
+            if error != nil {
+                self.controlError = true
+                print("Falha ao tentar logar.\n\(error?.localizedDescription ?? "")")
             }
-            self.authenticationdelegate?.nextView()
-            print("Login efetuado com Sucesso")
+            if self.controlError == true {
+                print("Problema com as credenciais")
+                self.authenticationFailDelegate?.showView()
+            } else {
+                self.authenticationdelegate?.nextView()
+                print("Login efetuado com Sucesso")
+            }
         })
     }
 }
-    
-    
-    

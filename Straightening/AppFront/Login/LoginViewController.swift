@@ -20,10 +20,16 @@ class LoginViewController: UIViewController {
         super.loadView()
         view = loginView
         setupTargets()
+        signatureDelegates()
         configureNotificationsObserves()
+        
+    }
+    func signatureDelegates() {
+        loginviewmodel.authenticationdelegate = self
+        loginviewmodel.authenticationFailDelegate = self
     }
 // MARK: - setup
-    func setupTargets() {
+    private func setupTargets() {
         loginView.forgotPasswordButton.addTarget(nil, action: #selector(hendleForgotPassword), for: .touchUpInside)
         loginView.signInButton.addTarget(nil, action: #selector(hendleSignIn), for: .touchUpInside)
         loginView.logInButton.addTarget(self, action: #selector(hendleLogIn), for: .touchUpInside)
@@ -53,7 +59,11 @@ class LoginViewController: UIViewController {
     }
     @objc func hendleLogIn() {
         loginviewmodel.performLogin()
-        nextView()
+    }
+    private func verifyErrorLogin() {
+        if loginviewmodel.controlError == true {
+            showView()
+        }
     }
 }
 
@@ -62,6 +72,12 @@ extension LoginViewController: UpdateFormViewModel {
         loginView.logInButton.backgroundColor = loginviewmodel.backgroundCollorButton
         loginView.logInButton.setTitleColor(loginviewmodel.titleColorButton, for: .normal)
         loginView.logInButton.isEnabled = loginviewmodel.formatIsValid
+    }
+}
+
+extension LoginViewController: AuthenticationLoginFail {
+    func showView() {
+        navigationController?.navigate(to: LoginErrorViewController())
     }
 }
 

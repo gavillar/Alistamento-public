@@ -66,6 +66,7 @@
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A38002934E24D003855C3 /* FireBaseManager.swift */; };
 		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
+		27172E5D293B9EFB0015CD09 /* LoginErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */; };
 		274384A22937911A0079AE75 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274384A12937911A0079AE75 /* LoginViewModel.swift */; };
 		274384A629379BE60079AE75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 274384A529379BE60079AE75 /* GoogleService-Info.plist */; };
 		2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */; };
@@ -89,6 +90,8 @@
 		279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055A292196DD00A6E008 /* PickerViewCustom.swift */; };
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* CALayer+Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* CALayer+Underline.swift */; };
+		279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9300293AAD8000BAA93C /* LoginModel.swift */; };
+		279F9304293AAEB600BAA93C /* LoginErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9303293AAEB600BAA93C /* LoginErrorView.swift */; };
 		27C379FA2932666A00397E14 /* Verses.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27C379F92932666A00397E14 /* Verses.geojson */; };
 		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIView+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */; };
@@ -190,6 +193,7 @@
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270A38002934E24D003855C3 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
+		27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorViewController.swift; sourceTree = "<group>"; };
 		274384A12937911A0079AE75 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		274384A529379BE60079AE75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Border.swift"; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		279E055A292196DD00A6E008 /* PickerViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewCustom.swift; sourceTree = "<group>"; };
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* CALayer+Underline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Underline.swift"; sourceTree = "<group>"; };
+		279F9300293AAD8000BAA93C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		279F9303293AAEB600BAA93C /* LoginErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorView.swift; sourceTree = "<group>"; };
 		27C379F92932666A00397E14 /* Verses.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Verses.geojson; sourceTree = "<group>"; };
 		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HiddenKeyboard.swift"; sourceTree = "<group>"; };
@@ -477,6 +483,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		27172E5B293B9ECF0015CD09 /* LoginError */ = {
+			isa = PBXGroup;
+			children = (
+				279F9303293AAEB600BAA93C /* LoginErrorView.swift */,
+				27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */,
+			);
+			path = LoginError;
+			sourceTree = "<group>";
+		};
 		2728114B292E4E1600D3B9C8 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +570,8 @@
 				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
 				1DB3725F293A604E00A47FA1 /* LoginView.swift */,
 				274384A12937911A0079AE75 /* LoginViewModel.swift */,
+				279F9300293AAD8000BAA93C /* LoginModel.swift */,
+				27172E5B293B9ECF0015CD09 /* LoginError */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -566,6 +583,17 @@
 				1DA68AA8293A149200154B91 /* IntroView.swift */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		279F92FF293AAA5300BAA93C /* RegisterMain */ = {
+			isa = PBXGroup;
+			children = (
+				1DB37261293A63A000A47FA1 /* RegisterView.swift */,
+				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
+				27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */,
+				27EECF9529352F8800DBBEEA /* RegisterModel.swift */,
+			);
+			path = RegisterMain;
 			sourceTree = "<group>";
 		};
 		27C379FD29329CEE00397E14 /* Methods */ = {
@@ -592,6 +620,7 @@
 		27E712B829266AF600009AEF /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				279F92FF293AAA5300BAA93C /* RegisterMain */,
 				1DB3726A293A71D300A47FA1 /* Address */,
 				1DB37269293A71C900A47FA1 /* AvaibleTime */,
 				1DB37268293A71C400A47FA1 /* Ministery */,
@@ -600,10 +629,6 @@
 				1DB37265293A719B00A47FA1 /* Email */,
 				1DB37264293A719500A47FA1 /* Phone */,
 				1DB37263293A716500A47FA1 /* Name */,
-				1DB37261293A63A000A47FA1 /* RegisterView.swift */,
-				27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */,
-				27EECF9529352F8800DBBEEA /* RegisterModel.swift */,
-				1DB786492923A5A100DFF861 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -885,9 +910,12 @@
 				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
 				1DA68AA9293A149200154B91 /* IntroView.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
+				279F9304293AAEB600BAA93C /* LoginErrorView.swift in Sources */,
+				279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */,
 				27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */,
 				27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
+				27172E5D293B9EFB0015CD09 /* LoginErrorViewController.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* RegisterAdressViewController.swift in Sources */,
