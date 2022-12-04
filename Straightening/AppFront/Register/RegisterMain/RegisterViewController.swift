@@ -29,7 +29,6 @@ class RegisterViewController: UIViewController {
     override func loadView() {
         super.loadView()
         freezeButton()
-        navigationController?.navigationBar.hideKeyboardWhenTappedAround()
         view.hideKeyboardWhenTappedAround()
         view = registerView
         registerView.button.delegate = self
