@@ -21,4 +21,5 @@ protocol AuthenticationLoginFail: AnyObject {
 }
 protocol AuthenticationDelegate: AnyObject {
     func nextView()
+    func reloadView()
 }

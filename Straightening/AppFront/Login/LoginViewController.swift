@@ -85,4 +85,8 @@ extension LoginViewController: AuthenticationDelegate {
     func nextView() {
         navigationController?.navigate(to: HomeViewController())
     }
+    func reloadView() {
+        loginView.emailTextField.text = nil
+        loginView.passwordTextField.text = nil
+    }
 }
