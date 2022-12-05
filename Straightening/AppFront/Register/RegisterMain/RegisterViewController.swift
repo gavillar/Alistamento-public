@@ -29,10 +29,9 @@ class RegisterViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
-        freezeButton()
         view.hideKeyboardWhenTappedAround()
         view = registerView
-        registerView.button.delegate = self
+        registerView.button.freezeButton()
         datePicker.addTarget(self, action: #selector(datePickerTarget), for: .valueChanged)
     }
 // MARK: - funcs
@@ -66,16 +65,5 @@ extension RegisterViewController: DatePickerDelegate {
     }
     func doneButtonTarget() {
         view.dismissKeyboard()
-    }
-}
-
-extension RegisterViewController: BaseButtonDelegate {
-    func freezeButton() {
-        registerView.button.alpha = 0.5
-        registerView.button.isUserInteractionEnabled = false
-    }
-    func unFreezeButton() {
-        registerView.button.alpha = 1
-        registerView.button.isUserInteractionEnabled = true
     }
 }
