@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         setupTargets()
         signatureDelegates()
         configureNotificationsObserves()
-        
     }
     func signatureDelegates() {
         loginviewmodel.authenticationdelegate = self

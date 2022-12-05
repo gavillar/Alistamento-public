@@ -100,7 +100,6 @@
 		27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F92925263F007CDF8A /* BooksViewModel.swift */; };
 		27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */; };
 		27E712BA29266B2B00009AEF /* RegisterAdressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */; };
-		27E712BC29266B3C00009AEF /* RegisterAdressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* DatePicker.swift */; };
 		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 		27EECF8D2935073600DBBEEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8C2935073600DBBEEA /* FirebaseAuth */; };
@@ -231,7 +230,6 @@
 		27E3A6F92925263F007CDF8A /* BooksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressViewModel.swift; sourceTree = "<group>"; };
-		27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
 		27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
@@ -374,7 +372,6 @@
 			isa = PBXGroup;
 			children = (
 				27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */,
-				27E712BB29266B3C00009AEF /* RegisterAdressModel.swift */,
 				2770EA82291C1FA100760A35 /* RegisterAdressViewController.swift */,
 			);
 			path = Address;
@@ -622,8 +619,8 @@
 			children = (
 				279F92FF293AAA5300BAA93C /* RegisterMain */,
 				1DB3726A293A71D300A47FA1 /* Address */,
-				1DB37269293A71C900A47FA1 /* AvaibleTime */,
 				1DB37268293A71C400A47FA1 /* Ministery */,
+				1DB37269293A71C900A47FA1 /* AvaibleTime */,
 				1DB37267293A71BC00A47FA1 /* BirthDate */,
 				1DB37266293A71A000A47FA1 /* Password */,
 				1DB37265293A719B00A47FA1 /* Email */,
@@ -934,7 +931,6 @@
 				1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */,
-				27E712BC29266B3C00009AEF /* RegisterAdressModel.swift in Sources */,
 				27F7863429364BB800796436 /* Regex+Password.swift in Sources */,
 				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
 				1D77F9AC2927D3ED00EF0EFB /* CALayer+Gradient.swift in Sources */,

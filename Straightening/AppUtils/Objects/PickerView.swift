@@ -15,7 +15,12 @@ protocol PickerViewDelegate: AnyObject {
 
 class PickerView: UIPickerView {
 // MARK: - variables
-    var options: [String]? = nil
+    var selectedOption: String?
+    var options: [String]? {
+        didSet {
+            selectedOption = options?.first
+        }
+    }
     weak var pickerViewDelegate: PickerViewDelegate? {
         didSet {
             setup()
@@ -59,6 +64,7 @@ extension PickerView: UIPickerViewDataSource, UIPickerViewDelegate {
         return options?[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedOption = options?[row]
         pickerViewDelegate?.pickerView(didSelect: options?[row] ?? String())
     }
 }
