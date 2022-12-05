@@ -21,7 +21,8 @@ class RegisterMinisteryViewController: RegisterViewController {
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
-        self.navigationController?.navigate(to: RegisterAdressViewController())
+        registerViewModel.userToRegister.ministery = pickerView.selectedOption
+        self.navigationController?.navigate(to: RegisterAdressViewController(registerViewModel))
     }
 }
 

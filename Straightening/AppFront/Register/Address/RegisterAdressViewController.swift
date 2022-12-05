@@ -10,7 +10,7 @@ import UIKit
 
 class RegisterAdressViewController: RegisterViewController {
 // MARK: - var and let
-    private let registeradressviewmodel = RegisterAdressViewModel()
+    private let registerAdressViewModel = RegisterAdressViewModel()
     lazy var streetLabel: UILabel = {
         let streetLabel = UILabel()
         streetLabel.font = registerView.textField.font
@@ -54,7 +54,7 @@ class RegisterAdressViewController: RegisterViewController {
                                                         locationLabel])
         title = "Endereço"
         setupView()
-        registeradressviewmodel.formViewModelDelegate = self
+        registerAdressViewModel.formViewModelDelegate = self
     }
 // MARK: - setupView
     func setupView() {
@@ -63,37 +63,43 @@ class RegisterAdressViewController: RegisterViewController {
         sendCep()
         updateForm()
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        unFreezeButton()
     }
 // MARK: - setupCepTextField
     func setupCepTextField() {
         registerView.textField.becomeFirstResponder()
         registerView.textField.delegate = self
         registerView.textField.addTarget(self, action: #selector(tapCepTextField), for: .editingChanged)
+        numberTextField.addTarget(self, action: #selector(numberTextFieldTarget), for: .editingChanged)
         registerView.textField.attributedPlaceholder = NSAttributedString(string: "Cep",
                                                                 attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 UIColor.white])
     }
     func sendCep() {
         registerView.textField.bind {[weak self] text in
-            self?.registeradressviewmodel.cep = text
+            self?.registerAdressViewModel.cep = text
         }
     }
 // MARK: - tapCepTextField
     @objc func tapCepTextField(sender: UITextField) {
         guard let text = sender.text else {return}
         if text.validateCep(text) {
-            registeradressviewmodel.getApiCep()
+            self.registerAdressViewModel.getApiCep()
         }
+    }
+// MARK: - tapCepTextField
+    @objc func numberTextFieldTarget(sender: UITextField) {
+        registerView.button.performSelection(condition: sender.text != nil)
     }
 // MARK: - objc functions
     @objc func buttonTarget() {
+        print(registerViewModel.userToRegister)
+        registerViewModel.register()
         self.navigationController?.navigate(to: LoginViewController())
     }
 }
 
 extension RegisterAdressViewController: RegisterAdressViewModelProtocol {
-    func sendCep(cep: Cep) {
+    func sendCep(cep: RegisterModel.Cep) {
         Task {
             streetLabel.text = "Endereço:\n\n\(cep.logradouro ?? "")"
             districtLabel.text = "Bairro: \(cep.bairro ?? "")"

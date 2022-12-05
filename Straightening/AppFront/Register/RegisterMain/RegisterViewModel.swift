@@ -9,22 +9,20 @@ import Foundation
 import Firebase
 
 class RegisterViewModel {
-    var auth: Auth?
+    var auth = Auth.auth()
     var userToRegister: RegisterModel = RegisterModel()
-    lazy var email: String = ""
-    lazy var password: String = ""
-    func setRegister() {
-        if email.isEmpty && password.isEmpty {
-            self.auth?.createUser(withEmail: email, password: password, completion: {(_, error) in
-                if error != nil {
-                    print("Falha ao Cadastrar")
+    func register() {
+        if let email = userToRegister.email,
+           let password = userToRegister.password {
+            auth.createUser(withEmail: email, password: password) {(_, error) in
+                if let error = error {
+                    print("ERROR: \(error)")
                 } else {
-                    print("Cadastro Realizado")
+                    print("Cadastro realizado com sucesso")
                 }
-            })
+            }
+        } else {
+            print("ERROR: Couldn't unwrap email/password")
         }
-    }
-    init(auth: Auth? = nil) {
-        self.auth = auth
     }
 }

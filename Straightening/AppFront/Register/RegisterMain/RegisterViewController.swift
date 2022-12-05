@@ -5,6 +5,7 @@
 //  Created by Josicleison Elves on 23/08/1401 AP.
 //
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 // MARK: - variables
