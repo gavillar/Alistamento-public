@@ -14,7 +14,7 @@ final class RegisterBirthDateViewController: RegisterViewController {
         setTextFieldPlaceholder(datePicker.dayMonthYear)
         registerView.textField.delegate = self
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        unFreezeButton()
+        registerView.button.unFreezeButton()
         datePicker.delegate = self
     }
 // MARK: - objc functions

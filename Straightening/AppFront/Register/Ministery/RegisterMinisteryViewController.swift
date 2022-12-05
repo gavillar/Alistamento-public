@@ -17,7 +17,7 @@ class RegisterMinisteryViewController: RegisterViewController {
                               "Serviços", "Adoração"]
         pickerView.pickerViewDelegate = self
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        unFreezeButton()
+        registerView.button.unFreezeButton()
     }
 // MARK: - objc functions
     @objc func buttonTarget() {

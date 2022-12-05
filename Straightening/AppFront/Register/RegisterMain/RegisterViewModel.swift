@@ -5,7 +5,6 @@
 //  Created by user220831 on 11/28/22.
 //
 
-import Foundation
 import Firebase
 
 class RegisterViewModel {
@@ -24,5 +23,11 @@ class RegisterViewModel {
         } else {
             print("ERROR: Couldn't unwrap email/password")
         }
+    }
+    func verifyIfEmailExists() async -> Bool {
+        if (try? await auth.fetchSignInMethods(forEmail: userToRegister.email ?? "")) != nil {
+            print("ERROR: This email already exists"); return true
+        }
+        return false
     }
 }

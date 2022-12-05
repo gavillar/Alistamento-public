@@ -7,13 +7,7 @@
 
 import UIKit
 
-protocol BaseButtonDelegate: AnyObject {
-    func freezeButton()
-    func unFreezeButton()
-}
-
 class BaseButton: UIButton {
-    weak var delegate: BaseButtonDelegate?
     init(_ title: String? = nil,
          titleColor: UIColor? = Assets.Colors.reverseDark,
          backgroundColor: UIColor? = Assets.Colors.weakWhite,
@@ -31,10 +25,18 @@ class BaseButton: UIButton {
     }
     @discardableResult func performSelection(condition: Bool) -> Bool {
         if condition {
-            delegate?.unFreezeButton()
+            unFreezeButton()
         } else {
-            delegate?.freezeButton()
+            freezeButton()
         }
         return condition
+    }
+    func freezeButton() {
+        alpha = 0.5
+        isUserInteractionEnabled = false
+    }
+    func unFreezeButton() {
+        alpha = 1
+        isUserInteractionEnabled = true
     }
 }

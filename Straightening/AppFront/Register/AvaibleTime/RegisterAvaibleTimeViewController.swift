@@ -17,7 +17,7 @@ final class RegisterAvaibleTimeViewController: RegisterViewController {
                               "Noite", "Todos Horários"]
         pickerView.pickerViewDelegate = self
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
-        unFreezeButton()
+        registerView.button.unFreezeButton()
     }
     @objc func buttonTarget() {
         registerViewModel.userToRegister.avaibleTime = pickerView.selectedOption
