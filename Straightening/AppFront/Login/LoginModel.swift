@@ -10,8 +10,6 @@ import UIKit
 
 protocol AuthenticationLoginViewModel {
     var formatIsValid: Bool {get}
-    var backgroundCollorButton: UIColor {get}
-    var titleColorButton: UIColor {get}
 }
 protocol UpdateFormViewModel: AnyObject {
     func updateForm()

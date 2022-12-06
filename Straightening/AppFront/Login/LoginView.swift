@@ -71,9 +71,9 @@ class LoginView: UIView {
                                                               titleColor: Assets.Colors.whiteBlack,
                                                               backgroundColor: nil)
     lazy var signInButton = Create.baseButton("CRIAR UMA CONTA")
-    lazy var logInButton: UIButton =  {
-        let logInButton = Create.baseButton("ENTRAR", titleColor: nil, backgroundColor: nil)
-        logInButton.isEnabled = false
+    lazy var logInButton: BaseButton = {
+        let logInButton = BaseButton("ENTRAR")
+        logInButton.freezeButton()
         return logInButton
     }()
 // MARK: - overrides

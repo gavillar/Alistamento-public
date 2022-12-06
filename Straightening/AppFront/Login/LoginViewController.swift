@@ -63,9 +63,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UpdateFormViewModel {
     func updateForm() {
-        loginView.logInButton.backgroundColor = loginviewmodel.backgroundCollorButton
-        loginView.logInButton.setTitleColor(loginviewmodel.titleColorButton, for: .normal)
-        loginView.logInButton.isEnabled = loginviewmodel.formatIsValid
+        loginView.logInButton.performSelection(condition: loginviewmodel.formatIsValid)
     }
 }
 
