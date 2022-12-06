@@ -9,6 +9,6 @@ import UIKit
 
 extension UIAlertController {
     var baseView: UIView {
-        return view.subviews.first?.subviews.first?.subviews.first ?? UIView()
+        return view.subviews.first?.subviews.first ?? UIView()
     }
 }
