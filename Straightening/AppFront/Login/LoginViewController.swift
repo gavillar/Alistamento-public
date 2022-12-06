@@ -70,7 +70,11 @@ extension LoginViewController: UpdateFormViewModel {
 
 extension LoginViewController: AuthenticationLoginFail {
     func showView() {
-        navigationController?.navigate(to: LoginErrorViewController())
+        let alert = Create.alert(
+            title: "Email ou Senha Incorretos",
+            message: "Confira se seu Email e sua senha estão corretos."
+        )
+        present(alert, animated: true)
     }
 }
 

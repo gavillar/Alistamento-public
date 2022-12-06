@@ -42,6 +42,12 @@ final class RegisterEmailViewController: RegisterViewController {
                 self.navigationController?.navigate(
                     to: RegisterPasswordViewController(self.registerViewModel)
                 )
+            } else {
+                let alert = Create.alert(
+                    title: "Este email j[a existe",
+                    message: "Tente com algum outro email."
+                )
+                present(alert, animated: true)
             }
         }
     }

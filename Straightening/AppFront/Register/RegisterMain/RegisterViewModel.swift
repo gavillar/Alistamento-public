@@ -25,7 +25,8 @@ class RegisterViewModel {
         }
     }
     func verifyIfEmailExists() async -> Bool {
-        if (try? await auth.fetchSignInMethods(forEmail: userToRegister.email ?? "")) != nil {
+        if let result = try? await auth.fetchSignInMethods(forEmail: userToRegister.email ?? ""),
+           result != [] {
             print("ERROR: This email already exists"); return true
         }
         return false
