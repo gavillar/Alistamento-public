@@ -8,6 +8,12 @@
 import UIKit
 
 extension UIView {
+    func subviews<T>(ofType: T.Type) -> T? {
+        for subview in subviews where (subview as? T) != nil {
+            return subview as? T
+        }
+        return nil
+    }
     func addSubviews(_ views: [UIView]) {
         for view in views {
             addSubview(view)

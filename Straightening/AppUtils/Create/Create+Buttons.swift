@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Create {
+extension Create {
     static func baseButton(_ title: String? = nil,
                            titleColor: UIColor? = Assets.Colors.reverseDark,
                            backgroundColor: UIColor? = Assets.Colors.weakWhite,

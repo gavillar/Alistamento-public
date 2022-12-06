@@ -61,6 +61,9 @@
 		1DDA2D982938D17B001FD29D /* Ezequiel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D972938D17B001FD29D /* Ezequiel.geojson */; };
 		1DDA2D9A2938D18A001FD29D /* Daniel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D992938D18A001FD29D /* Daniel.geojson */; };
 		1DDA2D9C2938D1C7001FD29D /* Oséias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */; };
+		1DDC411B293FBDD2005BD115 /* Create+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411A293FBDD2005BD115 /* Create+Alert.swift */; };
+		1DDC411D293FBDF4005BD115 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411C293FBDF4005BD115 /* Create.swift */; };
+		1DDC4120293FC13B005BD115 /* UIAlertController+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411F293FC13B005BD115 /* UIAlertController+Hierarchy.swift */; };
 		1DF1A50D293A2FCF00569FA5 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1A50C293A2FCF00569FA5 /* BaseButton.swift */; };
 		1DF1A50F293A37B800569FA5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1A50E293A37B800569FA5 /* PickerView.swift */; };
 		1DF21B0F291C194800A85B05 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B0E291C194800A85B05 /* Network.swift */; };
@@ -187,6 +190,9 @@
 		1DDA2D972938D17B001FD29D /* Ezequiel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ezequiel.geojson; sourceTree = "<group>"; };
 		1DDA2D992938D18A001FD29D /* Daniel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Daniel.geojson; sourceTree = "<group>"; };
 		1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Oséias.geojson"; sourceTree = "<group>"; };
+		1DDC411A293FBDD2005BD115 /* Create+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Alert.swift"; sourceTree = "<group>"; };
+		1DDC411C293FBDF4005BD115 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
+		1DDC411F293FC13B005BD115 /* UIAlertController+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Hierarchy.swift"; sourceTree = "<group>"; };
 		1DF1A50C293A2FCF00569FA5 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 		1DF1A50E293A37B800569FA5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		1DF21B0E291C194800A85B05 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -295,11 +301,13 @@
 		1D942CD4291D65800018CC82 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				1DDC411A293FBDD2005BD115 /* Create+Alert.swift */,
 				1D942CD8291D65B70018CC82 /* Create+Buttons.swift */,
 				277CC217291D69AB00BA2BCC /* Create+Labels.swift */,
 				1D3E05D2291E81F6007F836C /* Create+Stacks.swift */,
 				1D3E05D4291E8207007F836C /* Create+TextFields.swift */,
 				1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */,
+				1DDC411C293FBDF4005BD115 /* Create.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -423,6 +431,14 @@
 			path = Bible;
 			sourceTree = "<group>";
 		};
+		1DDC411E293FC118005BD115 /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				1DDC411F293FC13B005BD115 /* UIAlertController+Hierarchy.swift */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +477,7 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1DDC411E293FC118005BD115 /* UIAlertController */,
 				1D53BA6129367463007D6802 /* CALayer */,
 				27EECF9F2935482000DBBEEA /* String */,
 				27EECF9C2935407000DBBEEA /* UiNavigationController */,
@@ -902,6 +919,7 @@
 				27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */,
 				2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */,
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
+				1DDC411D293FBDF4005BD115 /* Create.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
@@ -922,6 +940,7 @@
 				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,
 				1DB3725C293A3F1F00A47FA1 /* BooksView.swift in Sources */,
 				27F7863229364B6800796436 /* Regex+Email.swift in Sources */,
+				1DDC4120293FC13B005BD115 /* UIAlertController+Hierarchy.swift in Sources */,
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				1D53BA6329367478007D6802 /* CALayer+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
@@ -944,6 +963,7 @@
 				1DB3725E293A469500A47FA1 /* BookView.swift in Sources */,
 				1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */,
 				27E3A6FD2925263F007CDF8A /* BooksViewModel.swift in Sources */,
+				1DDC411B293FBDD2005BD115 /* Create+Alert.swift in Sources */,
 				27E3A6F529251E75007CDF8A /* UIView+HiddenKeyboard.swift in Sources */,
 				1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */,
 				270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */,
