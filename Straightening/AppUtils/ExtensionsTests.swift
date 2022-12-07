@@ -11,19 +11,17 @@ import XCTest
 
 final class ExtensionsTests: XCTestCase {
     func testFormatMask() {
-        let phoneTest = {(numbers: [String: String]) in
-            for number in numbers {
-                XCTAssertTrue(number.key.formatMask(number.value).first == "(" &&
-                              number.key.formatMask(number.value).contains(")") &&
-                              number.key.formatMask(number.value).contains("-"))
-            }
+        let phoneTest = {(number: String, format:  String) in
+            XCTAssertTrue(number.formatMask(format).first == "(" &&
+                          number.formatMask(format).contains(")") &&
+                          number.formatMask(format).contains("-"))
         }
-        phoneTest(["123456791011": "(##)#####-####",
-                   "123456791": "(##)#####-####",
-                   "12345679101a1": "(##)#####-####",
-                   "(12)34567-91011": "(##)#####-####",
-                   "(1)23-456791011": "(##)#####-####",
-                   "1###23456791011": "(##)#####-####",
-                   "123456791011123": "(##)#####-####"])
+        phoneTest("123456791011", "(##)#####-####")
+        phoneTest("123456791", "(##)#####-####")
+        phoneTest("12345679101a1", "(##)#####-####")
+        phoneTest("(12)34567-91011", "(##)#####-####")
+        phoneTest("(1)23-456791011", "(##)#####-####")
+        phoneTest("1###23456791011", "(##)#####-####")
+        phoneTest("123456791011123", "(##)#####-####")
     }
 }
