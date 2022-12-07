@@ -10,7 +10,11 @@ import XCTest
 @testable import Straightening
 
 final class ExtensionsTests: XCTestCase {
-    func formatMask() {
-        print(String.formatMask("(##)#####-####"))
+    func testformatMask() {
+        XCTAssertTrue(
+            "123456791011".formatMask("(##)#####-####").contains("(") &&
+            "123456791011".formatMask("(##)#####-####").contains(")") &&
+            "123456791011".formatMask("(##)#####-####").contains("-")
+        )
     }
 }
