@@ -44,7 +44,7 @@ final class RegisterEmailViewController: RegisterViewController {
                 )
             } else {
                 let alert = Create.alert(
-                    title: "Este email j[a existe",
+                    title: "Este email já existe",
                     message: "Tente com algum outro email."
                 )
                 present(alert, animated: true)
