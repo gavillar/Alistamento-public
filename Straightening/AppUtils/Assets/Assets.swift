@@ -31,8 +31,9 @@ struct Assets {
         static let sand = UIColor(named: "sand")
         static let weakWhiteBlack = UIColor(named: "weakWhiteBlack")
         static let whiteBlack = UIColor(named: "whiteBlack")
-        static let weakWhite = UIColor(white: 1, alpha: 0.05)
         static let border = UIColor(cgColor: CGColor(red: 218/255, green: 165/255,
                                                      blue: 32/255, alpha: 1)).cgColor
+        static let moreWeakWhite = UIColor(white: 1, alpha: 0.05)
+        static let weakWhite = UIColor(white: 1, alpha: 0.1)
     }
 }
