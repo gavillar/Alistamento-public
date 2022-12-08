@@ -8,10 +8,12 @@
 import UIKit
 
 extension Create {
-    static func labelTitle() -> UILabel {
+    static func labelTitle(_ text: String? = nil) -> UILabel {
        let label = UILabel()
+        label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .black
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+       
 
         return label
     }
