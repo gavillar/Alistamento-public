@@ -436,15 +436,6 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
-		1DDA4DFC2922E42900B9C70F /* Bible */ = {
-			isa = PBXGroup;
-			children = (
-				1D7A2DFB2926A2CC00F9907D /* Book */,
-				27E3A6F62925263F007CDF8A /* Books */,
-			);
-			path = Bible;
-			sourceTree = "<group>";
-		};
 		1DDC411E293FC118005BD115 /* UIAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,7 +578,7 @@
 		27955AC729254C3200B12FD3 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
-				1DDA4DFC2922E42900B9C70F /* Bible */,
+				27E3A6F62925263F007CDF8A /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
 				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
 				1DA68AA8293A149200154B91 /* IntroView.swift */,
@@ -614,9 +605,10 @@
 			path = Methods;
 			sourceTree = "<group>";
 		};
-		27E3A6F62925263F007CDF8A /* Books */ = {
+		27E3A6F62925263F007CDF8A /* Bible */ = {
 			isa = PBXGroup;
 			children = (
+				1D7A2DFB2926A2CC00F9907D /* Book */,
 				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
 				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
 				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
@@ -624,7 +616,7 @@
 				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
 				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
 			);
-			path = Books;
+			path = Bible;
 			sourceTree = "<group>";
 		};
 		27E712B829266AF600009AEF /* Register */ = {

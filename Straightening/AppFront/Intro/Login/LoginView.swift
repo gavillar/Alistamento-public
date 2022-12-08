@@ -27,38 +27,18 @@ class LoginView: UIView {
         emailTextField.keyboardType = .namePhonePad
         return emailTextField
     }()
-    private lazy var emailStackView: UIStackView = {
-        let margins = frame.height*0.02
-        let emailStackView = Create.stack(
-            layoutMargins: UIEdgeInsets(top: margins, left: 0,
-                                        bottom: margins, right: 0),
-            arrangedSubviews: [emailTextField]
-        )
-        emailStackView.addUnderline(frame.height*0.015)
-        return emailStackView
-    }()
     lazy var passwordTextField: UITextField = {
         let passwordTextField = Create.textField(placeholder: "Senha")
         passwordTextField.isSecureTextEntry = true
         return passwordTextField
-    }()
-    private lazy var passwordStackView: UIStackView = {
-        let margins = frame.height*0.02
-        let passwordStackView = Create.stack(
-            layoutMargins: UIEdgeInsets(top: margins, left: 0,
-                                        bottom: margins, right: 0),
-            arrangedSubviews: [passwordTextField]
-        )
-        passwordStackView.addUnderline(frame.height*0.005)
-        return passwordStackView
     }()
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         let stackView = scrollView.turnIntoAList(of: [logoStack,
                                                       welcomeLabel,
-                                                      emailStackView,
-                                                      passwordStackView])
+                                                      emailTextField,
+                                                      passwordTextField])
         stackView.isLayoutMarginsRelativeArrangement = true
         let verticalMargins = frame.height*0.05
         let horizontalMargins = frame.height*0.04

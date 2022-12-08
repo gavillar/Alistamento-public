@@ -20,9 +20,10 @@ final class ForgotPasswordView: UIView {
     )
     lazy var forgotPasswordTextField = Create.textField()
     lazy var stackView: UIStackView = {
-        let stack = Create.stack()
-        stack.addArrangedSubviews([failureLabel, instructionLabel, forgotPasswordTextField])
-       return stack
+        let stackView = Create.stack(arrangedSubviews: [failureLabel,
+                                                        instructionLabel])
+        stackView.distribution = .fillProportionally
+       return stackView
     }()
     lazy var sendButton = Create.baseButton("ENVIAR")
     override init(frame: CGRect) {
@@ -34,7 +35,7 @@ final class ForgotPasswordView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func setupView() {
-        addSubviews([stackView, sendButton])
+        addSubviews([stackView, sendButton, forgotPasswordTextField])
     }
     func setupConstrains() {
         NSLayoutConstraint.activate([
@@ -44,6 +45,9 @@ final class ForgotPasswordView: UIView {
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor,
                                                 constant: -frame.width*0.1),
             stackView.bottomAnchor.constraint(equalTo: centerYAnchor),
+            forgotPasswordTextField.centerYAnchor.constraint(equalTo: centerYAnchor),
+            forgotPasswordTextField.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            forgotPasswordTextField.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             sendButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             sendButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             sendButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),

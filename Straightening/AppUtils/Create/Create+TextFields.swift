@@ -15,6 +15,7 @@ extension Create {
                           handler: UIActionHandler? = nil) -> UITextField {
         let textField = UITextField()
         textField.backgroundColor = Assets.Colors.moreWeakWhite
+        textField.addUnderline()
         if let keyboard = keyboard {
             textField.keyboardType = keyboard
         }
