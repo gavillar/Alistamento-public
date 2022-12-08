@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
             homeView.heightAnchor.constraint(equalTo: view.heightAnchor),
             welcomeLabel.topAnchor.constraint(equalTo: homeView.topAnchor, constant: 20),
             welcomeLabel.leadingAnchor.constraint(equalTo: homeView.leadingAnchor, constant: 12),
-            welcomeLabel.trailingAnchor.constraint(equalTo: homeView.trailingAnchor, constant: 12),
+            welcomeLabel.trailingAnchor.constraint(equalTo: homeView.trailingAnchor, constant: 12)
         ])
     }
 }
