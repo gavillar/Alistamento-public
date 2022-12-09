@@ -23,7 +23,7 @@ extension UIScrollView {
         ])
         return stackView
     }
-    @discardableResult func turnIntoAList(of view: UIView) -> UIView {
+    @discardableResult func turnIntoAList(view: UIView) -> UIView {
         removeSubviews()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
