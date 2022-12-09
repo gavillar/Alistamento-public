@@ -40,7 +40,7 @@ class LoginView: UIView {
         stackView.isLayoutMarginsRelativeArrangement = true
         let margins = frame.height*0.04
         stackView.layoutMargins = UIEdgeInsets(top: margins, left: margins,
-                                               bottom: 0, right: margins)
+                                               bottom: margins*4, right: margins)
         stackView.spacing = frame.height*0.07
         return scrollView
     }()
