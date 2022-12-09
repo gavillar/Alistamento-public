@@ -28,18 +28,18 @@ class RegisterView: UIView {
 // MARK: - overrides
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstraints()
+        configure()
+        constrain()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 // MARK: - setup
-    func setupView() {
+    private func configure() {
         baseView.addSubview(baseStackView)
         addSubviews([baseView, button])
     }
-    func setupConstraints() {
+    private func constrain() {
         addConstraints([
             baseStackView.widthAnchor.constraint(equalTo: baseView.widthAnchor, multiplier: 0.85),
             baseStackView.centerXAnchor.constraint(equalTo: baseView.centerXAnchor),

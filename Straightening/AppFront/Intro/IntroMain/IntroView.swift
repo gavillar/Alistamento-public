@@ -28,17 +28,17 @@ class IntroView: UIView {
     lazy var bibleButton = Create.baseButton("BÍBLIA SAGRADA")
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstraints()
+        configure()
+        constrain()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 // MARK: - Setup
-    func setupView() {
+    func configure() {
         addSubviews([straighteningButton, bibleButton, bibleScrollView])
     }
-    func setupConstraints() {
+    func constrain() {
         NSLayoutConstraint.activate([
             straighteningButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             straighteningButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),

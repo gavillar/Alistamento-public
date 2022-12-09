@@ -19,12 +19,15 @@ class IntroViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
+        configute()
+    }
+// MARK: - funcs
+    private func configute() {
         introView.straighteningButton.addAction(UIAction(handler: straighteningButtonHandler), for: .touchUpInside)
         introView.bibleButton.addAction(UIAction(handler: bibleButtonHandler), for: .touchUpInside)
         introView.verseDayLabel.text = Network.read([String].self, from: "Verses")?.randomElement()
         view = introView
     }
-// MARK: - funcs
     private func straighteningButtonHandler(_ action: UIAction) {
         navigationController?.navigate(to: loginviewcontroller)
     }

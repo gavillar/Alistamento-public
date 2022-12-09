@@ -19,6 +19,9 @@ final class BooksViewCollection: UICollectionView {
 // MARK: - overrides
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
+        configure()
+    }
+    private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         register(BooksCollectionCell.self, forCellWithReuseIdentifier: BooksCollectionCell.identifier)
         delegate = self

@@ -10,6 +10,9 @@ import UIKit
 final class RegisterAvaibleTimeViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         title = "Disponibilidade"
         registerView.textField.delegate = self
         setTextFieldPlaceholder("Manhã")

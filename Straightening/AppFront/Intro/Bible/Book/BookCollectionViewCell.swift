@@ -16,8 +16,8 @@ class BookCollectionViewCell: UICollectionViewCell {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstraints()
+        configure()
+        constrain()
     }
     override var isSelected: Bool {
         didSet {
@@ -37,10 +37,10 @@ class BookCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func setupView() {
+    func configure() {
         contentView.addSubview(label)
     }
-    func setupConstraints() {
+    func constrain() {
         contentView.addConstraints([
             label.topAnchor.constraint(equalTo: contentView.topAnchor),
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

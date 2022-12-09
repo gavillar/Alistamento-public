@@ -17,11 +17,11 @@ final class ForgotPasswordViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
-        view = forgotPasswordView
         configure()
     }
 // MARK: - funcs
     private func configure() {
+        view = forgotPasswordView
         forgotPasswordView.sendButton.addTarget(nil, action: #selector(tryAgainButtonTarget),
                                                     for: .touchUpInside)
     }

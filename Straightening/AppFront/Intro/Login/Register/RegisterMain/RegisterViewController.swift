@@ -28,6 +28,9 @@ class RegisterViewController: UIViewController {
     }
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         view.hideKeyboardWhenTappedAround()
         view = registerView
         registerView.button.freezeButton()

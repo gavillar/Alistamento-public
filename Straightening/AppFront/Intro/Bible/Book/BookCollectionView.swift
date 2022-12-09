@@ -20,6 +20,9 @@ final class BookCollectionView: UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
+        configure()
+    }
+    private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         delegate = self
         dataSource = self

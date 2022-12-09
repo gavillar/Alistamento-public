@@ -28,16 +28,16 @@ final class ForgotPasswordView: UIView {
     lazy var sendButton = Create.baseButton("ENVIAR")
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstrains()
+        configure()
+        constrain()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func setupView() {
+    private func configure() {
         addSubviews([stackView, sendButton, forgotPasswordTextField])
     }
-    func setupConstrains() {
+    private func constrain() {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor,

@@ -47,21 +47,21 @@ class RegisterAdressViewController: RegisterViewController {
     }
     override func loadView() {
         super.loadView()
+        configure()
+    }
+// MARK: - setupView
+    func configure() {
         registerView.baseStackView.addArrangedSubviews([registerView.textField,
                                                         streetLabel,
                                                         numberTextField,
                                                         districtLabel,
                                                         locationLabel])
         title = "Endereço"
-        setupView()
-        registerAdressViewModel.formViewModelDelegate = self
-    }
-// MARK: - setupView
-    func setupView() {
         view.hideKeyboardWhenTappedAround()
         setupCepTextField()
         sendCep()
         updateForm()
+        registerAdressViewModel.formViewModelDelegate = self
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)
     }
 // MARK: - setupCepTextField

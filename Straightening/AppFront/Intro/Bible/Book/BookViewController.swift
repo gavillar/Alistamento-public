@@ -22,6 +22,10 @@ final class BookViewController: UIViewController {
 // MARK: - overrides
     override func loadView() {
         super.loadView()
+        configute()
+    }
+// MARK: - funcs
+    private func configute() {
         bookViewModel.delegate = self
         bookViewModel.updateBook()
         bookViewModel.updateLabel()

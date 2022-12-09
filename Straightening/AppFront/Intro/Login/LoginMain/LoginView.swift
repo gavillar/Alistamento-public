@@ -56,20 +56,20 @@ class LoginView: UIView {
 // MARK: - overrides
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstraints()
+        configure()
+        constrain()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 // MARK: - funcs
-    func setupView() {
+    func configure() {
         addSubviews([scrollView,
                      forgotPasswordButton,
                      signInButton,
                      logInButton])
     }
-    func setupConstraints() {
+    func constrain() {
         addConstraints([
             scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),

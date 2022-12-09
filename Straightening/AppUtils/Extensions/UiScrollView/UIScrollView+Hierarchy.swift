@@ -8,8 +8,7 @@
 import UIKit
 
 extension UIScrollView {
-    @discardableResult
-    func turnIntoAList(of views: [UIView]) -> UIStackView {
+    @discardableResult func turnIntoAList(of views: [UIView]) -> UIStackView {
         removeSubviews()
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = .vertical
@@ -23,5 +22,19 @@ extension UIScrollView {
             stackView.widthAnchor.constraint(equalTo: frameLayoutGuide.widthAnchor)
         ])
         return stackView
+    }
+    @discardableResult func turnIntoAList(of view: UIView) -> UIView {
+        removeSubviews()
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        addConstraints([
+            view.topAnchor.constraint(equalTo: contentLayoutGuide.topAnchor),
+            view.leadingAnchor.constraint(equalTo: contentLayoutGuide.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: contentLayoutGuide.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: contentLayoutGuide.bottomAnchor),
+            view.widthAnchor.constraint(equalTo: frameLayoutGuide.widthAnchor)
+        ])
+        return view
     }
 }

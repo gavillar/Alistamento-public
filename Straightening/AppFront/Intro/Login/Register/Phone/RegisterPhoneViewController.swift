@@ -10,6 +10,9 @@ import UIKit
 final class RegisterPhoneViewController: RegisterViewController, UITextFieldDelegate {
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         title = "Telefone"
         setTextFieldPlaceholder("Telefone")
         registerView.textField.becomeFirstResponder()

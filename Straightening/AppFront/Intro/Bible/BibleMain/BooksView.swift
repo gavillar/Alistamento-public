@@ -27,18 +27,18 @@ class BooksView: UIView {
 // MARK: - overrides
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
-        setupConstraints()
+        configure()
+        constrain()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 // MARK: - setup
-    func setupView() {
+    func configure() {
         backgroundColor = Assets.Colors.whiteBlack
         addSubview(collectionView)
     }
-    func setupConstraints() {
+    func constrain() {
         addConstraints([
             collectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),

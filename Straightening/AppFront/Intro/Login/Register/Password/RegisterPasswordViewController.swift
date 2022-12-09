@@ -11,6 +11,9 @@ import UIKit
 final class RegisterPasswordViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         title = "Senha"
         setupText()
         registerView.button.addTarget(nil, action: #selector(buttonTarget), for: .touchUpInside)

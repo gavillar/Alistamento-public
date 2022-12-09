@@ -10,6 +10,9 @@ import UIKit
 final class RegisterBirthDateViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         title = "Data de Nascimento"
         setTextFieldPlaceholder(datePicker.dayMonthYear)
         registerView.textField.delegate = self

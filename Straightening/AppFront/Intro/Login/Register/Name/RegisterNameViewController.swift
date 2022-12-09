@@ -10,6 +10,9 @@ import UIKit
 final class RegisterNameViewController: RegisterViewController {
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         title = "Nome Completo"
         setTextFieldPlaceholder("Nome Completo")
         setupTargets()
