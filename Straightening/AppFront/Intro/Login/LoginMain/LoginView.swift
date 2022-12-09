@@ -62,6 +62,7 @@ class LoginView: UIView {
     }
 // MARK: - funcs
     func configure() {
+        layer.addGradientBackground(frame: frame)
         addSubviews([scrollView,
                      forgotPasswordButton,
                      signInButton,

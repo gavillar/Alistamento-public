@@ -35,6 +35,7 @@ final class ForgotPasswordView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     private func configure() {
+        layer.addGradientBackground(frame: frame)
         addSubviews([stackView, sendButton, forgotPasswordTextField])
     }
     private func constrain() {

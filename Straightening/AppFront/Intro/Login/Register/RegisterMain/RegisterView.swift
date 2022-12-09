@@ -36,6 +36,7 @@ class RegisterView: UIView {
     }
 // MARK: - setup
     private func configure() {
+        layer.addGradientBackground(frame: frame)
         baseView.addSubview(baseStackView)
         addSubviews([baseView, button])
     }

@@ -11,9 +11,10 @@ final class ForgotPasswordViewController: UIViewController {
 // MARK: - variables
     private lazy var forgotPasswordView = ForgotPasswordView(frame: view.frame)
 // MARK: - overrides
-    override func viewLayoutMarginsDidChange() {
-        super.viewLayoutMarginsDidChange()
-        view.layer.addGradientBackground()
+    override func viewWillTransition(to size: CGSize,
+                                     with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        view.layer.addGradientBackground(frame: CGRect(origin: .zero, size: size))
     }
     override func loadView() {
         super.loadView()

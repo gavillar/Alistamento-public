@@ -36,6 +36,7 @@ class IntroView: UIView {
     }
 // MARK: - Setup
     func configure() {
+        layer.addGradientBackground(frame: frame)
         addSubviews([straighteningButton, bibleButton, bibleScrollView])
     }
     func constrain() {

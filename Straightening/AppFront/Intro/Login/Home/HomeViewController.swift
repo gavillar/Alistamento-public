@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
                               noteButton,
                               configButton])
         setupConstraints()
-        view.layer.addGradientBackground()
+        view.layer.addGradientBackground(frame: view.frame)
         navigationController?.navigationBar.isUserInteractionEnabled = false
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
