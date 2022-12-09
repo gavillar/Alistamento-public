@@ -25,7 +25,6 @@ extension UIScrollView {
     }
     @discardableResult func turnIntoAList(of view: UIView) -> UIView {
         removeSubviews()
-        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         addConstraints([

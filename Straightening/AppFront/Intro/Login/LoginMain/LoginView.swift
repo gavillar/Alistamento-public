@@ -9,11 +9,9 @@ import UIKit
 
 class LoginView: UIView {
 // MARK: - variables
-    private lazy var logoStack: UIStackView = {
+    private lazy var logoLabel: UILabel = {
         let logoLabel = Create.label("Alistamento")
-        let logoStack = UIStackView(arrangedSubviews: [logoLabel])
-        logoStack.translatesAutoresizingMaskIntoConstraints = false
-        return logoStack
+        return logoLabel
     }()
     private lazy var welcomeLabel: UILabel = {
         let label = Create.label("Bem Vindo")
@@ -33,7 +31,7 @@ class LoginView: UIView {
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        let stackView = scrollView.turnIntoAList(of: [logoStack,
+        let stackView = scrollView.turnIntoAList(of: [logoLabel,
                                                       welcomeLabel,
                                                       emailTextField,
                                                       passwordTextField])
