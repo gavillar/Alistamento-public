@@ -55,16 +55,18 @@ class HomeViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-   
     override func loadView() {
         super.loadView()
         view.addSubview(scrollView)
-        homeView.addSubviews([bibleImage,welcomeLabel,markButton,noteButton,configButton])
+        homeView.addSubviews([bibleImage,
+                              welcomeLabel,
+                              markButton,
+                              noteButton,
+                              configButton])
         setupConstraints()
         view.layer.addGradientBackground()
         navigationController?.navigationBar.isUserInteractionEnabled = false
-        navigationController?.navigationBar.isHidden = true
-       
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -76,24 +78,25 @@ class HomeViewController: UIViewController {
             bibleImage.topAnchor.constraint(equalTo: homeView.topAnchor),
             bibleImage.leadingAnchor.constraint(equalTo: homeView.leadingAnchor),
             bibleImage.trailingAnchor.constraint(equalTo: homeView.trailingAnchor),
-            bibleImage.heightAnchor.constraint(equalTo: homeView.heightAnchor,multiplier: 0.20),
+            bibleImage.heightAnchor.constraint(equalTo: homeView.heightAnchor,
+                                               multiplier: 0.20),
             welcomeLabel.centerXAnchor.constraint(equalTo: bibleImage.centerXAnchor),
-            welcomeLabel.topAnchor.constraint(equalTo: bibleImage.topAnchor,constant: 2),
-            markButton.topAnchor.constraint(equalTo: bibleImage.bottomAnchor,constant: 20),
-            markButton.leadingAnchor.constraint(equalTo: homeView.leadingAnchor,constant: 20),
-            markButton.trailingAnchor.constraint(equalTo: homeView.trailingAnchor,constant: -20),
-            noteButton.topAnchor.constraint(equalTo: markButton.bottomAnchor,constant: 12),
+            welcomeLabel.topAnchor.constraint(equalTo: bibleImage.topAnchor,
+                                              constant: 2),
+            markButton.topAnchor.constraint(equalTo: bibleImage.bottomAnchor,
+                                            constant: 20),
+            markButton.leadingAnchor.constraint(equalTo: homeView.leadingAnchor,
+                                                constant: 20),
+            markButton.trailingAnchor.constraint(equalTo: homeView.trailingAnchor,
+                                                 constant: -20),
+            noteButton.topAnchor.constraint(equalTo: markButton.bottomAnchor,
+                                            constant: 12),
             noteButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
             noteButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
-            configButton.topAnchor.constraint(equalTo: noteButton.bottomAnchor,constant: 12),
+            configButton.topAnchor.constraint(equalTo: noteButton.bottomAnchor,
+                                              constant: 12),
             configButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
-            configButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
-
-            
-          
-            
-            
-           
+            configButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor)
         ])
     }
 }
