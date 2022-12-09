@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
         let label = Create.labelTitle("Bem Vindo a \n Bíblia Sagrada Jacaré")
         label.textColor = .white
         label.textAlignment = .center
-        label.numberOfLines = 0
         return label
     }()
     private lazy var markButton: UIButton = {
