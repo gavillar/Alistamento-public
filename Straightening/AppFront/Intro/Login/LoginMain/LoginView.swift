@@ -38,11 +38,10 @@ class LoginView: UIView {
                                                       emailTextField,
                                                       passwordTextField])
         stackView.isLayoutMarginsRelativeArrangement = true
-        let verticalMargins = frame.height*0.05
-        let horizontalMargins = frame.height*0.04
-        stackView.layoutMargins = UIEdgeInsets(top: verticalMargins, left: horizontalMargins,
-                                               bottom: verticalMargins*2, right: horizontalMargins)
-        stackView.spacing = 50
+        let margins = frame.height*0.04
+        stackView.layoutMargins = UIEdgeInsets(top: margins, left: margins,
+                                               bottom: 0, right: margins)
+        stackView.spacing = frame.height*0.07
         return scrollView
     }()
     lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
