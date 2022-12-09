@@ -16,6 +16,7 @@ extension Create {
         let stack = UIStackView(arrangedSubviews: arrangedSubviews)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = axis
+        stack.distribution = .equalSpacing
         stack.spacing = spacing
         if let layoutMargins = layoutMargins {
             stack.isLayoutMarginsRelativeArrangement = true
