@@ -564,24 +564,53 @@
 		2770EA7F291C1F5C00760A35 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				27714F2F29437C87004554B8 /* LoginMain */,
 				27172E5B293B9ECF0015CD09 /* ForgotPassword */,
 				27E712B829266AF600009AEF /* Register */,
 				2770EA7C291C1F4000760A35 /* Home */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		27714F2D29437B10004554B8 /* IntroMain */ = {
+			isa = PBXGroup;
+			children = (
+				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
+				1DA68AA8293A149200154B91 /* IntroView.swift */,
+			);
+			path = IntroMain;
+			sourceTree = "<group>";
+		};
+		27714F2E29437B72004554B8 /* BibleMain */ = {
+			isa = PBXGroup;
+			children = (
+				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
+				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
+				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
+				1DB3725B293A3F1F00A47FA1 /* BooksView.swift */,
+				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
+				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
+			);
+			path = BibleMain;
+			sourceTree = "<group>";
+		};
+		27714F2F29437C87004554B8 /* LoginMain */ = {
+			isa = PBXGroup;
+			children = (
 				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
 				1DB3725F293A604E00A47FA1 /* LoginView.swift */,
 				274384A12937911A0079AE75 /* LoginViewModel.swift */,
 				279F9300293AAD8000BAA93C /* LoginModel.swift */,
 			);
-			path = Login;
+			path = LoginMain;
 			sourceTree = "<group>";
 		};
 		27955AC729254C3200B12FD3 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				27714F2D29437B10004554B8 /* IntroMain */,
 				27E3A6F62925263F007CDF8A /* Bible */,
 				2770EA7F291C1F5C00760A35 /* Login */,
-				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
-				1DA68AA8293A149200154B91 /* IntroView.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -608,13 +637,8 @@
 		27E3A6F62925263F007CDF8A /* Bible */ = {
 			isa = PBXGroup;
 			children = (
+				27714F2E29437B72004554B8 /* BibleMain */,
 				1D7A2DFB2926A2CC00F9907D /* Book */,
-				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
-				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
-				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
-				1DB3725B293A3F1F00A47FA1 /* BooksView.swift */,
-				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
-				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
 			);
 			path = Bible;
 			sourceTree = "<group>";
