@@ -11,14 +11,12 @@ class LoginView: UIView {
 // MARK: - variables
     private lazy var logoStack: UIStackView = {
         let logoLabel = Create.label("Alistamento")
-        logoLabel.textColor = Assets.Colors.whiteBlack
         let logoStack = UIStackView(arrangedSubviews: [logoLabel])
         logoStack.translatesAutoresizingMaskIntoConstraints = false
         return logoStack
     }()
     private lazy var welcomeLabel: UILabel = {
         let label = Create.label("Bem Vindo")
-        label.textColor = Assets.Colors.whiteBlack
         return label
     }()
     lazy var emailTextField = {

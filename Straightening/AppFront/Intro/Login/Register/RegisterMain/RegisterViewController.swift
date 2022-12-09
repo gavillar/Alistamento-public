@@ -16,7 +16,6 @@ class RegisterViewController: UIViewController {
 // MARK: - init
     init(_ registerViewModel: RegisterViewModel = RegisterViewModel()) {
         self.registerViewModel = registerViewModel
-        print(self.registerViewModel.userToRegister)
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
