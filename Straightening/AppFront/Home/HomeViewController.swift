@@ -15,22 +15,56 @@ class HomeViewController: UIViewController {
         return scroll
     }()
     private lazy var welcomeLabel: UILabel = {
-        let label = Create.labelTitle("Bem Vindo Jacaré")
+        let label = Create.labelTitle("Bem Vindo a \n Bíblia Sagrada Jacaré")
+        label.textColor = .white
+        label.textAlignment = .center
+        label.numberOfLines = 0
         return label
+    }()
+    private lazy var markButton: UIButton = {
+        let button = Create.button()
+        button.setTitle("Versiculos Marcados", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.layer.borderWidth = 1
+        return button
+    }()
+    private lazy var noteButton: UIButton = {
+        let button = Create.button()
+        button.setTitle("Anotações", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.layer.borderWidth = 1
+        return button
+    }()
+    private lazy var configButton: UIButton = {
+        let button = Create.button()
+        button.setTitle("Configurações", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.layer.borderWidth = 1
+        return button
     }()
     private lazy var homeView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue
         return view
     }()
+    private lazy var bibleImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "HomeImage")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+   
     override func loadView() {
         super.loadView()
         view.addSubview(scrollView)
-        homeView.addSubviews([welcomeLabel])
+        homeView.addSubviews([bibleImage,welcomeLabel,markButton,noteButton,configButton])
         setupConstraints()
         view.layer.addGradientBackground()
         navigationController?.navigationBar.isUserInteractionEnabled = false
         navigationController?.navigationBar.isHidden = true
+       
     }
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -39,9 +73,27 @@ class HomeViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             homeView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            welcomeLabel.topAnchor.constraint(equalTo: homeView.topAnchor, constant: 20),
-            welcomeLabel.leadingAnchor.constraint(equalTo: homeView.leadingAnchor, constant: 12),
-            welcomeLabel.trailingAnchor.constraint(equalTo: homeView.trailingAnchor, constant: 12)
+            bibleImage.topAnchor.constraint(equalTo: homeView.topAnchor),
+            bibleImage.leadingAnchor.constraint(equalTo: homeView.leadingAnchor),
+            bibleImage.trailingAnchor.constraint(equalTo: homeView.trailingAnchor),
+            bibleImage.heightAnchor.constraint(equalTo: homeView.heightAnchor,multiplier: 0.20),
+            welcomeLabel.centerXAnchor.constraint(equalTo: bibleImage.centerXAnchor),
+            welcomeLabel.topAnchor.constraint(equalTo: bibleImage.topAnchor,constant: 2),
+            markButton.topAnchor.constraint(equalTo: bibleImage.bottomAnchor,constant: 20),
+            markButton.leadingAnchor.constraint(equalTo: homeView.leadingAnchor,constant: 20),
+            markButton.trailingAnchor.constraint(equalTo: homeView.trailingAnchor,constant: -20),
+            noteButton.topAnchor.constraint(equalTo: markButton.bottomAnchor,constant: 12),
+            noteButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
+            noteButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
+            configButton.topAnchor.constraint(equalTo: noteButton.bottomAnchor,constant: 12),
+            configButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
+            configButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
+
+            
+          
+            
+            
+           
         ])
     }
 }
