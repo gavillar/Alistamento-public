@@ -13,8 +13,6 @@ extension Create {
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 25)
-       
-
         return label
     }
     static func label(_ text: String? = nil,

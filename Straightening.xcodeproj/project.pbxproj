@@ -72,7 +72,7 @@
 		1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */; };
 		270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A38002934E24D003855C3 /* FireBaseManager.swift */; };
 		270C5EA8292DD12A00F8DFDC /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */; };
-		27172E5D293B9EFB0015CD09 /* LoginErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */; };
+		27172E5D293B9EFB0015CD09 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27172E5C293B9EFB0015CD09 /* ForgotPasswordViewController.swift */; };
 		274384A22937911A0079AE75 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274384A12937911A0079AE75 /* LoginViewModel.swift */; };
 		2754C9882933C5FD00B098E2 /* UITextfield+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */; };
 		27665C802927050A00F80344 /* UiStackView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27665C7F2927050A00F80344 /* UiStackView+VStack.swift */; };
@@ -93,7 +93,7 @@
 		279E055D2921972500A6E008 /* UITextField+NoPaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055C2921972500A6E008 /* UITextField+NoPaste.swift */; };
 		279E055F2921975F00A6E008 /* CALayer+Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* CALayer+Underline.swift */; };
 		279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9300293AAD8000BAA93C /* LoginModel.swift */; };
-		279F9304293AAEB600BAA93C /* LoginErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9303293AAEB600BAA93C /* LoginErrorView.swift */; };
+		279F9304293AAEB600BAA93C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9303293AAEB600BAA93C /* ForgotPasswordView.swift */; };
 		27C379FA2932666A00397E14 /* Verses.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27C379F92932666A00397E14 /* Verses.geojson */; };
 		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIView+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */; };
@@ -193,7 +193,7 @@
 		1DF21B12291C196200A85B05 /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		270A38002934E24D003855C3 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		270C5EA7292DD12A00F8DFDC /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
-		27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorViewController.swift; sourceTree = "<group>"; };
+		27172E5C293B9EFB0015CD09 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		274384A12937911A0079AE75 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2754C9872933C5FD00B098E2 /* UITextfield+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Border.swift"; sourceTree = "<group>"; };
 		27665C7F2927050A00F80344 /* UiStackView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiStackView+VStack.swift"; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		279E055C2921972500A6E008 /* UITextField+NoPaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+NoPaste.swift"; sourceTree = "<group>"; };
 		279E055E2921975F00A6E008 /* CALayer+Underline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Underline.swift"; sourceTree = "<group>"; };
 		279F9300293AAD8000BAA93C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		279F9303293AAEB600BAA93C /* LoginErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorView.swift; sourceTree = "<group>"; };
+		279F9303293AAEB600BAA93C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		27C379F92932666A00397E14 /* Verses.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Verses.geojson; sourceTree = "<group>"; };
 		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HiddenKeyboard.swift"; sourceTree = "<group>"; };
@@ -436,15 +436,6 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
-		1DDA4DFC2922E42900B9C70F /* Bible */ = {
-			isa = PBXGroup;
-			children = (
-				1D7A2DFB2926A2CC00F9907D /* Book */,
-				27E3A6F62925263F007CDF8A /* Books */,
-			);
-			path = Bible;
-			sourceTree = "<group>";
-		};
 		1DDC411E293FC118005BD115 /* UIAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,11 +470,7 @@
 		1DF21B0D291C18F200A85B05 /* AppFront */ = {
 			isa = PBXGroup;
 			children = (
-				27E712B829266AF600009AEF /* Register */,
 				27955AC729254C3200B12FD3 /* Intro */,
-				1DDA4DFC2922E42900B9C70F /* Bible */,
-				2770EA7F291C1F5C00760A35 /* Login */,
-				2770EA7C291C1F4000760A35 /* Home */,
 			);
 			path = AppFront;
 			sourceTree = "<group>";
@@ -511,13 +498,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		27172E5B293B9ECF0015CD09 /* LoginError */ = {
+		27172E5B293B9ECF0015CD09 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				279F9303293AAEB600BAA93C /* LoginErrorView.swift */,
-				27172E5C293B9EFB0015CD09 /* LoginErrorViewController.swift */,
+				279F9303293AAEB600BAA93C /* ForgotPasswordView.swift */,
+				27172E5C293B9EFB0015CD09 /* ForgotPasswordViewController.swift */,
 			);
-			path = LoginError;
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		2728114B292E4E1600D3B9C8 /* Objects */ = {
@@ -577,11 +564,13 @@
 		2770EA7F291C1F5C00760A35 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				27172E5B293B9ECF0015CD09 /* ForgotPassword */,
+				27E712B829266AF600009AEF /* Register */,
+				2770EA7C291C1F4000760A35 /* Home */,
 				2770EA43291BEF4600760A35 /* LoginViewController.swift */,
 				1DB3725F293A604E00A47FA1 /* LoginView.swift */,
 				274384A12937911A0079AE75 /* LoginViewModel.swift */,
 				279F9300293AAD8000BAA93C /* LoginModel.swift */,
-				27172E5B293B9ECF0015CD09 /* LoginError */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -589,6 +578,8 @@
 		27955AC729254C3200B12FD3 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				27E3A6F62925263F007CDF8A /* Bible */,
+				2770EA7F291C1F5C00760A35 /* Login */,
 				27955AC829254C4500B12FD3 /* IntroViewController.swift */,
 				1DA68AA8293A149200154B91 /* IntroView.swift */,
 			);
@@ -614,9 +605,10 @@
 			path = Methods;
 			sourceTree = "<group>";
 		};
-		27E3A6F62925263F007CDF8A /* Books */ = {
+		27E3A6F62925263F007CDF8A /* Bible */ = {
 			isa = PBXGroup;
 			children = (
+				1D7A2DFB2926A2CC00F9907D /* Book */,
 				27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */,
 				1D503E00292FE14C00600B02 /* BooksCollectionView.swift */,
 				27E3A6F92925263F007CDF8A /* BooksViewModel.swift */,
@@ -624,7 +616,7 @@
 				27E3A6F82925263F007CDF8A /* BooksViewController.swift */,
 				27E3A6F72925263F007CDF8A /* BooksModel.swift */,
 			);
-			path = Books;
+			path = Bible;
 			sourceTree = "<group>";
 		};
 		27E712B829266AF600009AEF /* Register */ = {
@@ -902,12 +894,12 @@
 				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
 				1DA68AA9293A149200154B91 /* IntroView.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
-				279F9304293AAEB600BAA93C /* LoginErrorView.swift in Sources */,
+				279F9304293AAEB600BAA93C /* ForgotPasswordView.swift in Sources */,
 				279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */,
 				27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */,
 				27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */,
 				1DF21B13291C196200A85B05 /* UIView+Hierarchy.swift in Sources */,
-				27172E5D293B9EFB0015CD09 /* LoginErrorViewController.swift in Sources */,
+				27172E5D293B9EFB0015CD09 /* ForgotPasswordViewController.swift in Sources */,
 				27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */,
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* RegisterAdressViewController.swift in Sources */,

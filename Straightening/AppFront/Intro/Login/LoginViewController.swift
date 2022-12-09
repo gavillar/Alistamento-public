@@ -51,8 +51,7 @@ class LoginViewController: UIViewController {
         updateForm()
     }
     @objc func hendleForgotPassword() {
-        present(Create.alert(title: "Lero",
-                             message: " Lero"), animated: true, completion: nil)
+        navigationController?.navigate(to: ForgotPasswordViewController())
     }
     @objc func hendleSignIn() {
         navigationController?.navigate(to: RegisterNameViewController())
