@@ -73,12 +73,12 @@ final class BooksCollectionCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func showData(data: BooksElements) {
-        authorLabel.text = data.author
-        titleBook.text = data.name
-        chaptersLabel.text = "Capítulos: \(data.chapters)"
-        testamentLabel.text = data.testament?.rawValue
-        groupLabel.text = data.group
+    func setup(cell detail: Detail?) {
+        authorLabel.text = detail?.author
+        titleBook.text = detail?.name
+        chaptersLabel.text = "Capítulos: \(detail?.chapters ?? 0)"
+        testamentLabel.text = detail?.testament
+        groupLabel.text = detail?.group
     }
     private func setupConstrains() {
         NSLayoutConstraint.activate([

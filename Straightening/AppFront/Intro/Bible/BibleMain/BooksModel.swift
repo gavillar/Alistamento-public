@@ -7,24 +7,16 @@
 
 import Foundation
 
+typealias Details = [Detail]
+
 // MARK: - BooksElements
-struct BooksElements: Codable {
+struct Detail: Codable {
     let abbrev: Abbrev?
-    let author: String?
-    let chapters: Int
-    let group, name: String?
-    let testament: Testament?
-    let results: [BooksElements]?
+    let group, name, testament, author: String?
+    let chapters: Int?
 }
 
 // MARK: - Abbrev
 struct Abbrev: Codable {
     let pt, en: String?
 }
-
-enum Testament: String, Codable {
-    case nt = "NT"
-    case vt = "VT"
-}
-
-typealias Books = [BooksElements]

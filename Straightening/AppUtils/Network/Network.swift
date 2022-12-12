@@ -32,7 +32,7 @@ struct Network {
             return try JSONDecoder().decode(model.self, from: data)
         } catch {print("ERROR: \(error): \(String(data: data, encoding: .ascii) ?? "?")"); return nil}
     }
-    static func read<T: Codable>(_ what: T.Type, from file: String, type: String = "geojson") -> T? {
+    static func read<T: Codable>(_ what: T.Type, from file: String, type: String = "json") -> T? {
         guard let url = Bundle.main.url(forResource: file, withExtension: type) else {
             print("ERROR: File not found"); return nil
         }
