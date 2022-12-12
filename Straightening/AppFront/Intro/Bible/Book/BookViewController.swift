@@ -12,8 +12,8 @@ final class BookViewController: UIViewController {
     private let bookViewModel: BookViewModel
     private lazy var bookView = BookView(frame: view.frame)
 // MARK: - init
-    init(_ detail: Detail) {
-        self.bookViewModel = BookViewModel(detail)
+    init(_ book: Book?, detail: Detail?) {
+        self.bookViewModel = BookViewModel(book, detail: detail)
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
@@ -27,7 +27,6 @@ final class BookViewController: UIViewController {
 // MARK: - funcs
     private func configute() {
         bookViewModel.delegate = self
-        bookViewModel.updateBook()
         bookViewModel.updateLabel()
         bookView.bookCollectionView.bookCollectionViewDelegate = self
         view = bookView
@@ -52,9 +51,9 @@ extension BookViewController: BookCollectionViewDelegate {
         bookViewModel.updateLabel(indexPath.row)
     }
     func numberOfItemsInSection() -> Int {
-        return bookViewModel.chapters
+        return bookViewModel.numberOfChapters
     }
     func selectedChapter() -> Int {
-        return bookViewModel.chapter
+        return bookViewModel.displayingChapter
     }
 }

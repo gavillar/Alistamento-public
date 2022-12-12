@@ -8,13 +8,16 @@
 import Foundation
 
 final class BooksViewModel {
-    var details: Details?
+    private var details: Details?
     var numberOfBooks: Int {self.details?.count ?? 0}
-    lazy var detail = {(index: Int) -> Detail in
-        return self.details?[index] ?? Detail()
+    lazy var detail = {(index: Int) -> Detail? in
+        return self.details?[index]
+    }
+    lazy var book = {(index: Int) -> Book? in
+        return Network.read(Books.self, from: "Bible")?[index]
     }
     func getBooks() {
-        guard let details = Network.read(Details.self, from: "Books") else {return}
+        guard let details = Network.read(Details.self, from: "Sumary") else {return}
         self.details = details
     }
 }

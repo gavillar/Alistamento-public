@@ -7,26 +7,9 @@
 
 import Foundation
 
-struct Bible: Codable {
-    let chapters: [Article]?
-}
+typealias Books = [Book]
 
-struct Article: Codable {
-    struct Book: Codable {
-        let abbrev: Abbrev?
-        let name, author, group, version: String?
-    }
-    struct Abbrev: Codable {
-        let pt, en: String?
-    }
-    struct Chapter: Codable {
-        let number, verses: Int?
-    }
-    struct Verse: Codable {
-        let number: Int?
-        let text: String?
-    }
-    let book: Book?
-    let chapter: Chapter?
-    let verses: [Verse]?
+struct Book: Codable {
+    let abbrev, name: String?
+    let chapters: [[String]]?
 }

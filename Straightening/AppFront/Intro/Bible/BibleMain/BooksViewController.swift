@@ -27,8 +27,11 @@ final class BooksViewController: UIViewController {
 
 extension BooksViewController: BooksViewCollectionDelegate {
     func collectionView(didSelectItemAt indexPath: IndexPath) {
-//        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)),
-//                                                 animated: true)
+        navigationController?.pushViewController(
+            BookViewController(booksviewmodel.book(indexPath.row),
+                               detail: booksviewmodel.detail(indexPath.row)),
+            animated: true
+        )
     }
     func numberOfItemsInSection() -> Int {
         return booksviewmodel.numberOfBooks

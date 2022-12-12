@@ -14,29 +14,25 @@ protocol BookViewModelDelegate: AnyObject {
 
 final class BookViewModel {
     weak var delegate: BookViewModelDelegate?
-    private var bible: (book: Bible?, detail: Detail)?
-    init(_ detail: Detail) {
-        self.bible = (book: nil, detail: detail)
+    private var bible: (book: Book?, detail: Detail?)
+    init(_ book: Book?, detail: Detail?) {
+        self.bible = (book: book, detail: detail)
     }
-    var chapter: Int = 0
-    var chapters: Int {
-        return bible?.book?.chapters?.count ?? 0
+    var displayingChapter: Int = 0
+    var numberOfChapters: Int {
+        return bible.detail?.chapters ?? 0
     }
     var title: String {
-        return bible?.detail.name ?? ""
+        return bible.detail?.name ?? ""
     }
-    func updateBook() {
-        let name = self.bible?.detail.name ?? ""
-        self.bible?.book = Network.read(Bible.self, from: name)
-    }
-    func updateLabel(_ chapter: Int = 0) {
-        if !(bible?.book?.chapters?.isEmpty ?? true) {
-            guard let verses = bible?.book?.chapters?[chapter].verses else {return}
-            delegate?.updateLabel(text: "\(verses.first?.number ?? 0): \(verses.first?.text ?? "")\n")
-            for counter in 1...verses.count - 1 {
-                delegate?.updateLabel(text: "\n\(verses[counter].number ?? 0): \(verses[counter].text ?? "")\n")
+    func updateLabel(_ index: Int = 0) {
+        if let chapters = bible.book?.chapters, !chapters.isEmpty {
+            let chapter = chapters[index]
+            delegate?.updateLabel(text: "1: \(chapter.first ?? "")\n")
+            for counter in 1...chapter.count - 1 {
+                delegate?.updateLabel(text: "\n\(counter + 1): \(chapter[counter])\n")
             }
-            self.chapter = chapter
+            displayingChapter = index
             delegate?.unfreezeCollection()
         }
     }

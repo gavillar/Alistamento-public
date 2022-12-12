@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D255F462937BE5A00074B58 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Books.json */; };
+		1D255F462937BE5A00074B58 /* Sumary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Sumary.json */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
@@ -101,7 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D255F452937BE5A00074B58 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
+		1D255F452937BE5A00074B58 /* Sumary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sumary.json; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				27C379F92932666A00397E14 /* Verses.json */,
-				1D255F452937BE5A00074B58 /* Books.json */,
+				1D255F452937BE5A00074B58 /* Sumary.json */,
 				1D71736029477200003C8791 /* Bible.json */,
 			);
 			path = Books;
@@ -746,7 +746,7 @@
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
 				27C379FA2932666A00397E14 /* Verses.json in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
-				1D255F462937BE5A00074B58 /* Books.json in Resources */,
+				1D255F462937BE5A00074B58 /* Sumary.json in Resources */,
 				1D71736129477200003C8791 /* Bible.json in Resources */,
 				1DA23365293E364F00865B0D /* GoogleService-Info.plist in Resources */,
 			);

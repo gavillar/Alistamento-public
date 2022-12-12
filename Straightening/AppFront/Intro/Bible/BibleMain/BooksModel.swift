@@ -14,14 +14,6 @@ struct Detail: Codable {
     let abbrev: Abbrev?
     let group, name, testament, author: String?
     let chapters: Int?
-    init() {
-        abbrev = nil
-        group = nil
-        name = nil
-        testament = nil
-        author = nil
-        chapters = nil
-    }
 }
 
 // MARK: - Abbrev
