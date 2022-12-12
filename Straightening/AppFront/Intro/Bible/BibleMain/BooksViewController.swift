@@ -19,35 +19,21 @@ final class BooksViewController: UIViewController {
     }
     private func configute() {
         title = "Bíblia Digital"
-        booksviewmodel.booksviewmodeldelegate = self
         booksView.collectionView.booksViewCollectionDelegate = self
         booksviewmodel.getBooks()
         view = booksView
     }
 }
 
-extension BooksViewController: BooksViewModelDelegate {
-    func sendBooksElements(data: BooksElements) {
-        Task {[weak self] in
-            self?.booksviewmodel.books = data
-        }
-    }
-    func sendBooksQuantity(data: Books) {
-        Task {[weak self] in
-            self?.booksView.collectionView.reloadData()
-        }
-    }
-}
-
 extension BooksViewController: BooksViewCollectionDelegate {
     func collectionView(didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)),
-                                                 animated: true)
+//        navigationController?.pushViewController(BookViewController(booksviewmodel.book(indexPath.row)),
+//                                                 animated: true)
     }
     func numberOfItemsInSection() -> Int {
-        return self.booksviewmodel.count
+        return booksviewmodel.numberOfBooks
     }
     func collectionView(_ cell: BooksCollectionCell, forItemAt indexPath: IndexPath) {
-        cell.showData(data: self.booksviewmodel.booksData[indexPath.row])
+        cell.setup(cell: booksviewmodel.detail(indexPath.row))
     }
 }

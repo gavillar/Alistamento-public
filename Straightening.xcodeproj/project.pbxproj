@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D255F462937BE5A00074B58 /* Books.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Books.geojson */; };
+		1D255F462937BE5A00074B58 /* Books.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Books.json */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
 		1D53BA6329367478007D6802 /* CALayer+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D53BA6229367478007D6802 /* CALayer+Hierarchy.swift */; };
-		1D635314292E99560052705D /* Levítico.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */; };
-		1D635316292E9B760052705D /* Números.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1D635315292E9B760052705D /* Números.geojson */; };
 		1D65ED9129294259008842F4 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */; };
 		1D695752292F963D008AE42D /* BookCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695751292F963D008AE42D /* BookCollectionView.swift */; };
 		1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */; };
+		1D71736129477200003C8791 /* Bible.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D71736029477200003C8791 /* Bible.json */; };
 		1D77F9AC2927D3ED00EF0EFB /* CALayer+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* CALayer+Gradient.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
@@ -32,37 +31,15 @@
 		1DA4456A2927A807001E137C /* UINavigationController+Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA445692927A807001E137C /* UINavigationController+Navigate.swift */; };
 		1DA4456C2927B029001E137C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4456B2927B029001E137C /* BookModel.swift */; };
 		1DA4456E2927B2A5001E137C /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA4456D2927B2A5001E137C /* BookViewModel.swift */; };
-		1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DA45EE32929181D00BB5870 /* Gênesis.geojson */; };
 		1DA68AA9293A149200154B91 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA68AA8293A149200154B91 /* IntroView.swift */; };
 		1DB3725C293A3F1F00A47FA1 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725B293A3F1F00A47FA1 /* BooksView.swift */; };
 		1DB3725E293A469500A47FA1 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725D293A469500A47FA1 /* BookView.swift */; };
 		1DB37260293A604E00A47FA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3725F293A604E00A47FA1 /* LoginView.swift */; };
 		1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB37261293A63A000A47FA1 /* RegisterView.swift */; };
 		1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB3726B293A7E7200A47FA1 /* UIView+addUnderLine.swift */; };
-		1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */; };
 		1DB7864A2923A5A100DFF861 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB786492923A5A100DFF861 /* RegisterViewController.swift */; };
 		1DC7A9162940C6F700F78A17 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC7A9152940C6F700F78A17 /* FirebaseAuth */; };
 		1DC7A91D2940C7CB00F78A17 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC7A91C2940C7CB00F78A17 /* ExtensionsTests.swift */; };
-		1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D732938CB8B001FD29D /* Rute.geojson */; };
-		1DDA2D762938CBB1001FD29D /* 1º Samuel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */; };
-		1DDA2D782938CBCC001FD29D /* 2º Samuel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */; };
-		1DDA2D7D2938CC5D001FD29D /* 2º Crônicas.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */; };
-		1DDA2D7E2938CC60001FD29D /* 1º Crônicas.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */; };
-		1DDA2D7F2938CC63001FD29D /* 2º Reis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */; };
-		1DDA2D802938CC66001FD29D /* 1º Reis.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D792938CC27001FD29D /* 1º Reis.geojson */; };
-		1DDA2D822938CD17001FD29D /* Esdras.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D812938CD17001FD29D /* Esdras.geojson */; };
-		1DDA2D842938CD35001FD29D /* Neemias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D832938CD35001FD29D /* Neemias.geojson */; };
-		1DDA2D862938CE07001FD29D /* Ester.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D852938CE07001FD29D /* Ester.geojson */; };
-		1DDA2D882938CE17001FD29D /* Jó.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D872938CE17001FD29D /* Jó.geojson */; };
-		1DDA2D8B2938CE44001FD29D /* Provérbios.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */; };
-		1DDA2D8D2938CE59001FD29D /* Eclesiastes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */; };
-		1DDA2D8F2938CE68001FD29D /* Cânticos.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */; };
-		1DDA2D912938CE75001FD29D /* Isaías.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D902938CE75001FD29D /* Isaías.geojson */; };
-		1DDA2D942938D11A001FD29D /* Jeremias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D932938D11A001FD29D /* Jeremias.geojson */; };
-		1DDA2D962938D12F001FD29D /* Lamentações de Jeremias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */; };
-		1DDA2D982938D17B001FD29D /* Ezequiel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D972938D17B001FD29D /* Ezequiel.geojson */; };
-		1DDA2D9A2938D18A001FD29D /* Daniel.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D992938D18A001FD29D /* Daniel.geojson */; };
-		1DDA2D9C2938D1C7001FD29D /* Oséias.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */; };
 		1DDC411B293FBDD2005BD115 /* Create+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411A293FBDD2005BD115 /* Create+Alert.swift */; };
 		1DDC411D293FBDF4005BD115 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411C293FBDF4005BD115 /* Create.swift */; };
 		1DDC4120293FC13B005BD115 /* UIAlertController+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDC411F293FC13B005BD115 /* UIAlertController+Hierarchy.swift */; };
@@ -94,7 +71,7 @@
 		279E055F2921975F00A6E008 /* CALayer+Underline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E055E2921975F00A6E008 /* CALayer+Underline.swift */; };
 		279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9300293AAD8000BAA93C /* LoginModel.swift */; };
 		279F9304293AAEB600BAA93C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F9303293AAEB600BAA93C /* ForgotPasswordView.swift */; };
-		27C379FA2932666A00397E14 /* Verses.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27C379F92932666A00397E14 /* Verses.geojson */; };
+		27C379FA2932666A00397E14 /* Verses.json in Resources */ = {isa = PBXBuildFile; fileRef = 27C379F92932666A00397E14 /* Verses.json */; };
 		27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */; };
 		27E3A6F529251E75007CDF8A /* UIView+HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */; };
 		27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6F72925263F007CDF8A /* BooksModel.swift */; };
@@ -103,7 +80,6 @@
 		27E3A6FE2925263F007CDF8A /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */; };
 		27E712BA29266B2B00009AEF /* RegisterAdressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */; };
 		27E7E0B2292F9CF700B7C546 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E7E0B1292F9CF700B7C546 /* DatePicker.swift */; };
-		27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */; };
 		27EECF8D2935073600DBBEEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8C2935073600DBBEEA /* FirebaseAuth */; };
 		27EECF8F2935073600DBBEEA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 27EECF8E2935073600DBBEEA /* FirebaseFirestore */; };
 		27EECF9229351A1600DBBEEA /* RegisterPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */; };
@@ -112,8 +88,6 @@
 		27EECFA12935483600DBBEEA /* FormatMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EECFA02935483600DBBEEA /* FormatMask.swift */; };
 		27F7863229364B6800796436 /* Regex+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863129364B6800796436 /* Regex+Email.swift */; };
 		27F7863429364BB800796436 /* Regex+Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F7863329364BB800796436 /* Regex+Password.swift */; };
-		5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB458F2936927700B3D7F9 /* Josué.geojson */; };
-		5FCB45922936A1BA00B3D7F9 /* Juízes.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,16 +101,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D255F452937BE5A00074B58 /* Books.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Books.geojson; sourceTree = "<group>"; };
+		1D255F452937BE5A00074B58 /* Books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Books.json; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
-		1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Levítico.geojson"; sourceTree = "<group>"; };
 		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
 		1D53BA6229367478007D6802 /* CALayer+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Hierarchy.swift"; sourceTree = "<group>"; };
-		1D635315292E9B760052705D /* Números.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Números.geojson"; sourceTree = "<group>"; };
 		1D65ED9029294259008842F4 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D695751292F963D008AE42D /* BookCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionView.swift; sourceTree = "<group>"; };
 		1D695753292F9DC2008AE42D /* UIScrollView+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Hierarchy.swift"; sourceTree = "<group>"; };
+		1D71736029477200003C8791 /* Bible.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Bible.json; sourceTree = "<group>"; };
 		1D77F9AB2927D3ED00EF0EFB /* CALayer+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Gradient.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
@@ -152,38 +125,15 @@
 		1DA445692927A807001E137C /* UINavigationController+Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Navigate.swift"; sourceTree = "<group>"; };
 		1DA4456B2927B029001E137C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		1DA4456D2927B2A5001E137C /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
-		1DA45EE32929181D00BB5870 /* Gênesis.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Gênesis.geojson"; sourceTree = "<group>"; };
 		1DA68AA8293A149200154B91 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		1DB3725B293A3F1F00A47FA1 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
 		1DB3725D293A469500A47FA1 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		1DB3725F293A604E00A47FA1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1DB37261293A63A000A47FA1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		1DB3726B293A7E7200A47FA1 /* UIView+addUnderLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addUnderLine.swift"; sourceTree = "<group>"; };
-		1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Êxodo.geojson"; sourceTree = "<group>"; };
 		1DB786492923A5A100DFF861 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1DC7A90B2940C48700F78A17 /* StraighteningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StraighteningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC7A91C2940C7CB00F78A17 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionsTests.swift; path = Straightening/AppUtils/ExtensionsTests.swift; sourceTree = SOURCE_ROOT; };
-		1DDA2D732938CB8B001FD29D /* Rute.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rute.geojson; sourceTree = "<group>"; };
-		1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Samuel.geojson"; sourceTree = "<group>"; };
-		1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Samuel.geojson"; sourceTree = "<group>"; };
-		1DDA2D792938CC27001FD29D /* 1º Reis.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Reis.geojson"; sourceTree = "<group>"; };
-		1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Reis.geojson"; sourceTree = "<group>"; };
-		1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "1º Crônicas.geojson"; sourceTree = "<group>"; };
-		1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "2º Crônicas.geojson"; sourceTree = "<group>"; };
-		1DDA2D812938CD17001FD29D /* Esdras.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Esdras.geojson; sourceTree = "<group>"; };
-		1DDA2D832938CD35001FD29D /* Neemias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Neemias.geojson; sourceTree = "<group>"; };
-		1DDA2D852938CE07001FD29D /* Ester.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ester.geojson; sourceTree = "<group>"; };
-		1DDA2D872938CE17001FD29D /* Jó.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Jó.geojson"; sourceTree = "<group>"; };
-		1DDA2D892938CE30001FD29D /* Salmos.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Salmos.geojson; sourceTree = "<group>"; };
-		1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Provérbios.geojson"; sourceTree = "<group>"; };
-		1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Eclesiastes.geojson; sourceTree = "<group>"; };
-		1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Cânticos.geojson"; sourceTree = "<group>"; };
-		1DDA2D902938CE75001FD29D /* Isaías.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Isaías.geojson"; sourceTree = "<group>"; };
-		1DDA2D932938D11A001FD29D /* Jeremias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jeremias.geojson; sourceTree = "<group>"; };
-		1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Lamentações de Jeremias.geojson"; sourceTree = "<group>"; };
-		1DDA2D972938D17B001FD29D /* Ezequiel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ezequiel.geojson; sourceTree = "<group>"; };
-		1DDA2D992938D18A001FD29D /* Daniel.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Daniel.geojson; sourceTree = "<group>"; };
-		1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Oséias.geojson"; sourceTree = "<group>"; };
 		1DDC411A293FBDD2005BD115 /* Create+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Alert.swift"; sourceTree = "<group>"; };
 		1DDC411C293FBDF4005BD115 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		1DDC411F293FC13B005BD115 /* UIAlertController+Hierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Hierarchy.swift"; sourceTree = "<group>"; };
@@ -217,7 +167,7 @@
 		279E055E2921975F00A6E008 /* CALayer+Underline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Underline.swift"; sourceTree = "<group>"; };
 		279F9300293AAD8000BAA93C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		279F9303293AAEB600BAA93C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		27C379F92932666A00397E14 /* Verses.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Verses.geojson; sourceTree = "<group>"; };
+		27C379F92932666A00397E14 /* Verses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Verses.json; sourceTree = "<group>"; };
 		27C8BB6A292D1AC00067FE17 /* Regex+Cep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Cep.swift"; sourceTree = "<group>"; };
 		27E3A6F429251E75007CDF8A /* UIView+HiddenKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HiddenKeyboard.swift"; sourceTree = "<group>"; };
 		27E3A6F72925263F007CDF8A /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
@@ -226,15 +176,12 @@
 		27E3A6FA2925263F007CDF8A /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		27E712B929266B2B00009AEF /* RegisterAdressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAdressViewModel.swift; sourceTree = "<group>"; };
 		27E7E0B1292F9CF700B7C546 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-		27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Deuteronômio.geojson"; sourceTree = "<group>"; };
 		27EECF9129351A1600DBBEEA /* RegisterPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPasswordViewController.swift; sourceTree = "<group>"; };
 		27EECF9329351C7000DBBEEA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		27EECF9529352F8800DBBEEA /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		27EECFA02935483600DBBEEA /* FormatMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMask.swift; sourceTree = "<group>"; };
 		27F7863129364B6800796436 /* Regex+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Email.swift"; sourceTree = "<group>"; };
 		27F7863329364BB800796436 /* Regex+Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regex+Password.swift"; sourceTree = "<group>"; };
-		5FCB458F2936927700B3D7F9 /* Josué.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Josué.geojson"; sourceTree = "<group>"; };
-		5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Juízes.geojson"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,36 +349,9 @@
 		1DDA2D922938CE7E001FD29D /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				27C379F92932666A00397E14 /* Verses.geojson */,
-				1D255F452937BE5A00074B58 /* Books.geojson */,
-				1DA45EE32929181D00BB5870 /* Gênesis.geojson */,
-				1DB41A72292CFFEC00FB81A0 /* Êxodo.geojson */,
-				1D4FB4B4292E96C6003DFA6D /* Levítico.geojson */,
-				1D635315292E9B760052705D /* Números.geojson */,
-				27E7E0B5292FFF9600B7C546 /* Deuteronômio.geojson */,
-				5FCB458F2936927700B3D7F9 /* Josué.geojson */,
-				5FCB45912936A1BA00B3D7F9 /* Juízes.geojson */,
-				1DDA2D732938CB8B001FD29D /* Rute.geojson */,
-				1DDA2D752938CBB1001FD29D /* 1º Samuel.geojson */,
-				1DDA2D772938CBCC001FD29D /* 2º Samuel.geojson */,
-				1DDA2D792938CC27001FD29D /* 1º Reis.geojson */,
-				1DDA2D7A2938CC35001FD29D /* 2º Reis.geojson */,
-				1DDA2D7B2938CC4E001FD29D /* 1º Crônicas.geojson */,
-				1DDA2D7C2938CC5D001FD29D /* 2º Crônicas.geojson */,
-				1DDA2D812938CD17001FD29D /* Esdras.geojson */,
-				1DDA2D832938CD35001FD29D /* Neemias.geojson */,
-				1DDA2D852938CE07001FD29D /* Ester.geojson */,
-				1DDA2D872938CE17001FD29D /* Jó.geojson */,
-				1DDA2D892938CE30001FD29D /* Salmos.geojson */,
-				1DDA2D8A2938CE44001FD29D /* Provérbios.geojson */,
-				1DDA2D8C2938CE59001FD29D /* Eclesiastes.geojson */,
-				1DDA2D8E2938CE68001FD29D /* Cânticos.geojson */,
-				1DDA2D902938CE75001FD29D /* Isaías.geojson */,
-				1DDA2D932938D11A001FD29D /* Jeremias.geojson */,
-				1DDA2D952938D12F001FD29D /* Lamentações de Jeremias.geojson */,
-				1DDA2D972938D17B001FD29D /* Ezequiel.geojson */,
-				1DDA2D992938D18A001FD29D /* Daniel.geojson */,
-				1DDA2D9B2938D1C7001FD29D /* Oséias.geojson */,
+				27C379F92932666A00397E14 /* Verses.json */,
+				1D255F452937BE5A00074B58 /* Books.json */,
+				1D71736029477200003C8791 /* Bible.json */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -823,38 +743,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DDA2D8F2938CE68001FD29D /* Cânticos.geojson in Resources */,
-				1DDA2D802938CC66001FD29D /* 1º Reis.geojson in Resources */,
-				1DDA2D9A2938D18A001FD29D /* Daniel.geojson in Resources */,
 				2770EA4F291BEF4700760A35 /* LaunchScreen.storyboard in Resources */,
-				1DDA2D742938CB8B001FD29D /* Rute.geojson in Resources */,
-				1DDA2D7E2938CC60001FD29D /* 1º Crônicas.geojson in Resources */,
-				27C379FA2932666A00397E14 /* Verses.geojson in Resources */,
-				5FCB45922936A1BA00B3D7F9 /* Juízes.geojson in Resources */,
-				1DDA2D942938D11A001FD29D /* Jeremias.geojson in Resources */,
-				1DDA2D962938D12F001FD29D /* Lamentações de Jeremias.geojson in Resources */,
+				27C379FA2932666A00397E14 /* Verses.json in Resources */,
 				2770EA4C291BEF4700760A35 /* Assets.xcassets in Resources */,
-				1DDA2D882938CE17001FD29D /* Jó.geojson in Resources */,
-				5FCB45902936927700B3D7F9 /* Josué.geojson in Resources */,
-				1DDA2D7D2938CC5D001FD29D /* 2º Crônicas.geojson in Resources */,
-				1D255F462937BE5A00074B58 /* Books.geojson in Resources */,
-				1DB41A74292D002700FB81A0 /* Êxodo.geojson in Resources */,
-				1DA45EE42929181D00BB5870 /* Gênesis.geojson in Resources */,
-				1DDA2D762938CBB1001FD29D /* 1º Samuel.geojson in Resources */,
-				1DDA2D842938CD35001FD29D /* Neemias.geojson in Resources */,
-				1DDA2D7F2938CC63001FD29D /* 2º Reis.geojson in Resources */,
-				1DDA2D912938CE75001FD29D /* Isaías.geojson in Resources */,
-				1D635314292E99560052705D /* Levítico.geojson in Resources */,
-				1DDA2D9C2938D1C7001FD29D /* Oséias.geojson in Resources */,
-				1DDA2D8B2938CE44001FD29D /* Provérbios.geojson in Resources */,
-				1D635316292E9B760052705D /* Números.geojson in Resources */,
+				1D255F462937BE5A00074B58 /* Books.json in Resources */,
+				1D71736129477200003C8791 /* Bible.json in Resources */,
 				1DA23365293E364F00865B0D /* GoogleService-Info.plist in Resources */,
-				1DDA2D8D2938CE59001FD29D /* Eclesiastes.geojson in Resources */,
-				1DDA2D782938CBCC001FD29D /* 2º Samuel.geojson in Resources */,
-				27E7E0B6292FFF9600B7C546 /* Deuteronômio.geojson in Resources */,
-				1DDA2D982938D17B001FD29D /* Ezequiel.geojson in Resources */,
-				1DDA2D822938CD17001FD29D /* Esdras.geojson in Resources */,
-				1DDA2D862938CE07001FD29D /* Ester.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,19 +14,19 @@ protocol BookViewModelDelegate: AnyObject {
 
 final class BookViewModel {
     weak var delegate: BookViewModelDelegate?
-    private var bible: (book: Bible?, details: BooksElements)?
-    init(_ booksElements: BooksElements) {
-        self.bible = (book: nil, details: booksElements)
+    private var bible: (book: Bible?, detail: Detail)?
+    init(_ detail: Detail) {
+        self.bible = (book: nil, detail: detail)
     }
     var chapter: Int = 0
     var chapters: Int {
         return bible?.book?.chapters?.count ?? 0
     }
     var title: String {
-        return bible?.details.name ?? ""
+        return bible?.detail.name ?? ""
     }
     func updateBook() {
-        let name = self.bible?.details.name ?? ""
+        let name = self.bible?.detail.name ?? ""
         self.bible?.book = Network.read(Bible.self, from: name)
     }
     func updateLabel(_ chapter: Int = 0) {

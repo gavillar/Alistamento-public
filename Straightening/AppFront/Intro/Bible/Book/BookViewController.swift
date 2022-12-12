@@ -12,8 +12,8 @@ final class BookViewController: UIViewController {
     private let bookViewModel: BookViewModel
     private lazy var bookView = BookView(frame: view.frame)
 // MARK: - init
-    init(_ booksElements: BooksElements) {
-        self.bookViewModel = BookViewModel(booksElements)
+    init(_ detail: Detail) {
+        self.bookViewModel = BookViewModel(detail)
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {

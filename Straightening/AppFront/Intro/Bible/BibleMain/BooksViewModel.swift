@@ -7,23 +7,14 @@
 
 import Foundation
 
-protocol BooksViewModelDelegate: AnyObject {
-    func sendBooksQuantity(data: Books)
-    func sendBooksElements(data: BooksElements)
-}
-
 final class BooksViewModel {
-    weak var booksviewmodeldelegate: BooksViewModelDelegate?
-    var booksData = [BooksElements]()
-    var books: BooksElements?
-// MARK: - count
-    var count: Int {self.booksData.count}
-    lazy var book = {(index: Int) -> BooksElements in
-        return self.booksData[index]
+    var details: Details?
+    var numberOfBooks: Int {self.details?.count ?? 0}
+    lazy var detail = {(index: Int) -> Detail in
+        return self.details?[index] ?? Detail()
     }
     func getBooks() {
-        guard let books = Network.read(Books.self, from: "Books") else {return}
-        booksData = books
-        booksviewmodeldelegate?.sendBooksQuantity(data: booksData)
+        guard let details = Network.read(Details.self, from: "Books") else {return}
+        self.details = details
     }
 }
