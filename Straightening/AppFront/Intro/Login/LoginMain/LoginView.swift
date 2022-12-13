@@ -10,7 +10,7 @@ import UIKit
 class LoginView: UIView {
 // MARK: - variables
     private lazy var logoLabel: UILabel = {
-        let logoLabel = Create.label("Alistamento")
+        let logoLabel = Create.label("Alistamento", font: .systemFont(ofSize: 45))
         return logoLabel
     }()
     lazy var emailTextField = {

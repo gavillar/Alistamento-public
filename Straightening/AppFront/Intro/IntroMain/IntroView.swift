@@ -25,7 +25,7 @@ class IntroView: UIView {
         return bibleScrollView
     }()
     lazy var straighteningButton = Create.baseButton("ALISTAMENTO")
-    lazy var bibleButton = Create.baseButton("BÍBLIA SAGRADA")
+    lazy var bibleButton = Create.baseButton("BÍBLIA QUADRANGULAR")
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()

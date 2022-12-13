@@ -15,10 +15,10 @@ final class BooksViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {false}
     override func loadView() {
         super.loadView()
-        configute()
+        configure()
     }
-    private func configute() {
-        title = "Bíblia Digital"
+    private func configure() {
+        title = "Bíblia Quadrangular"
         booksView.collectionView.booksViewCollectionDelegate = self
         booksviewmodel.getBooks()
         view = booksView
