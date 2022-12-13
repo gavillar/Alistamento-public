@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+	
 final class ForgotPasswordView: UIView {
 // MARK: - variables
     lazy var failureLabel: UILabel = {

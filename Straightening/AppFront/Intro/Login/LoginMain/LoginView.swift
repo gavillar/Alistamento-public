@@ -13,10 +13,6 @@ class LoginView: UIView {
         let logoLabel = Create.label("Alistamento")
         return logoLabel
     }()
-    private lazy var welcomeLabel: UILabel = {
-        let label = Create.label("Bem Vindo")
-        return label
-    }()
     lazy var emailTextField = {
         let emailTextField = Create.textField(placeholder: "Email")
         emailTextField.becomeFirstResponder()
@@ -32,7 +28,6 @@ class LoginView: UIView {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         let stackView = scrollView.turnIntoAList(of: [logoLabel,
-                                                      welcomeLabel,
                                                       emailTextField,
                                                       passwordTextField])
         stackView.isLayoutMarginsRelativeArrangement = true
