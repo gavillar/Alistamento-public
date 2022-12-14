@@ -21,27 +21,18 @@ class HomeViewController: UIViewController {
         return label
     }()
     private lazy var markButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Versiculos Marcados", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Versiculos Marcados")
+        button.addUnderline()
         return button
     }()
     private lazy var noteButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Anotações", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Anotações")
+        button.addUnderline()
         return button
     }()
     private lazy var configButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Configurações", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Configurações")
+        button.addUnderline()
         return button
     }()
     private lazy var homeView: UIView = {
