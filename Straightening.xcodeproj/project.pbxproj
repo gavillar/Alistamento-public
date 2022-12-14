@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D255F462937BE5A00074B58 /* Sumary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Sumary.json */; };
+		1D318B5C2949FBEE000C2853 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
@@ -102,6 +103,7 @@
 
 /* Begin PBXFileReference section */
 		1D255F452937BE5A00074B58 /* Sumary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sumary.json; sourceTree = "<group>"; };
+		1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D318B5A2949FBCB000C2853 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		1D53BA6129367463007D6802 /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +377,7 @@
 		1DF21B0B291C18E500A85B05 /* AppUtils */ = {
 			isa = PBXGroup;
 			children = (
+				1D318B5A2949FBCB000C2853 /* SwiftUI */,
 				1DDA2D922938CE7E001FD29D /* Books */,
 				27C379FD29329CEE00397E14 /* Methods */,
 				2728114B292E4E1600D3B9C8 /* Objects */,
@@ -808,6 +819,7 @@
 				2770EA40291BEF4600760A35 /* AppDelegate.swift in Sources */,
 				1DDC411D293FBDF4005BD115 /* Create.swift in Sources */,
 				27E3A6FB2925263F007CDF8A /* BooksModel.swift in Sources */,
+				1D318B5C2949FBEE000C2853 /* ViewControllerRepresentable.swift in Sources */,
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
 				1DA68AA9293A149200154B91 /* IntroView.swift in Sources */,
