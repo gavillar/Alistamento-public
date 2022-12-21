@@ -51,12 +51,12 @@ final class BooksCollectionCell: UICollectionViewCell {
         label.backgroundColor = .black
         label.layer.cornerRadius = 5
         label.layer.borderWidth = 1
-        label.layer.borderColor = Assets.Colors.border
+        label.layer.borderColor = UIColor.border.cgColor
         return label
     }()
     lazy var titleBook: UILabel = {
         let label = UILabel()
-        label.textColor = Assets.Colors.reverseDark
+        label.textColor = .reverseDark
         label.text = "Name"
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.numberOfLines = 0

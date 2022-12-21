@@ -38,7 +38,7 @@ class LoginView: UIView {
         return scrollView
     }()
     lazy var forgotPasswordButton = Create.baseButton("Esqueci minha senha",
-                                                              titleColor: Assets.Colors.whiteBlack,
+                                                              titleColor: .whiteBlack,
                                                               backgroundColor: nil)
     lazy var signInButton = Create.baseButton("CRIAR UMA CONTA")
     lazy var logInButton: BaseButton = {

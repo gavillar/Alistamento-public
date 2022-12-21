@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D255F462937BE5A00074B58 /* Sumary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Sumary.json */; };
 		1D318B5C2949FBEE000C2853 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */; };
+		1D332CB229538BEC0080F61F /* UIColorColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332CB129538BEC0080F61F /* UIColorColors.swift */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
 		1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D4291E8207007F836C /* Create+TextFields.swift */; };
 		1D503E01292FE14C00600B02 /* BooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D503E00292FE14C00600B02 /* BooksCollectionView.swift */; };
@@ -104,6 +105,7 @@
 /* Begin PBXFileReference section */
 		1D255F452937BE5A00074B58 /* Sumary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sumary.json; sourceTree = "<group>"; };
 		1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		1D332CB129538BEC0080F61F /* UIColorColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorColors.swift; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
 		1D3E05D4291E8207007F836C /* Create+TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+TextFields.swift"; sourceTree = "<group>"; };
 		1D503E00292FE14C00600B02 /* BooksCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksCollectionView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,14 @@
 				1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		1D332CB029538BD30080F61F /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				1D332CB129538BEC0080F61F /* UIColorColors.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		1D53BA6129367463007D6802 /* CALayer */ = {
@@ -409,6 +419,7 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1D332CB029538BD30080F61F /* UIColor */,
 				1DDC411E293FC118005BD115 /* UIAlertController */,
 				1D53BA6129367463007D6802 /* CALayer */,
 				27EECF9F2935482000DBBEEA /* String */,
@@ -834,6 +845,7 @@
 				2770EA81291C1F7D00760A35 /* HomeViewController.swift in Sources */,
 				2770EA83291C1FA100760A35 /* RegisterAdressViewController.swift in Sources */,
 				1DA298C82922A4D60034770C /* RegisterPhoneViewController.swift in Sources */,
+				1D332CB229538BEC0080F61F /* UIColorColors.swift in Sources */,
 				1D695754292F9DC2008AE42D /* UIScrollView+Hierarchy.swift in Sources */,
 				27C8BB6B292D1AC00067FE17 /* Regex+Cep.swift in Sources */,
 				279E055B292196DD00A6E008 /* PickerViewCustom.swift in Sources */,

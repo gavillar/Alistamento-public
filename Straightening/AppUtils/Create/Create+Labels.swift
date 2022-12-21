@@ -23,7 +23,7 @@ extension Create {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text
-        label.textColor = Assets.Colors.reverseDark
+        label.textColor = .reverseDark
         label.textAlignment = alignment
         label.numberOfLines = numberOfLines
         label.font = font

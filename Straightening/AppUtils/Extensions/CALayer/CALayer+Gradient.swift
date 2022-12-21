@@ -9,10 +9,10 @@ import UIKit
 
 extension CALayer {
     func addGradientBackground(frame: CGRect,
-                               colors: [CGColor?] = [Assets.Colors.purple?.cgColor,
-                                                     Assets.Colors.blue?.cgColor,
-                                                     Assets.Colors.red?.cgColor,
-                                                     Assets.Colors.orange?.cgColor]) {
+                               colors: [CGColor?] = [UIColor.purple.cgColor,
+                                                     UIColor.blue.cgColor,
+                                                     UIColor.red.cgColor,
+                                                     UIColor.orange.cgColor]) {
         removeSubLayers(ofType: CAGradientLayer.self)
         let gradient = CAGradientLayer()
         gradient.frame = frame
