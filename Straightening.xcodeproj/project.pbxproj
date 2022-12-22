@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D255F462937BE5A00074B58 /* Sumary.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D255F452937BE5A00074B58 /* Sumary.json */; };
+		1D2B1E442954C1080044587A /* UIImageImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B1E432954C1080044587A /* UIImageImages.swift */; };
+		1D2B1E472954C22B0044587A /* UIFontFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B1E462954C22B0044587A /* UIFontFonts.swift */; };
 		1D318B5C2949FBEE000C2853 /* ViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */; };
 		1D332CB229538BEC0080F61F /* UIColorColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332CB129538BEC0080F61F /* UIColorColors.swift */; };
 		1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E05D2291E81F6007F836C /* Create+Stacks.swift */; };
@@ -21,7 +23,6 @@
 		1D77F9AC2927D3ED00EF0EFB /* CALayer+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D77F9AB2927D3ED00EF0EFB /* CALayer+Gradient.swift */; };
 		1D7A2DFD2926A2DA00F9907D /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */; };
 		1D7A2DFF2926A5DA00F9907D /* Create+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */; };
-		1D942CD7291D65A60018CC82 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD6291D65A60018CC82 /* Assets.swift */; };
 		1D942CD9291D65B70018CC82 /* Create+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D942CD8291D65B70018CC82 /* Create+Buttons.swift */; };
 		1DA23365293E364F00865B0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23364293E364F00865B0D /* GoogleService-Info.plist */; };
 		1DA298C429229AEE0034770C /* RegisterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA298C329229AEE0034770C /* RegisterNameViewController.swift */; };
@@ -104,6 +105,8 @@
 
 /* Begin PBXFileReference section */
 		1D255F452937BE5A00074B58 /* Sumary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sumary.json; sourceTree = "<group>"; };
+		1D2B1E432954C1080044587A /* UIImageImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageImages.swift; sourceTree = "<group>"; };
+		1D2B1E462954C22B0044587A /* UIFontFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontFonts.swift; sourceTree = "<group>"; };
 		1D318B5B2949FBEE000C2853 /* ViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		1D332CB129538BEC0080F61F /* UIColorColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorColors.swift; sourceTree = "<group>"; };
 		1D3E05D2291E81F6007F836C /* Create+Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Stacks.swift"; sourceTree = "<group>"; };
@@ -117,7 +120,6 @@
 		1D77F9AB2927D3ED00EF0EFB /* CALayer+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Gradient.swift"; sourceTree = "<group>"; };
 		1D7A2DFC2926A2DA00F9907D /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		1D7A2DFE2926A5DA00F9907D /* Create+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+NavigationController.swift"; sourceTree = "<group>"; };
-		1D942CD6291D65A60018CC82 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		1D942CD8291D65B70018CC82 /* Create+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Create+Buttons.swift"; sourceTree = "<group>"; };
 		1DA23364293E364F00865B0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1DA298C329229AEE0034770C /* RegisterNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNameViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2B1E422954C0F60044587A /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				1D2B1E432954C1080044587A /* UIImageImages.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		1D2B1E452954C2180044587A /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				1D2B1E462954C22B0044587A /* UIFontFonts.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		1D318B5A2949FBCB000C2853 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,14 +278,6 @@
 				1DDC411C293FBDF4005BD115 /* Create.swift */,
 			);
 			path = Create;
-			sourceTree = "<group>";
-		};
-		1D942CD5291D65980018CC82 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				1D942CD6291D65A60018CC82 /* Assets.swift */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 		1DB37263293A716500A47FA1 /* Name */ = {
@@ -391,7 +401,6 @@
 				1DDA2D922938CE7E001FD29D /* Books */,
 				27C379FD29329CEE00397E14 /* Methods */,
 				2728114B292E4E1600D3B9C8 /* Objects */,
-				1D942CD5291D65980018CC82 /* Assets */,
 				1D942CD4291D65800018CC82 /* Create */,
 				1DF21B11291C195200A85B05 /* Network */,
 				1DF21B10291C194C00A85B05 /* Extensions */,
@@ -419,6 +428,8 @@
 		1DF21B10291C194C00A85B05 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1D2B1E452954C2180044587A /* UIFont */,
+				1D2B1E422954C0F60044587A /* UIImage */,
 				1D332CB029538BD30080F61F /* UIColor */,
 				1DDC411E293FC118005BD115 /* UIAlertController */,
 				1D53BA6129367463007D6802 /* CALayer */,
@@ -834,6 +845,7 @@
 				27665C8429270AFD00F80344 /* UiView+ConstrainsFunc.swift in Sources */,
 				1DB3726C293A7E7200A47FA1 /* UIView+addUnderLine.swift in Sources */,
 				1DA68AA9293A149200154B91 /* IntroView.swift in Sources */,
+				1D2B1E442954C1080044587A /* UIImageImages.swift in Sources */,
 				27E3A6FC2925263F007CDF8A /* BooksViewController.swift in Sources */,
 				279F9304293AAEB600BAA93C /* ForgotPasswordView.swift in Sources */,
 				279F9301293AAD8000BAA93C /* LoginModel.swift in Sources */,
@@ -855,13 +867,13 @@
 				277CC216291D692500BA2BCC /* UIStackView+Hierarchy.swift in Sources */,
 				1D53BA6329367478007D6802 /* CALayer+Hierarchy.swift in Sources */,
 				2770EA42291BEF4600760A35 /* SceneDelegate.swift in Sources */,
-				1D942CD7291D65A60018CC82 /* Assets.swift in Sources */,
 				1DA4456A2927A807001E137C /* UINavigationController+Navigate.swift in Sources */,
 				1D3E05D3291E81F6007F836C /* Create+Stacks.swift in Sources */,
 				1DB37262293A63A000A47FA1 /* RegisterView.swift in Sources */,
 				1D3E05D5291E8207007F836C /* Create+TextFields.swift in Sources */,
 				270A38012934E24D003855C3 /* FireBaseManager.swift in Sources */,
 				27F7863429364BB800796436 /* Regex+Password.swift in Sources */,
+				1D2B1E472954C22B0044587A /* UIFontFonts.swift in Sources */,
 				27665C822927055100F80344 /* UiStackView+HStack.swift in Sources */,
 				1D77F9AC2927D3ED00EF0EFB /* CALayer+Gradient.swift in Sources */,
 				1DF1A50D293A2FCF00569FA5 /* BaseButton.swift in Sources */,

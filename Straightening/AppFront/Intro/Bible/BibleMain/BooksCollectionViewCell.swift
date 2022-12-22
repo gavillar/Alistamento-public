@@ -38,7 +38,7 @@ final class BooksCollectionCell: UICollectionViewCell {
     }()
     lazy var imageBook: UIImageView = {
         let image = UIImageView()
-        image.image = Assets.Images.bible
+        image.image = .bible
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
