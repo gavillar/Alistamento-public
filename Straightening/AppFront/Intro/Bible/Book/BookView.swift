@@ -36,7 +36,7 @@ class BookView: UIView {
     }
 // MARK: - setup
     func configure() {
-        backgroundColor = Assets.Colors.whiteBlack
+        backgroundColor = .whiteBlack
         addSubviews([bookCollectionView, versesScroll])
     }
     func constrain() {

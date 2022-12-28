@@ -26,7 +26,7 @@ final class BookCollectionView: UICollectionView {
         translatesAutoresizingMaskIntoConstraints = false
         delegate = self
         dataSource = self
-        backgroundColor = Assets.Colors.whiteBlack
+        backgroundColor = .whiteBlack
         register(BookCollectionViewCell.self, forCellWithReuseIdentifier: identifier)
         showsHorizontalScrollIndicator = false
     }
