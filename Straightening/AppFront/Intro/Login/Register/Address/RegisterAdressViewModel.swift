@@ -10,7 +10,7 @@ import UIKit
 protocol UpdateFormAdressViewModel {
     func updateForm()
 }
-
+		
 protocol RegisterAdressViewModelProtocol {
     func sendCep(cep: RegisterModel.Cep)
 }
@@ -22,7 +22,8 @@ class RegisterAdressViewModel {
     var cep: String = ""
 // MARK: - getApiCep
     func getApiCep() {
-        Task {
+        Task { [weak self] in
+            guard self != nil else {return}
             guard let data = await Network.call(from: Network.EndPoints.cepInformation(cep)) else {return}
             guard let cep = await Network.decode(RegisterModel.Cep.self, from: data) else {return}
             print(cep)
