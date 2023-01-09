@@ -22,7 +22,7 @@ class RegisterView: UIView {
     }()
     lazy var textField = BindingTextField()
     lazy var button: BaseButton = {
-        let button = BaseButton("ENTRAR", titleColor: Assets.Colors.brown)
+        let button = BaseButton("ENTRAR", titleColor: .brown)
         return button
     }()
 // MARK: - overrides

@@ -10,8 +10,8 @@ import UIKit
 class BookCollectionViewCell: UICollectionViewCell {
     lazy var label: UILabel = {
         let label = Create.label(font: UIFont.systemFont(ofSize: 20, weight: .bold))
-        label.backgroundColor = Assets.Colors.whiteBlack
-        label.textColor = Assets.Colors.reverseDark
+        label.backgroundColor = .whiteBlack
+        label.textColor = .reverseDark
         return label
     }()
     override init(frame: CGRect) {
@@ -22,11 +22,11 @@ class BookCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                alternateColors(text: Assets.Colors.whiteBlack,
-                                background: Assets.Colors.reverseDark)
+                alternateColors(text: .whiteBlack,
+                                background: .reverseDark)
             } else {
-                alternateColors(text: Assets.Colors.reverseDark,
-                                background: Assets.Colors.whiteBlack)
+                alternateColors(text: .reverseDark,
+                                background: .whiteBlack)
             }
         }
     }

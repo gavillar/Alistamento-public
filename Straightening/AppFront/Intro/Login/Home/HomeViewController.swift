@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView()
-        let stackview = scroll.turnIntoAList(of: [homeView])
+        let stackview = scroll.turnIntoAList(view: homeView)
         scroll.translatesAutoresizingMaskIntoConstraints = false
         return scroll
     }()
@@ -21,27 +21,18 @@ class HomeViewController: UIViewController {
         return label
     }()
     private lazy var markButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Versiculos Marcados", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Versiculos Marcados")
+        button.addUnderline()
         return button
     }()
     private lazy var noteButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Anotações", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Anotações")
+        button.addUnderline()
         return button
     }()
     private lazy var configButton: UIButton = {
-        let button = Create.button()
-        button.setTitle("Configurações", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.borderWidth = 1
+        let button = Create.baseButton("Configurações")
+        button.addUnderline()
         return button
     }()
     private lazy var homeView: UIView = {
@@ -54,8 +45,16 @@ class HomeViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
+    override func viewWillTransition(to size: CGSize,
+                                     with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        view.layer.addGradientBackground(frame: CGRect(origin: .zero, size: size))
+    }
     override func loadView() {
         super.loadView()
+        configure()
+    }
+    private func configure() {
         view.addSubview(scrollView)
         homeView.addSubviews([bibleImage,
                               welcomeLabel,
@@ -73,29 +72,28 @@ class HomeViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            homeView.heightAnchor.constraint(equalTo: view.heightAnchor),
             bibleImage.topAnchor.constraint(equalTo: homeView.topAnchor),
             bibleImage.leadingAnchor.constraint(equalTo: homeView.leadingAnchor),
             bibleImage.trailingAnchor.constraint(equalTo: homeView.trailingAnchor),
-            bibleImage.heightAnchor.constraint(equalTo: homeView.heightAnchor,
-                                               multiplier: 0.20),
+            bibleImage.heightAnchor.constraint(equalToConstant: view.frame.height*0.5),
             welcomeLabel.centerXAnchor.constraint(equalTo: bibleImage.centerXAnchor),
             welcomeLabel.topAnchor.constraint(equalTo: bibleImage.topAnchor,
-                                              constant: 2),
+                                              constant: view.frame.height*0.005),
             markButton.topAnchor.constraint(equalTo: bibleImage.bottomAnchor,
-                                            constant: 20),
+                                            constant: view.frame.height*0.02),
             markButton.leadingAnchor.constraint(equalTo: homeView.leadingAnchor,
-                                                constant: 20),
+                                                constant: view.frame.width*0.02),
             markButton.trailingAnchor.constraint(equalTo: homeView.trailingAnchor,
-                                                 constant: -20),
+                                                 constant: -view.frame.width*0.02),
             noteButton.topAnchor.constraint(equalTo: markButton.bottomAnchor,
-                                            constant: 12),
+                                            constant: view.frame.height*0.01),
             noteButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
             noteButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
             configButton.topAnchor.constraint(equalTo: noteButton.bottomAnchor,
-                                              constant: 12),
+                                              constant: view.frame.height*0.01),
             configButton.leadingAnchor.constraint(equalTo: markButton.leadingAnchor),
-            configButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor)
+            configButton.trailingAnchor.constraint(equalTo: markButton.trailingAnchor),
+            configButton.bottomAnchor.constraint(equalTo: homeView.bottomAnchor)
         ])
     }
 }

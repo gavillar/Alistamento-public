@@ -36,7 +36,7 @@ final class DatePicker: UIDatePicker {
         toolBar.sizeToFit()
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(done))
-        doneButton.tintColor = Assets.Colors.brown
+        doneButton.tintColor = .brown
         toolBar.setItems([spaceButton, doneButton], animated: false)
         delegate?.datePicker(toolBar)
 //        textField.inputView = datePicker

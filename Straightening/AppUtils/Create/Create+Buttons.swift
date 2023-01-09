@@ -9,8 +9,8 @@ import UIKit
 
 extension Create {
     static func baseButton(_ title: String? = nil,
-                           titleColor: UIColor? = Assets.Colors.reverseDark,
-                           backgroundColor: UIColor? = Assets.Colors.weakWhite,
+                           titleColor: UIColor? = .reverseDark,
+                           backgroundColor: UIColor? = .weakWhite,
                            for control: UIControl.Event? = nil,
                            handler: UIActionHandler? = nil) -> UIButton {
         let baseButton = UIButton()

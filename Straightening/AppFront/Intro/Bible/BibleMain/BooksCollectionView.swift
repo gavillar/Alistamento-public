@@ -26,7 +26,7 @@ final class BooksViewCollection: UICollectionView {
         register(BooksCollectionCell.self, forCellWithReuseIdentifier: BooksCollectionCell.identifier)
         delegate = self
         dataSource = self
-        backgroundColor = Assets.Colors.weakWhiteBlack
+        backgroundColor = .weakWhiteBlack
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
